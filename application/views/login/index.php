@@ -26,7 +26,7 @@
             <div class="container">
                 <!-- BEGIN LOGIN FORM -->
                 <div class="form">
-                    <form class="login-form" action="<?php echo site_url('ceklogin/user') ?>" method="post">
+                    <form class="login-form" action="<?= base_url('login/index') ?>" method="post">
                         <div class="container">
                             <center>
                                 <div class="logo">
@@ -41,11 +41,13 @@
                         <div class="form-group">
                             <div class="input-icon">
                                 <i class="fa fa-user"></i>
-                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Username" name="username" />
+                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Username" name="username" value="<?= set_value('username');?>" />
+                                <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="input-icon">
                                 <i class="fa fa-lock"></i>
                                 <input type="password" name="password" class="form-control placeholder-no-fix" placeholder="Password " autocomplete="off" onkeypress="capLock(event)"/>
+                                <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                         </div>
                         <div class="form-group">
