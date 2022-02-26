@@ -26,7 +26,7 @@
             <div class="container">
                 <!-- BEGIN LOGIN FORM -->
                 <div class="form">
-                    <form class="login-form" action="<?= base_url('login/index') ?>" method="post">
+                    <form class="login-form" action="<?= base_url('login/cek_login') ?>" method="post">
                         <div class="container">
                             <center>
                                 <div class="logo">

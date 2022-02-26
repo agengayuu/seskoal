@@ -17,6 +17,10 @@ class Login extends CI_Controller
     }
 
     public function index(){
+        $this->load->view('login/index');
+    }
+
+    public function cek_login(){
 
         //$data['hasil'] = $this->m_user->cek_user();
         //var_dump($data['hasil']);die;
@@ -26,12 +30,18 @@ class Login extends CI_Controller
         if($this->form_validation->run() == false){
             $this->load->view('login/index');
         } else {
-            //validation success
+            //validation success..
             $username = $this->input->post('username');
             $password = $this->input->post('password');
-            //var_dump($password); 
+            // //var_dump($password); 
+            // $data = array(
+            //     'username' => $username,
+            //     'passsword' => md5($password)
+            // );
 
-            $user = $this->db->get_where('user',['username' => $username, 'password' => md5($password)])->row_array();
+            //print_r($data);die;
+
+            $user = $this->db->get_where('user',['username' => $username])->row_array();
             //var_dump($password);die();
             //jika usernya ada
             if($user){
@@ -50,13 +60,14 @@ class Login extends CI_Controller
                         $a = $this->session->set_userdata($data);
                         //print($a);die;
                         //arahkan ke view sesuai dengan grup
-                        //redirect('main_menu');
-                        echo"masuk pa eko";
+                        redirect('main_menu');
+                       
 
                     }else{
                         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Wrong password </div>');
-                        echo "password salah";
-                        //redirect('login');
+                        //echo password_hash($password, PASSWORD_DEFAULT);
+
+                        redirect('login');
                     }
 
                 }else{
