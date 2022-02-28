@@ -10,7 +10,6 @@
             <meta http-equiv="Content-type" content="text/html; charset=utf-8">
             <meta content="" name="description"/>
             <meta content="" name="author"/>
-            <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
             <!-- BEGIN GLOBAL MANDATORY STYLES -->
             <link href="<?php echo base_url() ?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
