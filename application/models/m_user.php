@@ -6,7 +6,7 @@ exit('No direct script access allowed');
 class M_user extends CI_Model{
 
     function construct(){
-        parentt:: __construct();
+        parent:: __construct();
     }
 
     function cek_user(){

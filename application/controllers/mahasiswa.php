@@ -17,8 +17,12 @@ class Mahasiswa extends CI_Controller
 
 public function index(){
     $data['siswa'] = $this->m_mahasiswa->tampildata()->result();
-    print_r($data);die();
+    //print_r($data);die();
+    
+    $this->load->view('templates_dosen/header'); 
+    $this->load->view('templates_dosen/sidebar'); 
     $this->load->view('mahasiswa/index', $data);
+    $this->load->view('templates_dosen/footer'); 
     
 
 }
