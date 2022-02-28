@@ -20,15 +20,14 @@ public function index(){
     //print_r($data);die();
     
     $this->load->view('templates_dosen/header'); 
-    $this->load->view('templates_dosen/sidebar'); 
+    $this->load->view('templates_dosen/sidebar_admin'); 
     $this->load->view('mahasiswa/index', $data);
     $this->load->view('templates_dosen/footer'); 
     
-
 }
 
 public function admintambah(){
-
+    $this->load->view('mahasiswa/tambah');
 }
 
 public function adminedit(){

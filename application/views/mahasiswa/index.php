@@ -5,7 +5,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('dosen/ruang/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Ruangan</button>') ?>
+    <?php echo anchor('mahasiswa/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Mahasiswa</button>') ?>
 
     <!--table -->
     <div class="card shadow mb-4">
@@ -38,8 +38,8 @@
                             <td><?= $s->tahun_masuk ?></td>
                             <td><?= $s->jabatan ?></td>
                             <td><?= $s->email ?></td>
-                            <td width="20px"> <div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
-                            <td width="20px"> <div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            <td width="20px"> <div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div></td>
+                            <td width="20px"> <div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div></td>
                         </tr>
                             <?php
                             endforeach
