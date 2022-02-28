@@ -10,6 +10,7 @@ class M_mahasiswa extends CI_Model{
     }
 
     public function tampildata(){
+        $data['title'] = 'Mahasiswa';
        return $this->db->get('tbl_mahasiswa');
     }
     

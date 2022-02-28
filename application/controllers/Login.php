@@ -59,31 +59,20 @@ class Login extends CI_Controller
                         //save to session
                         $this->session->set_userdata($data);
                         if($user['id_grup_user'] == 1){
-                           // redirect('main_menu/admin');
-                           $this->load->view('main_menu/admin');
-                          // echo"masuk admin";
+                          $this->_admin();
                         }
                         elseif ($user ['id_grup_user'] == 2){
-                            //redirect('main_menu/siswa');
-                            $this->load->view('main_menu/siswa');
-                            //echo "masuk siswa";
+                            $this->_siswa();
                         }
                         else{
-                            //redirect('main_menu/dosen');
-                            //echo "masuk dosen";
-                            $this->load->view('main_menu/dosen');
+                            $this->_dosen();
                         }
 
-                        //print($a);die;
                         //arahkan ke view sesuai dengan grup
-                        //redirect('main_menu/admin');
                         
-                       
-
                     }else{
                         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Wrong password </div>');
-                        echo password_hash($password, PASSWORD_DEFAULT);die;
-
+                        //echo password_hash($password, PASSWORD_DEFAULT);die;
                         redirect('login');
                     }
 
@@ -109,6 +98,31 @@ class Login extends CI_Controller
         $this->session->unset_usedata('id_grup_user');
         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> you have been logged out</div>');
         redirect('login');
+    }
+
+
+    private function _admin(){
+        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/sidebar_admin'); 
+        $this->load->view('main_menu/admin');
+        $this->load->view('templates_dosen/footer'); 
+        
+    }
+
+    private function _siswa(){
+        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/sidebar_admin'); 
+        $this->load->view('main_menu/admin');
+        $this->load->view('templates_dosen/footer'); 
+        
+    }
+
+    private function _dosen(){
+        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/sidebar_admin'); 
+        $this->load->view('main_menu/admin');
+        $this->load->view('templates_dosen/footer'); 
+        
     }
 }
 
