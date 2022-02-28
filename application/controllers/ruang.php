@@ -1,4 +1,9 @@
 <?php
+
+if(!defined('BASEPATH'))
+exit('No direct script access allowed');
+
+
     class Ruang extends CI_Controller {
         public function index() {
 
@@ -47,17 +52,21 @@
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                     Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span> </button></div>');
-                    redirect('dosen/ruang');
+                    redirect('ruang');
                 }
             }
 
             public function _rules(){
                 $this->form_validation->set_rules('id_ruang', 'id_ruang', 'required', ['required' => 'Id Ruang wajib diisi!']);
                 $this->form_validation->set_rules('nama_ruang', 'nama_ruang', 'required' , ['required' => 'Nama Ruang wajib diisi!']);
+                $this->form_validation->set_rules('id_jenis_ruang', 'id_jenis_ruang', 'required' , ['required' => 'Jenis Ruang wajib diisi!']);
                 $this->form_validation->set_rules('lantai', 'lantai', 'required' , ['required' => 'Lantai wajib diisi!']);
+                $this->form_validation->set_rules('gedung', 'gedung', 'required' , ['required' => 'Lantai wajib diisi!']);
+                $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Lantai wajib diisi!']);
             }
 
             public function update($id) {
+                
                 $where = array('id_ruang' => $id);
                 $data['tbl_ruang'] = $this->ruang_model->edit_data($where, 'tbl_jurusan')->result();
 
@@ -69,15 +78,16 @@
 
             public function update_aksi(){
                 $id     = $this->input->post('id_ruang');
-                $id     = $this->input->post('id_ruang');
+                $nama_ruang     = $this->input->post('nama_ruang');
                 
             }
 
             public function delete($id) {
+
                 $where = array('id_ruang' => $id);
                 $this->ruang_model->hapus_data($where, 'tbl_ruang'); 
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                 <span aria-hidden="true">&times;</span> </button></div>');
 
                 redirect('dosen/ruang');

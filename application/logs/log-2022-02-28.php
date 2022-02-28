@@ -267,3 +267,166 @@ ERROR - 2022-02-28 04:05:34 --> Severity: Notice --> Undefined variable: id_ruan
 ERROR - 2022-02-28 04:05:34 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
 ERROR - 2022-02-28 04:05:51 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
 ERROR - 2022-02-28 04:05:51 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 04:07:42 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 04:07:42 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 04:07:43 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 04:07:43 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 04:08:03 --> 404 Page Not Found: dosen/Buttonshtml/index
+ERROR - 2022-02-28 04:08:03 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 04:08:03 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 04:08:04 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 04:08:05 --> 404 Page Not Found: dosen/Buttonshtml/index
+ERROR - 2022-02-28 04:08:05 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 04:08:05 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 04:08:06 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 04:08:08 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 04:08:08 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 04:08:15 --> 404 Page Not Found: dosen/Ruang/img
+ERROR - 2022-02-28 04:08:19 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 04:13:34 --> 404 Page Not Found: dosen/Indexhtml/index
+ERROR - 2022-02-28 04:13:34 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 04:13:34 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 04:13:36 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 07:45:15 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:45:25 --> 404 Page Not Found: dosen/Indexhtml/index
+ERROR - 2022-02-28 07:45:25 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 07:45:25 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 07:45:27 --> 404 Page Not Found: dosen/Buttonshtml/index
+ERROR - 2022-02-28 07:45:28 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 07:45:28 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 07:45:30 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 07:45:30 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:46:33 --> 404 Page Not Found: dosen/Ruang/img
+ERROR - 2022-02-28 07:46:37 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 07:46:45 --> Severity: error --> Exception: Call to undefined method Ruang_model::edit_data() C:\laragon\www\seskoal-siak\seskoal\application\controllers\dosen\ruang.php 62
+ERROR - 2022-02-28 07:46:47 --> Severity: Notice --> Undefined variable: id_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\ruang.php 42
+ERROR - 2022-02-28 07:47:17 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:47:18 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:47:39 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:47:40 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:47:40 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:47:40 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:49:00 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:49:45 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:50:01 --> 404 Page Not Found: dosen/Ruang/img
+ERROR - 2022-02-28 07:50:03 --> 404 Page Not Found: Ruang/simpan
+ERROR - 2022-02-28 07:50:03 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-02-28 07:50:03 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-02-28 07:51:45 --> 404 Page Not Found: dosen/Ruang/index
+ERROR - 2022-02-28 07:51:46 --> 404 Page Not Found: dosen/Ruang/input
+ERROR - 2022-02-28 07:51:51 --> 404 Page Not Found: dosen/Ruang/index
+ERROR - 2022-02-28 07:51:51 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 07:51:51 --> 404 Page Not Found: dosen/Assets/assets
+ERROR - 2022-02-28 07:52:46 --> 404 Page Not Found: dosen/Img/undraw_profile.svg
+ERROR - 2022-02-28 07:52:48 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 07:53:01 --> 404 Page Not Found: dosen/Ruang/input
+ERROR - 2022-02-28 07:53:01 --> 404 Page Not Found: dosen/Ruang/assets
+ERROR - 2022-02-28 07:53:01 --> 404 Page Not Found: dosen/Ruang/assets
+ERROR - 2022-02-28 07:53:58 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 07:53:59 --> 404 Page Not Found: dosen/Ruang/input
+ERROR - 2022-02-28 07:53:59 --> 404 Page Not Found: dosen/Ruang/assets
+ERROR - 2022-02-28 07:53:59 --> 404 Page Not Found: dosen/Ruang/assets
+ERROR - 2022-02-28 07:54:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 07:54:14 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 07:54:25 --> Severity: error --> Exception: Call to undefined method Ruang_model::edit_data() C:\laragon\www\seskoal-siak\seskoal\application\controllers\ruang.php 67
+ERROR - 2022-02-28 07:56:41 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 07:56:43 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 07:57:26 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 07:57:27 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 07:57:31 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 07:58:06 --> 404 Page Not Found: Ruang/index.html
+ERROR - 2022-02-28 07:58:06 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-02-28 07:58:06 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-02-28 07:58:09 --> 404 Page Not Found: Ruang/index.html
+ERROR - 2022-02-28 07:58:09 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-02-28 07:58:09 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-02-28 07:58:22 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:08:03 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:10:21 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:10:39 --> Severity: error --> Exception: Call to undefined method Ruang_model::edit_data() C:\laragon\www\seskoal-siak\seskoal\application\controllers\ruang.php 67
+ERROR - 2022-02-28 08:11:35 --> 404 Page Not Found: Loginhtml/index
+ERROR - 2022-02-28 08:13:14 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:13:18 --> 404 Page Not Found: Assets/global
+ERROR - 2022-02-28 08:13:30 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:18:02 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:18:03 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:18:50 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:19:00 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:19:01 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:19:05 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:19:10 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:19:52 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2022-02-28 08:20:00 --> 404 Page Not Found: Loginhtml/index
+ERROR - 2022-02-28 08:20:06 --> 404 Page Not Found: Buttonshtml/index
+ERROR - 2022-02-28 08:20:16 --> 404 Page Not Found: Buttonshtml/index
+ERROR - 2022-02-28 08:20:19 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2022-02-28 08:20:21 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2022-02-28 08:20:23 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2022-02-28 08:20:25 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2022-02-28 08:21:14 --> 404 Page Not Found: Chartshtml/index
+ERROR - 2022-02-28 08:21:19 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2022-02-28 08:21:48 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:21:49 --> 404 Page Not Found: Index/index
+ERROR - 2022-02-28 08:24:15 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:24:16 --> 404 Page Not Found: Index/index
+ERROR - 2022-02-28 08:24:20 --> 404 Page Not Found: Index/index
+ERROR - 2022-02-28 08:24:26 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:25:38 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:25:38 --> 404 Page Not Found: Index/index
+ERROR - 2022-02-28 08:26:50 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:26:51 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:27:12 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:29:33 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:29:51 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:30:48 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:31:01 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:31:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:31:18 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:31:23 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:32:36 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:33:41 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:33:51 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:34:00 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:34:46 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:35:42 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:36:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:36:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:36:43 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:37:38 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:37:40 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:37:59 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:38:01 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:38:01 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:38:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:38:21 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:38:46 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:39:24 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:41:28 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:42:09 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:43:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:44:06 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:45:33 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:45:47 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:46:25 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:46:31 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:47:03 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:47:24 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:47:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:48:26 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:50:24 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:50:36 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:51:35 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:54:02 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:54:03 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:54:09 --> Severity: error --> Exception: Call to undefined method Ruang_model::edit_data() C:\laragon\www\seskoal-siak\seskoal\application\controllers\ruang.php 71
+ERROR - 2022-02-28 08:54:20 --> 404 Page Not Found: Utilities-colorhtml/index
+ERROR - 2022-02-28 08:54:29 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:54:31 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:54:33 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:54:43 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:54:44 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:54:45 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:56:19 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:57:14 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-02-28 08:58:11 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-02-28 08:58:31 --> 404 Page Not Found: Img/undraw_profile.svg

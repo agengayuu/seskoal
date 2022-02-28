@@ -5,7 +5,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('dosen/ruang/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Ruangan</button>') ?>
+    <?php echo anchor('ruang/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Ruangan</button>') ?>
 
     <!--table -->
     <div class="card shadow mb-4">
@@ -38,8 +38,8 @@
                             <td><?php echo $rgn->kapasitas ?></td>
                             <td><?php echo $rgn->lantai ?></td>
                             <td><?php echo $rgn->keterangan ?></td>
-                            <td width="20px"> <?php echo anchor('dosen/ruang/update/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
-                            <td width="20px"> <?php echo anchor('dosen/ruang/delete/'.$id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            <td width="20px"> <?php echo anchor('ruang/update/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
+                            <td width="20px"> <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                         </tr>
                             <?php
                             endforeach
@@ -51,3 +51,8 @@
         </div>
     </div>
 </div>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
