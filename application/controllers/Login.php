@@ -58,8 +58,8 @@ class Login extends CI_Controller
 
                         //save to session
                         $this->session->set_userdata($data);
-                        if($user['id_grup_user'] == 1){
-                          $this->_admin();
+                        if($user['id_grup_user'] == 1){              
+                            $this->_admin();
                         }
                         elseif ($user ['id_grup_user'] == 2){
                             $this->_siswa();
@@ -102,25 +102,31 @@ class Login extends CI_Controller
 
 
     private function _admin(){
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar_admin'); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('main_menu/admin');
         $this->load->view('templates_dosen/footer'); 
         
     }
 
     private function _siswa(){
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar_admin'); 
-        $this->load->view('main_menu/admin');
+        $this->load->view('templates_dosen/sidebar_mahasiswa'); 
+        $this->load->view('main_menu/siswa');
         $this->load->view('templates_dosen/footer'); 
         
     }
 
     private function _dosen(){
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar_admin'); 
-        $this->load->view('main_menu/admin');
+        $this->load->view('templates_dosen/sidebar', $data); 
+        $this->load->view('dosen/index');
         $this->load->view('templates_dosen/footer'); 
         
     }
