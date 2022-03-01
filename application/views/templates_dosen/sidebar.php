@@ -8,9 +8,9 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-            <div class="sidebar-brand-icon rotate-n-15">
+            <!-- <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
-            </div>
+            </div> -->
             <div class="sidebar-brand-text mx-3">SIAK SESKOAL</div>
         </a>
 
@@ -20,9 +20,10 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('main_menu_dosen') ?>">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Menu</span></a>
+            <!-- <img src="<?php echo base_url() ?>assets/assets/images/seskoal.png" class="img-fluid" alt="Responsive image"> -->
+            <i class="fas fa-menu"></i><span>Menu</span></a>
         </li>
+        
 
         <!-- Divider -->
         <hr class="sidebar-divider">
