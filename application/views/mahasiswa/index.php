@@ -38,8 +38,8 @@
                             <td><?= $s->tahun_masuk ?></td>
                             <td><?= $s->jabatan ?></td>
                             <td><?= $s->email ?></td>
-                            <td width="20px"> <div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div></td>
-                            <td width="20px"> <div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div></td>
+                            <td width="20px"> <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
+                            <td width="20px"> <?php echo anchor('mahasiswa/adminhapus/'.$s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                         </tr>
                             <?php
                             endforeach

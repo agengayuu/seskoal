@@ -1,10 +1,10 @@
 <div class="container-fluid">
 
-    <form action="<?php echo base_url('mahasiswa/simpan') ?>">
+    <form action="<?php echo base_url('mahasiswa/adminsimpan') ?>" method="post">
 
         <div class="form-group">
             <label>NIM</label>
-            <input type="text" name="nim" placeholder="Masukkan NIM" class="form-control">
+            <input type="text" name="nim" placeholder="Masukkan NIM" class="form-control" required>
             <?php echo form_error('nim', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 
@@ -52,7 +52,7 @@
 
         <div class="form-group">
             <label>Foto</label>
-            <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control">
+            <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required>
             <?php echo form_error('foto', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 
