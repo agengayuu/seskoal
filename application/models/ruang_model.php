@@ -14,4 +14,4 @@
             $this->db->delete($table);
         }
     }
-?>
+?> 

@@ -36,15 +36,17 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
+                <i class="fas fa-fw fa-graduation"></i>
                 <span>Akademik</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Sub-Menu Akademik:</h6>
                     <a class="collapse-item" href="<?php echo base_url('mahasiswa') ?>">Mahasiswa</a>
-                    <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Jenis Ruangan</a>
+                    <a class="collapse-item" href="<?php echo base_url('jenis_ruang') ?>">Jenis Ruangan</a>
                     <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Ruangan</a>
+                    <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Pertanyaan</a>
+                    <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Jadwal</a>
                     <a class="collapse-item" href="<?php echo base_url('nilai') ?>">Nilai</a>
                 </div>
             </div>

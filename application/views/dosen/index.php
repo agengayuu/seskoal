@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <div class="alert alert-success" role="alert">
-        Teks Pokoknya
+        Selamat Datang (Nama) di Dashboard Dosen
         <hr>
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
             <i class="fas fa-cogs"></i> Control Panel

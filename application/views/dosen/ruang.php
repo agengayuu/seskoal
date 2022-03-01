@@ -18,7 +18,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Ruang ID</th>
+                            <th>Ruang ID</th> 
                             <th>Nama Ruang</th>
                             <th>Jenis Ruang</th>
                             <th>Kapasitas</th>
@@ -44,7 +44,6 @@
                             <?php
                             endforeach
                             ?>
-                        ?>
                     </thead>
                 </table>
             </div>
