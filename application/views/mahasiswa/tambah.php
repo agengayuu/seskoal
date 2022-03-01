@@ -37,6 +37,16 @@
             <input type="text" name="jabatan" placeholder="Masukkan Jabatan" class="form-control">
             <?php echo form_error('jabatan', '<div class="text-danger small ml-3"></div>') ?>
         </div>
+
+        <div class="form-group">
+            <label> Diklat </label>
+            <select class="form-control" name='nama_diklat' id='nama_diklat'>
+			<option value='0' selected>--- Pilih Diklat ---</option>
+		    <?php foreach ($diklat as $d) { ?>
+			<option value="<?php echo $d->id_diklat; ?>"><?php echo $d->nama_diklat; ?></option>
+			<?php } ?>
+		</select>
+        </div>
         
         <div class="form-group">
             <label>Email</label>

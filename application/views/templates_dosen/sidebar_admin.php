@@ -45,6 +45,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Sub-Menu Kemahasiswaan:</h6>
                     <a class="collapse-item" href="<?= base_url ('mahasiswa')?>">Mahasiswa</a>
+                    <a class="collapse-item" href="<?= base_url ('diklat')?>">Diklat</a>
                 </div>
             </div>
         </li>

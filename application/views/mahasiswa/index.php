@@ -1,7 +1,10 @@
 <div class="container-fluid">
-    <div class="alert alert-success" role="alert">
-        Mahasiswa
-    </div>
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Mahasiswa
+        </div>
+</div>
+    
 
     <?php echo $this->session->flashdata('pesan') ?>
 
@@ -16,12 +19,12 @@
             <div class="table-responsive">
                 <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
+                        <tr style="text-align: center;">
                             <th>No</th>
                             <th>Nim</th>
                             <th>Nama Mahasiswa</th>
                             <th>Angkatan</th>
-                            <th>Tahun Mauk</th>
+                            <th>Tahun Masuk</th>
                             <th>Jabatan</th>
                             <th>Email</th>
                             <th>Aksi</th>
@@ -30,7 +33,7 @@
                         $no =1;
                         foreach ($siswa as $s) : ?>
 
-                        <tr>
+                        <tr style="text-align: center;">
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $s->nim ?></td>
                             <td><?= $s->nama ?></td>
@@ -38,8 +41,10 @@
                             <td><?= $s->tahun_masuk ?></td>
                             <td><?= $s->jabatan ?></td>
                             <td><?= $s->email ?></td>
+                            <center>
                             <td width="20px"> <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
                             <td width="20px"> <?php echo anchor('mahasiswa/adminhapus/'.$s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            </center>
                         </tr>
                             <?php
                             endforeach

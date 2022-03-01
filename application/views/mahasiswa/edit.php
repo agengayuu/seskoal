@@ -58,6 +58,7 @@
 
             <button type="submit" class="btn btn-primary mb-4">Simpan</button>
             <button type="submit" class="btn btn-danger mb-4">Batal</button>
+           
     </form>
     <?php } ?>
 

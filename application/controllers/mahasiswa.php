@@ -16,25 +16,30 @@ class Mahasiswa extends CI_Controller
 
 
 public function index(){
-    $data['user'] = $this->db->get_where('user', ['username'=> 
-    $this->session->userdata('username')])->row_array();
     $data['title'] = 'Mahasiswa';
+    $data['user'] = $this->db->get_where('user', ['username'=> 
+    $this->session->userdata('username')])->row_array(); 
+    $this->load->view('templates_dosen/header', $data); 
     $data['siswa'] = $this->m_mahasiswa->tampildata()->result();
-    //print_r($data);die();
-    $this->load->view('templates_dosen/header'); 
+
     $this->load->view('templates_dosen/sidebar_admin',$data); 
     $this->load->view('mahasiswa/index');
-    //$this->load->view('templates_dosen/footer'); 
+    $this->load->view('templates_dosen/footer'); 
     
 }
 
 public function tambah(){
+    $data['title'] = 'Tambah Mahasiswa';
     $data['user'] = $this->db->get_where('user', ['username'=> 
     $this->session->userdata('username')])->row_array();
-    $data['title'] = 'Tambah Mahasiswa';
-    $this->load->view('templates_dosen/header'); 
+   
+    $this->load->view('templates_dosen/header',$data); 
     $this->load->view('templates_dosen/sidebar_admin',$data); 
-    $this->load->view('mahasiswa/tambah');
+
+    $query= $this->db->query("select * from tbl_diklat")->result();
+    $data['diklat'] = $query;
+    
+    $this->load->view('mahasiswa/tambah',$data);
     $this->load->view('templates_dosen/footer'); 
 }
 
@@ -43,7 +48,7 @@ public function adminsimpan(){
     $data['user'] = $this->db->get_where('user', ['username'=> 
     $this->session->userdata('username')])->row_array();
     $data['title'] = 'Tambah Mahasiswa';
-    $this->load->view('templates_dosen/header'); 
+    $this->load->view('templates_dosen/header', $data); 
     $this->load->view('templates_dosen/sidebar_admin',$data); 
     $this->load->view('mahasiswa/tambah');
     $this->load->view('templates_dosen/footer'); 
@@ -80,16 +85,12 @@ public function adminedit($nim){
     $data['title'] = 'Edit Mahasiswa';
     $this->load->view('templates_dosen/header'); 
     $this->load->view('templates_dosen/sidebar_admin',$data); 
-    $this->load->view('mahasiswa/edit');
-    $this->load->view('templates_dosen/footer'); 
-
     $where = array(
         'nim' => $nim
     );
     $data['siswanya'] = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
     $this->load->view('mahasiswa/edit', $data);
-
-
+    $this->load->view('templates_dosen/footer'); 
 
 }
 public function adminhapus($nim){
