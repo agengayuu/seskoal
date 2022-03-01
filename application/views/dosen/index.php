@@ -23,44 +23,44 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">PROFILE</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
 
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
 
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
 
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
                 </div><hr>
 
                 <div class="row">
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">INPUT NILAI</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">INPUT NILAI</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
 
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">JADWAL</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">JADWAL</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
 
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">RUANGAN</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">RUANGAN</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
 
                     <div class="col-md-3 text-info text-center">
-                    <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
                 </div>

@@ -926,3 +926,53 @@ ERROR - 2022-03-01 07:38:26 --> Severity: Notice --> Undefined variable: title C
 ERROR - 2022-03-01 07:38:26 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-01 07:38:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
 ERROR - 2022-03-01 07:38:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 07:40:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 07:40:20 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 07:43:35 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 07:43:35 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 07:43:40 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 07:43:40 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 07:50:44 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 07:50:44 --> 404 Page Not Found: Jenis_ruang/img
+ERROR - 2022-03-01 07:50:48 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 07:50:48 --> 404 Page Not Found: Jenis_ruang/img
+ERROR - 2022-03-01 07:50:56 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 07:50:56 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 07:50:58 --> 404 Page Not Found: Jenis_ruang/update
+ERROR - 2022-03-01 07:50:58 --> 404 Page Not Found: Jenis_ruang/update
+ERROR - 2022-03-01 07:50:58 --> 404 Page Not Found: Jenis_ruang/update
+ERROR - 2022-03-01 07:50:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:14:06 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:14:07 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:14:10 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:14:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:14:15 --> 404 Page Not Found: Nilai/index
+ERROR - 2022-03-01 08:14:17 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:14:19 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-01 08:14:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:15:06 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:15:06 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:15:08 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:15:08 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:18:44 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:18:44 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:30:37 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:30:37 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:30:44 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-01 08:30:49 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:30:58 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:30:58 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:32:40 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:32:40 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 08:32:44 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 08:32:44 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 09:03:13 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 09:03:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 09:03:14 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 09:03:14 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 09:03:16 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 09:03:16 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 09:03:55 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 09:03:55 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 09:04:31 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 09:04:31 --> 404 Page Not Found: Img/undraw_profile.svg
