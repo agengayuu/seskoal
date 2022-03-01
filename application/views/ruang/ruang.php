@@ -1,6 +1,8 @@
 <div class="container-fluid">
-    <div class="alert alert-success" role="alert">
-        Ruangan
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Ruangan
+        </div>
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>

@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <form action="<?php echo base_url('ruang/simpan') ?>">
+    <form method="post" action="<?php echo base_url('ruang/simpan') ?>">
 
         <div class="form-group">
             <label>ID Ruang</label>

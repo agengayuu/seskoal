@@ -60,9 +60,10 @@ exit('No direct script access allowed');
                 $this->form_validation->set_rules('id_ruang', 'id_ruang', 'required', ['required' => 'Id Ruang wajib diisi!']);
                 $this->form_validation->set_rules('nama_ruang', 'nama_ruang', 'required' , ['required' => 'Nama Ruang wajib diisi!']);
                 $this->form_validation->set_rules('id_jenis_ruang', 'id_jenis_ruang', 'required' , ['required' => 'Jenis Ruang wajib diisi!']);
+                $this->form_validation->set_rules('kapasitas', 'kapasitas', 'required' , ['required' => 'Kapasitas wajib diisi!']);
                 $this->form_validation->set_rules('lantai', 'lantai', 'required' , ['required' => 'Lantai wajib diisi!']);
-                $this->form_validation->set_rules('gedung', 'gedung', 'required' , ['required' => 'Lantai wajib diisi!']);
-                $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Lantai wajib diisi!']);
+                $this->form_validation->set_rules('gedung', 'gedung', 'required' , ['required' => 'Gedung wajib diisi!']);
+                $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Keterangan wajib diisi!']);
             }
 
             public function update($id) {

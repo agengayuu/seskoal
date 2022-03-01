@@ -1,11 +1,13 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-        Selamat Datang (Nama) di Dashboard Dosen
-        <hr>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-            <i class="fas fa-cogs"></i> Control Panel
-        </button>
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Selamat Datang (Nama) di Dashboard Dosen
+            <hr>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                <i class="fas fa-cogs"></i> Control Panel
+            </button>
+        </div>
     </div>
 
         <!-- Modal -->

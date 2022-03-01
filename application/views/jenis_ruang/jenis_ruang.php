@@ -1,6 +1,8 @@
 <div class="container-fluid">
-    <div class="alert alert-success" role="alert">
-        Jenis Ruangan
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Jenis Ruangan
+        </div>
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
@@ -32,7 +34,7 @@
                             <td width="20px"> <?php echo anchor('jenis_ruang/delete/'.$jr->id_jenis_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                         </tr>
                             <?php
-                            endforeach
+                            endforeach;
                             ?>
                     </thead>
                 </table>
