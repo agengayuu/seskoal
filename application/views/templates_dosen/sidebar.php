@@ -1,6 +1,6 @@
-
-
 <body id="page-top">
+
+<img src="<?php echo base_url() ?>assets/assets/images/bannr.png" class="img-fluid" alt="Responsive image">
 
 <!-- Page Wrapper -->
 <div id="wrapper">
