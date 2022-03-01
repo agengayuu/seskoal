@@ -1,7 +1,5 @@
 <body id="page-top">
 
-<img src="<?php echo base_url() ?>assets/assets/images/bannr.png" class="img-fluid" alt="Responsive image">
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -44,9 +42,10 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Sub-Menu Akademik:</h6>
-                    <a class="collapse-item" href="buttons.html">Mahasiswa</a>
+                    <a class="collapse-item" href="<?php echo base_url('mahasiswa') ?>">Mahasiswa</a>
+                    <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Jenis Ruangan</a>
                     <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Ruangan</a>
-                    <a class="collapse-item" href="buttons.html">Ruangan</a>
+                    <a class="collapse-item" href="<?php echo base_url('nilai') ?>">Nilai</a>
                 </div>
             </div>
         </li>

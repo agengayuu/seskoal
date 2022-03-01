@@ -27,6 +27,10 @@
 
 </head>
 
+<body id="page-top">
+
+<img src="<?php echo base_url() ?>assets/assets/images/bannr.png" class="img-fluid" alt="Responsive image">
+
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -46,3 +50,4 @@
             </div>
         </div>
     </div>
+</body>

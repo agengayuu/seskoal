@@ -177,3 +177,334 @@ ERROR - 2022-03-01 02:27:02 --> Severity: Notice --> Undefined variable: title C
 ERROR - 2022-03-01 02:27:02 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-01 02:27:18 --> 404 Page Not Found: Assets/global
 ERROR - 2022-03-01 02:27:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:32:24 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:32:24 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:33:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:33:20 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:33:22 --> Query error: Table 'seskoal.user' doesn't exist - Invalid query: SELECT *
+FROM `user`
+WHERE `username` IS NULL
+ERROR - 2022-03-01 02:33:23 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:33:25 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:33:25 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:36:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:36:21 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:36:22 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:22 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:36:22 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:22 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:36:47 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:47 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:36:47 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:36:48 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:49 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:36:49 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:39:32 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:39:32 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:39:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:39:33 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:39:33 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:39:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:39:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:39:33 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:39:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:39:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:39:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:39:34 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:39:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:39:34 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:39:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:39:35 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:39:35 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:39:35 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:43 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:41:43 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:41:43 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:41:43 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:41:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:43 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:44 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:41:51 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:41:51 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:41:51 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:41:51 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:51 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:41:51 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:52 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:41:54 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:54 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:41:55 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:41:55 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:41:55 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:41:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:41:55 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:42:02 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:42:07 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:42:07 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:42:07 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:42:07 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:42:07 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:42:07 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:42:07 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:42:08 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:02 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:02 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:04 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:27 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:27 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:27 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:27 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:27 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:27 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:28 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:31 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:32 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:34 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:35 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:35 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:35 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:55 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:55 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:43:56 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:44:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-01 02:44:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:06 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:44:15 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-01 02:44:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-01 02:44:26 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:27 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:44:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:44:33 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:33 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:44:37 --> 404 Page Not Found: Nilai/index
+ERROR - 2022-03-01 02:44:40 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:42 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:42 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:44:48 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:44:48 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:45:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:45:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:46:08 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:46:08 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:47:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:47:35 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:47:44 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:47:44 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:49:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:49:05 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:49:08 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:49:08 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:49:18 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:49:26 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:50:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:50:05 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-01 02:50:08 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:50:08 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:50:29 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:50:35 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:50:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:50:51 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:50:51 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-01 02:50:53 --> 404 Page Not Found: Main_menu_mahasiswa/dataself
+ERROR - 2022-03-01 02:50:53 --> 404 Page Not Found: Main_menu_mahasiswa/assets
+ERROR - 2022-03-01 02:50:53 --> 404 Page Not Found: Main_menu_mahasiswa/assets
+ERROR - 2022-03-01 02:51:02 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:51:03 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-01 02:52:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:52:20 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-01 02:52:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:52:39 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:52:39 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-01 02:52:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:52:52 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:53:22 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-01 02:53:32 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:53:32 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-01 02:54:06 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:54:06 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:58:13 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:58:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-01 02:59:13 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:59:33 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:59:37 --> 404 Page Not Found: Mahasiswa/simpan
+ERROR - 2022-03-01 02:59:37 --> 404 Page Not Found: Mahasiswa/assets
+ERROR - 2022-03-01 02:59:37 --> 404 Page Not Found: Mahasiswa/assets
+ERROR - 2022-03-01 02:59:39 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-01 02:59:45 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
