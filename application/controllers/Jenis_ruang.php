@@ -51,13 +51,46 @@ class Jenis_ruang extends CI_Controller{
         $this->form_validation->set_rules('nama_jenis_ruang', 'nama_jenis_ruang', 'required', ['required' => 'Nama Ruangan Wajib diisi!']);
     }
 
+    public function update($id) {
+        $where = array('id_jenis_ruang' => $id);
+        $data['jenis_ruang'] = $this->jenis_ruang_model->edit_data($where, 'tbl_jenis_ruang')->result();
+
+        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/sidebar'); 
+        $this->load->view('jenis_ruang/update_jenis_ruang', $data); 
+        $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function update_aksi(){
+        // $timestamp = date('Y-m-d H:i:s');
+
+        $id = $this->input->post('id_jenis_ruang');
+        $nama_jenis_ruang = $this->input->post('nama_jenis_ruang');
+
+        $data = array(
+            'nama_jenis_ruang' => $nama_jenis_ruang
+        );
+
+        $where = array(
+            'id_jenis_ruang' => $id
+        );
+
+        $this->jenis_ruang_model->update_data($where, $data, 'tbl_jenis_ruang');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+        redirect('jenis_ruang');
+
+    }
+
     public function delete($id) {
 
         $where = array('id_jenis_ruang' => $id);
         $this->jenis_ruang_model->hapus_data($where, 'tbl_jenis_ruang'); 
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-        <span aria-hidden="true">&times;</span> </button></div>');
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
 
         redirect('jenis_ruang');
     }
