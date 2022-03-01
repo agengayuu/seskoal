@@ -11,6 +11,8 @@
 
     <title><?= $title ;?></title>
 
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/seskoal.png" type="image/x-icon"/>
+
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url() ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link

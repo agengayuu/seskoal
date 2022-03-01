@@ -3,7 +3,7 @@
     <footer class="sticky-footer bg-primary">
         <div class="container my-auto">
             <div class="copyright text-center text-white my-auto">
-                <span>Copyright &copy; Your Website 2020</span>
+                <span>Copyright &copy; 2022 Academic Information Management System - SESKOAL, All Right Reserved</span>
             </div>
         </div>
     </footer>

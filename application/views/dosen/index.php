@@ -1,7 +1,4 @@
 <div class="container-fluid">
-    <div class="alert alert-success" role="alert">
-        Menu
-    </div>
 
     <div class="alert alert-success" role="alert">
         Teks Pokoknya
