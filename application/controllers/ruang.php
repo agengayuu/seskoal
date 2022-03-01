@@ -11,7 +11,7 @@ exit('No direct script access allowed');
 
             $this->load->view('templates_dosen/header'); 
             $this->load->view('templates_dosen/sidebar'); 
-            $this->load->view('dosen/ruang', $data); 
+            $this->load->view('ruang/ruang', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
 
@@ -29,7 +29,7 @@ exit('No direct script access allowed');
 
             $this->load->view('templates_dosen/header'); 
             $this->load->view('templates_dosen/sidebar'); 
-            $this->load->view('dosen/tambah_ruang', $data); 
+            $this->load->view('ruang/tambah_ruang', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
 
@@ -72,7 +72,7 @@ exit('No direct script access allowed');
 
                 $this->load->view('templates_dosen/header'); 
                 $this->load->view('templates_dosen/sidebar'); 
-                $this->load->view('dosen/update_ruang', $data); 
+                $this->load->view('ruang/update_ruang', $data); 
                 $this->load->view('templates_dosen/footer'); 
             }
 
@@ -90,7 +90,7 @@ exit('No direct script access allowed');
                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                 <span aria-hidden="true">&times;</span> </button></div>');
 
-                redirect('dosen/ruang');
+                redirect('ruang');
             }
         }
 ?>
