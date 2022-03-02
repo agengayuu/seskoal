@@ -738,3 +738,53 @@ ERROR - 2022-03-02 04:25:10 --> Severity: Notice --> Undefined variable: title C
 ERROR - 2022-03-02 04:25:10 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
 ERROR - 2022-03-02 04:25:36 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-02 04:25:38 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 04:26:12 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 04:38:55 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 04:38:57 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 04:42:56 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-02 04:43:02 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 04:50:36 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-02 04:50:41 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 04:50:41 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-02 04:50:44 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 04:50:44 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 04:50:46 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:51:06 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:51:23 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:53:20 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:53:33 --> Severity: Notice --> Undefined variable: jenis_ruang C:\laragon\www\seskoal-siak\seskoal\application\views\ruang\tambah_ruang.php 20
+ERROR - 2022-03-02 04:53:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\ruang\tambah_ruang.php 20
+ERROR - 2022-03-02 04:54:03 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:54:04 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:54:39 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:58:16 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:58:54 --> 404 Page Not Found: Ruang/tambah
+ERROR - 2022-03-02 04:58:54 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-03-02 04:58:54 --> 404 Page Not Found: Ruang/assets
+ERROR - 2022-03-02 04:58:58 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 04:58:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 04:58:59 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 04:59:00 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 04:59:04 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 05:08:57 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:16:46 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:16:51 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 06:16:51 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:16:53 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 06:16:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 06:17:00 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-02 06:17:41 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:34:41 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-02 06:36:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:37:02 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:37:03 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:37:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:37:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:38:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:38:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:38:11 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:38:16 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:38:18 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:40:13 --> 404 Page Not Found: Dosen/index
+ERROR - 2022-03-02 06:40:24 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 06:40:27 --> 404 Page Not Found: Img/undraw_profile.svg

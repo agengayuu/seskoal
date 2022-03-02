@@ -15,23 +15,35 @@ exit('No direct script access allowed');
             $this->load->view('templates_dosen/footer'); 
         }
 
-        public function input() {
+        // public function input() {
 
-            $timestamp = date('Y-m-d H:i:s');
+        //     $timestamp = date('Y-m-d H:i:s');
 
-            $data = array(
-                'id_ruang'          => set_value('id_ruang'),
-                'nama_ruang'        => set_value('nama_ruang'),
-                'id_jenis_ruang'    => set_value('id_jenis_ruang'),
-                'kapasitas'         => set_value('kapasitas'),
-                'gedung'            => set_value('gedung'),
-                'lantai'            => set_value('lantai'),
-                'keterangan'        => set_value('keterangan'),
-                'created_at'        => set_value($timestamp)
-            );
+        //     $data = array(
+        //         'id_ruang'          => set_value('id_ruang'),
+        //         'nama_ruang'        => set_value('nama_ruang'),
+        //         'id_jenis_ruang'    => set_value('id_jenis_ruang'),
+        //         'kapasitas'         => set_value('kapasitas'),
+        //         'gedung'            => set_value('gedung'),
+        //         'lantai'            => set_value('lantai'),
+        //         'keterangan'        => set_value('keterangan'),
+        //         'created_at'        => set_value($timestamp)
+        //     );
+ 
+        //     $this->load->view('ruang/tambah_ruang', $data); 
+        // }
 
-            $this->load->view('templates_dosen/header'); 
-            $this->load->view('templates_dosen/sidebar'); 
+        public function input(){
+            $data['title'] = 'Tambah Ruangan';
+
+            $data['user'] = $this->db->get_where('user', ['username'=> 
+            $this->session->userdata('username')])->row_array();
+            $this->load->view('templates_dosen/header', $data); 
+            $this->load->view('templates_dosen/sidebar', $data);
+        
+            $query= $this->db->query("select * from tbl_jenis_ruang")->result();
+            $data['jenis_ruang'] = $query;
+            
             $this->load->view('ruang/tambah_ruang', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
@@ -91,8 +103,8 @@ exit('No direct script access allowed');
                 $where = array('id_ruang' => $id);
                 $this->ruang_model->hapus_data($where, 'tbl_ruang'); 
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                <span aria-hidden="true">&times;</span> </button></div>');
+                                                        Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                        <span aria-hidden="true">&times;</span> </button></div>');
 
                 redirect('ruang');
             }

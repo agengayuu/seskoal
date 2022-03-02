@@ -1,5 +1,6 @@
 <div class="container-fluid">
 
+    <!-- Form -->
     <form method="post" action="<?php echo base_url('ruang/simpan') ?>">
 
         <div class="form-group">
@@ -15,10 +16,10 @@
         </div>
         <div class="form-group">
             <label>Jenis Ruang</label>
-                <select class="form-control" name='nama_diklat' id='nama_diklat'>
-                    <option value='0' selected>-- Pilih Jenis Ruang --</option>
-                    <?php foreach ($diklat as $d) { ?>
-                    <option value="<?php echo $d->id_diklat; ?>"><?php echo $d->nama_jenis_ruang; ?></option>
+                <select class="form-control" name='nama_jenis_ruang' id='nama_jenis_ruang'>
+                    <option value='0' selected>- Pilih Jenis Ruangan -</option>
+                    <?php foreach ($jenis_ruang as $jr) { ?>
+                    <option value="<?php echo $jr->id_jenis_ruang; ?>"><?php echo $jr->nama_jenis_ruang; ?></option>
                     <?php } ?>
 		        </select>
             <?php echo form_error('id_jenis_ruang', '<div class="text-danger small ml-3"></div>') ?>
@@ -50,7 +51,9 @@
 
         <button type="submit" class="btn btn-primary mb-4">Simpan</button>
         <button type="submit" class="btn btn-danger mb-4">Batal</button>
+
     </form>
+    <!-- Form End -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
