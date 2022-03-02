@@ -23,6 +23,15 @@ class M_user extends CI_Model{
 
         return $query->result();
     }
+
+    public function simpanpass($newpass){
+        return $this->db->insert('user', $newpass);
+
+    }
+
+
 }
+
+
 
 ?>

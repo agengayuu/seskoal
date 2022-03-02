@@ -15,6 +15,12 @@
         </div>
 
         <div class="form-group">
+            <label>Tanggal Lahir</label>
+            <input type="date" name="tgl_lhr" placeholder="Masukkan Tanggal Lahir" class="form-control">
+            <?php echo form_error('tgl_lhr', '<div class="text-danger small ml-3"></div>') ?>
+        </div>
+
+        <div class="form-group">
             <label>Angkatan</label>
             <input type="text" name="angkatan" placeholder="Masukkan Kapasitas" class="form-control">
             <?php echo form_error('angkatan', '<div class="text-danger small ml-3"></div>') ?>

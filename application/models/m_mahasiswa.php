@@ -18,6 +18,11 @@ class M_mahasiswa extends CI_Model{
         return $this->db->insert($table, $data);
 
     }
+    public function simpanuser($data2){
+        $a = $this->db->insert('user',$data2);
+        return $a;
+        print_r($a);die;
+    }
     
     public function adminedit($where,$table){
         return $this->db->get_where($table,$where);

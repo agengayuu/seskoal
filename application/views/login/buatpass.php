@@ -25,7 +25,7 @@
             <div class="container">
                 <!-- BEGIN LOGIN FORM -->
                 <div class="form">
-                    <form class="login-form" action="<?= base_url('login/cek_login') ?>" method="post">
+                    <form class="login-form" action="<?= base_url('login/validasi_pass') ?>" method="post">
                         <div class="container">
                             <center>
                                 <div class="logo">
@@ -34,37 +34,25 @@
                             </center>
                         </div>
                         <div class="form-header">
-                            <h2>Selamat Datang<br />
-                            Academic Information System</h2>
+                            <h2 style="text-align: center;">Buat Password<br />
+                            </h2>
                         </div>
                         <div class="form-group">
                             <div class="input-icon">
                                 <i class="fa fa-user"></i>
-                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Username" name="username" value="<?= set_value('username');?>" />
+                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan NIM" name="username" value="<?= set_value('username');?>" />
                                 <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="input-icon">
                                 <i class="fa fa-lock"></i>
-                                <input type="password" name="password" class="form-control placeholder-no-fix" placeholder="Password " autocomplete="off" onkeypress="capLock(event)"/>
-                                <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="rmb">
-                                <input type="checkbox" value="remember" name="remember">
-                                <span>remember me</span>   
-                            </label>
-                            <div class="float-right">
-                                <a href="<?= base_url('login/buatpass');?>">Buat password</a>
+                                <input type="date" name="tgl_lhr" class="form-control placeholder-no-fix" placeholder="Masukan Tanggal Lahir " autocomplete="off"/>
+                                <?= form_error('tgl_lhr', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                         </div>
 
                         <input type="hidden" id="token" name="token">
-                            <!--
-                            <a href="<?php echo base_url('ceklogin/cas') ?>" class="btn blue">&nbsp;&nbsp;&nbsp;CAS <i class="m-icon-swapright m-icon-white"></i></a>
-                            -->
-                            <button type="submit" class="btn green">
-                                Login <i class="m-icon-swapright m-icon-white"></i>
+                            <button type="submit" class="btn green" <?= base_url('login/validasi_pass/');?>>
+                                Lanjut <i class="m-icon-swapright m-icon-white"></i>
                             </button>
 					
                     </form>

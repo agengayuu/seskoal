@@ -63,6 +63,9 @@ public function adminsimpan(){
     $email          = $this->input->post('email');
     $no_tlp         = $this->input->post('no_tlp');
     $foto           = $this->input->post('foto');
+    $id_grup_user   = $this->input->post('id_grup_user');
+    $tgl_lhr        = $this->input->post('tgl_lhr');
+    $hsl            = date('jmY', strtotime($tgl_lhr));
 
     $data = array(
         'nim' => $nim,
@@ -75,7 +78,15 @@ public function adminsimpan(){
         'no_tlp' => $no_tlp,
         'foto'   => $foto 
     );
+
+    $data2 = array(
+        'username' => $nim,
+        'id_grup_user' => 2,
+        'is_active' =>1,
+        'id_unique' => $nim.$hsl
+    );
     $this->m_mahasiswa->adminsimpan($data,'tbl_mahasiswa');
+    $this->m_mahasiswa->simpanuser($data2, 'user');
     redirect('mahasiswa');
 
 }
