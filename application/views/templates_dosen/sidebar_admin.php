@@ -46,6 +46,7 @@
                     <h6 class="collapse-header">Sub-Menu Kemahasiswaan:</h6>
                     <a class="collapse-item" href="<?= base_url ('mahasiswa')?>">Mahasiswa</a>
                     <a class="collapse-item" href="<?= base_url ('diklat')?>">Diklat</a>
+                    <a class="collapse-item" href="<?= base_url ('dosen')?>">Dosen</a>
                 </div>
             </div>
         </li>
