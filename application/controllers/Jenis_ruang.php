@@ -2,12 +2,14 @@
 
 class Jenis_ruang extends CI_Controller{
     public function index(){
-        $data['jenis_ruang'] = $this->jenis_ruang_model->tampil_data()->result();
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar',$data); 
 
-        $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar'); 
+        $data['jenis_ruang'] = $this->jenis_ruang_model->tampil_data()->result();
         $this->load->view('jenis_ruang/jenis_ruang', $data); 
         $this->load->view('templates_dosen/footer'); 
+
     }
 
     public function input() {

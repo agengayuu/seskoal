@@ -2,7 +2,7 @@
 
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Selamat Datang (Nama) di Dashboard Dosen
+            Selamat Datang <?= $user['username'];?> di Dashboard Dosen
             <hr>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                 <i class="fas fa-cogs"></i> Control Panel

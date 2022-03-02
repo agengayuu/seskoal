@@ -333,3 +333,193 @@ ERROR - 2022-03-02 03:07:06 --> Severity: Warning --> Invalid argument supplied 
 ERROR - 2022-03-02 03:07:06 --> 404 Page Not Found: Ruang/img
 ERROR - 2022-03-02 03:21:28 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
 ERROR - 2022-03-02 03:21:28 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:28:52 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:28:52 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:28:52 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:28:53 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:29:18 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:29:18 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:29:18 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:29:18 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:30:12 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:30:12 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:12 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:12 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:30:13 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:30:13 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:13 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:30:14 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:30:14 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:14 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:14 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:30:18 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:30:18 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:18 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:18 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:30:31 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:30:31 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:30:41 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:30:41 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:41 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:30:41 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:32:37 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:32:37 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:32:49 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:32:49 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:33:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-02 03:33:27 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:33:27 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-02 03:33:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-02 03:33:48 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:33:48 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-02 03:33:49 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:33:49 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:35:22 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:35:22 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:35:23 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:35:24 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:35:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:35:29 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:35:29 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:35:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:35:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:35:34 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:35:34 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:35:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:35:37 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:35:37 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:35:37 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:35:37 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:36:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-02 03:36:13 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:36:13 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-02 03:36:16 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:36:16 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:36:16 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:36:16 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:37:54 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:37:54 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:37:54 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:37:54 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:37:57 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:37:57 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:38:02 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:38:03 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:38:06 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:38:06 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:38:06 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:38:06 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:38:45 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:38:45 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:38:45 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:38:45 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:38:45 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:39:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:39:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:39:04 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:39:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:39:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:39:05 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:05 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:05 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:39:16 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:39:16 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:39:16 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:16 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:39:17 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:39:17 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:39:17 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:17 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:39:17 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:40:19 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:40:19 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:40:19 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:40:19 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:40:20 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:40:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:40:20 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:40:20 --> Severity: Notice --> Undefined variable: mahasiswa_d C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:40:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 29
+ERROR - 2022-03-02 03:40:20 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:40:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:40:29 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:40:29 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:40:30 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:41:10 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:10 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:10 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:41:27 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-02 03:41:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:29 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:29 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:31 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-02 03:41:32 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:32 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:34 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:41:36 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:36 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:36 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:36 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:41:56 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:56 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:56 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:56 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:41:56 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:41:57 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:41:57 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:57 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:41:57 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:41:57 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:42:50 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:42:50 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:42:50 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:42:50 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:42:50 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:42:50 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:42:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:42:59 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:42:59 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:42:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:42:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:42:59 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:43:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:43:04 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:43:04 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:43:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:43:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:43:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:43:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:43:29 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:43:29 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:43:40 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:43:40 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:43:40 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:43:40 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:43:48 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:43:48 --> Severity: Notice --> Undefined variable: user C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:43:48 --> Severity: Notice --> Trying to access array offset on value of type null C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\sidebar.php 170
+ERROR - 2022-03-02 03:43:48 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:43:48 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:44:04 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:44:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:10 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:44:10 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\mahasiswa_d\mahasiswa_d.php 1
+ERROR - 2022-03-02 03:44:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:12 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:44:12 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:13 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:44:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:35 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:44:35 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:37 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-02 03:44:37 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-02 03:44:39 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-02 03:44:41 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12

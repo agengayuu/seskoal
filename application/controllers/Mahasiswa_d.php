@@ -15,14 +15,12 @@ class Mahasiswa_d extends CI_Controller{
     }
  
     public function index(){
-        $data['title'] = 'Daftar Mahasiswa per Diklat';
 
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
 
         $data['mahasiswa_d'] = $this->m_mahasiswa_d->tampil_data()->result();
-        $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar'); 
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar', $data); 
         $this->load->view('mahasiswa_d/mahasiswa_d', $data); 
 
 
