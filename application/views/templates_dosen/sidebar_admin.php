@@ -47,6 +47,7 @@
                     <a class="collapse-item" href="<?= base_url ('mahasiswa')?>">Mahasiswa</a>
                     <a class="collapse-item" href="<?= base_url ('diklat')?>">Diklat</a>
                     <a class="collapse-item" href="<?= base_url ('dosen')?>">Dosen</a>
+                    <a class="collapse-item" href="<?= base_url ('matakuliah')?>">Matakuliah</a>
                 </div>
             </div>
         </li>
