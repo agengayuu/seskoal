@@ -18,7 +18,7 @@
             <div class="table-responsive">
                 <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
+                        <tr  style="text-align: center;">
                             <th>No</th>
                             <th>Nama Ruang</th>
                             <th>Aksi</th>
@@ -26,8 +26,8 @@
                         <?php
                         $no =1;
                         foreach ($jenis_ruang as $jr) : ?>
-
-                        <tr>
+                        
+                        <tr  style="text-align: center;">
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?php echo $jr->nama_jenis_ruang ?></td>
                             <td width="20px"> <?php echo anchor('jenis_ruang/update/'.$jr->id_jenis_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
