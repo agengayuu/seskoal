@@ -13,6 +13,16 @@
             <input type="text" name="nama_ruang" placeholder="Masukkan Nama Ruang" class="form-control">
             <?php echo form_error('nama_ruang', '<div class="text-danger small ml-3"></div>') ?>
         </div>
+        <div class="form-group">
+            <label>Jenis Ruang</label>
+                <select class="form-control" name='nama_diklat' id='nama_diklat'>
+                    <option value='0' selected>-- Pilih Jenis Ruang --</option>
+                    <?php foreach ($diklat as $d) { ?>
+                    <option value="<?php echo $d->id_diklat; ?>"><?php echo $d->nama_jenis_ruang; ?></option>
+                    <?php } ?>
+		        </select>
+            <?php echo form_error('id_jenis_ruang', '<div class="text-danger small ml-3"></div>') ?>
+        </div>
 
         <div class="form-group">
             <label>Kapasitas</label>

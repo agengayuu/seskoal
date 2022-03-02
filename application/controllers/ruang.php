@@ -16,6 +16,9 @@ exit('No direct script access allowed');
         }
 
         public function input() {
+
+            $timestamp = date('Y-m-d H:i:s');
+
             $data = array(
                 'id_ruang'          => set_value('id_ruang'),
                 'nama_ruang'        => set_value('nama_ruang'),
@@ -24,7 +27,7 @@ exit('No direct script access allowed');
                 'gedung'            => set_value('gedung'),
                 'lantai'            => set_value('lantai'),
                 'keterangan'        => set_value('keterangan'),
-                'created_at'        => set_value('created_at')
+                'created_at'        => set_value($timestamp)
             );
 
             $this->load->view('templates_dosen/header'); 
@@ -42,7 +45,7 @@ exit('No direct script access allowed');
                     $data = array(
                         'id_ruang'      => $this->input->post('id_ruang', TRUE),
                         'nama_ruang'    => $this->input->post('nama_ruang', TRUE),
-                        'id_jenis_ruang'=> $this->input->post('keterangan', TRUE),
+                        'id_jenis_ruang'=> $this->input->post('id_jenis_ruang', TRUE),
                         'lantai'        => $this->input->post('lantai', TRUE),
                         'gedung'        => $this->input->post('gedung', TRUE),
                         'keterangan'    => $this->input->post('keterangan', TRUE),
