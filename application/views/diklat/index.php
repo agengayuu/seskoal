@@ -23,7 +23,6 @@
                         <tr style="text-align: center;">
                             <th>No</th>
                             <th>Diklat</th>
-                            <th>Created_at</th>
                             <th>Aksi</th>
                         </tr>
                         <?php
@@ -33,7 +32,6 @@
                         <tr  style="text-align: center;">
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $d->nama_diklat ?></td>
-                            <td><?= $d->created_at ?></td>
                             <center>
                             <td width="20px"> <?php echo anchor('diklat/adminedit/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
                             <td width="20px"> <?php echo anchor('diklat/adminhapus/'.$d->id_diklat, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>

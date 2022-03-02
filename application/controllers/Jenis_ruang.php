@@ -62,7 +62,6 @@ class Jenis_ruang extends CI_Controller{
     }
 
     public function update_aksi(){
-        // $timestamp = date('Y-m-d H:i:s');
 
         $id = $this->input->post('id_jenis_ruang');
         $nama_jenis_ruang = $this->input->post('nama_jenis_ruang');
