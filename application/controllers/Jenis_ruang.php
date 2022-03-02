@@ -2,6 +2,8 @@
 
 class Jenis_ruang extends CI_Controller{
     public function index(){
+        $data['title'] = 'Jenis Ruangan';
+
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar',$data); 
@@ -13,7 +15,12 @@ class Jenis_ruang extends CI_Controller{
     }
 
     public function input() {
-        
+        $data['title'] = 'Tambah Jenis Ruangan';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar',$data); 
+
         $timestamp = date('Y-m-d H:i:s');
 
         $data = array(
@@ -22,8 +29,6 @@ class Jenis_ruang extends CI_Controller{
             'created_at'               => set_value($timestamp)
         );
 
-        $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar'); 
         $this->load->view('jenis_ruang/tambah_jenis_ruang', $data); 
         $this->load->view('templates_dosen/footer'); 
     }
@@ -54,11 +59,15 @@ class Jenis_ruang extends CI_Controller{
     }
 
     public function update($id) {
+        $data['title'] = 'Update Jenis Ruangan';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar',$data); 
+
         $where = array('id_jenis_ruang' => $id);
         $data['jenis_ruang'] = $this->jenis_ruang_model->edit_data($where, 'tbl_jenis_ruang')->result();
 
-        $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar'); 
         $this->load->view('jenis_ruang/update_jenis_ruang', $data); 
         $this->load->view('templates_dosen/footer'); 
     }

@@ -11,7 +11,7 @@
             <!-- <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div> -->
-            <div class="sidebar-brand-text mx-3">SIAK SESKOAL</div>
+            <div class="sidebar-brand-text mx-3">SELAMAT DATANG DI SIAK SESKOAL</div>
         </a>
 
         <!-- Divider -->
@@ -49,6 +49,7 @@
                     <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Pertanyaan</a>
                     <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Jadwal</a>
                     <a class="collapse-item" href="<?php echo base_url('nilai') ?>">Nilai</a>
+                    <a class="collapse-item" href="<?php echo base_url('dosen') ?>">Dosen</a>
                 </div>
             </div>
         </li>
