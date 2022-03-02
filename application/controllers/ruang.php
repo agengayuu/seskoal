@@ -6,11 +6,13 @@ exit('No direct script access allowed');
 
     class Ruang extends CI_Controller {
         public function index() {
+            $data['user'] = $this->db->get_where('user', ['username'=> 
+            $this->session->userdata('username')])->row_array();
+            
+            $this->load->view('templates_dosen/header',$data);  
+            $this->load->view('templates_dosen/sidebar',$data); 
 
             $data['ruang'] = $this->ruang_model->tampil_data()->result();
-
-            $this->load->view('templates_dosen/header'); 
-            $this->load->view('templates_dosen/sidebar'); 
             $this->load->view('ruang/ruang', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
