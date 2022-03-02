@@ -54,15 +54,15 @@ public function adminsimpan(){
     $this->load->view('templates_dosen/footer'); 
     //-------------------END----------------------------------
 
-    $nim = $this->input->post('nim');
-    $nama = $this->input->post('nama');
-    $angkatan = $this->input->post('angkatan');
-    $tahun_masuk = $this->input->post('tahun_masuk');
+    $nim            = $this->input->post('nim');
+    $nama           = $this->input->post('nama');
+    $angkatan       = $this->input->post('angkatan');
+    $tahun_masuk    = $this->input->post('tahun_masuk');
     $tahun_akademik = $this->input->post('tahun_akademik');
-    $jabatan = $this->input->post('jabatan');
-    $email = $this->input->post('email');
-    $no_tlp = $this->input->post('no_tlp');
-    $foto = $this->input->post('foto');
+    $jabatan        = $this->input->post('jabatan');
+    $email          = $this->input->post('email');
+    $no_tlp         = $this->input->post('no_tlp');
+    $foto           = $this->input->post('foto');
 
     $data = array(
         'nim' => $nim,
