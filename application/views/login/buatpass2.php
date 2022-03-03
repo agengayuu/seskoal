@@ -46,7 +46,7 @@
                             </div>
                            <div class="input-icon">
                                 <i class="fa fa-lock"></i>
-                                <input type="password2" name="password2" class="form-control placeholder-no-fix" placeholder="Konfirmasi Password " autocomplete="off" onkeypress="capLock(event)"/>
+                                <input type="password" name="password2" class="form-control placeholder-no-fix" placeholder="Konfirmasi Password " autocomplete="off" onkeypress="capLock(event)"/>
                                 <?= form_error('password2', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                         </div>
