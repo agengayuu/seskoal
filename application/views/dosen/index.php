@@ -1,85 +1,58 @@
 <div class="container-fluid">
-
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Selamat Datang <?= $user['username'];?> di Dashboard Dosen
-            <hr>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                <i class="fas fa-cogs"></i> Control Panel
-            </button>
+            Dosen
+        </div>
+</div>
+    
+
+    <?php echo $this->session->flashdata('pesan') ?>
+
+    <?php echo anchor('dosen/admintambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Mata Kuliah</button>') ?>
+
+    <!--table -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Dosen</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr style="text-align: center;">
+                            <th>No</th>
+                            <th>NIP</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Aksi</th>
+                        </tr>
+                    
+                        <?php
+                        $no =1;
+                        foreach ($dosen as $d) : ?>
+
+                        <tr style="text-align: center;">
+                            <td width="20px"><?php echo $no++ ?></td>
+                            <td><?= $d->nip ?></td>
+                            <td><?= $d->nama ?></td>
+                            <td><?= $d->email ?></td>
+                            <td><?= $d->no_tlp ?></td>
+                            <center>
+                            <td width="15px"> <?php echo anchor('matakuliah/adminedit/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
+                            <td width="15px"> <?php echo anchor('matakuliah/adminhapus/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            </center>
+                        </tr>
+                            <?php
+                            endforeach
+                            ?>
+                    </thead>
+                </table>
+            </div>
         </div>
     </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-cogs"></i> Control Panel</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">PROFILE</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-                </div><hr>
-
-                <div class="row">
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">INPUT NILAI</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">JADWAL</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">RUANGAN</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-            </div>
-        </div>
-        </div>
-
-    <h3>
-        <center>Selamat Datang di Aplikasi Akademik SESKOAL</center>
-    </h3>
 </div>
-
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-

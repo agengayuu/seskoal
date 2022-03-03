@@ -1,13 +1,5 @@
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
+<body>
+    
     <!-- Footer -->
     <footer class="sticky-footer bg-primary">
         <div class="container my-auto">
