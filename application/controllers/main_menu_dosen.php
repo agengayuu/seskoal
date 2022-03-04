@@ -12,7 +12,7 @@ class Main_menu_dosen extends CI_Controller {
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar',$data); 
 
-        $this->load->view('dosen/index', $data); 
+        $this->load->view('main_menu/dosen', $data); 
         $this->load->view('templates_dosen/footer'); 
     }
 }

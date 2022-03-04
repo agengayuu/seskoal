@@ -70,3 +70,60 @@ ERROR - 2022-03-04 01:58:14 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-04 01:58:46 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-04 01:59:03 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-04 02:00:42 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:01:50 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:01:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:01:50 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:11 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:11 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:11 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:11 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:11 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:12 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:21 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:21 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:21 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:23 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:23 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:31 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:31 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:31 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:33 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:33 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:33 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:34 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:34 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:34 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:02:34 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:34 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:02:35 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:03:03 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:03:03 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:03:03 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:06:38 --> 404 Page Not Found: Cek_login/index
+ERROR - 2022-03-04 02:06:40 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:40 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:41 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:41 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:06:41 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:41 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:06:42 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:42 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:06:42 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:12:09 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:12:09 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:12:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:12:10 --> Severity: Notice --> Undefined variable: dosen C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:12:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\index.php 32
+ERROR - 2022-03-04 02:12:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:13:46 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:13:47 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:13:49 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:13:53 --> 404 Page Not Found: Nilai/index
+ERROR - 2022-03-04 02:13:56 --> Query error: Table 'seskoal.tbl_dosen' doesn't exist - Invalid query: select * from 
+                        tbl_dosen 
+ERROR - 2022-03-04 02:13:59 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:17:33 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 02:17:42 --> 404 Page Not Found: Img/undraw_profile.svg
