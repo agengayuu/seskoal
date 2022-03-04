@@ -50,7 +50,7 @@
 
         <div class="form-group">
             <label> Diklat </label>
-            <select class="form-control" name='nama_diklat' id='nama_diklat'>
+            <select class="form-control" name='id_diklat' id='id_diklat'>
 			<option value='0' selected>--- Pilih Diklat ---</option>
 		    <?php foreach ($diklat as $d) { ?>
 			<option value="<?php echo $d->id_diklat; ?>"><?php echo $d->nama_diklat; ?></option>
