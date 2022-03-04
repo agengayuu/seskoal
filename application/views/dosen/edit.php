@@ -55,10 +55,13 @@
             <input type="date" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir" class="form-control" value = "<?= $d->tgl_lahir;?>">
             <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3"></div>') ?>
         </div>
-        
+
         <div class="form-group">
-            <label>Jenis Kelamin</label>
-            <input type="text" name="jk" placeholder="Masukkan Jenis Kelamin" class="form-control" value = "<?= $d->jk;?>">
+            <select class="form-control" id='jk'name="jk">
+                <option value="<?= $d->jk;?>"> <?= $d->jk;?> </option>
+                <option value="Perempuan"> Perempuan </option>
+                <option value='Laki-Laki'>Laki-Laki</option>
+            </select>
             <?php echo form_error('jk', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 

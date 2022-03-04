@@ -38,6 +38,7 @@ class Matakuliah extends CI_Controller
 
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['mata_kuliah'] = $query;
+        $data['dosen'] = $this->db->query("select * from tbl_dosen")->result();
         
         $this->load->view('matakuliah/tambah',$data);
         $this->load->view('templates_dosen/footer'); 
