@@ -56,8 +56,11 @@
         </div>
         
         <div class="form-group">
-            <label>Jenis Kelamin</label>
-            <input type="text" name="jk" placeholder="Masukkan Jenis Kelamin" class="form-control">
+            <select class="form-control" id='jk'name="jk">
+                <option value="Kosong">--- Pilih Jenis Kelamin ---</option>
+                <option value='p'>Perempuan </option>
+                <option value='l'>Laki-Laki</option>
+            </select>
             <?php echo form_error('jk', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 

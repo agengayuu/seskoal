@@ -63,6 +63,7 @@ public function adminsimpan(){
     $email          = $this->input->post('email');
     $no_tlp         = $this->input->post('no_tlp');
     $foto           = $this->input->post('foto');
+    $id_diklat      = $this->input->post('id_diklat');
     $id_grup_user   = $this->input->post('id_grup_user');
     $tgl_lhr        = $this->input->post('tgl_lhr');
     $hsl            = date('jmY', strtotime($tgl_lhr));
@@ -75,8 +76,9 @@ public function adminsimpan(){
         'tahun_akademik' => $tahun_akademik,
         'jabatan' => $jabatan,
         'email' =>  $email,
+        'id_diklat' => $id_diklat,
         'no_tlp' => $no_tlp,
-        'foto'   => $foto 
+        'foto'   => $foto
     );
 
     $data2 = array(

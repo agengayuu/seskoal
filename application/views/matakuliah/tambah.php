@@ -19,6 +19,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Dosen Mata Kuliah</label>
+                    <select class="form-control" name='id_dosen' id='id_dosen'>
+                    <option value='0' selected>--- Pilih Dosen ---</option>
+                    <?php foreach ($dosen as $d) { ?>
+                    <option value="<?php echo $d->id_dosen; ?>"><?php echo $d->nama; ?></option>
+			    <?php } ?>
+		        </select>
+                </div>
+
+                <div class="form-group">
                     <label>Bobot</label>
                     <input type="number" name="bobot" class="form-control">
                     <?php echo form_error('bobot', '<div class="text-danger small ml-3"></div>') ?>

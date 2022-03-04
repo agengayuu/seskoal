@@ -38,6 +38,7 @@ class Matakuliah extends CI_Controller
 
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['mata_kuliah'] = $query;
+        $data['dosen'] = $this->db->query("select * from tbl_dosen")->result();
         
         $this->load->view('matakuliah/tambah',$data);
         $this->load->view('templates_dosen/footer'); 
@@ -58,11 +59,13 @@ class Matakuliah extends CI_Controller
         $kode_mata_kuliah   = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah   = $this->input->post('nama_mata_kuliah');
         $bobot              = $this->input->post('bobot');
+        $id_dosen              = $this->input->post('id_dosen');
 
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
-            'bobot' => $bobot
+            'bobot' => $bobot,
+            'id_dosen' => $id_dosen
         );
         $this->m_matakuliah->adminsimpan($data,'tbl_mata_kuliah');
         redirect('matakuliah');
@@ -79,7 +82,9 @@ class Matakuliah extends CI_Controller
             $data = array(
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', TRUE),
-                'bobot' => $this->input->post('bobot', TRUE)
+                'bobot' => $this->input->post('bobot', TRUE),
+                'id_dosen' => $this->input->post('id_dosen', TRUE)
+                
             );
 
             print_r($data);
@@ -118,11 +123,13 @@ class Matakuliah extends CI_Controller
         $kode_mata_kuliah = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah = $this->input->post('nama_mata_kuliah');
         $bobot = $this->input->post('bobot');
+        $id_dosen              = $this->input->post('id_dosen');
 
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
-            'bobot' => $bobot
+            'bobot' => $bobot,
+            'id_dosen' => $id_dosen
         );
 
         $where = array(
