@@ -21,7 +21,7 @@
         <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('main_menu_dosen') ?>">
             <!-- <img src="<?php echo base_url() ?>assets/assets/images/seskoal.png" class="img-fluid" alt="Responsive image"> -->
-            <i class="fas fa-menu"></i><span>Menu</span></a>
+            <i class="fas fa-menu"></i></i><span>Menu</span></a>
         </li>
         
 
