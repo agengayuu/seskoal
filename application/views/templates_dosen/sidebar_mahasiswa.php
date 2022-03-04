@@ -38,7 +38,7 @@
         <li class="nav-item">
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('main_menu_mahasiswa/dataself') ?>">
-                    <i class="fa-solid fa-id-card"></i></i>
+                <i class="far fa-address-card"></i>
                     <span>Data Diri</span></a>
             </li>
         </li>
@@ -54,14 +54,14 @@
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link" href="charts.html">
-                <i class="fas fa-fw fa-chart-area"></i>
+                <i class="far fa-calendar-alt"></i>
                 <span>Jadwal Kuliah</span></a>
         </li>
 
         <li class="nav-item">
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('main_menu_mahasiswa/dataself') ?>">
-                    <i class="fa-solid fa-id-card"></i></i>
+                <i class="fa fa-clipboard"></i>
                     <span>Test Evaluasi</span></a>
             </li>
         </li>
