@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="card mb-4 py-1 border-left-primary">
+    <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
             Ruangan
         </div>

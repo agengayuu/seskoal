@@ -3,7 +3,7 @@
     <form method="post" action="<?php echo base_url('jenis_ruang/simpan') ?>">
 
         <div class="form-group">
-            <label>Nama Jenis Ruang</label>
+            <label>Nama Jenis Ruang<i style="color:red">*</i></label>
             <input type="text" name="nama_jenis_ruang" placeholder="Masukkan Jenis Ruangan" class="form-control">
             <?php echo form_error('nama_jenis_ruang', '<div class="text-danger small" ml-3></div>') ?>
         </div>

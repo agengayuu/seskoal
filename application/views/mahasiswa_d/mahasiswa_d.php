@@ -1,7 +1,7 @@
 <title><?= $title ;?></title>
 
 <div class="container-fluid">
-    <div class="card mb-4 py-1 border-left-primary">
+    <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
             <h4>Mahasiswa per Diklat</h4>
             <span>Data Mahasiswa akan ditampilkan berupa data per Diklat.</span>

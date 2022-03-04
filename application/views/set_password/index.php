@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            Set Password
+        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Set Password
         </div>
     </div>
 
