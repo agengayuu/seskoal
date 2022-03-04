@@ -8,6 +8,9 @@ class Profile_dosen extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar',$data); 
 
+        $data['profilnya'] = $this->db->query("select * from tbl_dosen")->result();
+        
+
         $this->load->view('profile_dosen/index', $data); 
         $this->load->view('templates_dosen/footer'); 
 

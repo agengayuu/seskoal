@@ -23,9 +23,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-horizontal form-bordered">
+                                            <?php foreach($profilnya as $p) {?>
                                                 <div class="form-group row">
                                                     <div class="col-md-2">
-                                                        <img src="https://cdn.ipb.ac.id/admisi/J3C119007_S0_C1_AGENG AYU_952e83d4-75f5-4be2-9c8a-1e7612a584ca.jpg" alt="User" style="width: 90%;" class="card shadow img-thumbnail rounded">
+                                                        <img src="<?= $p->foto;?>" alt="User" style="width: 90%;" class="card shadow img-thumbnail rounded">
                                                     </div>
                                                     <div class="col-md-10">
                                                         <div class="form-group row">
@@ -33,7 +34,7 @@
                                                                 <label for="">NIP</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                                <?= $p->nip;?>
                                                             </div>
                                                             <div class="col-md2">
                                                                 <button class="btn btn-danger"><i class="fas fa-edit"></i> Edit</button>
@@ -44,7 +45,7 @@
                                                                 <label for="">Nama</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                                 <?= $p->nama;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -52,7 +53,7 @@
                                                                 <label for="">Email</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                                 <?= $p->email;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -60,7 +61,7 @@
                                                                 <label for="">No Telp</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                                <?= $p->no_tlp;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -68,7 +69,7 @@
                                                                 <label for="">Tempat Lahir</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                            <?= $p->tempat_lahir;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -76,7 +77,7 @@
                                                                 <label for="">Tanggal Lahir</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                            <?= $p->tgl_lahir;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -84,7 +85,7 @@
                                                                 <label for="">Jenis Kelamin</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                            <?= $p->jk;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -92,7 +93,7 @@
                                                                 <label for="">Agama</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                            <?= $p->agama;?>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -100,9 +101,10 @@
                                                                 <label for="">Alamat</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                J3C119007
+                                                            <?= $p->alamat;?>
                                                             </div>
                                                         </div>
+                                                        <?php }?>
 
 
                                                     </div>

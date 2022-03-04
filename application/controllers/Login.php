@@ -115,7 +115,7 @@ class Login extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar_mahasiswa',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('main_menu/siswa');
         $this->load->view('templates_dosen/footer'); 
         
@@ -125,7 +125,7 @@ class Login extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar', $data); 
+        $this->load->view('templates_dosen/sidebar_admin', $data); 
         $this->load->view('main_menu/dosen');
         $this->load->view('templates_dosen/footer'); 
         
