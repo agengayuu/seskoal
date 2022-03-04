@@ -3,7 +3,7 @@
         <div class="card-body">
             Dosen
         </div>
-</div>
+    </div>
     
 
     <?php echo $this->session->flashdata('pesan') ?>
