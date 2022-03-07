@@ -33,6 +33,15 @@ class M_mahasiswa extends CI_Model{
         $this->db->where($where);
         $this->db->delete($table);
     }
+
+    public function admindetail($nim){
+        $hasil = $this->db->where('nim', $nim)->get('tbl_mahasiswa');
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else {
+            return false;
+        }
+    }
 }
 
 ?>

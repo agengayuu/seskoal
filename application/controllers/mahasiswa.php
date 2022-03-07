@@ -57,6 +57,7 @@ public function adminsimpan(){
     $nim            = $this->input->post('nim');
     $nama           = $this->input->post('nama');
     $angkatan       = $this->input->post('angkatan');
+    $tgl_lahir      = $this->input->post('tgl_lahir');
     $tahun_masuk    = $this->input->post('tahun_masuk');
     $tahun_akademik = $this->input->post('tahun_akademik');
     $jabatan        = $this->input->post('jabatan');
@@ -72,6 +73,7 @@ public function adminsimpan(){
         'nim' => $nim,
         'nama' => $nama,
         'angkatan' => $angkatan,
+        'tgl_lahir' => $tgl_lahir,
         'tahun_masuk' => $tahun_masuk,
         'tahun_akademik' => $tahun_akademik,
         'jabatan' => $jabatan,
@@ -116,6 +118,19 @@ public function adminhapus($nim){
     
         redirect('mahasiswa','refresh');
 }
+
+    public function admindetail($nim){
+        $data['title'] = 'Detail Mahasiswa';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $data['detail'] = $this->m_mahasiswa->admindetail($nim);
+
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        $this->load->view('mahasiswa/detail');
+        $this->load->view('templates_dosen/footer'); 
+    }
+
 public function dosenindex(){
 
 }
