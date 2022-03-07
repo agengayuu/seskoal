@@ -107,11 +107,14 @@ public function adminedit($nim){
 
 }
 public function adminhapus($nim){
-   
-        $this->db->query("delete from tbl_mahasiswa where nim ='" . $nim . "'");
 
-        redirect('mahasiswa','refresh');
+        $where = array('nim' => $nim);
+        $this->m_mahasiswa->adminhapus($where, 'tbl_mahasiswa'); 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
     
+        redirect('mahasiswa','refresh');
 }
 public function dosenindex(){
 

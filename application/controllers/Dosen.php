@@ -48,6 +48,7 @@ class Dosen extends CI_Controller
         $data['title'] = "Simpan Dosen";
         $data['user'] = $this->db->get_where('user', ['username' => 
         $this->session->userdata('username')])->row_array();
+        
 
         $nip            = $this->input->post('nip');
         $nama           = $this->input->post('nama');

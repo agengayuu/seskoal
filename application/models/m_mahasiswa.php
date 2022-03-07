@@ -26,7 +26,12 @@ class M_mahasiswa extends CI_Model{
     
     public function adminedit($where,$table){
         return $this->db->get_where($table,$where);
+ 
+    }
 
+    public function adminhapus($where, $table){
+        $this->db->where($where);
+        $this->db->delete($table);
     }
 }
 

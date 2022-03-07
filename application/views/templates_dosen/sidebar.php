@@ -59,16 +59,14 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                 aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Pengaturan</span>
+                <span>Informasi</span>
             </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Sub-Pengaturan:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Colors</a>
-                    <a class="collapse-item" href="utilities-border.html">Borders</a>
-                    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                    <a class="collapse-item" href="utilities-other.html">Other</a>
+                    <h6 class="collapse-header">Sub-Informasi:</h6>
+                    <a class="collapse-item" href="utilities-color.html">Informasi Akademik</a>
+                    <a class="collapse-item" href="utilities-border.html">Gallery</a>
                 </div>
             </div>
         </li>

@@ -59,8 +59,8 @@
             <label>Jenis Kelamin<i style="color:red">*</i></label>
             <select class="form-control" id='jk'name="jk">
                 <option value="Kosong">--- Pilih Jenis Kelamin ---</option>
-                <option value='p'>Perempuan </option>
-                <option value='l'>Laki-Laki</option>
+                <option value='Perempuan'>Perempuan </option>
+                <option value='Laki-laki'>Laki-Laki</option>
             </select>
             <?php echo form_error('jk', '<div class="text-danger small ml-3"></div>') ?>
         </div>
