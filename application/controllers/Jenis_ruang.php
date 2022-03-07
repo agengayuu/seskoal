@@ -21,7 +21,7 @@ class Jenis_ruang extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar',$data); 
 
-        $timestamp = date('Y-m-d H:i:s');
+        $timestamp = date('Y-m-d H:i:s'); 
 
         $data = array(
             'id_jenis_ruang'           => set_value('id_jenis_ruang'),

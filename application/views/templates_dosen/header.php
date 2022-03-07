@@ -23,7 +23,13 @@
     <link href="<?php echo base_url() ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
+    <link href="<?php echo base_url() ?>https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <script src="<?php echo base_url() ?>https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="<?php echo base_url() ?>https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
 
 </head>
 
