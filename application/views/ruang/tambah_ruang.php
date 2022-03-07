@@ -1,5 +1,9 @@
 <div class="container-fluid">
+<h1 class="h3 mb-2 text-black-800">Tambah Ruangan</h1>
 
+    <div class="card-header bg-white">
+    <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
+        <div class="card-body">
     <!-- Form -->
     <form method="post" action="<?php echo base_url('ruang/simpan') ?>">
 
@@ -50,10 +54,12 @@
         </div>
 
         <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-        <button type="submit" class="btn btn-danger mb-4">Batal</button>
+        <button type="batal" class="btn btn-danger mb-4" onclick=self.history.back()>Batal</button>
 
     </form>
-    <!-- Form End -->
+
+    </div>
+</div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
