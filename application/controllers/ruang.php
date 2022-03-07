@@ -5,6 +5,16 @@ exit('No direct script access allowed');
 
 
     class Ruang extends CI_Controller {
+
+        function __construct()
+        {
+            parent::__construct();
+            $this->load->library('form_validation');
+            $this->load->model('ruang_model');
+            $this->load->library('session');
+            //session_start();
+        }
+
         public function index() {
             $data['title'] = 'Ruangan';
 
@@ -53,7 +63,7 @@ exit('No direct script access allowed');
 
         public function simpan() {
             $this->_rules();
-
+ 
                 if($this->form_validation->run() == FALSE) {
                     $this->input();
                 } else {
@@ -61,12 +71,13 @@ exit('No direct script access allowed');
                         'id_ruang'      => $this->input->post('id_ruang', TRUE),
                         'nama_ruang'    => $this->input->post('nama_ruang', TRUE),
                         'id_jenis_ruang'=> $this->input->post('id_jenis_ruang', TRUE),
-                        'lantai'        => $this->input->post('lantai', TRUE),
+                        'kapasitas'     => $this->input->post('kapasitas', TRUE),
                         'gedung'        => $this->input->post('gedung', TRUE),
+                        'lantai'        => $this->input->post('lantai', TRUE),
                         'keterangan'    => $this->input->post('keterangan', TRUE),
                     );
 
-                    $this->ruang_model->input_data($data);
+                    $this->ruang_model->input_data($data, 'tbl_ruang');
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                     Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span> </button></div>');

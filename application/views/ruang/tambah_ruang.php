@@ -4,6 +4,7 @@
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
+            
     <!-- Form -->
     <form method="post" action="<?php echo base_url('ruang/simpan') ?>">
 
