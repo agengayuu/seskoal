@@ -72,6 +72,12 @@
         </div>
 
         <div class="form-group">
+            <label>Alamat<i style="color:red">*</i></label>
+            <textarea class="form-control" name="alamat" rows="3"></textarea>
+            <?php echo form_error('alamat', '<div class="text-danger small ml-3"></div>') ?>
+        </div>
+
+        <div class="form-group">
             <label>Foto<i style="color:red">*</i></label>
             <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required>
             <?php echo form_error('foto', '<div class="text-danger small ml-3"></div>') ?>

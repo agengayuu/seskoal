@@ -59,6 +59,7 @@ class Dosen extends CI_Controller
         $tgl_lahir      = $this->input->post('tgl_lahir');
         $jk             = $this->input->post('jk');
         $agama          = $this->input->post('agama');
+        $alamat          = $this->input->post('alamat');
         $foto           = $this->input->post('foto');
         $id_grup_user   = $this->input->post('id_grup_user');
         $created_at     = $this->input->post('created_at');
@@ -75,6 +76,7 @@ class Dosen extends CI_Controller
             'tgl_lahir' => $tgl_lahir,
             'jk'   => $jk,
             'agama'   => $agama,
+            'alamat'   => $alamat,
             'foto'   => $foto,
             'jk'   => $jk ,
             'created_at' => time()
@@ -130,6 +132,7 @@ class Dosen extends CI_Controller
         $tgl_lahir      = $this->input->post('tgl_lahir');
         $jk             = $this->input->post('jk');
         $agama          = $this->input->post('agama');
+        $alamat          = $this->input->post('alamat');
         $foto           = $this->input->post('foto');
 
         $data = array(
@@ -144,6 +147,7 @@ class Dosen extends CI_Controller
             'tgl_lahir' => $tgl_lahir,
             'jk'   => $jk,
             'agama'   => $agama,
+            'alamat'   => $alamat,
             'foto'   => $foto,
             'jk'   => $jk 
         );
@@ -162,10 +166,13 @@ class Dosen extends CI_Controller
     }
 
     public function adminhapus($id_dosen){
-        $this->db->query("delete from tbl_dosen where id_dosen ='" . $id_dosen . "'");
 
-        redirect('dosen','refresh');
+        $where = array('id_dosen' => $id_dosen);
+        $this->m_dosen->adminhapus($where, 'tbl_dosen'); 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
 
-
+        redirect('dosen', 'refresh');
     }
 }

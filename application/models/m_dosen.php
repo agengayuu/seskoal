@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('BASEPATH'))
+if(!defined('BASEPATH')) 
 exit('No direct script access allowed');
 
 class M_dosen extends CI_Model{
@@ -26,6 +26,11 @@ class M_dosen extends CI_Model{
     public function adminupdate($where,$data,$table){
     $this->db->where($where);
     $this->db->update($table,$data);
+    }
+
+    public function adminhapus($where, $table){
+        $this->db->where($where);
+        $this->db->delete($table);
     }
 
 }

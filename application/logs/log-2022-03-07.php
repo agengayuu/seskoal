@@ -104,3 +104,10 @@ ERROR - 2022-03-07 01:58:00 --> 404 Page Not Found: Ruang/img
 ERROR - 2022-03-07 01:58:06 --> 404 Page Not Found: Ruang/img
 ERROR - 2022-03-07 01:58:08 --> 404 Page Not Found: Ruang/img
 ERROR - 2022-03-07 01:58:18 --> 404 Page Not Found: Ruang/img
+ERROR - 2022-03-07 01:59:54 --> 404 Page Not Found: Master_pertanyaan/index
+ERROR - 2022-03-07 02:00:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-07 02:00:09 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-07 02:00:09 --> 404 Page Not Found: Pngtree-profile-line-black-icon-png-image_691065jpg/index
+ERROR - 2022-03-07 02:00:31 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-07 02:05:38 --> Severity: error --> Exception: syntax error, unexpected '<' C:\laragon\www\seskoal-siak\seskoal\application\views\dosen\edit.php 76
+ERROR - 2022-03-07 02:09:22 --> Severity: error --> Exception: Call to undefined method M_dosen::hapus_data() C:\laragon\www\seskoal-siak\seskoal\application\controllers\Dosen.php 171
