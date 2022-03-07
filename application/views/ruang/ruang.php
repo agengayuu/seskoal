@@ -14,42 +14,48 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Ruangan</h6>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Ruang ID</th> 
-                            <th>Nama Ruang</th>
-                            <th>Jenis Ruang</th>
-                            <th>Kapasitas</th>
-                            <th>Lantai</th>
-                            <th>Keterangan</th>
-                            <th>Aksi</th>
-                        </tr>
-                        <?php
-                        $no =1;
-                        foreach ($ruang as $rgn) : ?>
 
-                        <tr>
-                            <td width="20px"><?php echo $no++ ?></td>
-                            <td><?php echo $rgn->id_ruang ?></td>
-                            <td><?php echo $rgn->nama_ruang ?></td>
-                            <td><?php echo $rgn->id_jenis_ruang ?></td>
-                            <td><?php echo $rgn->kapasitas ?></td>
-                            <td><?php echo $rgn->lantai ?></td>
-                            <td><?php echo $rgn->keterangan ?></td>
-                            <td width="20px"> <?php echo anchor('ruang/update/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
-                            <td width="20px"> <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
-                        </tr>
-                            <?php
-                            endforeach
-                            ?>
-                    </thead>
-                </table>
+        <div class="card-body">
+                <div class="table-responsive">                
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Ruang ID</th> 
+                                        <th>Nama Ruang</th>
+                                        <th>Jenis Ruang</th>
+                                        <th>Kapasitas</th>
+                                        <th>Lantai</th>
+                                        <th>Keterangan</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $no =1;
+                                    foreach ($ruang as $rgn) : ?>
+                                            <tr>
+                                                <td width="20px"><?php echo $no++ ?></td>
+                                                <td><?php echo $rgn->id_ruang ?></td>
+                                                <td><?php echo $rgn->nama_ruang ?></td>
+                                                <td><?php echo $rgn->id_jenis_ruang ?></td>
+                                                <td><?php echo $rgn->kapasitas ?></td>
+                                                <td><?php echo $rgn->lantai ?></td>
+                                                <td><?php echo $rgn->keterangan ?></td>
+                                                <td width="20px"> <?php echo anchor('ruang/update/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                                <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                            </tr>
+                                            <?php
+                                        endforeach
+                                        ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </div>
 </div>
 
