@@ -393,3 +393,24 @@ ERROR - 2022-03-04 08:16:55 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-04 08:18:21 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-04 08:18:35 --> 404 Page Not Found: Img/undraw_profile.svg
 ERROR - 2022-03-04 08:19:01 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 08:24:35 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 08:24:49 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-04 08:24:51 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-04 08:24:54 --> Query error: Table 'seskoal.tbl_mata_kuliah' doesn't exist - Invalid query: SELECT *
+FROM `tbl_mata_kuliah`
+ERROR - 2022-03-04 08:24:56 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-04 08:24:59 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-04 08:25:05 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-04 08:25:05 --> 404 Page Not Found: Login/img
+ERROR - 2022-03-04 08:25:10 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:00:13 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:44:16 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:44:59 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:45:02 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:45:07 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:45:27 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:45:45 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:45:53 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:46:00 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:46:04 --> 404 Page Not Found: Img/undraw_profile.svg
+ERROR - 2022-03-04 09:46:07 --> 404 Page Not Found: Img/undraw_profile.svg

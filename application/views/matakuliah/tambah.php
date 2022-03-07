@@ -7,19 +7,19 @@
             <form action="<?php echo base_url('matakuliah/adminsimpanaksi') ?>" method="post">
 
                 <div class="form-group">
-                    <label>Kode Mata Kuliah</label>
+                    <label>Kode Mata Kuliah<i style="color:red">*</i></label>
                     <input type="text" name="kode_mata_kuliah" class="form-control" required>
                     <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
-                    <label>Nama Mata Kuliah</label>
+                    <label>Nama Mata Kuliah<i style="color:red">*</i></label>
                     <input type="text" name="nama_mata_kuliah" class="form-control">
                     <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
-                    <label>Dosen Mata Kuliah</label>
+                    <label>Dosen Mata Kuliah<i style="color:red">*</i></label>
                     <select class="form-control" name='id_dosen' id='id_dosen'>
                     <option value='0' selected>--- Pilih Dosen ---</option>
                     <?php foreach ($dosen as $d) { ?>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Bobot</label>
+                    <label>Bobot<i style="color:red">*</i></label>
                     <input type="number" name="bobot" class="form-control">
                     <?php echo form_error('bobot', '<div class="text-danger small ml-3"></div>') ?>
                 </div>

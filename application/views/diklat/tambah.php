@@ -3,7 +3,7 @@
     <form action="<?php echo base_url('diklat/adminsimpan') ?>" method="post">
 
         <div class="form-group">
-            <label>Nama Diklat</label>
+            <label>Nama Diklat<i style="color:red">*</i></label>
             <!-- <div class="col-md-4"> -->
             <input type="text" name="nama_diklat" placeholder="Masukkan Diklat" class="form-control" required>
             <?php echo form_error('nama_diklat', '<div class="text-danger small ml-3"></div>') ?>
