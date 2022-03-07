@@ -14,39 +14,43 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Sub Menu</h6>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr  style="text-align: center;">
+                        <tr>
                             <th>No</th>
                             <th>Sub Menu</th>
                             <th>Menu</th>
                             <th>Url</th>
                             <th>Icon</th>
                             <th>Active</th>
+                            <th width="70px">Aksi</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <?php
                         $no =1;
                         foreach ($submenu as $s) : ?>
-                        
-                        <tr  style="text-align: center;">
+                            <tr>
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $s->title?></td>
                             <td><?= $s->nama_menu?></td>
                             <td><?= $s->url?></td>
                             <td><?= $s->icon?></td>
                             <td><?= $s->is_active?></td>
-                            <td width="20px"> <?php echo anchor('menu/subedit/'.$s->id_sub_menu, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
-                            <td width="20px"> <?php echo anchor('menu/subdelete/'.$s->id_sub_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
-                        </tr>
-                            <?php
-                            endforeach;
+                            <td width="20px"> <?php echo anchor('menu/subedit/'.$s->id_sub_menu, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                            <?php echo anchor('menu/subdelete/'.$s->id_sub_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            </tr>
+                                <?php
+                            endforeach
                             ?>
-                    </thead>
+                    </tbody>
                 </table>
             </div>
         </div>
+
     </div>
 
 
