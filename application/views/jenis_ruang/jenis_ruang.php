@@ -22,8 +22,8 @@
                             <thead>
                                 <tr>
                                     <th width="10px">No</th>
-                                    <th width="50px">Jenis Ruangan</th>
-                                    <th>Aksi</th>
+                                    <th>Jenis Ruangan</th>
+                                    <th width="100px">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
