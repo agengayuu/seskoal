@@ -1057,3 +1057,67 @@ ERROR - 2022-03-07 03:30:31 --> 404 Page Not Found: Vendor/jquery-easing
 ERROR - 2022-03-07 03:30:31 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-03-07 03:30:31 --> 404 Page Not Found: Vendor/bootstrap
 ERROR - 2022-03-07 03:30:31 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:30:59 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:30:59 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:33:55 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:33:55 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:34:26 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:26 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:36 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:34:36 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:34:36 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:34:36 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:34:36 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:36 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:34:37 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:34:37 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:34:55 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:34:55 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:35:14 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:35:14 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-07 03:35:19 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-07 03:35:19 --> 404 Page Not Found: Js/demo
