@@ -93,7 +93,13 @@ class Diklat extends CI_Controller{
     }
 
     public function adminhapus($id){
-        $this->db->query("delete from tbl_diklat where id_diklat ='" . $id . "'");
+
+        $where = array('id_diklat' => $id);
+        $this->m_diklat->adminhapus($where, 'tbl_diklat'); 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
         redirect('diklat','refresh');
     }
     
