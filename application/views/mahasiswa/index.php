@@ -15,42 +15,43 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h6>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr style="text-align: center;">
+                        <tr>
                             <th>No</th>
                             <th>Nim</th>
                             <th>Nama Mahasiswa</th>
                             <th>Angkatan</th>
                             <th>Tahun Masuk</th>
-                            <th>Jabatan</th>
                             <th>Email</th>
                             <th>Aksi</th>
                         </tr>
-                        <?php
-                        $no =1;
+                    </thead>
+                    <tbody>
+                        <?php 
+                        $no =  1;
                         foreach ($siswa as $s) : ?>
-
-                        <tr style="text-align: center;">
+                        <tr>
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $s->nim ?></td>
                             <td><?= $s->nama ?></td>
                             <td><?= $s->angkatan ?></td>
                             <td><?= $s->tahun_masuk ?></td>
-                            <td><?= $s->jabatan ?></td>
                             <td><?= $s->email ?></td>
-                            <center>
-                            <td width="20px"> <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
-                            <td width="20px"> <?php echo anchor('mahasiswa/adminhapus/'.$s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
-                            </center>
+                            
+                            <td> <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>' ) ?>
+                                 <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                 <?php echo anchor('mahasiswa/adminhapus/'.$s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                            </td>
+                            
                         </tr>
-                            <?php
+                                <?php
                             endforeach
                             ?>
-                        
-                    </thead>
+                    </tbody>
                 </table>
             </div>
         </div>
