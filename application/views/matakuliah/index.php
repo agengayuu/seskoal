@@ -15,36 +15,36 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Mata Kuliah</h6>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr style="text-align: center;">
+                        <tr>
                             <th>No</th>
                             <th>Kode</th>
                             <th>Nama Mata Kuliah</th>
                             <th>Bobot</th>
                             <th>Aksi</th>
                         </tr>
-                    
+                    </thead>
+                    <tbody>
                         <?php
-                        $no =1;
-                        foreach ($matakuliah as $m) : ?>
-
-                        <tr style="text-align: center;">
-                            <td width="20px"><?php echo $no++ ?></td>
+                            $no =1;
+                            foreach ($matakuliah as $m) : ?>
+                        <tr>
+                            <td><?php echo $no++ ?></td>
                             <td><?= $m->kode_mata_kuliah ?></td>
                             <td><?= $m->nama_mata_kuliah ?></td>
                             <td><?= $m->bobot ?></td>
-                            <center>
-                            <td width="15px"> <?php echo anchor('matakuliah/adminedit/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?></td>
-                            <td width="15px"> <?php echo anchor('matakuliah/adminhapus/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            <td> <?php echo anchor('matakuliah/adminedit/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                            <?php echo anchor('matakuliah/adminhapus/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             </center>
                         </tr>
-                            <?php
+                                <?php
                             endforeach
                             ?>
-                    </thead>
+                    </tbody>
                 </table>
             </div>
         </div>
