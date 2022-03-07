@@ -58,6 +58,21 @@ class Menu extends CI_Controller
 
     }
 
+    public function edit(){
+
+
+    }
+
+    public function editaksi(){
+
+
+    }
+
+    public function hapus (){
+
+
+    }
+
     public function submenu(){
         $data['title'] = 'Sub Menu Management';
         $data['user'] = $this->db->get_where('user', ['username'=> 
@@ -68,8 +83,52 @@ class Menu extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin',$data);             
         $this->load->view('menu/submenu');
         $this->load->view('templates_dosen/footer'); 
-            
+
+    }
+    public function tambahsub(){
+        $data['title'] = 'Tambah Sub Menu ';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+
+        $data['menunya'] = $this->db->query("select * from user_menu") ->result();
+        $this->load->view('templates_dosen/sidebar_admin',$data);             
+        $this->load->view('menu/tambahsub');
+        $this->load->view('templates_dosen/footer'); 
+
+    }
     
+    
+    public function simpansub(){
+        $data['title'] = 'Tambah Sub Menu';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data);             
+        $this->load->view('menu/tambah');
+        $this->load->view('templates_dosen/footer'); 
+
+        $title = $this->input->post('title');
+        $id_menu = $this->input->post ('id_menu');
+        $url = $this->input->post ('url');
+        $icon = $this->input->post ('icon');
+        $is_active = $this->input->post ('status');
+
+        $data = array( 
+                'title' =>  $title,
+                'id_menu' => $id_menu,
+                'url' => $url,
+                'icon' => $icon,
+                'is_active' => $is_active
+
+            );
+        $this->m_menu->adminsubsimpan($data, 'user_submenu');
+        
+        redirect('menu/submenu', 'refresh');
+
+    }
+
+    public function subedit($id){
 
     }
 

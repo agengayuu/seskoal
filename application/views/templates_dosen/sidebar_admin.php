@@ -10,14 +10,76 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
             <div class="sidebar-brand-text mx-3">SIAK SESKOAL</div>
         </a>
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
+
+
+        <?php 
+        //$grupuser = $this->session->userdata('id_grup_user');
+        // $querymenu = "select 'user_menu'.'id_menu', 'nama_menu'
+        //             from 'user_menu' join 'user_akses_menu'
+        //             on 'user_menu'.'id_menu' = user_akses_menu.id_menu
+        //             where 'user_akses_menu'.'id_grup_user' = $grupuser
+        //             order by 'user_akses_menu'.'id_menu' asc";
+
+        //  $querymenu = "SELECT user_menu.id_menu, nama_menu
+        //  FROM user_menu
+        //  JOIN user_akses_menu ON user_menu.id_menu = user_akses_menu.id_menu
+        //  WHERE user_akses_menu.id_grup_user = $grupuser
+        //  order by user_akses_menu.id_menu  asc
+        //  ";       
+        // $grupuser=$this->db->get_where('user', ['id_grup_user'=> 
+        // $this->session->userdata('id_grup_user')])->row_array();
+   
+        $grupuser = $this->session->userdata('id_grup_user');
+        $querymenu="SELECT `user_menu`.`id_menu`, `nama_menu`
+                    FROM `user_menu`
+                    JOIN `user_akses_menu`
+                    ON `user_menu`.`id_menu` = `user_akses_menu`.`id_menu`
+                    WHERE `user_akses_menu`.`id_grup_user` = $grupuser
+                    ORDER BY `user_akses_menu`.`id_menu`  ASC
+                     ";
+
+        $menu = $this->db->query($querymenu)->result_array();
+        //var_dump($menu);die;
+        ?>
+
+        <!-- LOOPING MENU  -->
+        <?php foreach ($menu as $m) :?>
+            <div class="sidebar-heading">
+                <?= $m['nama_menu']?>
+            </div>
+
+
+            <!-- loopig sub menu sesuai menu -->
+            <?php 
+            $menuid = $m['id_menu'];
+            $querysubmenu ="SELECT * FROM `user_submenu`
+            JOIN `user_menu`
+            ON `user_submenu`.`id_menu` = `user_menu`.`id_menu`
+            WHERE `user_submenu`.`id_menu` = $menuid
+            AND `user_submenu`.`is_active`  = 1 ";
+
+            $submenu = $this->db->query($querysubmenu)->result_array();
+            
+           // print_r($submenu);die;
+            ?>
+
+            <?php foreach($submenu as $sm) :?>
+                <li class="nav-item ">
+                <a class="nav-link" href="<?= $sm['url']; ?>">
+                <i class="<?= $sm['icon'];?>"></i>
+                <span><?= $sm['title'];?></span></a>
+        </li>
+            <?php endforeach;?>
+               <!-- Divider -->
+        <hr class="sidebar-divider">
+
+            <?php endforeach;?>
+
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
@@ -29,10 +91,6 @@
         <!-- Divider -->
         <hr class="sidebar-divider">
 
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Master
-        </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -48,6 +106,11 @@
                     <a class="collapse-item" href="<?= base_url ('diklat')?>">Diklat</a>
                     <a class="collapse-item" href="<?= base_url ('dosen')?>">Dosen</a>
                     <a class="collapse-item" href="<?= base_url ('matakuliah')?>">Matakuliah</a>
+                    <a class="collapse-item" href="<?= base_url ('ruang')?>">Ruangan</a>
+                    <a class="collapse-item" href="<?= base_url ('jenis_ruang')?>">Jenis Ruang</a>
+                    <a class="collapse-item" href="<?= base_url ('pertanyaan')?>">Pertanyaan</a>
+
+                    
                 </div>
             </div>
         </li>
@@ -57,16 +120,15 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                 aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Pengaturan</span>
+                <span>Akademik</span>
             </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Sub-Pengaturan:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Colors</a>
-                    <a class="collapse-item" href="utilities-border.html">Borders</a>
-                    <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                    <a class="collapse-item" href="utilities-other.html">Other</a>
+                    <h6 class="collapse-header">Sub-Akademik:</h6>
+                    <a class="collapse-item" href="utilities-color.html">Jadwal Kuliah </a>
+                    <a class="collapse-item" href="utilities-border.html">Jadwal Ruang</a>
+                    <a class="collapse-item" href="utilities-animation.html">Rekapitulasi Studi</a>
                 </div>
             </div>
         </li>
@@ -76,7 +138,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Addons
+            User Management
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -84,7 +146,7 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                 aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Pages</span>
+                <span>User</span>
             </a>
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">

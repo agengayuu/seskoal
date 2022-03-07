@@ -32,4 +32,9 @@ class M_menu extends CI_Model{
         return $this->db->query($query)->result();
 
      }
+
+     public function adminsubsimpan($data){
+         return $this->db->insert('user_submenu',$data);
+
+     }
 }
