@@ -148,7 +148,7 @@ class Menu extends CI_Controller
         $id_menu = $this->input->post ('id_menu');
         $url = $this->input->post ('url');
         $icon = $this->input->post ('icon');
-        $is_active = $this->input->post ('status');
+        $is_active = $this->input->post ('is_active');
 
         $data = array( 
                 'title' =>  $title,
@@ -166,17 +166,63 @@ class Menu extends CI_Controller
 
     public function subedit($id){
         
+        $data['title'] = 'Edit Sub Menu ';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data);           
+
+        $where = array(
+            'id_sub_menu' => $id
+        ); 
+        $data['menunya'] = $this->db->query("select * from user_menu") ->result();
+        $data['subnya'] = $this->m_menu->subedit($where, 'user_submenu');
+        $this->load->view('menu/editsub',$data);
+        $this->load->view('templates_dosen/footer'); 
     }
 
+    public function editsubaksi(){
+        $data['title'] = 'Edit Sub Menu';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data);             
+        $this->load->view('menu/tambah');
+        $this->load->view('templates_dosen/footer'); 
+
+        $title = $this->input->post('title');
+        $id_menu = $this->input->post ('id_menu');
+        $url = $this->input->post ('url');
+        $icon = $this->input->post ('icon');
+        $is_active = $this->input->post ('is_active');
+        $id = $this->input->post('id_sub_menu');
+
+        $data = array( 
+                'title' =>  $title,
+                'id_menu' => $id_menu,
+                'url' => $url,
+                'icon' => $icon,
+                'is_active' => $is_active
+
+            );
+        $where = array(
+                'id_sub_menu' => $id
+            ); 
+        $this->m_menu->editsubaksi($where, $data, 'user_submenu');
+        
+        redirect('menu/submenu', 'refresh');
+
+
+    }
+
+    public function subdelete($id){
+   
+        $this->db->query("delete from user_submenu where id_sub_menu ='" . $id . "'");
+
+        redirect('menu/submenu','refresh');
     
 
-
-
-
-
-
-
-
+    }
 
 
 }

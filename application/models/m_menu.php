@@ -42,4 +42,17 @@ class M_menu extends CI_Model{
         return $this->db->insert('user_submenu',$data);
 
     }
+
+    public function subedit($where, $table) {
+        return $this->db->get_where($table, $where)->result();
+     }
+
+     public function editsubaksi($where, $data, $table){
+        $this->db->where($where);
+        $this->db->update($table, $data);
+    }
+
+
+
+
 }
