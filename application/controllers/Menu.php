@@ -58,18 +58,54 @@ class Menu extends CI_Controller
 
     }
 
-    public function edit(){
+    public function _rules() {
+        $this->form_validation->set_rules('nama_menu', 'nama_menu', 'required', ['required' => 'Nama Menu Wajib diisi!']);
+    }
 
+    public function edit($id_menu){
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $data['title'] = 'Edit Menu';
+        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        $where = array(
+            'id_menu' => $id_menu
+        );
+        $data['menunya'] = $this->m_menu->edit_data($where, 'user_menu')->result();
+        $this->load->view('menu/edit', $data);
+        $this->load->view('templates_dosen/footer');
 
     }
 
     public function editaksi(){
+        $id_menu = $this->input->post('id_menu');
+        $nama_menu = $this->input->post('nama_menu');
 
+        $data = array(
+            'id_menu' => $id_menu,
+            'nama_menu' => $nama_menu
+        );
 
+        $where = array(
+            'id_menu' => $id_menu
+        );
+
+        $this->m_menu->edit_data_aksi($where, $data, 'user_menu');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+        redirect('menu');
     }
 
-    public function hapus (){
+    public function hapus($id_menu){
+        $where = array('id_menu' => $id_menu);
+        $this->m_menu->hapus_data($where, 'user_menu'); 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
 
+        redirect('menu');
 
     }
 
@@ -129,7 +165,7 @@ class Menu extends CI_Controller
     }
 
     public function subedit($id){
-
+        
     }
 
     
