@@ -13,7 +13,7 @@
                     <?php echo form_error('nama_menu', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-                <button class="btn btn-danger mb-4" onclick=self.history.back()>Batal</button>
+                <button class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
             </form>
         </div>
     </div>

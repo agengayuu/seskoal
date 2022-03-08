@@ -158,6 +158,14 @@
                             </form>
                         </div>
                     </li>
+<!-- 
+                        <div class="page-toolbar">
+                            <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm btn-default" data-container="body" data-placement="bottom" data-original-title="Rubah range tanggal">
+                                <i class="fas fa-calendar"></i>&nbsp; 
+                                <span class="thin uppercase visible-lg-inline-block">&nbsp;</span>&nbsp; 
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div> -->
 
                     <div class="topbar-divider d-none d-sm-block"></div>
                     
