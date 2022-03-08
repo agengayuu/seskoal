@@ -57,7 +57,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-            <button type="submit" class="btn btn-danger mb-4">Batal</button>
+            <button class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
            
     </form>
     <?php } ?>

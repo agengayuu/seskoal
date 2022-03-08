@@ -24,8 +24,8 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Diklat</th>
+                                    <th width="10px">No</th>
+                                    <th width="50px">Diklat</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>

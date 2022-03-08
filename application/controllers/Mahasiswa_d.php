@@ -22,7 +22,7 @@ class Mahasiswa_d extends CI_Controller{
         $data['mahasiswa_d'] = $this->m_mahasiswa_d->tampil_data()->result();
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar', $data); 
-        $this->load->view('mahasiswa_d/mahasiswa_d', $data); 
+        $this->load->view('mahasiswa_d/index', $data); 
 
 
         $data['diklatnya'] = $this->m_mahasiswa_d->tampil_data()->result();

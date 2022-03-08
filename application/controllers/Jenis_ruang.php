@@ -8,8 +8,8 @@ class Jenis_ruang extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar',$data); 
 
-        $data['jenis_ruang'] = $this->jenis_ruang_model->tampil_data()->result();
-        $this->load->view('jenis_ruang/jenis_ruang', $data); 
+        $data['jenis_ruang'] = $this->m_jenis_ruang->tampil_data()->result();
+        $this->load->view('jenis_ruang/index', $data); 
         $this->load->view('templates_dosen/footer'); 
 
     }
@@ -29,7 +29,7 @@ class Jenis_ruang extends CI_Controller{
             'created_at'               => set_value($timestamp)
         );
 
-        $this->load->view('jenis_ruang/tambah_jenis_ruang', $data); 
+        $this->load->view('jenis_ruang/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
     }
 
@@ -46,7 +46,7 @@ class Jenis_ruang extends CI_Controller{
 
             print_r($data);
 
-            $this->jenis_ruang_model->input_data($data);
+            $this->m_jenis_ruang->input_data($data);
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
                                                     Data Berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span></button></div>');
@@ -66,9 +66,9 @@ class Jenis_ruang extends CI_Controller{
         $this->load->view('templates_dosen/sidebar',$data); 
 
         $where = array('id_jenis_ruang' => $id);
-        $data['jenis_ruang'] = $this->jenis_ruang_model->edit_data($where, 'tbl_jenis_ruang')->result();
+        $data['jenis_ruang'] = $this->m_jenis_ruang->edit_data($where, 'tbl_jenis_ruang')->result();
 
-        $this->load->view('jenis_ruang/update_jenis_ruang', $data); 
+        $this->load->view('jenis_ruang/update', $data); 
         $this->load->view('templates_dosen/footer'); 
     }
 
@@ -85,7 +85,7 @@ class Jenis_ruang extends CI_Controller{
             'id_jenis_ruang' => $id
         );
 
-        $this->jenis_ruang_model->update_data($where, $data, 'tbl_jenis_ruang');
+        $this->m_jenis_ruang->update_data($where, $data, 'tbl_jenis_ruang');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                 Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
@@ -97,7 +97,7 @@ class Jenis_ruang extends CI_Controller{
     public function delete($id) {
 
         $where = array('id_jenis_ruang' => $id);
-        $this->jenis_ruang_model->hapus_data($where, 'tbl_jenis_ruang'); 
+        $this->m_jenis_ruang->hapus_data($where, 'tbl_jenis_ruang'); 
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');

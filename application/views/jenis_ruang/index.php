@@ -21,9 +21,9 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>No</th>
+                                    <th width="10px">No</th>
                                     <th>Jenis Ruangan</th>
-                                    <th>Aksi</th>
+                                    <th width="100px">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>

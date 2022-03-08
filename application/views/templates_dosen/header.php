@@ -22,6 +22,11 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url() ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <link href="<?php echo base_url() ?>assets/global/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet"/>
+    <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+    <link href="<?php echo base_url() ?>assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url() ?>assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+
     <!-- Custom styles for this page -->
     <link href="<?php echo base_url() ?>https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">

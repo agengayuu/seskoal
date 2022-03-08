@@ -33,6 +33,15 @@ class M_dosen extends CI_Model{
         $this->db->delete($table);
     }
 
+    public function admindetail($id_dosen){
+        $hasil = $this->db->where('id_dosen', $id_dosen)->get('tbl_dosen');
+        if($hasil->num_rows() > 0){
+            return $hasil->result();
+        } else {
+            return false;
+        }
+    }
+
 }
 
 ?>

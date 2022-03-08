@@ -16,7 +16,7 @@
             </div>
 
             <button type="submit" class="btn btn-info mb-4">Update</button>
-            <button type="cancel" class="btn btn-danger mb-4">Back</button>
+            <button class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
         </form>
 
     <?php endforeach; ?>

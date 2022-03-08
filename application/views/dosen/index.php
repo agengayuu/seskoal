@@ -39,7 +39,8 @@
                             <td><?= $d->nama ?></td>
                             <td><?= $d->email ?></td>
                             
-                            <td> <?php echo anchor('dosen/adminedit/'.$d->id_dosen, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                            <td> <?php echo anchor('dosen/admindetail/'.$d->id_dosen, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>' ) ?> 
+                                <?php echo anchor('dosen/adminedit/'.$d->id_dosen, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                             <?php echo anchor('dosen/adminhapus/'.$d->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             
                         </tr>

@@ -10,7 +10,7 @@ exit('No direct script access allowed');
         {
             parent::__construct();
             $this->load->library('form_validation');
-            $this->load->model('ruang_model');
+            $this->load->model('m_ruang');
             $this->load->library('session');
             //session_start();
         }
@@ -23,7 +23,7 @@ exit('No direct script access allowed');
             $this->load->view('templates_dosen/header',$data);  
             $this->load->view('templates_dosen/sidebar',$data); 
 
-            $data['ruang'] = $this->ruang_model->tampil_data()->result();
+            $data['ruang'] = $this->m_ruang->tampil_data()->result();
             $this->load->view('ruang/ruang', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
@@ -57,7 +57,7 @@ exit('No direct script access allowed');
             $query= $this->db->query("select * from tbl_jenis_ruang")->result();
             $data['jenis_ruang'] = $query;
             
-            $this->load->view('ruang/tambah_ruang', $data); 
+            $this->load->view('ruang/tambah', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
 
@@ -77,7 +77,7 @@ exit('No direct script access allowed');
                         'keterangan'    => $this->input->post('keterangan', TRUE),
                     );
 
-                    $this->ruang_model->input_data($data, 'tbl_ruang');
+                    $this->m_ruang->input_data($data, 'tbl_ruang');
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                     Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span> </button></div>');
@@ -98,11 +98,11 @@ exit('No direct script access allowed');
             public function update($id) {
                 
                 $where = array('id_ruang' => $id);
-                $data['tbl_ruang'] = $this->ruang_model->edit_data($where, 'tbl_jurusan')->result();
+                $data['tbl_ruang'] = $this->m_ruang->edit_data($where, 'tbl_jurusan')->result();
 
                 $this->load->view('templates_dosen/header'); 
                 $this->load->view('templates_dosen/sidebar'); 
-                $this->load->view('ruang/update_ruang', $data); 
+                $this->load->view('ruang/update', $data); 
                 $this->load->view('templates_dosen/footer'); 
             }
 
@@ -115,7 +115,7 @@ exit('No direct script access allowed');
             public function delete($id) {
 
                 $where = array('id_ruang' => $id);
-                $this->ruang_model->hapus_data($where, 'tbl_ruang'); 
+                $this->m_ruang->hapus_data($where, 'tbl_ruang'); 
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                         Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                         <span aria-hidden="true">&times;</span> </button></div>');
