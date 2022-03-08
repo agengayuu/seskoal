@@ -23,7 +23,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-horizontal form-bordered">
-                                            <?php foreach($profilnya as $p) {?>
+                                            <?php foreach($user as $p) {?>
                                                 <div class="form-group row">
                                                     <div class="col-md-2">
                                                         <img src="<?= $p->foto;?>" alt="User" style="width: 90%;" class="card shadow img-thumbnail rounded">
@@ -104,7 +104,7 @@
                                                             <?= $p->alamat;?>
                                                             </div>
                                                         </div>
-                                                        <?php }?>
+                                                        <?php } ?>
 
 
                                                     </div>
