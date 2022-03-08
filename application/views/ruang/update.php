@@ -1,11 +1,15 @@
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-black-800">Edit Ruangan</h1>
+    <div class="card mb-4 py-0 border-left-primary">
+        <div class="card-body">
+         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Update Ruangan 
+        </div>
+    </div>
 
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
     
-    <?php foreach($ruangnya as $r) { ?>        
+    <?php foreach($ruangnya as $r) { ?>         
     <!-- Form -->
     <form method="post" action="<?php echo base_url('ruang/update_aksi') ?>">
         <div class="form-group">
