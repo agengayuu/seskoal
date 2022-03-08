@@ -1,5 +1,5 @@
 <?php
-    class Ruang_model extends CI_Model {
+    class M_ruang extends CI_Model {
 
         function construct(){
             parent:: __construct();
