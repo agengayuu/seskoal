@@ -13,7 +13,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-            <button class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
+            <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
         </form>
 
     </div>
