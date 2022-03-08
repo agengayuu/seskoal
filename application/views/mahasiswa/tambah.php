@@ -76,6 +76,34 @@
                     <?php echo form_error('foto', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
+                <!-- document -->
+                <br />
+                <hr>
+                <br />
+                <table class="table table-bordered mb-4">
+                    <thead class="thead-dark">
+                        <tr align="center">
+                            <th>Jenis Dokumen</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="center">
+                            <th>Dokumen 1</th>
+                            <th><input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required></th>
+                        </tr>
+                        <tr align="center">
+                            <th>Dokumen 2</th>
+                            <th><input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required></th>
+                        </tr>
+                        <tr align="center">
+                            <th>Dokumen 3</th>
+                            <td><input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- end document -->
+
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
             </form>
