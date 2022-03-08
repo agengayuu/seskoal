@@ -23,7 +23,7 @@
                             <th>No</th>
                             <th>Sub Menu</th>
                             <th>Menu</th>
-                            <th>Url</th>
+                            <th>URL</th>
                             <th>Icon</th>
                             <th>Active</th>
                             <th width="70px">Aksi</th>
