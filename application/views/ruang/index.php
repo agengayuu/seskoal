@@ -23,7 +23,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Ruang ID</th> 
+                                        <!-- <th>Ruang ID</th>  -->
                                         <th>Nama Ruang</th>
                                         <th>Jenis Ruang</th>
                                         <th>Kapasitas</th>
@@ -38,13 +38,13 @@
                                     foreach ($ruang as $rgn) : ?>
                                             <tr>
                                                 <td width="20px"><?php echo $no++ ?></td>
-                                                <td><?php echo $rgn->id_ruang ?></td>
+                                                <!-- <td><?php echo $rgn->id_ruang ?></td> -->
                                                 <td><?php echo $rgn->nama_ruang ?></td>
                                                 <td><?php echo $rgn->id_jenis_ruang ?></td>
                                                 <td><?php echo $rgn->kapasitas ?></td>
                                                 <td><?php echo $rgn->lantai ?></td>
                                                 <td><?php echo $rgn->keterangan ?></td>
-                                                <td width="20px"> <?php echo anchor('ruang/test/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                                <td width="20px"> <?php echo anchor('ruang/edit/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                                                 <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                             </tr>
                                             <?php
