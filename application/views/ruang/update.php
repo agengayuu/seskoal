@@ -21,9 +21,9 @@
         <div class="form-group">
             <label>Jenis Ruang<i style="color:red">*</i></label>
                 <select class="form-control" name='id_jenis_ruang' id='id_jenis_ruang'>
-                    <option value='0' selected>--- Pilih Jenis Ruangan ---</option>
+                    <option>--- Pilih Jenis Ruangan ---</option>
                     <?php foreach ($jenisnya as $jr) { ?>
-                    <option value="<?php echo $jr->id_jenis_ruang; ?>"><?php echo $jr->nama_jenis_ruang; ?></option>
+                    <option value="<?php echo $jr->id_jenis_ruang; ?>" <?php if($jr->id_jenis_ruang == $r->id_jenis_ruang){ echo "selected";}?>><?php echo $jr->nama_jenis_ruang; ?></option>
                     <?php } ?>
 		        </select>
             <?php echo form_error('id_jenis_ruang', '<div class="text-danger small ml-3"></div>') ?>
@@ -49,12 +49,12 @@
         
         <div class="form-group">
             <label>Keterangan<i style="color:red">*</i></label>
-            <textarea class="form-control" name="keterangan" rows="3" value="<?= $r->keterangan;?>"></textarea>
+            <textarea class="form-control" name="keterangan" rows="3"> <?= $r->keterangan;?></textarea>
             <?php echo form_error('keterangan', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 
         <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-        <button type="batal" class="btn btn-danger mb-4" onclick=self.history.back()>Batal</button>
+        <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
 
     </form>
     <?php } ?>

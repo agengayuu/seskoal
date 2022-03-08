@@ -130,10 +130,10 @@ exit('No direct script access allowed');
                 $data = array(
                     'id_ruang'      =>  $id_ruang,
                     'nama_ruang'    =>  $nama_ruang,
-                    'id_jenis_ruang'=> $id_jenis_ruang,
-                    'kapasitas'     => $kapasitas,
-                    'gedung'        => $gedung,
-                    'lantai'        => $lantai ,
+                    'id_jenis_ruang'=>  $id_jenis_ruang,
+                    'kapasitas'     =>  $kapasitas,
+                    'gedung'        =>  $gedung,
+                    'lantai'        =>  $lantai ,
                     'keterangan'    =>  $keterangan
                 );
 
