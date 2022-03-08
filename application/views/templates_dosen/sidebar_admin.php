@@ -109,8 +109,7 @@
                     <a class="collapse-item" href="<?= base_url ('ruang')?>">Ruangan</a>
                     <a class="collapse-item" href="<?= base_url ('jenis_ruang')?>">Jenis Ruang</a>
                     <a class="collapse-item" href="<?= base_url ('pertanyaan')?>">Pertanyaan</a>
-
-                    
+                    <a class="collapse-item" href="<?= base_url ('pengumuman')?>">Pengumuman</a>
                 </div>
             </div>
         </li>
