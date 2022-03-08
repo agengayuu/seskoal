@@ -11,6 +11,9 @@ class Mahasiswa_d extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_mahasiswa_d');
         $this->load->library('session');
+        if(!$this->session->userdata('username')){
+            redirect('login');
+        }
        // session_start();
     }
  

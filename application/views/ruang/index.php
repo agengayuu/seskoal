@@ -44,7 +44,7 @@
                                                 <td><?php echo $rgn->kapasitas ?></td>
                                                 <td><?php echo $rgn->lantai ?></td>
                                                 <td><?php echo $rgn->keterangan ?></td>
-                                                <td width="20px"> <?php echo anchor('ruang/update/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                                <td width="20px"> <?php echo anchor('ruang/test/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                                                 <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                             </tr>
                                             <?php

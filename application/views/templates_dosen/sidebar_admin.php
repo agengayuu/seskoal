@@ -44,6 +44,8 @@
                      ";
 
         $menu = $this->db->query($querymenu)->result_array();
+        //print_r($menu); die;
+
         //var_dump($menu);die;
         ?>
 
@@ -65,12 +67,16 @@
 
             $submenu = $this->db->query($querysubmenu)->result_array();
             
-           // print_r($submenu);die;
+        //    print_r($submenu);die;
             ?>
 
             <?php foreach($submenu as $sm) :?>
-                <li class="nav-item ">
-                <a class="nav-link" href="<?= $sm['url']; ?>">
+                <?php
+                // echo "<pre>";
+                //      print_r($sm['url']);die;
+                    ?>
+                <li class="nav-item test">
+                <a class="nav-link" href="<?= base_url(). $sm['url']; ?>">
                 <i class="<?= $sm['icon'];?>"></i>
                 <span><?= $sm['title'];?></span></a>
         </li>
