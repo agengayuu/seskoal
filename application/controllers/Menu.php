@@ -12,6 +12,9 @@ class Menu extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_menu');
         $this->load->library('session');
+        if(!$this->session->userdata('username')){
+            redirect('login');
+        }
        // session_start();
     }
     public function index(){
@@ -121,6 +124,7 @@ class Menu extends CI_Controller
         $this->load->view('templates_dosen/footer'); 
 
     }
+    
     public function tambahsub(){
         $data['title'] = 'Tambah Sub Menu ';
         $data['user'] = $this->db->get_where('user', ['username'=> 
@@ -141,7 +145,7 @@ class Menu extends CI_Controller
         $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar_admin',$data);             
-        $this->load->view('menu/tambah');
+        $this->load->view('menu/tambahsub');
         $this->load->view('templates_dosen/footer'); 
 
         $title = $this->input->post('title');
@@ -187,7 +191,7 @@ class Menu extends CI_Controller
         $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar_admin',$data);             
-        $this->load->view('menu/tambah');
+        $this->load->view('menu/tambahsub');
         $this->load->view('templates_dosen/footer'); 
 
         $title = $this->input->post('title');
@@ -219,7 +223,7 @@ class Menu extends CI_Controller
    
         $this->db->query("delete from user_submenu where id_sub_menu ='" . $id . "'");
 
-        redirect('menu/submenu','refresh');
+        redirect('menu/index','refresh');
     
 
     }

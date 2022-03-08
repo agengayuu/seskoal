@@ -60,13 +60,14 @@ class Login extends CI_Controller
                         //save to session
                         $this->session->set_userdata($data);
                         if($user['id_grup_user'] == 1){              
-                            $this->_admin();
+                            // $this->_admin();
+                            redirect('main_menu/admin','refresh');
                         }
                         elseif ($user ['id_grup_user'] == 2){
-                            $this->_siswa();
+                            redirect('main_menu/siswa','refresh');
                         }
                         else{
-                            $this->_dosen();
+                            redirect('main_menu/dosen','refresh');
                         }
 
                         //arahkan ke view sesuai dengan grup
@@ -94,42 +95,44 @@ class Login extends CI_Controller
     }
 
     public function logout(){
-        $this->session->unset_usedata('username');
-        $this->session->unset_usedata('id_grup_user');
+        $this->session->sess_destroy();
+        // $this->session->unset_usedata('username');
+        // $this->session->unset_usedata('id_grup_user');
         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> you have been logged out</div>');
         redirect('login');
     }
 
 
-    private function _admin(){
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array(); 
-        $this->load->view('templates_dosen/header',$data); 
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
-        $this->load->view('main_menu/admin',$data);
-        $this->load->view('templates_dosen/footer'); 
+    // public function admin(){
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array(); 
+    //     $this->load->view('templates_dosen/header',$data); 
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
+    //     $this->load->view('main_menu/admin',$data);
+    //     $this->load->view('templates_dosen/footer'); 
         
-    }
+    // }
+    
+   
+    // public function siswa(){
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array();  
+    //     $this->load->view('templates_dosen/header'); 
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
+    //     $this->load->view('main_menu/siswa');
+    //     $this->load->view('templates_dosen/footer'); 
+        
+    // }
 
-    private function _siswa(){
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();  
-        $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
-        $this->load->view('main_menu/siswa');
-        $this->load->view('templates_dosen/footer'); 
+    // public function dosen(){
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array();  
+    //     $this->load->view('templates_dosen/header'); 
+    //     $this->load->view('templates_dosen/sidebar_admin', $data); 
+    //     $this->load->view('main_menu/dosen');
+    //     $this->load->view('templates_dosen/footer'); 
         
-    }
-
-    private function _dosen(){
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();  
-        $this->load->view('templates_dosen/header'); 
-        $this->load->view('templates_dosen/sidebar_admin', $data); 
-        $this->load->view('main_menu/dosen');
-        $this->load->view('templates_dosen/footer'); 
-        
-    }
+    // }
 
     public function buatpass(){
         $this->load->view('login/buatpass');

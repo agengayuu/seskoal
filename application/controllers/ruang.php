@@ -4,7 +4,8 @@ if(!defined('BASEPATH'))
 exit('No direct script access allowed');
 
 
-    class Ruang extends CI_Controller {
+    class Ruang extends CI_Controller 
+    {
 
         function __construct()
         {
@@ -12,16 +13,17 @@ exit('No direct script access allowed');
             $this->load->library('form_validation');
             $this->load->model('m_ruang');
             $this->load->library('session');
+            if(!$this->session->userdata('username')){
+                redirect('login');
+            }
             //session_start();
         }
 
         public function index() {
             $data['title'] = 'Ruangan';
-
-
             $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
             $this->load->view('templates_dosen/header',$data);  
-            $this->load->view('templates_dosen/sidebar',$data); 
+            $this->load->view('templates_dosen/sidebar_admin',$data); 
 
             $data['ruang'] = $this->m_ruang->tampil_data()->result();
             $this->load->view('ruang/index', $data); 
@@ -52,7 +54,7 @@ exit('No direct script access allowed');
             $data['user'] = $this->db->get_where('user', ['username'=> 
             $this->session->userdata('username')])->row_array();
             $this->load->view('templates_dosen/header', $data); 
-            $this->load->view('templates_dosen/sidebar', $data);
+            $this->load->view('templates_dosen/sidebar_admin', $data);
         
             $query= $this->db->query("select * from tbl_jenis_ruang")->result();
             $data['jenis_ruang'] = $query;
@@ -77,8 +79,13 @@ exit('No direct script access allowed');
                         'keterangan'    => $this->input->post('keterangan', TRUE),
                     );
 
+<<<<<<< Updated upstream
                     $this->m_ruang->input_data($data, 'tbl_ruang');
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+=======
+                    $this->ruang_model->input_data($data, 'tbl_ruang');
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+>>>>>>> Stashed changes
                                                     Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span> </button></div>');
                     redirect('ruang');
@@ -95,8 +102,14 @@ exit('No direct script access allowed');
                 $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Keterangan wajib diisi!']);
             }
 
-            public function update($id) {
+            // public function update($id) {
+                // $data['title'] = "Edit Ruangan";
+                // $data['user'] = $this->db->get_where('user', ['username'=> 
+                // $this->session->userdata('username')])->row_array();
+            //     $this->load->view('templates_dosen/header',$data); 
+            //     $this->load->view('templates_dosen/sidebar_admin',$data); 
                 
+<<<<<<< Updated upstream
                 $where = array('id_ruang' => $id);
                 $data['tbl_ruang'] = $this->m_ruang->edit_data($where, 'tbl_jurusan')->result();
 
@@ -104,12 +117,61 @@ exit('No direct script access allowed');
                 $this->load->view('templates_dosen/sidebar'); 
                 $this->load->view('ruang/update', $data); 
                 $this->load->view('templates_dosen/footer'); 
+=======
+            //     $data = array('
+            //             id_ruang' => $id
+            //         );
+            //    // $data['tbl_ruang'] = $this->ruang_model->edit_data($where, 'tbl_jurusan')->result();
+            //     $this->load->view('ruang', $data); 
+            //     $this->load->view('templates_dosen/footer'); 
+            // }
+
+            public function test($id){
+                $data['title'] = "Edit Ruangan";
+                $data['user'] = $this->db->get_where('user', ['username'=> 
+                $this->session->userdata('username')])->row_array();
+                $this->load->view('templates_dosen/header'); 
+                $this->load->view('templates_dosen/sidebar_admin',$data);
+
+                $data['jenisnya'] = $this->db->query("Select * from tbl_jenis_ruang")->result();
+                
+                $where = array( 'id_ruang' => $id );
+                $data['ruangnya'] = $this->ruang_model->edit_data($where,'tbl_ruang')->result();
+
+                $this->load->view('ruang/update_ruang',$data); 
+                $this->load->view('templates_dosen/footer',$data); 
+>>>>>>> Stashed changes
             }
 
             public function update_aksi(){
-                $id     = $this->input->post('id_ruang');
-                $nama_ruang     = $this->input->post('nama_ruang');
-                
+
+                $id_ruang = $this->input->post('id_ruang');
+                $nama_ruang = $this->input->post('nama_ruang' );
+                $id_jenis_ruang =$this->input->post('id_jenis_ruang');
+                $kapasitas =  $this->input->post('kapasitas');
+                $gedung = $this->input->post('gedung');
+                $lantai = $this->input->post('lantai');
+                $keterangan = $this->input->post('keterangan');
+
+                $data = array(
+                    'id_ruang'      =>  $id_ruang,
+                    'nama_ruang'    =>  $nama_ruang,
+                    'id_jenis_ruang'=> $id_jenis_ruang,
+                    'kapasitas'     => $kapasitas,
+                    'gedung'        => $gedung,
+                    'lantai'        => $lantai ,
+                    'keterangan'    =>  $keterangan
+                );
+
+                $where = array(
+                    'id_ruang'=> $id_ruang
+                );
+                $this->ruang_model->updateaksi($where,$data, 'tbl_ruang');
+                $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+                redirect('ruang');
             }
 
             public function delete($id) {

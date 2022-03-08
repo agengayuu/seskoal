@@ -15,8 +15,8 @@
                 <input type="text" name="nama_jenis_ruang" class="form-control" value="<?php echo $jr->nama_jenis_ruang ?>">
             </div>
 
-            <button type="submit" class="btn btn-info mb-4">Update</button>
-            <button class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
+            <button type="submit" class="btn btn-info mb-4">Simpan</button>
+            <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
         </form>
 
     <?php endforeach; ?>
