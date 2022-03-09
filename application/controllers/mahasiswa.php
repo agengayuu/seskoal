@@ -23,7 +23,7 @@ public function index(){
     $data['siswa'] = $this->m_mahasiswa->tampildata()->result();
 
     $this->load->view('templates_dosen/sidebar_admin',$data); 
-    $this->load->view('mahasiswa/index');
+    $this->load->view('mahasiswa/index',$data);
     $this->load->view('templates_dosen/footer'); 
     
 }
