@@ -23,6 +23,7 @@
 //     }
 // }
 
+            // $id_menu = $querymenu['id_menu'];
 
 // function check_access($role_id, $menu_id)
 // {
