@@ -26,11 +26,11 @@
                     </thead>
                     <tbody>
                         <?php
-                        $no =1;
+                        $no =1; 
                         foreach ($menu as $m)  : ?>
                             <tr>
                             <td width="20px"><?php echo $no++ ?></td>
-                            <td><?= $m->nama_menu?></td>
+                            <td><?= $m['nama_menu']?></td>
                             <td width="20px">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 

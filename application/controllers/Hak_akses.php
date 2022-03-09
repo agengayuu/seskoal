@@ -33,8 +33,8 @@ class Hak_akses extends CI_Controller{
 
     public function akses($id_role){
 
-         $this->load->helper('aksesblock_helper');
-        echo cek_akses(1,2);die;
+        //  $this->load->helper('aksesblock_helper');
+        // echo cek_akses(1,2);die;
         $data['title'] = 'Hak Akses';
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
     
@@ -44,7 +44,7 @@ class Hak_akses extends CI_Controller{
     
         $data['role'] = $this->db->get_where('grupuser', ['id_grup_user' => $id_role])->row_array();
 
-        $data['menu'] = $this->db->query("select * from user_menu")->result();
+        $data['menu'] = $this->db->query("select * from user_menu")->result_array();
         $this->load->view('hak_akses/akses',$data);
         $this->load->view('templates_dosen/footer'); 
     
