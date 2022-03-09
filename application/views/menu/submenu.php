@@ -19,7 +19,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
+                        <tr style="text-align: center;">
                             <th>No</th>
                             <th>Sub Menu</th>
                             <th>Menu</th>
@@ -34,12 +34,12 @@
                         $no =1;
                         foreach ($submenu as $s) : ?>
                             <tr>
-                            <td width="20px"><?php echo $no++ ?></td>
+                            <td width="20px" style="text-align: center;"><?php echo $no++ ?></td>
                             <td><?= $s->title?></td>
                             <td><?= $s->nama_menu?></td>
                             <td><?= $s->url?></td>
                             <td><?= $s->icon?></td>
-                            <td><?= $s->is_active?></td>
+                            <td style="text-align: center;"><?= $s->is_active?></td>
                             <td width="20px"> <?php echo anchor('menu/subedit/'.$s->id_sub_menu, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                             <?php echo anchor('menu/subdelete/'.$s->id_sub_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             </tr>

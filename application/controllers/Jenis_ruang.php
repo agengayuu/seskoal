@@ -6,7 +6,7 @@ class Jenis_ruang extends CI_Controller{
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header',$data);  
-        $this->load->view('templates_dosen/sidebar',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $data['jenis_ruang'] = $this->m_jenis_ruang->tampil_data()->result();
         $this->load->view('jenis_ruang/index', $data); 
@@ -19,7 +19,7 @@ class Jenis_ruang extends CI_Controller{
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header',$data);  
-        $this->load->view('templates_dosen/sidebar',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $timestamp = date('Y-m-d H:i:s'); 
 
@@ -63,7 +63,7 @@ class Jenis_ruang extends CI_Controller{
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header',$data);  
-        $this->load->view('templates_dosen/sidebar',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $where = array('id_jenis_ruang' => $id);
         $data['jenis_ruang'] = $this->m_jenis_ruang->edit_data($where, 'tbl_jenis_ruang')->result();
