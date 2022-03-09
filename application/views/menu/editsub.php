@@ -5,7 +5,7 @@
         <div class="form-group">
 
             <label>Nama Sub Menu<i style="color:red">*</i></label>
-            <input type="text" name="id_sub_menu" value="<?php echo $s->id_sub_menu ?>">
+            <input type="hidden" name="id_sub_menu" value="<?php echo $s->id_sub_menu ?>">
             <input type="text" name="title" placeholder="Masukkan Nama Sub Menu" class="form-control" value = "<?= $s->title;?>">
             <?php echo form_error('title', '<div class="text-danger small" ml-3></div>') ?>
 
@@ -13,7 +13,9 @@
             <select class="form-control" name="id_menu" id="id_menu">
                 <option value='0' selected>--- Pilih Menu ---</option>
                 <?php foreach ($menunya as $m) { ?>
-                <option value="<?php echo $m->id_menu; ?>"><?php echo $m->nama_menu; ?></option>
+                <option value="<?php echo $m->id_menu; ?>" <?php if ($m->id_menu == $s->id_menu) {
+                                                                                        echo "selected";
+                                                                                    } ?>><?php echo $m->nama_menu; ?></option>
                 <?php } ?>
                 </select>
 
