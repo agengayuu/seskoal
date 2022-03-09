@@ -33,12 +33,12 @@
                             $no =1;
                             foreach ($pengumuman as $p) : ?>
                         <tr>
-                            <td><?php echo $no++ ?></td>
+                            <td style="text-align: center"><?php echo $no++ ?></td>
                             <td><?= $p->judul_pengumuman ?></td>
                             <td><?= $p->isi_pengumuman ?></td>
-                            <td><?= $p->tgl_pembuatan ?></td>
+                            <td style="text-align: center"><?= $p->tgl_pembuatan ?></td>
                             <center>
-                            <td> <?php echo anchor('pengumuman/edit/'.$p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> 
+                            <td style="text-align: center"> <?php echo anchor('pengumuman/edit/'.$p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> 
                             <?php echo anchor('pengumuman/delete/'.$p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             </center>
                         </tr>

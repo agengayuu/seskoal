@@ -5,11 +5,14 @@
 <title><?= $title ;?></title>
 
 <div class="container-fluid">
-    <div class="card mb-4 py-0 border-left-primary">
+    <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            <h4>Pengumuman</h4>
+            Pengumuman
         </div>
     </div>
+
+    <?php echo $this->session->flashdata('pesan') ?>
+
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -17,45 +20,48 @@
         </div>
 
         <div class="card-body">
-            <div class="table-responsive">                
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Tanggal</th>
-                                    <th>Judul</th>
-                                    <th>Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr style="text-align: center">
+                            <th>No</th>
+                            <th>Tanggal Pembuatan</th>
+                            <th>Judul Pengumuman</th>
+                            <th>Id Pengumuman</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $no =1;
+                            foreach ($pengumuman as $pa) : ?>
+                        <tr>
+                            <td style="text-align: center"><?php echo $no++ ?></td>
+                            <td><?= $pa->tgl_pembuatan ?></td>
+                            <td><?= $pa->judul_pengumuman ?></td>
+                            <td><?= $pa->id_pengumuman ?></td>
+                            <td style="text-align: center">
+                                <button type="button" class="btn btn-info" onclick="detail()" data-toggle="modal" data-target="#detailModal">
+                                    <i class="fas fa-search"></i> Detail
+                                </button>
+                            </td>
+                            <td >
+                                <input type="text" name="idpengumuman" id="idpengumuman" value="<?= $pa->id_pengumuman; ?>" >
+                            </td>
+                        </tr>
                                 <?php
-                                $no =1;
-                                foreach ($pengumuman as $md) : ?>
-                                    <tr>
-                                        <td width="20px"><?php echo $no++ ?></td>
-                                        <td><?= $md->nama_diklat ?>
-                                        <td><?= $md->nama_diklat ?>
-                                        
-                                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="fas fa-search"></i> Detail
-                                        </button>
-                                        </td>
-                                    </tr>
-                                        <?php
-                                    endforeach
-                                    ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                            endforeach
+                            ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
-         <!-- Modal -->
-         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <?php $no = 1;
+    foreach ($pengumuman as $pgm) : $no++;?>
+    <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModal" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -64,45 +70,53 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-3 text-bold">
-                        Judul <span class="float-right">:</span>
+            <form action="<?php echo base_url('pengumuman_view/detail') ?>">
+                <div class="modal-body">
+                    <div class="row">
+                        <input type="text" name="id_pengumuman" id="id_pengumuman" value="<?= $pgm->id_pengumuman; ?>" >
+                        <div class="col-md-3 text-bold">
+                            Judul <span class="float-right">: </span>
+                        </div>
+                        <div class="col-md-9" value="<?php echo $pgm->judul_pengumuman;?>">
+                            
+                        </div>
                     </div>
-                    <div class="col-md-9">
-                        Yuk Vaksinasi Booster Covid-19 di lingkungan IPB University
+                    <div class="row">
+                        <div class="col-md-3 text-bold">
+                            Tanggal <span class="float-right">:</span>
+                        </div>
+                        <div class="col-md-9" value="<?php echo $pgm->tgl_pembuatan;?>">
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 text-bold">
-                        Tanggal <span class="float-right">:</span>
-                    </div>
-                    <div class="col-md-9">
-                        16 Februari 2022
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 text-bold">
-                        Pengumuman <span class="float-right">:</span>
-                    </div>
-                    <div class="col-md-9">
-                        <p><strong>[Vaksinasi Booster IPB University]</strong></p>
-                        <p>Vaksinasi Booster Covid-19 bagi Pegawai &amp; keluarga inti, Mahasiswa dan Alumni IPB akan diselenggarakan pada:</p>
-                        <p>Kamis, 17 Februari 2022<br>Pukul 08.00 – 15.00 WIB<br>di Graha Widya Wisuda, Kampus IPB Dramaga</p>
-                        <p>Tautan pendaftaran: <a href="https://ipb.link/pendaftaranvaksinasiboosteripb">https://ipb.link/pendaftaranvaksinasiboosteripb</a></p>
-                        <p>Unduh form skrining:<br><a href="https://ipb.link/form-skrining-booster">https://ipb.link/form-skrining-booster</a></p>
-                        <p>&nbsp;</p>
-                        <p>Demikian informasi ini disampaikan. Atas kerjasamanya diucapkan terima kasih.</p>
-                        <p>Hormat kami,<br>Panitia Vaksinasi <br>IPB University</p>
+                    <div class="row">
+                        <div class="col-md-3 text-bold">
+                            Pengumuman <span class="float-right">:</span>
+                        </div>
+                        <div class="col-md-9" value="<?php echo $pgm->isi_pengumuman;?>">
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                </div>
+                </div>
+            </form>
+            
         </div>
-        </div>
-
     </div>
+    <?php endforeach ?>
 </div>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<script>
+    function detail() {
+        var id_detail = document.getElementById("idpengumuman").value;  
+        console.log(id_detail)
+    }
+</script>

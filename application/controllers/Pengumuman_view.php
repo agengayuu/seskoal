@@ -18,18 +18,24 @@ class Pengumuman_view extends CI_Controller{
         $data['title'] = 'Pengumuman';
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
-
-        $data['pengumuman'] = $this->m_pengumuman_v->tampil_data()->result();
         $this->load->view('templates_dosen/header', $data); 
-        $this->load->view('templates_dosen/sidebar', $data); 
-        $this->load->view('pengumuman_view/index', $data); 
-
-
-        $data['diklatnya'] = $this->m_pengumuman_v->tampil_data()->result();
+        $data['pengumuman'] = $this->m_pengumuman_v->tampil_data()->result();
+        $this->load->view('templates_dosen/sidebar_admin', $data); 
+        $this->load->view('pengumuman_view/index', $data);
         $this->load->view('templates_dosen/footer'); 
 
     }
-    
 
+    public function detail($id_pengumuman) {
+        $data['title'] = 'Detail Pengumuman';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $data['pengumuman'] = $this->m_pengumuman_v->detail($id_pengumuman);
+
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        // $this->load->view('mahasiswa/detail');
+        $this->load->view('templates_dosen/footer');
+    }
 
 }
