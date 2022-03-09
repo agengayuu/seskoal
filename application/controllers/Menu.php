@@ -223,7 +223,7 @@ class Menu extends CI_Controller
    
         $this->db->query("delete from user_submenu where id_sub_menu ='" . $id . "'");
 
-        redirect('menu/index','refresh');
+        redirect('menu/submenu','refresh');
     
 
     }
