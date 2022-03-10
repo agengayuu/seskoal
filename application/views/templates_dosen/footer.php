@@ -61,6 +61,32 @@
 
         <!-- Page level custom scripts -->
         <script src="<?php echo base_url() ?>js/demo/datatables-demo.js"></script>
+
+        <script>
+
+        $('.form-check-input').on('click', function() {
+                const idmenu = $(this).data('menu');
+                const idgrup = $(this).data('role');
+
+
+                $.ajax ({
+                    url: "<?= base_url('hak_akses/ganti_akses');?>",
+                    type: 'post',
+                    data: {
+                        id_menu: idmenu,
+                        idgrup: idgrup
+
+                    },
+                    success: function() {
+                        document.location.href = "<?= base_url('hak_akses/akses/'); ?>" ++ id_grup_user;
+
+                    }
+                });
+
+        });
+
+        </script>
+        
     
 </body>
 

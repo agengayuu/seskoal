@@ -33,7 +33,10 @@
                                 <td><?= $m['nama_menu'] ?></td>
                                 <td width="20px">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" <?= cek_akses($role['id_grup_user'], $m['id_menu']);  ?>>
+                                        <input class="form-check-input" type="checkbox" <?= cek_akses($role['id_grup_user'], $m['id_menu']);  ?>
+                                        data-roie="<?= $role['id_grup_user']; ?>"
+                                        data-menu="<?= $role['id_menu']; ?>>
+                        
                                     </div>
                                 </td>
                             </tr>
