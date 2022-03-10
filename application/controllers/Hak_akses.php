@@ -45,6 +45,9 @@ class Hak_akses extends CI_Controller{
         $data['role'] = $this->db->get_where('grupuser', ['id_grup_user' => $id_role])->row_array();
 
         $data['menu'] = $this->db->query("select * from user_menu")->result_array();
+        // echo "<pre>";
+        // print_r($data);
+        // die();
         $this->load->view('hak_akses/akses',$data);
         $this->load->view('templates_dosen/footer'); 
     

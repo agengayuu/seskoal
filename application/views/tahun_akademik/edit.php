@@ -1,5 +1,9 @@
 <div class="container-fluid">
-    <?php foreach ($akademik as $ak) { ?>
+    <?php
+    // echo "<pre>";
+    // print_r($akademik);
+    // die();
+     foreach ($akademik as $ak) { ?>
         <form action="<?php echo base_url('tahun_akademik/update') ?>" method="post">
 
             <div class="form-group">
@@ -12,13 +16,8 @@
             <div class="form-group">
                 <label>Semester<i style="color:red">*</i></label>
                 <select class="form-control" name='semester' id='semester'>
-                    <option value="<?= $ak->semester; ?>"><?= $ak->semester; ?></option>
-
-                    <option value="<?= $ak->semester; ?>"><?php if ($ak->semester == "Ganjil") {
-                                                                echo "Genap";
-                                                            } else {
-                                                                echo "Ganjil";
-                                                            } ?></option>
+                    <option value="Ganjil" <?php echo  ($ak->semester == 'Ganjil') ? 'selected':''?>>Ganjil</option>
+                    <option value="Genap" <?php echo ($ak->semester == 'Genap') ? 'selected':''?>>Genap</option>
                 </select>
             </div>
 
@@ -26,13 +25,8 @@
             <div class="form-group">
                 <label>Status<i style="color:red">*</i></label>
                 <select class="form-control" name='status' id='status'>
-                    <option value="<?= $ak->status; ?>"><?= $ak->status; ?></option>
-
-                    <option value=" <?= $ak->status; ?>"> <?php if ($ak->status == "Aktif") {
-                                                                echo "Tidak Aktif";
-                                                            } else {
-                                                                echo "Aktif";
-                                                            } ?></option>
+                    <option value="Aktif" <?php echo ($ak->status == 'Aktif') ? 'selected':'' ?>>Aktif</option>
+                    <option value="Tidak Aktif" <?php echo ($ak->status == 'Tidak Aktif') ? 'selected':'' ?>>Tidak Aktif</option>
                 </select>
             </div>
 

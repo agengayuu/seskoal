@@ -7,7 +7,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-     <h5>Role: <?= $role['nama']; ?></h5>
+    <h5>Role: <?= $role['nama']; ?></h5>
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -26,22 +26,21 @@
                     </thead>
                     <tbody>
                         <?php
-                        $no =1; 
-                        foreach ($menu as $m)  : ?>
+                        $no = 1;
+                        foreach ($menu as $m) : ?>
                             <tr>
-                            <td width="20px"><?php echo $no++ ?></td>
-                            <td><?= $m['nama_menu']?></td>
-                            <td width="20px">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" 
-                                <?= cek_akses($role['id_grup_user'], $m['id_menu']);  ?>>
-                            </label>
-                            </div>
-                            </td>
+                                <td width="20px"><?php echo $no ?></td>
+                                <td><?= $m['nama_menu'] ?></td>
+                                <td width="20px">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" <?= cek_akses($role['id_grup_user'], $m['id_menu']);  ?>>
+                                    </div>
+                                </td>
                             </tr>
-                                <?php
-                             endforeach;
-                            ?>
+                            <?php $no++;?>
+                        <?php
+                        endforeach;
+                        ?>
                     </tbody>
                 </table>
             </div>

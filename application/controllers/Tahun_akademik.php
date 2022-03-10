@@ -73,7 +73,7 @@ class Tahun_akademik extends CI_Controller
         );
         $data['akademik'] = $this->m_akademik->editdata($where, 'thn_akademik')->result();
         $data['semester'] = $this->db->query("select semester,id_akademik from thn_akademik");
-
+       
         $this->load->view('tahun_akademik/edit', $data);
         $this->load->view('templates_dosen/footer');
         
