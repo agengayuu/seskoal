@@ -89,10 +89,10 @@ class Jadwal_kuliah extends CI_Controller
 
     }
 
-    public function hapus(){
+    public function hapus($id){
 
         $this->db->query("delete from tbl_jadwal_kuliah where id_jadwal_kuliah ='" . $id . "'");
 
-        redirect('menu/submenu','refresh');
+        redirect('jadwal_kuliah','refresh');
     }
 }

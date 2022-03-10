@@ -118,7 +118,8 @@
                      <div class="card">
                          <div class="card-body">
                              <h5 class="card-title">Jadwal</h5>
-                             <p class="card-text">92 Januari 2090.</p>
+                             <?php foreach($jadwal as $jad) { ?>
+                             <p class="card-text"><?= $jad->tanggal; ?></p>
                              <div class="card mb-2">
                                  <div class="card-body">
                                      <div class="tw-mt-5 tw-border tw-border-gray-200 tw-rounded-xl tw-py-3 tw-px-4">
@@ -135,24 +136,22 @@
                                          </div>
                                          <div>
                                              <div class="tw-flex tw-items-center tw-mb-2">
-                                                 <h6 class="font-14px tw-text-sp-muted-text">Diklat</h6>
-                                             </div>
-                                             <div class="tw-flex tw-items-center tw-mb-2">
-                                                 <h6 class="font-14px tw-text-sp-muted-text">Selasa</h6>
+                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->id_diklat; ?></h6>
                                              </div>
                                              <div class="tw-flex tw-items-center tw-mb-2">
                                                  <div class="bg-icon_oclock tw-mr-2"></div>
                                                  <h6 class="font-14px tw-text-sp-muted-text">
-                                                     8:00 - 16:30
+                                                 <?= $jad->waktu; ?>
                                                  </h6>
                                              </div>
                                              <div class="tw-flex tw-items-center">
-                                                 <h6 class="font-14px tw-text-sp-muted-text">Ruangan</h6>
+                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->id_ruang; ?></h6>
                                              </div>
                                          </div>
                                      </div>
                                  </div>
                              </div>
+                             <?php }?>
                              <center>
                                  <a href="#" class="btn btn-secondary">Lihat Semua Jadwal</a>
                              </center>
