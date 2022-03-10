@@ -22,15 +22,16 @@
                                 <th>Tanggal Lahir</th>
                                 <th>Aksi</th>
                             </tr>
-                        
+                        </thead>
+                        <tbody>
                             <?php
                             $no =1;
                             foreach ($profil_mahasiswa as $p) : ?>
 
-                            <tr style="text-align: center;">
-                                <td width="20px"><?php echo $no++ ?></td>
+                            <tr>
+                                <td width="20px" style="text-align: center;"><?php echo $no++ ?></td>
                                 <td><?= $p->nim ?></td>
-                                <td><?= $p->nama ?></td>
+                                <td ><?= $p->nama ?></td>
                                 <td><?= $p->jenis_kelamin ?></td>
                                 <td><?= $p->agama ?></td>
                                 <td><?= $p->tgl_lahir ?></td>
@@ -41,7 +42,7 @@
                                 <?php
                                 endforeach
                                 ?>
-                        </thead>
+                        </tbody>
                     </table>
                 </div>
             </div>
