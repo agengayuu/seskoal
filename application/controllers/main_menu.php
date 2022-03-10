@@ -52,8 +52,26 @@ class Main_menu extends CI_Controller {
         //print_r($last);die;
         $data['pengumuman'] = $last;
 
+        // jadwal
+
+        $query = $this->db->query("select * from tbl_jadwal_kuliah")->result();
+        $data['jadwal'] = $query;
+
         $idterakhir = 
         $this->load->view('main_menu/siswa',$data); 
         $this->load->view('templates_dosen/footer',$data); 
     }
+
+    // public function jadwal() {
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array();
+    //     $this->load->view('templates_dosen/header',$data); 
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+    //     $query = $this->db->query("select * from tbl_jadwal_kuliah")->result();
+    //     $data['jadwal'] = $query;
+
+    //     $this->load->view('main_menu/siswa',$data); 
+    //     $this->load->view('templates_dosen/footer',$data); 
+    // }
 }
