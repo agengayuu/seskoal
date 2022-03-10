@@ -31,7 +31,9 @@ class Pengumuman_view extends CI_Controller{
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header', $data); 
-        $data['pengumuman'] = $this->m_pengumuman_v->detail($id_pengumuman);
+        // $data['pengumuman'] = $this->m_pengumuman_v->detail($id_pengumuman);
+        $data['pengumuman'] = $this->db->query("select * from tbl_pengumuman")->result_array();
+
 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
         // $this->load->view('mahasiswa/detail');

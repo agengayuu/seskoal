@@ -98,16 +98,16 @@
                      <div class="card">
                          <div class="card-body">
                              <div class="row">
-                                 <div class="col-sm-9">
-                                     <h5 class="card-title">Informasi/Pengumuman</h5>
+                                 <div class="col-sm-10">
+                                     <h5 class="card-title" style="font-weight: bolder;">Informasi/Pengumuman</h5>
                                  </div>
-                                 <div class="col-3">
-                                     <a href="<?php echo base_url('pengumuman_view') ?>" class="btn btn-secondary">Lihat Semua</a>
+                                 <div class="col-2">
+                                     <a href="<?php echo base_url('pengumuman_view') ?>" class="btn btn-primary btn-icon-split btn-sm">Lihat Semua</a>
                                  </div>
                              </div>
                              <?php foreach($pengumuman as $peng) { ?>
-                             <label><?= $peng-> tgl_pembuatan; ?></label>
-                             <h5 class="card-title"><?= $peng->judul_pengumuman; ?></h5>
+                             <label>Tanggal <?= $peng-> tgl_pembuatan; ?></label>
+                             <h5 class="card-title" style="font-weight:bold; color:blue;" ><?= $peng->judul_pengumuman; ?></h5>
                              <p class="card-text"><?= $peng->isi_pengumuman?>
                              </p>
                              <?php } ?>
@@ -154,7 +154,7 @@
                                  </div>
                              </div>
                              <center>
-                                 <a href="#" class="btn btn-secondary">Lihat Semua Jadwal</a>
+                                 <a href="#" class="btn btn-primary btn-icon-split btn-sm">Lihat Semua Jadwal</a>
                              </center>
                          </div>
                      </div>
