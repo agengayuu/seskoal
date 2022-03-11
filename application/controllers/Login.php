@@ -223,7 +223,79 @@ class Login extends CI_Controller
         }
 
         
+    }
+
+public function set(){
+        $data['title'] = 'Ganti Password';
+
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+
+        $this->load->view('templates_dosen/header', $data);
+        $this->load->view('templates_dosen/sidebar', $data);
+        $this->load->view('set_password/index', $data);
+        $this->load->view('templates_dosen/footer');
+
 }
+    public function set_password()
+    {
+        $data['title'] = 'Set Password';
+
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        // $data['set_password'] = $this->m_set_password->tampil_data()->result();
+       if(!$this->form_validation->run() == false ){
+        $this->load->view('templates_dosen/header', $data);
+        $this->load->view('templates_dosen/sidebar', $data);
+        $this->load->view('set_password/index', $data);
+        $this->load->view('templates_dosen/footer');
+       }
+       else{
+           $passlama = $this->input->post('passlama');
+            $passbaru = $this->input->post('passbaru');
+            $passbaru1 = $this->input->post('passbaru1');
+
+            echo "<pre>";
+            echo "$passlama <pre>"; 
+            echo "$passbaru <pre>";
+            echo "$passbaru1";die;
+
+           if(!password_verify($passlama, $data['user']['password'])){
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                             Password lama salah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+                                                redirect('login/set_password');
+
+           } else{
+               if($passlama == $passbaru ){
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                             Password baru tidak boleh sama dengan password lama. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+                    redirect('login/set');
+
+               } else if
+                ($passbaru == $passbaru1 ){
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                             Konfirmasi password tidak sesuai. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+                    redirect('login/set');
+
+               }
+               else{
+                   //password sudah benar
+
+                    $passwordhash = password_hash($passbaru, PASSWORD_DEFAULT);
+                    $this->db->set('password', $passwordhash);
+                    $this->db->where('username', $this->session->userdata('username'));
+                    $this->db->update('user');
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                             Password berhasil di ganti. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+                    redirect('login/set_password');
+
+               }
+           }
+
+       }
+    }
 }
     
 
