@@ -43,7 +43,6 @@ class Hak_akses extends CI_Controller{
         $this->load->view('templates_dosen/sidebar_admin',$data);
     
         $data['role'] = $this->db->get_where('grupuser', ['id_grup_user' => $id_role])->row_array();
-
         $data['menu'] = $this->db->query("select * from user_menu")->result_array();
         // echo "<pre>";
         // print_r($data);
@@ -55,16 +54,16 @@ class Hak_akses extends CI_Controller{
 
         public function ganti_akses(){
 
-            $idmenu = $this->input->post('idmenu');
-            $idgrup = $this->input->post('idgrup');
-
-            $data = array( 
-                'id_grup_user' => $idgrup,
-                'id_menu' => $idmenu
-            );
-
-            $result = $this->get_where($user_akses_menu, $data);
-
+            $id_menu = $this->input->post('id_menu');
+            $id_grup_user = $this->input->post('id_grup_user');
+            
+            $data = [ 
+                'id_grup_user' => $id_grup_user,
+                'id_menu' => $id_menu
+            ];
+            
+            $result = $this->db->get_where('user_akses_menu', $data);
+            
             if($result->num_rows() < 1){
                 $this->db->insert('user_akses_menu',$data);
             } else{

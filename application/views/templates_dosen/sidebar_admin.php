@@ -51,9 +51,13 @@
 
         <!-- LOOPING MENU  -->
         <?php foreach ($menu as $m) :?>
-            <div class="sidebar-heading">
-                <?= $m['nama_menu']?>
-            </div>
+            <?php
+            if($this->session->userdata('id_grup_user') == '1'){ ?>
+                <div class="sidebar-heading">
+                    <?= $m['nama_menu']?>
+                </div>
+
+            <?php } ?>
 
 
             <!-- loopig sub menu sesuai menu -->

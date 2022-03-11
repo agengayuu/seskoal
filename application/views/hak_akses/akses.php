@@ -33,14 +33,11 @@
                                 <td><?= $m['nama_menu'] ?></td>
                                 <td width="20px">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" <?= cek_akses($role['id_grup_user'], $m['id_menu']);  ?>
-                                        data-roie="<?= $role['id_grup_user']; ?>"
-                                        data-menu="<?= $role['id_menu']; ?>>
-                        
+                                        <input class="form-check-input" type="checkbox" <?= cek_akses($role['id_grup_user'], $m['id_menu']);  ?> data-role="<?= $role['id_grup_user']; ?>" data-menu="<?= $m['id_menu']; ?>">
                                     </div>
                                 </td>
                             </tr>
-                            <?php $no++;?>
+                            <?php $no++; ?>
                         <?php
                         endforeach;
                         ?>
@@ -53,5 +50,5 @@
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
+                                        <i class="fas fa-angle-up"></i>
+                                        </a>
