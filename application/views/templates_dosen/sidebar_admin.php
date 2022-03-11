@@ -18,21 +18,9 @@
 
 
         <?php 
-        //$grupuser = $this->session->userdata('id_grup_user');
-        // $querymenu = "select 'user_menu'.'id_menu', 'nama_menu'
-        //             from 'user_menu' join 'user_akses_menu'
-        //             on 'user_menu'.'id_menu' = user_akses_menu.id_menu
-        //             where 'user_akses_menu'.'id_grup_user' = $grupuser
-        //             order by 'user_akses_menu'.'id_menu' asc";
-
-        //  $querymenu = "SELECT user_menu.id_menu, nama_menu
-        //  FROM user_menu
-        //  JOIN user_akses_menu ON user_menu.id_menu = user_akses_menu.id_menu
-        //  WHERE user_akses_menu.id_grup_user = $grupuser
-        //  order by user_akses_menu.id_menu  asc
-        //  ";       
-        // $grupuser=$this->db->get_where('user', ['id_grup_user'=> 
-        // $this->session->userdata('id_grup_user')])->row_array();
+        
+        $grupuser=$this->db->get_where('user', ['id_grup_user'=> 
+        $this->session->userdata('id_grup_user')])->row_array();
    
         $grupuser = $this->session->userdata('id_grup_user');
         $querymenu="SELECT `user_menu`.`id_menu`, `nama_menu`
