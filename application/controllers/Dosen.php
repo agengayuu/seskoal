@@ -70,6 +70,7 @@ class Dosen extends CI_Controller
             $jk                 = $this->input->post('jk');
             $agama              = $this->input->post('agama');
             $alamat             = $this->input->post('alamat');
+            $hsl                = date('jmY', strtotime($tgl_lahir));
             $foto               = $_FILES['foto'];
             if ($foto=''){}else{
                 $config['upload_path']      = './assets/uploads/';
@@ -111,7 +112,17 @@ class Dosen extends CI_Controller
                 'created_at'        => $created_at
             );
 
+            $data2 = array(
+                'username' => $nip,
+                'id_grup_user' => 3,
+                'is_active' =>1,
+                'id_unique' => $nip.$hsl,
+                'date_created' => time()
+    
+            );
+
             $this->m_dosen->adminsimpan($data, 'tbl_dosen');
+            $this->m_dosen->simpanuser($data2,'user');
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
                                             Data Berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                             <span aria-hidden="true">&times;</span></button></div>');
