@@ -44,7 +44,7 @@ class Jenis_ruang extends CI_Controller{
                 'nama_jenis_ruang' => $this->input->post('nama_jenis_ruang', TRUE)
             );
 
-            print_r($data);
+            // print_r($data);
 
             $this->m_jenis_ruang->input_data($data);
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">

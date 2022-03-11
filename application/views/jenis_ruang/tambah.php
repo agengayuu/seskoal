@@ -1,8 +1,11 @@
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-black-800">Tambah Jenis Ruangan</h1>
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Tambah Jenis Ruangan
+        </div>
+    </div>
 
     <div class="card-header bg-white">
-    <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
         <form method="post" action="<?php echo base_url('jenis_ruang/simpan') ?>">
 

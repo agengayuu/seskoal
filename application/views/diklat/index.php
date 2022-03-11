@@ -5,7 +5,7 @@
         <div class="card-body">
             Diklat
         </div>
-</div>
+    </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 

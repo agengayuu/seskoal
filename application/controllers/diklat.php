@@ -39,23 +39,30 @@ class Diklat extends CI_Controller{
         $this->load->view('templates_dosen/footer'); 
     }
 
-    public function adminsimpan(){
-        $data['title'] = 'Simpan Diklat';
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();
-        $this->load->view('templates_dosen/header',$data); 
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
-        
-        $date = date('Y-m-d H:m:s');
+    public function _rules() {
+        $this->form_validation->set_rules('nama_diklat', 'nama_diklat', 'required', ['required' => 'Nama Diklat Wajib diisi!']);
+    }
 
-        $nama_diklat = $this->input->post('nama_diklat');
-        $data = array( 
-                'nama_diklat' =>  $nama_diklat,
-                'created_at' => $date 
-            );
-        $this->m_diklat->adminsimpan($data, 'tbl_diklat');
+    public function adminsimpan(){
         
-        redirect('diklat', 'refresh');
+        $this->_rules();
+
+        $created_at = date('Y-m-d H:m:s');
+
+        if($this->form_validation->run()== FALSE) {
+            $this->admintambah();
+        } else {
+            $data = array(
+                'nama_diklat' => $this->input->post('nama_diklat', TRUE),
+                'created_at' => $created_at
+            );
+
+            $this->m_diklat->adminsimpan($data, 'tbl_diklat');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
+                                                    Data Berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span></button></div>');
+            redirect('diklat', 'refresh');
+        }
         
     }
 
@@ -77,7 +84,7 @@ class Diklat extends CI_Controller{
 
         $data = array(
             'nama_diklat' => $nama_diklat
-        );
+        ); 
 
         $where = array(
             'id_diklat' => $id
