@@ -21,7 +21,7 @@
         <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('main_menu_dosen') ?>">
             <!-- <img src="<?php echo base_url() ?>assets/assets/images/seskoal.png" class="img-fluid" alt="Responsive image"> -->
-            <i class="fas fa-menu"></i></i><span>Menu</span></a>
+            <i class="	fas fa-fw fa-tachometer-alt"></i><span>Menu</span></a>
         </li>
         
 
@@ -37,7 +37,7 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-graduation"></i>
+                <i class="fas fa-fw fa-solid fa-book-open"></i>
                 <span>Akademik</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -47,9 +47,9 @@
                     <!-- <a class="collapse-item" href="<?php echo base_url('jenis_ruang') ?>">Jenis Ruangan</a>
                     <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Ruangan</a> -->
                     <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Pertanyaan</a>
-                    <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Jadwal</a>
-                    <a class="collapse-item" href="<?php echo base_url('nilai') ?>">Nilai</a>
-                    <a class="collapse-item" href="<?php echo base_url('dosen') ?>">Dosen</a>
+                    <a class="collapse-item" href="<?php echo base_url('master_jadwal') ?>">Master Jadwal</a>
+                    <a class="collapse-item" href="<?php echo base_url('#') ?>">Nilai</a>
+                    <a class="collapse-item" href="<?php echo base_url('#') ?>">Dosen</a>
                 </div>
             </div>
         </li>
@@ -58,15 +58,15 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                 aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
+                <i class="fas fa-fw fas fa-fw fa-bullhorn"></i>
                 <span>Informasi</span>
             </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Sub-Informasi:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Informasi Akademik</a>
-                    <a class="collapse-item" href="utilities-border.html">Gallery</a>
+                    <a class="collapse-item" href="<?php echo base_url('informasi_akademik') ?>">Informasi Akademik</a>
+                    <a class="collapse-item" href="<?php echo base_url('#') ?>">Gallery</a>
                 </div>
             </div>
         </li>

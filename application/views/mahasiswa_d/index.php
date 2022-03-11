@@ -33,7 +33,7 @@
                                             <td width="20px"><?php echo $no++ ?></td>
                                             <td><?= $md->nama_diklat ?>
                                             
-                                            <td width="180px"> <?php echo anchor('mahasiswa_d/adminedit/'.$md->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?></td>
+                                            <td width="180px"> <?php echo anchor('mahasiswa_d/lm/'.$md->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?></td>
                                             </td>
                                         </tr>
                                             <?php

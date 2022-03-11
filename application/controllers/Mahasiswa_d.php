@@ -32,6 +32,21 @@ class Mahasiswa_d extends CI_Controller{
         $this->load->view('templates_dosen/footer'); 
 
     }
+
+    public function lm($id) {
+        $data['title'] = 'List Mahasiswa per Diklat';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+
+        $this->load->view('templates_dosen/header',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+    
+        $query= $this->db->query("select * from tbl_mahasiswa where id_diklat='".$id."' order by id_mahasiswa asc")->result();
+        $data['siswa'] = $query;
+        
+        $this->load->view('mahasiswa_d/lm',$data);
+        $this->load->view('templates_dosen/footer');
+    }
     
 
 
