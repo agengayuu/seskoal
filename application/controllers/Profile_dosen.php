@@ -3,6 +3,8 @@
 class Profile_dosen extends CI_Controller{
     public function index(){
         $data['title'] = 'Profile Dosen';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
 
         
         $userlogin = $this->session->userdata('username');
