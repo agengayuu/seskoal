@@ -5,6 +5,10 @@
         </div>
     </div>
 
+    <?php echo $this->session->flashdata('pesan') ?>
+
+    <?php echo anchor('profil_mahasiswa/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i>Tambah Profil Mahasiswa</button>') ?>
+
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Daftar Profil Mahasiswa</h6>
@@ -33,10 +37,10 @@
                                 <td><?= $p->nim ?></td>
                                 <td ><?= $p->nama ?></td>
                                 <td><?= $p->jenis_kelamin ?></td>
-                                <td><?= $p->agama ?></td>
-                                <td><?= $p->tgl_lahir ?></td>
+                                <td ><?= $p->agama ?></td>
+                                <td style="text-align: center;"><?= $p->tgl_lahir ?></td>
                                 <center>
-                                <td> <?php echo anchor('profil_mahasiswa/detail/'.$p->nim, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/adminedit/'.$p->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/adminhapus/'.$p->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                <td> <?php echo anchor('profil_mahasiswa/detail/'.$p->nim, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/edit/'.$p->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/hapus'.$p->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                 </center>
                             </tr>
                                 <?php
