@@ -48,8 +48,9 @@
                     <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Ruangan</a> -->
                     <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Pertanyaan</a>
                     <a class="collapse-item" href="<?php echo base_url('master_jadwal') ?>">Master Jadwal</a>
+                    <a class="collapse-item" href="<?php echo base_url('#') ?>">Kelola Soal Evaluasi</a>
+                    <a class="collapse-item" href="<?php echo base_url('#') ?>">Hasil Evaluasi</a>
                     <a class="collapse-item" href="<?php echo base_url('#') ?>">Nilai</a>
-                    <a class="collapse-item" href="<?php echo base_url('#') ?>">Dosen</a>
                 </div>
             </div>
         </li>

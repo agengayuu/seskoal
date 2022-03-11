@@ -5,6 +5,12 @@
         <div class="card-body">
             Selamat Datang <?= $user['username'];?> di Dashboard Dosen
             <hr>
+            <b>Petunjuk Penggunaan</b>
+            <br />
+            <p>
+                <span><b>1. Dashboard Utama</b></span><br />
+                <span><b>2. Set Password</b></span>
+            </p>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                 <i class="fas fa-cogs"></i> Control Panel
             </button>
@@ -35,7 +41,7 @@
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">DIKLAT</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">Evaluasi Ujian</p></a>
                         <i class="fas fa-3x fa-book"></i>
                     </div>
                 </div><hr>
@@ -53,7 +59,7 @@
                         <i class="fas fa-3x fa-landmark"></i>
                     </div>
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">GALLERY KAMPUS</p></a>
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">Mata Kuliah</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
                 </div>
