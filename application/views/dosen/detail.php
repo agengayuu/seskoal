@@ -3,8 +3,10 @@
         <div class="card-body">
          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Detail Dosen 
         </div>
-    </div>
+    </div> 
 
+    <?php foreach($detail as $dt) : ?>
+        
     <div class="card-header bg-white">
         <div class="card-body">
             <div class="row">
@@ -12,9 +14,10 @@
                     <div class="form-horizontal form-bordered">
                         <div class="form-group row">
                             <div class="col-md-2">
-                                <img src=""  style="width: 90%;" class="card shadow img-thumbnail rounded">
+                                <?php if($dt->foto!= null) { ?>
+                                    <img src="<?=base_url('./assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
+                                <?php } ?>
                             </div>
-                            <?php foreach($detail as $dt) : ?>
 
                             <div class="col-md-10">
                                 <div class="form-group row">
@@ -23,6 +26,30 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for=""><?php echo $dt->nip; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">NIK</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->nik; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">NPWP</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->npwp; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">Kewarganegaraan</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->kewarganegaraan; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">

@@ -136,7 +136,7 @@ exit('No direct script access allowed');
                     'lantai'        =>  $lantai ,
                     'keterangan'    =>  $keterangan
                 );
-
+ 
                 $where = array(
                     'id_ruang'=> $id_ruang
                 );

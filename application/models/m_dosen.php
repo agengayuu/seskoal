@@ -9,8 +9,8 @@ class M_dosen extends CI_Model{
         parent:: __construct();
     }
 
-    public function adminsimpan($data){
-        return $this->db->insert('tbl_dosen', $data);
+    public function adminsimpan($data, $table){
+        return $this->db->insert($table, $data);
 
     }
     public function simpanuser($data2){
@@ -18,14 +18,14 @@ class M_dosen extends CI_Model{
         return $a;
     }
     
-    public function adminedit($where){
-        return $this->db->get_where('tbl_dosen',$where);
+    public function adminedit($where, $table){
+        return $this->db->get_where($table ,$where);
 
     }
 
     public function adminupdate($where,$data,$table){
-    $this->db->where($where);
-    $this->db->update($table,$data);
+        $this->db->where($where);
+        $this->db->update($table,$data);
     }
 
     public function adminhapus($where, $table){

@@ -1,91 +1,127 @@
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-black-800">Tambah Dosen</h1>
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Tambah Dosen
+        </div>
+    </div>
 
+    <?php echo form_open_multipart('dosen/adminsimpan'); ?> 
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
-    <form action="<?php echo base_url('dosen/adminsimpan') ?>" method="post">
+    <!-- <form action="<?php echo base_url('dosen/adminsimpan') ?>" method="post" enctype="multipart/form-data"> -->
 
         <div class="form-group">
             <label>NIP<i style="color:red">*</i></label>
-            <input type="number" name="nip" placeholder="Masukkan NIP" class="form-control" required>
-            <?php echo form_error('nip', '<div class="text-danger small ml-3"></div>') ?>
+            <input type="number" name="nip" placeholder="Masukkan NIP" class="form-control">
+            <?php echo form_error('nip', '<div class="text-danger small ml-3">','</div>') ?>
+        </div>
+
+        <div class="form-group">
+            <label>NIK<i style="color:red">*</i></label>
+            <input type="number" name="nik" placeholder="Masukkan NIK" class="form-control">
+            <?php echo form_error('nik', '<div class="text-danger small ml-3">','</div>') ?>
+        </div>
+
+        <div class="form-group">
+            <label>NPWP<i style="color:red">*</i></label>
+            <input type="number" name="npwp" placeholder="Masukkan NPWP" class="form-control">
+            <?php echo form_error('npwp', '<div class="text-danger small ml-3">','</div>') ?>
+        </div>
+
+        <div class="form-group">
+            <label>Kewarganegaraan<i style="color:red">*</i></label>
+            <input type="text" name="kewarganegaraan" placeholder="Masukkan Kewarganegaraan" class="form-control">
+            <?php echo form_error('kewarganegaraan', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Nama Dosen<i style="color:red">*</i></label>
             <input type="text" name="nama" placeholder="Masukkan Nama Dosen" class="form-control">
-            <?php echo form_error('nama', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('nama', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Email<i style="color:red">*</i></label>
             <input type="email" name="email" placeholder="Masukkan Email" class="form-control">
-            <?php echo form_error('tgl_lhr', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('email', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>No. Telepon<i style="color:red">*</i></label>
             <input type="number" name="no_tlp" placeholder="Masukkan No. Telepon" class="form-control">
-            <?php echo form_error('no_tlp', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('no_tlp', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Gelar Depan<i style="color:red">*</i></label>
             <input type="text" name="gelar_depan" placeholder="Masukkan Gelar Depan" class="form-control">
-            <?php echo form_error('tahun_masuk', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('gelar_depan', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Gelar Belakang<i style="color:red">*</i></label>
             <input type="text" name="gelar_belakang" placeholder="Masukkan Gelar Belakang" class="form-control">
-            <?php echo form_error('gelar_belakang', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('gelar_belakang', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
         
         <div class="form-group">
             <label>Tempat Lahir<i style="color:red">*</i></label>
             <input type="text" name="tempat_lahir" placeholder="Masukkan Tempat Lahir" class="form-control">
-            <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         
         <div class="form-group">
             <label>Tanggal Lahir<i style="color:red">*</i></label>
             <input type="date" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir" class="form-control">
-            <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
         
         <div class="form-group">
             <label>Jenis Kelamin<i style="color:red">*</i></label>
             <select class="form-control" id='jk'name="jk">
-                <option value="Kosong">--- Pilih Jenis Kelamin ---</option>
+                <option>-- Pilih Jenis Kelamin --</option>
                 <option value='Perempuan'>Perempuan </option>
                 <option value='Laki-laki'>Laki-Laki</option>
             </select>
-            <?php echo form_error('jk', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('jk', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Agama<i style="color:red">*</i></label>
-            <input type="text" name="agama" placeholder="Masukkan Agama" class="form-control">
-            <?php echo form_error('agama', '<div class="text-danger small ml-3"></div>') ?>
+            <select class="form-control" id='agama'name="agama">
+                <option>-- Pilih Agama --</option>
+                <option value='Islam'>Islam</option>
+                <option value='Kristen'>Kristen</option>
+                <option value='Katholik'>Katholik</option>
+                <option value='Budha'>Budha</option>
+                <option value='Hindu'>Hindu</option>
+                <option value='Konghucu'>Konghucu</option>
+            </select>
+            <?php echo form_error('agama', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Alamat<i style="color:red">*</i></label>
             <textarea class="form-control" name="alamat" rows="3"></textarea>
-            <?php echo form_error('alamat', '<div class="text-danger small ml-3"></div>') ?>
+            <?php echo form_error('alamat', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Foto<i style="color:red">*</i></label>
-            <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required>
-            <?php echo form_error('foto', '<div class="text-danger small ml-3"></div>') ?>
+            <!-- <div class="custom-file">
+            <input type="file" class="form-control" name="foto" id="foto">
+            <label class="custom-file-label" for="foto">Pilih Foto</label>
+            </div> -->
+            <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control">
+            <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
-        <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-        <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
-    </form>
+        <button type="submit" class="btn btn-primary mb-4 mt-4">Simpan</button>
+        <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>
+    <!-- </form> -->
+    <?php form_close(); ?>
 
     </div>
 </div>
