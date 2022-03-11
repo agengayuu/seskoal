@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">tempat_lahir</label>
+                                        <label for="">Tempat Lahir</label>
                                     </div>
                                     <div class="col-md-6">
                                         <label for=""><?php echo $dt->tempat_lahir; ?></label>

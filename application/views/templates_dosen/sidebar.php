@@ -44,8 +44,8 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Sub-Menu Akademik:</h6>
                     <a class="collapse-item" href="<?php echo base_url('mahasiswa_d') ?>">Mahasiswa</a>
-                    <a class="collapse-item" href="<?php echo base_url('jenis_ruang') ?>">Jenis Ruangan</a>
-                    <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Ruangan</a>
+                    <!-- <a class="collapse-item" href="<?php echo base_url('jenis_ruang') ?>">Jenis Ruangan</a>
+                    <a class="collapse-item" href="<?php echo base_url('ruang') ?>">Ruangan</a> -->
                     <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Pertanyaan</a>
                     <a class="collapse-item" href="<?php echo base_url('master_pertanyaan') ?>">Master Jadwal</a>
                     <a class="collapse-item" href="<?php echo base_url('nilai') ?>">Nilai</a>

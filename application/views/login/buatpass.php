@@ -11,9 +11,17 @@
             <meta content="" name="description"/>
             <meta content="" name="author"/>
 
+            <link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/seskoal.png" type="image/x-icon"/>
+            
             <!-- BEGIN GLOBAL MANDATORY STYLES -->
             <link href="<?php echo base_url() ?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
             <!-- END GLOBAL MANDATORY STYLES -->
+
+                <!-- Custom fonts for this template-->
+                <link href="<?php echo base_url() ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+                <link
+                    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+                    rel="stylesheet">
 
             <!-- CSS -->
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
@@ -39,12 +47,12 @@
                         </div>
                         <div class="form-group">
                             <div class="input-icon">
-                                <i class="fa fa-user"></i>
+                                <i class="fas fa-user"></i>
                                 <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan NIM" name="username" value="<?= set_value('username');?>" />
                                 <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="input-icon">
-                                <i class="fa fa-lock"></i>
+                                <i class="fas fa-lock"></i>
                                 <input type="date" name="tgl_lhr" class="form-control placeholder-no-fix" placeholder="Masukan Tanggal Lahir " autocomplete="off"/>
                                 <?= form_error('tgl_lhr', '<small class="text-danger pl-3">', '</small>');?>
                             </div>

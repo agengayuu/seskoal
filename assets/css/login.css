@@ -65,7 +65,7 @@ a:link {
     padding-bottom: 10px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=date] {
     outline: 0;
     background: #fffff7;
     width: 100%;

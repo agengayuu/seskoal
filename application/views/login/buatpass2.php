@@ -11,6 +11,8 @@
             <meta content="" name="description"/>
             <meta content="" name="author"/>
 
+            <link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/seskoal.png" type="image/x-icon"/>
+
             <!-- BEGIN GLOBAL MANDATORY STYLES -->
             <link href="<?php echo base_url() ?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
             <!-- END GLOBAL MANDATORY STYLES -->
