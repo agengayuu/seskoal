@@ -220,11 +220,11 @@ class Dosen extends CI_Controller
         // $this->load->view('templates_dosen/header',$data); 
         // $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $this->_rules();
+        // $this->_rules();
 
-        if($this->form_validation->run() == FALSE){
-            $this->adminedit();
-        } else {
+        // if($this->form_validation->run() == FALSE){
+        //     $this->adminedit();
+        // } else {
             $id_dosen           = $this->input->post('id_dosen');
             $nip                = $this->input->post('nip');
             $nik                = $this->input->post('nik');
@@ -287,7 +287,7 @@ class Dosen extends CI_Controller
                                                 <span aria-hidden="true">&times;</span> </button></div>');
                 redirect('dosen');
         
-    }
+    // }
 
         // $id_dosen       = $this->input->post('id_dosen');
         // $nip            = $this->input->post('nip');
