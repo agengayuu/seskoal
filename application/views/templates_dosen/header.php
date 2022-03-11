@@ -35,6 +35,9 @@
 
     <script src="<?php echo base_url() ?>https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
+    <script src="<?php echo base_url() ?>assets/js/highcharts.js"></script>
+    
+
 
 </head>
 
@@ -53,7 +56,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Klik Logout Jika ingin Logout.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="<?php echo base_url('login/logout') ?>">Logout</a>

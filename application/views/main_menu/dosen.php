@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
 
     <div class="card mb-4 py-1 border-left-primary">
@@ -63,9 +64,68 @@
             </div>
         </div>
         </div>
+        <br />
     <h3>
         <center>Selamat Datang di Aplikasi Akademik SESKOAL</center>
     </h3>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                
+                <div class="col-md-12">
+
+                    <div id="blokgrafik"></div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        Highcharts.chart('blokgrafik', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Persentase Jumlah Siswa Perdiklat'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+            valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: "Brands",
+            colorByPoint: true,
+            data: [
+			<?php echo $grafik; ?>
+		
+			]
+        }]
+    });
+    </script>
     
 </div>
 

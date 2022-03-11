@@ -1,5 +1,9 @@
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-black-800">Tambah Jadwal Kuliah</h1>
+    <div class="card mb-4 py-0 border-left-primary">
+        <div class="card-body">
+            <span>Tambah Jadwal Kuliah</span>
+        </div>
+    </div>
 
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
@@ -20,9 +24,9 @@
         </div>
 
         <div class="form-group">
-            <label> Nama Mata Kuliah <i style="color:red">*</i></label>
+            <label> Materi Mata Kuliah <i style="color:red">*</i></label>
                 <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah'>
-                    <option value='0' selected>--- Pilih Mata Kuliah ---</option>
+                    <option value='0' selected>--- Materi Mata Kuliah ---</option>
                     <?php foreach ($matkul as $mat) { ?>
                     <option value="<?php echo $mat->id_mata_kuliah; ?>"><?php echo $mat->nama_mata_kuliah; ?></option>
                     <?php } ?>
@@ -54,9 +58,26 @@
         </div>
 
         <div class="form-group">
-            <label>Waktu<i style="color:red">*</i></label>
+            <label>Waktu Mulai<i style="color:red">*</i></label>
             <input type="time" name="waktu" placeholder="Masukkan Waktu" class="form-control"  id='waktu'>
             <?php echo form_error('waktu', '<div class="text-danger small ml-3"></div>') ?>
+        </div>
+        <div class="form-group">
+            <label>Waktu Akhir<i style="color:red">*</i></label>
+            <input type="time" name="waktu" placeholder="Masukkan Waktu" class="form-control"  id='waktu'>
+            <?php echo form_error('waktu', '<div class="text-danger small ml-3"></div>') ?>
+        </div>
+
+        <div class="form-group">
+            <label>Jam Pelajaran Ke<i style="color:red">*</i></label>
+            <input type="text" name="tema" placeholder="Masukkan Tema" class="form-control"  id='tema'>
+            <?php echo form_error('tema', '<div class="text-danger small ml-3"></div>') ?>
+        </div>
+
+        <div class="form-group">
+            <label>Tema<i style="color:red">*</i></label>
+            <input type="text" name="tema" placeholder="Masukkan Tema" class="form-control"  id='tema'>
+            <?php echo form_error('tema', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 
         <div class="form-group">
