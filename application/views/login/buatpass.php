@@ -47,16 +47,9 @@
                         </div>
                         <div class="form-group">
                             <div class="input-icon">
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
                                 <i class="fa fa-user"></i>
                                 <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan Nomer Induk" name="username" value="<?= set_value('username');?>" />
-=======
->>>>>>> Stashed changes
-                                <i class="fas fa-user"></i>
-                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan NIM" name="username" value="<?= set_value('username');?>" />
->>>>>>> f825350c77fdf864f399686cdf20362c23453c0f
                                 <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="input-icon">
