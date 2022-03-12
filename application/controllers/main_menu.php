@@ -9,6 +9,7 @@ class Main_menu extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('m_jadwal');
         $this->load->library('session');
         if(!$this->session->userdata('username')){
             redirect('login');
@@ -54,8 +55,7 @@ class Main_menu extends CI_Controller {
 
         // jadwal
 
-        $query = $this->db->query("select * from tbl_jadwal_kuliah")->result();
-        $data['jadwal'] = $query;
+        $data['jadwal'] = $this->m_jadwal->getdata();
 
         $idterakhir = 
         $this->load->view('main_menu/siswa',$data); 

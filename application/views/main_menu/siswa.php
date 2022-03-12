@@ -136,7 +136,7 @@
                                          </div>
                                          <div>
                                              <div class="tw-flex tw-items-center tw-mb-2">
-                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->id_diklat; ?></h6>
+                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->nama_diklat; ?></h6>
                                              </div>
                                              <div class="tw-flex tw-items-center tw-mb-2">
                                                  <div class="bg-icon_oclock tw-mr-2"></div>
@@ -145,7 +145,7 @@
                                                  </h6>
                                              </div>
                                              <div class="tw-flex tw-items-center">
-                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->id_ruang; ?></h6>
+                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->nama_ruang; ?></h6>
                                              </div>
                                          </div>
                                      </div>
