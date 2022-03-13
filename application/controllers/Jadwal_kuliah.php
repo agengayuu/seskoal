@@ -69,8 +69,8 @@ class Jadwal_kuliah extends CI_Controller
             'id_mata_kuliah' => $matkul,
             'id_dosen' => $dosen,
             // 'kode_jadwal' => $kode,
-            'tanggal' => $tgl,
-            'waktu' => time(),
+            'tanggal' => date('Y-m-d'),
+            'waktu' => date("h:i:sa"),
             'id_ruang' => $tempat,
             'keterangan' => $ket
         );

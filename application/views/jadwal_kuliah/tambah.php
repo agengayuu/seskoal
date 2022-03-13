@@ -59,13 +59,13 @@
 
         <div class="form-group">
             <label>Waktu Mulai<i style="color:red">*</i></label>
-            <input type="time" name="waktu" placeholder="Masukkan Waktu" class="form-control"  id='waktu'>
-            <?php echo form_error('waktu', '<div class="text-danger small ml-3"></div>') ?>
+            <input type="time" name="waktu_mulai" placeholder="Masukkan Waktu" class="form-control"  id='waktu_mulai'>
+            <?php echo form_error('waktu_mulai', '<div class="text-danger small ml-3"></div>') ?>
         </div>
         <div class="form-group">
             <label>Waktu Akhir<i style="color:red">*</i></label>
-            <input type="time" name="waktu" placeholder="Masukkan Waktu" class="form-control"  id='waktu'>
-            <?php echo form_error('waktu', '<div class="text-danger small ml-3"></div>') ?>
+            <input type="time" name="waktu_akhir" placeholder="Masukkan Waktu" class="form-control"  id='waktu_akhir'>
+            <?php echo form_error('waktu_akhir', '<div class="text-danger small ml-3"></div>') ?>
         </div>
 
         <div class="form-group">
