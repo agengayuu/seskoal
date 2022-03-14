@@ -1,14 +1,12 @@
   
-
-
-
-
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Detail Dosen 
         </div>
     </div> 
+
+    <?php echo $this->session->flashdata('pesan') ?>
 
     <?php foreach($user as $p) {?>
         
@@ -33,7 +31,7 @@
                                         <label for=""><?= $p->nip;?></label>
                                     </div>
                                     <div>
-                                    <?php echo anchor('dosen/adminedit/'.$p->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-edit"></i> Edit</div>' ) ?>
+                                    <?php echo anchor('profile_dosen/edit/'.$p->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-edit"></i> Edit</div>' ) ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -132,8 +130,7 @@
                 </div>
             </div>
             
-            <?php echo anchor('dosen', '<div class="btn btn-sm btn-danger"> Kembali
-            </div>'); ?>
+            <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Kembali</button>
         </div>
     </div>
 
