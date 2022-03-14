@@ -118,6 +118,7 @@ class Dosen extends CI_Controller
                 'id_grup_user' => 3,
                 'is_active' =>1,
                 'id_unique' => $nip.$hsl,
+                'foto'              => $foto,
                 'date_created' => time()
     
             );

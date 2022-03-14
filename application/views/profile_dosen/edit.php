@@ -16,19 +16,19 @@
 
         <div class="form-group">
             <label>NIP<i style="color:red">*</i></label>
-            <input type="number" name="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" disabled>
+            <input type="number" name="nip" id="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" disabled>
             <?php echo form_error('nip', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>NIK<i style="color:red">*</i></label>
-            <input type="number" name="nik" placeholder="Masukkan NIK" class="form-control" value="<?php echo $d->nik ?>" disabled>
+            <input type="number" name="nik" id="nik" placeholder="Masukkan NIK" class="form-control" value="<?php echo $d->nik ?>" disabled>
             <?php echo form_error('nik', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>NPWP<i style="color:red">*</i></label>
-            <input type="number" name="npwp" placeholder="Masukkan NPWP" class="form-control" value="<?php echo $d->npwp ?>" disabled>
+            <input type="number" name="npwp" id="npwp" placeholder="Masukkan NPWP" class="form-control" value="<?php echo $d->npwp ?>" disabled>
             <?php echo form_error('npwp', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 

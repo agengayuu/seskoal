@@ -12,19 +12,19 @@
 
                 <div class="form-group">
                     <label>Password Lama</label>
-                    <input type="text" name="passlama" id="passlama" placeholder="Masukkan Password Lama" class="form-control">
+                    <input type="password" name="passlama" id="passlama" placeholder="Masukkan Password Lama" class="form-control">
                     <?php echo form_error('passlama', '<div class="text-danger small" ml-3></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Password Baru</label>
-                    <input type="text" name="passbaru" id="passbaru" placeholder="Masukkan Password Baru" class="form-control">
+                    <input type="password" name="passbaru" id="passbaru" placeholder="Masukkan Password Baru" class="form-control">
                     <?php echo form_error('passbaru', '<div class="text-danger small" ml-3></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label> Ulangi password</label>
-                    <input type="text" name="passbaru1" id="passbaru1" placeholder="Konfirmasi Password" class="form-control">
+                    <input type="password" name="passbaru1" id="passbaru1" placeholder="Konfirmasi Password" class="form-control">
                     <?php echo form_error('passbaru1', '<div class="text-danger small" ml-3></div>') ?>
                 </div>
 
