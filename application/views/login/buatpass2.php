@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <div class="input-icon">
                                 <i class="fa fa-lock"></i>
-                                <input type="text" name="id" value="<?php echo $user->id ?>">
+                                <input type="hidden" name="id" value="<?php echo $user->id ?>">
                                 <input type="password" name="password" class="form-control placeholder-no-fix" placeholder="Password Baru " autocomplete="off" onkeypress="capLock(event)"/>
                                 <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
