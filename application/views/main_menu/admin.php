@@ -113,7 +113,7 @@
             type: 'pie'
         },
         title: {
-            text: 'Persentase Jumlah Siswa Perdiklat'
+            text: 'Persentase Jumlah Mahasiswa Per Diklat'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
