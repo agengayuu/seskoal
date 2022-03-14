@@ -47,6 +47,19 @@ class Mahasiswa_d extends CI_Controller{
         $this->load->view('mahasiswa_d/lm',$data);
         $this->load->view('templates_dosen/footer');
     }
+
+    public function detail($nim){
+        $data['title'] = 'Detail Mahasiswa';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $data['detail'] = $this->m_mahasiswa_d->detail($nim);
+
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        $this->load->view('mahasiswa_d/detail');
+        $this->load->view('templates_dosen/footer'); 
+    }
     
 
 
