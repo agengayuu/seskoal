@@ -24,6 +24,8 @@ class Soal_evaluasi_ujian extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
+        $data['ujian'] = $this->m_soal_evaluasi->tampil_data2()->result();
+
         $this->load->view('soal_evaluasi_ujian/index', $data); 
         $this->load->view('templates_dosen/footer'); 
 
@@ -39,6 +41,9 @@ class Soal_evaluasi_ujian extends CI_Controller{
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['matakuliah'] = $query;
 
+        // $query = $this->db->query("select a.*,b.* 
+        // from tbl_soal_evaluasi a, tbl_mata_kuliah b
+        // where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
 
         $this->load->view('soal_evaluasi_ujian/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
@@ -87,6 +92,59 @@ class Soal_evaluasi_ujian extends CI_Controller{
          redirect('soal_evaluasi_ujian');
     }
 
+    public function edit($id){
+        $data['title'] = "Edit Soal";
+
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        
+        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/sidebar_admin',$data);
+
+        $data['matakuliah'] = $this->db->query("Select * from tbl_mata_kuliah")->result();
+        
+        $where = array( 'id_soal_evaluasi' => $id );
+        $data['ujian'] = $this->m_soal_evaluasi->edit_data($where,'tbl_soal_evaluasi')->result();
+
+        $this->load->view('soal_evaluasi_ujian/update',$data); 
+        $this->load->view('templates_dosen/footer',$data); 
+    }
+
+    public function update_aksi(){
+
+        $id_soal_evaluasi = $this->input->post('id_soal_evaluasi');
+        $id_mata_kuliah = $this->input->post('id_mata_kuliah');
+        $pertanyaan     = $this->input->post('pertanyaan');
+        $a              = $this->input->post('a' );
+        $b              = $this->input->post('b');
+        $c              = $this->input->post('c');
+        $d              = $this->input->post('d');
+        $e              = $this->input->post('e');
+        $kunci_jawaban  = $this->input->post('kunci_jawaban');
+
+        $data = array(
+            'id_soal_evaluasi' => $id_soal_evaluasi,
+            'id_mata_kuliah'  =>  $id_mata_kuliah,
+            'pertanyaan'      =>  $pertanyaan,
+            'a'               =>  $a,
+            'b'               =>  $b,
+            'c'               =>  $c,
+            'd'               =>  $d,
+            'e'               =>  $e,
+            'kunci_jawaban'   =>  $kunci_jawaban
+        );
+
+        $where = array(
+            'id_soal_evaluasi'=> $id_soal_evaluasi
+        );
+        $this->m_soal_evaluasi->updateaksi($where,$data, 'tbl_soal_evaluasi');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                        <span aria-hidden="true">&times;</span> </button></div>');
+
+        redirect('soal_evaluasi_ujian'); 
+    }
+
     public function delete($id) {
 
         $where = array('id_soal_evaluasi' => $id);
@@ -95,7 +153,7 @@ class Soal_evaluasi_ujian extends CI_Controller{
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
 
-        redirect('ruang');
+        redirect('soal_evaluasi_ujian');
     }
 }
 

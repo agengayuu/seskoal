@@ -31,25 +31,79 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <?php 
+                        <?php 
                         $no =  1;
-                        foreach ($siswa as $s) : ?> -->
+                        foreach ($ujian as $u) : ?>
                         <tr>
                             <td width="20px"><?php echo $no++ ?></td>
-                            <td><?= $s->nim ?></td>
-                            <td><?= $s->nama ?></td>
-                            <td><?= $s->angkatan ?></td>
-                            <td><?= $s->tahun_masuk ?></td>
+                            <td><?= $u->id_mata_kuliah ?></td>
+                            <td><?= $u->id_mata_kuliah ?></td>
+                            <td>
+                            <?= $u->pertanyaan ?>
+                            <ol type="A">
+                                <li>
+                                    <?php if ('A'== $u->kunci_jawaban) {
+                                        echo "<b>";
+                                        echo $u->a;
+                                        echo "</b>";
+                                    } else {
+                                        echo $u->a;
+                                    }
+                                        ?>                                                                
+                                </li>
+                                <li>
+                                    <?php if ('B'== $u->kunci_jawaban) {
+                                        echo "<b>";
+                                        echo $u->b;
+                                        echo "</b>";
+                                    } else {
+                                        echo $u->b;
+                                    }
+                                        ?>    
+                                </li>
+                                <li>
+                                    <?php if ('C'== $u->kunci_jawaban) {
+                                        echo "<b>";
+                                        echo $u->c;
+                                        echo "</b>";
+                                    } else {
+                                        echo $u->c;
+                                    }
+                                        ?>    
+                                </li>
+                                <li>
+                                    <?php if ('D'== $u->kunci_jawaban) {
+                                        echo "<b>";
+                                        echo $u->d;
+                                        echo "</b>";
+                                    } else {
+                                        echo $u->d;
+                                    }
+                                        ?>    
+                                </li>
+                                <li>
+                                    <?php if ('E'== $u->kunci_jawaban) {
+                                        echo "<b>";
+                                        echo $u->e;
+                                        echo "</b>";
+                                    } else {
+                                        echo $u->e;
+                                    }
+                                        ?>    
+                                </li>
+                            </ol>
+                            </td>
+                            <td><?= $u->kunci_jawaban ?></td>
                             
                             <td>
-                                 <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                 <?php echo anchor('mahasiswa/adminhapus/'.$s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                 <?php echo anchor('soal_evaluasi_ujian/edit/'.$u->id_soal_evaluasi, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                 <?php echo anchor('soal_evaluasi_ujian/delete/'.$u->id_soal_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
                             </td>
                             
                         </tr>
-                                <!-- <?php
+                                <?php
                             endforeach
-                            ?> -->
+                            ?>
                     </tbody>
                 </table>
             </div>

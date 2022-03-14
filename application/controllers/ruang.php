@@ -26,6 +26,7 @@ exit('No direct script access allowed');
             $this->load->view('templates_dosen/sidebar_admin',$data); 
 
             $data['ruang'] = $this->m_ruang->tampil_data()->result();
+            
             $this->load->view('ruang/index', $data); 
             $this->load->view('templates_dosen/footer'); 
         }
