@@ -11,7 +11,11 @@ class M_mahasiswa extends CI_Model{
 
     public function tampildata(){
         $data['title'] = 'Mahasiswa';
-       return $this->db->get('tbl_mahasiswa');
+
+        $query = "SELECT tbl_mahasiswa.*, tbl_diklat.*
+        FROM tbl_mahasiswa
+        INNER JOIN tbl_diklat ON tbl_mahasiswa.id_diklat=tbl_diklat.id_diklat";
+        return $this->db->query($query);
     }
 
     public function adminsimpan($data,$table){
@@ -43,5 +47,3 @@ class M_mahasiswa extends CI_Model{
         }
     }
 }
-
-?>
