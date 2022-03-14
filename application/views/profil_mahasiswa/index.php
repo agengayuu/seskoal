@@ -15,7 +15,7 @@
         </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-borderes" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr style="text-align: center;">
                                 <th>No</th>
@@ -40,7 +40,7 @@
                                 <td ><?= $p->agama ?></td>
                                 <td style="text-align: center;"><?= $p->tgl_lahir ?></td>
                                 <center>
-                                <td> <?php echo anchor('profil_mahasiswa/detail/'.$p->nim, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/edit/'.$p->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/hapus'.$p->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                <td> <?php echo anchor('profil_mahasiswa/detail/'.$p->id_mahasiswa, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/edit/'.$p->id_mahasiswa, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> <?php echo anchor('profil_mahasiswa/delete/'.$p->id_mahasiswa, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                 </center>
                             </tr>
                                 <?php
