@@ -10,7 +10,7 @@
         <div class="card-body">
 
     <?php foreach($dosennya as $d) : ?> 
-    <?php echo form_open_multipart('dosen/adminupdate'); ?> 
+    <?php echo form_open_multipart('profile_dosen/update'); ?> 
 
     <input type="hidden" class="form-control" name="id_dosen" id="id_dosen" value="<?php echo $d->id_dosen; ?>">
 

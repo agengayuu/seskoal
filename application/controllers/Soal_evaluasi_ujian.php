@@ -27,8 +27,8 @@ class Soal_evaluasi_ujian extends CI_Controller{
         $data['ujian'] = $this->m_soal_evaluasi->tampil_data2()->result();
 
         $query = $this->db->query("select a.*,b.* 
-        from tbl_soal_evaluasi a, tbl_mata_kuliah b
-        where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
+                                    from tbl_soal_evaluasi a, tbl_mata_kuliah b
+                                    where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
 
         $data['ujian'] = $query;
 
