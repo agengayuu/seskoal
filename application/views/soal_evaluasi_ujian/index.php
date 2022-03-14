@@ -36,8 +36,8 @@
                         foreach ($ujian as $u) : ?>
                         <tr>
                             <td width="20px"><?php echo $no++ ?></td>
-                            <td><?= $u->id_mata_kuliah ?></td>
-                            <td><?= $u->id_mata_kuliah ?></td>
+                            <td><?= $u->kode_mata_kuliah ?></td>
+                            <td><?= $u->nama_mata_kuliah ?></td>
                             <td>
                             <?= $u->pertanyaan ?>
                             <ol type="A">

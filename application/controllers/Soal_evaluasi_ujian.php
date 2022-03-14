@@ -26,6 +26,12 @@ class Soal_evaluasi_ujian extends CI_Controller{
 
         $data['ujian'] = $this->m_soal_evaluasi->tampil_data2()->result();
 
+        $query = $this->db->query("select a.*,b.* 
+        from tbl_soal_evaluasi a, tbl_mata_kuliah b
+        where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
+
+        $data['ujian'] = $query;
+
         $this->load->view('soal_evaluasi_ujian/index', $data); 
         $this->load->view('templates_dosen/footer'); 
 
@@ -40,10 +46,6 @@ class Soal_evaluasi_ujian extends CI_Controller{
 
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['matakuliah'] = $query;
-
-        // $query = $this->db->query("select a.*,b.* 
-        // from tbl_soal_evaluasi a, tbl_mata_kuliah b
-        // where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
 
         $this->load->view('soal_evaluasi_ujian/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
