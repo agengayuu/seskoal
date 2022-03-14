@@ -86,6 +86,17 @@ class Soal_evaluasi_ujian extends CI_Controller{
 
          redirect('soal_evaluasi_ujian');
     }
+
+    public function delete($id) {
+
+        $where = array('id_soal_evaluasi' => $id);
+        $this->m_soal_evaluasi->hapus_data($where, 'tbl_soal_evaluasi'); 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+        redirect('ruang');
+    }
 }
 
 
