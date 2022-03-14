@@ -31,7 +31,7 @@ class Main_menu extends CI_Controller {
         $tomi = count($queryc);
 
         $wx = "";
-        foreach ($querya as $ruk) {
+        foreach ($querya as $ruk) {  
             $queryd = $this->db->query("select * from tbl_mahasiswa where id_diklat='" . $ruk->id_diklat . "'")->result();
             $toma = count($queryd);
             $hasil = $toma / $tomi * 100;
