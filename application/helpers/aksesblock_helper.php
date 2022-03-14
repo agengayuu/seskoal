@@ -1,24 +1,58 @@
  <?php
 
-    function is_logged_in()
+    function strposa(string $haystack, array $needles, int $offset = 0): bool
+    {
+        foreach ($needles as $needle) {
+            if (strpos($haystack, $needle, $offset) !== false) {
+                return true; // stop on first true result
+            }
+        }
+
+        return false;
+    }
+
+    function is_logged_in($id_group)
     {
         $ci = get_instance();
-        if (!$ci->session->userdata('email')) {
-            redirect('auth');
+        if (!$ci->session->userdata('username')) {
+            redirect('login');
         } else {
-            $role_id = $ci->session->userdata('role_id');
-            $menu = $ci->uri->segment(1);
+            $id_grup_user = $ci->session->userdata('id_grup_user');
+            if ($id_grup_user == $id_group) {
 
-            $queryMenu = $ci->db->get_where('user_menu', ['menu' => $menu])->row_array();
-            $menu_id = $queryMenu['id'];
+                $queryMenu = $ci->db->get_where('user_akses_menu', ['id_grup_user' => $id_grup_user])->result();
 
-            $userAccess = $ci->db->get_where('user_access_menu', [
-                'role_id' => $role_id,
-                'menu_id' => $menu_id
-            ]);
-
-            if ($userAccess->num_rows() < 1) {
-                redirect('Login/blocked');
+                $sub_menu_array = [];
+                foreach ($queryMenu as $menu) {
+                    $querySubMenu = $ci->db->get_where('user_submenu', ['id_menu' => $menu->id_menu])->result();
+                    foreach ($querySubMenu as $sub_menu) {
+                        $sub_menu_array[] = $sub_menu->url;
+                    }
+                }
+                // print_r($sub_menu_array);die();
+                $match = true;
+                if (strposa(uri_string(), $sub_menu_array, 0)) {
+                    // url match
+                    $match = true;
+                } else {
+                    // url not match
+                    $match = false;
+                }
+                if (!$match) {
+                    redirect('Login/blocked');
+                }
+            } else {
+                $url_back = '';
+                if($id_grup_user == '1'){
+                    $url_back = 'main_menu/admin';
+                }else if($id_grup_user == '2'){
+                    $url_back = 'main_menu/siswa'; 
+                } else if ($id_grup_user == '3') {
+                    $url_back = 'main_menu/dosen';
+                } else {
+                    $url_back = '/';
+                }
+                redirect($url_back);
             }
         }
     }

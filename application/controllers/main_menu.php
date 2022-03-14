@@ -11,14 +11,16 @@ class Main_menu extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->model('m_jadwal');
         $this->load->library('session');
+        $this->load->helper('aksesblock');
         if(!$this->session->userdata('username')){
             redirect('login');
         }
         //session_start();
     }
-
+    
     public function admin() {
-
+        
+        is_logged_in('1');
         $data['title'] = 'Dashboard';
 
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
@@ -45,6 +47,7 @@ class Main_menu extends CI_Controller {
     }
 
     public function dosen() {
+        is_logged_in('3');
         $data['title'] = 'Menu Dosen';
 
         $data['user'] = $this->db->get_where('user', ['username'=> 
@@ -73,6 +76,7 @@ class Main_menu extends CI_Controller {
     
 
     public function siswa() {
+        is_logged_in('2');
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header',$data); 
