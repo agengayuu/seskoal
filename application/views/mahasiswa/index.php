@@ -3,8 +3,8 @@
         <div class="card-body">
             Mahasiswa
         </div>
-</div>
-    
+    </div>
+
 
     <?php echo $this->session->flashdata('pesan') ?>
 
@@ -24,6 +24,7 @@
                             <th>No</th>
                             <th>Nim</th>
                             <th>Nama Mahasiswa</th>
+                            <th>Nama Diklat</th>
                             <th>Angkatan</th>
                             <th>Tahun Masuk</th>
                             <th>Email</th>
@@ -31,26 +32,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php 
+                        <?php
                         $no =  1;
                         foreach ($siswa as $s) : ?>
-                        <tr>
-                            <td width="20px"><?php echo $no++ ?></td>
-                            <td><?= $s->nim ?></td>
-                            <td><?= $s->nama ?></td>
-                            <td><?= $s->angkatan ?></td>
-                            <td><?= $s->tahun_masuk ?></td>
-                            <td><?= $s->email ?></td>
-                            
-                            <td> <?php echo anchor('mahasiswa/admindetail/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>' ) ?>
-                                 <?php echo anchor('mahasiswa/adminedit/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                 <?php echo anchor('mahasiswa/adminhapus/'.$s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
-                            </td>
-                            
-                        </tr>
-                                <?php
-                            endforeach
-                            ?>
+                            <tr>
+                                <td width="20px"><?php echo $no++ ?></td>
+                                <td><?= $s->nim ?></td>
+                                <td><?= $s->nama ?></td>
+                                <td><?= $s->nama_diklat ?></td>
+                                <td><?= $s->angkatan ?></td>
+                                <td><?= $s->tahun_masuk ?></td>
+                                <td><?= $s->email ?></td>
+
+                                <td> <?php echo anchor('mahasiswa/admindetail/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>') ?>
+                                    <?php echo anchor('mahasiswa/adminedit/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                    <?php echo anchor('mahasiswa/adminhapus/' . $s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?>
+                                </td>
+
+                            </tr>
+                        <?php
+                        endforeach
+                        ?>
                     </tbody>
                 </table>
             </div>
