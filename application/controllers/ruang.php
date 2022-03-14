@@ -26,6 +26,12 @@ exit('No direct script access allowed');
             $this->load->view('templates_dosen/sidebar_admin',$data); 
 
             $data['ruang'] = $this->m_ruang->tampil_data()->result();
+
+            $query = $this->db->query("select a.*,b.* 
+                                        from tbl_ruang a, tbl_jenis_ruang b
+                                        where a.id_jenis_ruang = b.id_jenis_ruang order by a.id_jenis_ruang")->result();
+
+            $data['ruang'] = $query;
             
             $this->load->view('ruang/index', $data); 
             $this->load->view('templates_dosen/footer'); 

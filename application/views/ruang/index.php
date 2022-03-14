@@ -40,7 +40,7 @@
                                                 <td width="20px"><?php echo $no++ ?></td>
                                                 <!-- <td><?php echo $rgn->id_ruang ?></td> -->
                                                 <td><?php echo $rgn->nama_ruang ?></td>
-                                                <td><?php echo $rgn->id_jenis_ruang ?></td>
+                                                <td><?php echo $rgn->nama_jenis_ruang ?></td>
                                                 <td><?php echo $rgn->kapasitas ?></td>
                                                 <td><?php echo $rgn->lantai ?></td>
                                                 <td><?php echo $rgn->keterangan ?></td>
