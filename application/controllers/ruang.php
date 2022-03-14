@@ -60,7 +60,7 @@ exit('No direct script access allowed');
             $data['jenis_ruang'] = $query;
             
             $this->load->view('ruang/tambah', $data); 
-            $this->load->view('templates_dosen/footer'); 
+            $this->load->view('templates_dosen/footer');  
         }
 
         public function simpan() {

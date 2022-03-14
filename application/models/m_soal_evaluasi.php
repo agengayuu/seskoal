@@ -13,6 +13,10 @@ class M_soal_evaluasi extends CI_Model{
         $data['title'] = 'Mata kuliah';
         return $this->db->get('tbl_mata_kuliah');
     }
+
+    public function input_data($data){
+        return $this->db->insert('tbl_soal_evaluasi', $data); 
+     }
 }
 
 ?>
