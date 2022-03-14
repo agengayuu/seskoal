@@ -11,6 +11,8 @@ class Jadwal_kuliah extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_jadwal');
         $this->load->library('session');
+        $this->load->helper('aksesblock');
+        is_logged_in('1');
         //session_start();
     }
 

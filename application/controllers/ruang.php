@@ -16,6 +16,7 @@ exit('No direct script access allowed');
             if(!$this->session->userdata('username')){
                 redirect('login');
             }
+            is_logged_in('1');
             //session_start();
         }
 

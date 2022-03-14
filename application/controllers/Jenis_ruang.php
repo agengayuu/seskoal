@@ -3,6 +3,14 @@
 if(!defined('BASEPATH'))
 exit('No direct script access allowed');
 class Jenis_ruang extends CI_Controller{
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->library('form_validation');
+        $this->load->library('session');
+        is_logged_in('1');
+        //session_start();
+    }
     public function index(){
         $data['title'] = 'Jenis Ruangan';
 

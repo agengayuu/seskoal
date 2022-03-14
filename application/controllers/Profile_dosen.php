@@ -10,6 +10,10 @@ class Profile_dosen extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_profil_dosen');
         $this->load->library('session');
+        $this->load->helper('aksesblock');
+        is_logged_in('3');
+        
+        
         // if(!$this->session->userdata('username')){
         //     redirect('login');
         // }

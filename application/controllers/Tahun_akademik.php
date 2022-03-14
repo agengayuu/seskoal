@@ -12,6 +12,7 @@ class Tahun_akademik extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_akademik');
         $this->load->library('session');
+        is_logged_in('1');
         // session_start();
     }
 

@@ -11,6 +11,7 @@ class Profil_mahasiswa extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_profil_mahasiswa');
         $this->load->library('session');
+        is_logged_in('2');
         //session_start();
     }
 

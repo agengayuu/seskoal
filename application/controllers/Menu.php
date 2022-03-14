@@ -12,9 +12,7 @@ class Menu extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_menu');
         $this->load->library('session');
-        if(!$this->session->userdata('username')){
-            redirect('login');
-        }
+        is_logged_in('1');
        // session_start();
     }
     public function index(){

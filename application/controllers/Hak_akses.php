@@ -11,6 +11,7 @@ class Hak_akses extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_diklat');
         $this->load->library('session');
+        is_logged_in('1');
         // $this->load->helper('aksesblock_helper');
         // echo cek_akses(1,2);die;
         
