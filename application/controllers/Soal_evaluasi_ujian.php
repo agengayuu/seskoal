@@ -9,7 +9,7 @@ class Soal_evaluasi_ujian extends CI_Controller{
     {
         parent::__construct();
         $this->load->library('form_validation');
-        // $this->load->model('m_mahasiswa_d');
+        $this->load->model('m_soal_evaluasi');
         $this->load->library('session');
         if(!$this->session->userdata('username')){
             redirect('login');
@@ -40,6 +40,20 @@ class Soal_evaluasi_ujian extends CI_Controller{
 
         $this->load->view('soal_evaluasi_ujian/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function matakuliah(){
+        $data['title'] = 'Mata Kuliah';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        $data['matakuliah'] = $this->m_soal_evaluasi->tampildata()->result();
+
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        $this->load->view('soal_evaluasi_ujian/matakuliah', $data);
+        $this->load->view('templates_dosen/footer'); 
+        
     }
 }
 

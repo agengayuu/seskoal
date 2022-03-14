@@ -5,7 +5,7 @@ exit('No direct script access allowed');
 
 class M_profil_dosen extends CI_Model{
 
-    function construct(){
+    function construct(){ 
         parent:: __construct();
     }
     

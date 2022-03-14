@@ -9,7 +9,7 @@
     <?php echo $this->session->flashdata('pesan') ?>
 
     <?php echo anchor('soal_evaluasi_ujian/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Soal Evaluasi</button>') ?>
-    <?php echo anchor('soal_evaluasi_ujian/tambah', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye"></i> Data Mata Kuliah</button>') ?>
+    <?php echo anchor('soal_evaluasi_ujian/matakuliah', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye"></i> Data Mata Kuliah</button>') ?>
 
     <!--table -->
     <div class="card shadow mb-4">
