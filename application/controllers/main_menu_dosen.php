@@ -24,7 +24,7 @@ class Main_menu_dosen extends CI_Controller {
 		$hasil = $toma / $tomi * 100;
 		$wx .= '{ name :"'.$ruk->nama_diklat.'",y:'.$hasil.' },';
 		}
- 
+  
 		$data['grafik'] = $wx; 
 
         $this->load->view('main_menu/dosen', $data); 
