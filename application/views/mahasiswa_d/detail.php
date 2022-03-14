@@ -1,15 +1,10 @@
-  
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Detail Dosen 
+         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Detail Mahasiswa 
         </div>
-    </div> 
+    </div>
 
-    <?php echo $this->session->flashdata('pesan') ?>
-
-    <?php foreach($user as $p) {?>
-        
     <div class="card-header bg-white">
         <div class="card-body">
             <div class="row">
@@ -17,45 +12,17 @@
                     <div class="form-horizontal form-bordered">
                         <div class="form-group row">
                             <div class="col-md-2">
-                                <?php if($p->foto!= null) { ?>
-                                    <img src="<?=base_url('./assets/uploads/'.$p->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
-                                <?php } ?>
+                                <img src=""  style="width: 90%;" class="card shadow img-thumbnail rounded">
                             </div>
+                            <?php foreach($detail as $dt) : ?>
 
                             <div class="col-md-10">
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">NIP</label>
+                                        <label for="">NIM</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?= $p->nip;?></label>
-                                    </div>
-                                    <div>
-                                    <?php echo anchor('profile_dosen/edit/'.$p->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-edit"></i> Edit</div>' ) ?>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">NIK</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for=""><?= $p->nik;?></label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">NPWP</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for=""><?= $p->npwp;?></label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">Kewarganegaraan</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for=""><?= $p->kewarganegaraan;?></label>
+                                        <label for=""><?php echo $dt->nim; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -63,31 +30,15 @@
                                         <label for="">Nama Lengkap</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->gelar_depan; ?>&nbsp;<?php echo $p->nama; ?>&nbsp;<?php echo $p->gelar_belakang; ?></label>
+                                        <label for=""><?php echo $dt->nama; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">Email</label>
+                                        <label for="">Angkatan</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->email; ?></label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">No Telpon</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for=""><?php echo $p->no_tlp; ?></label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">Tempat Lahir</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for=""><?php echo $p->tempat_lahir; ?></label>
+                                        <label for=""><?php echo $dt->angkatan; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -95,23 +46,55 @@
                                         <label for="">Tanggal Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->tgl_lahir; ?></label>
+                                        <label for=""><?php echo $dt->tgl_lhr; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">Jenis Kelamin</label>
+                                        <label for="">Tahun Masuk</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->jk; ?></label>
+                                        <label for=""><?php echo $dt->tahun_masuk; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">Agama</label>
+                                        <label for="">Tahun Akademik</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->agama; ?></label>
+                                        <label for=""><?php echo $dt->tahun_akademik; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">Jabatan</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->jabatan; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->email; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">No Telpon</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->no_tlp; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">Diklat</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="">NIP</label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -119,12 +102,12 @@
                                         <label for="">Alamat</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->alamat; ?></label>
+                                        <label for="">NIP</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <?php } ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -133,9 +116,4 @@
             <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Kembali</button>
         </div>
     </div>
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
 </div>

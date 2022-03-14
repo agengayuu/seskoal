@@ -6,8 +6,6 @@
     </div>
     
 
-    <?php echo $this->session->flashdata('pesan') ?>
-
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -40,7 +38,7 @@
                             <td><?= $s->tahun_masuk ?></td>
                             <td><?= $s->email ?></td>
                             
-                            <td> <?php echo anchor('mahasiswa/admindetail/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?>
+                            <td> <?php echo anchor('mahasiswa_d/detail/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?>
                             </td>
                             
                         </tr>
