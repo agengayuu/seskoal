@@ -55,7 +55,7 @@
                 </div>
                 <div class="modal-body">Klik Logout Jika ingin Logout.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <a class="btn btn-primary" href="<?php echo base_url('login/logout') ?>">Logout</a>
                 </div>
             </div>

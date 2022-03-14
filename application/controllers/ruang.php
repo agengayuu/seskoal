@@ -60,7 +60,7 @@ exit('No direct script access allowed');
             $data['jenis_ruang'] = $query;
             
             $this->load->view('ruang/tambah', $data); 
-            $this->load->view('templates_dosen/footer'); 
+            $this->load->view('templates_dosen/footer');  
         }
 
         public function simpan() {
@@ -145,7 +145,7 @@ exit('No direct script access allowed');
                                                 Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
 
-                redirect('ruang');
+                redirect('ruang'); 
             }
 
             public function delete($id) {

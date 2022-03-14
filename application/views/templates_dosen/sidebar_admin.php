@@ -77,7 +77,7 @@
             <?php endforeach; ?>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Akademik</span>
@@ -90,7 +90,7 @@
                         <a class="collapse-item" href="utilities-animation.html">Rekapitulasi Studi</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
