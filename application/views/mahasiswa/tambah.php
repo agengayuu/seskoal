@@ -1,5 +1,9 @@
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-black-800">Tambah Mahasiswa</h1>
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Tambah Mahasiswa
+        </div>
+    </div>
 
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
