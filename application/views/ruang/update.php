@@ -51,7 +51,7 @@
 
                     <div class="form-group">
                         <label>Keterangan<i style="color:red">*</i></label>
-                        <textarea class="form-control" name="keterangan" rows="3" value="<?= $r->keterangan; ?>"></textarea>
+                        <textarea class="form-control" name="keterangan" rows="3" ><?= $r->keterangan; ?></textarea>
                         <?php echo form_error('keterangan', '<div class="text-danger small ml-3">','</div>') ?>
                     </div>
 
