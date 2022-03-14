@@ -26,19 +26,19 @@ class Main_menu extends CI_Controller {
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
 
-        $querya = $this->db->query("select * from tbl_diklat")->result();
-        $queryc = $this->db->query("select * from tbl_mahasiswa")->result();
-        $tomi = count($queryc);
+        $queryaa = $this->db->query("select * from tbl_diklat")->result();
+		$querycc = $this->db->query("select * from tbl_mahasiswa")->result();
+		$tomi = count($querycc);
 
-        $wx = "";
-        foreach ($querya as $ruk) {  
-            $queryd = $this->db->query("select * from tbl_mahasiswa where id_diklat='" . $ruk->id_diklat . "'")->result();
-            $toma = count($queryd);
-            $hasil = $toma / $tomi * 100;
-            $wx .= '{ name :"' . $ruk->nama_diklat . '",y:' . $hasil . ' },';
-        }
-
-        $data['grafik'] = $wx;
+		$wx = "";
+		foreach ($queryaa as $ruk){ 
+		$queryd = $this->db->query("select * from tbl_mahasiswa where id_diklat='".$ruk->id_diklat."'")->result();
+		$toma = count($queryd);
+		$hasil = $toma / $tomi * 100;
+		$wx .= '{ name :"'.$ruk->nama_diklat.'",y:'.$hasil.' },';
+		}
+  
+		$data['grafik'] = $wx;
 
         $this->load->view('main_menu/admin', $data);
         $this->load->view('templates_dosen/footer'); 
