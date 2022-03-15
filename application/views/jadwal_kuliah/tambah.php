@@ -14,8 +14,8 @@
 
                 <div class="form-group">
                     <label> Nama Diklat <i style="color:red">*</i></label>
-                    <select class="form-control" name='id_diklat' id='id_diklat'>
-                        <option value='0' selected>--- Pilih Diklat ---</option>
+                    <select class="form-control" name='id_diklat' id='id_diklat' required>
+                        <option style="display:none" value="">--- Pilih Diklat ---</option>
                         <?php foreach ($diklat as $d) { ?>
                             <option value="<?php echo $d->id_diklat; ?>"><?php echo $d->nama_diklat; ?></option>
                         <?php } ?>
@@ -24,9 +24,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label> Materi Mata Kuliah <i style="color:red">*</i></label>
-                    <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah'>
-                        <option value='0' selected>--- Materi Mata Kuliah ---</option>
+                    <label>Mata Kuliah <i style="color:red">*</i></label>
+                    <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah' required>
+                        <option style="display:none" value="">--- Materi Mata Kuliah ---</option>
                         <?php foreach ($matkul as $mat) { ?>
                             <option value="<?php echo $mat->id_mata_kuliah; ?>"><?php echo $mat->nama_mata_kuliah; ?></option>
                         <?php } ?>
@@ -36,8 +36,8 @@
 
                 <div class="form-group">
                     <label> Nama Dosen <i style="color:red">*</i></label>
-                    <select class="form-control" name='id_dosen' id='id_dosen'>
-                        <option value='0' selected>--- Pilih Dosen ---</option>
+                    <select class="form-control" name='id_dosen' id='id_dosen' required>
+                        <option style="display:none" value="">--- Pilih Dosen ---</option>
                         <?php foreach ($dosen as $d) { ?>
                             <option value="<?php echo $d->id_dosen; ?>"><?php echo $d->nama; ?></option>
                         <?php } ?>
@@ -53,37 +53,37 @@
 
                 <div class="form-group">
                     <label>Tanggal<i style="color:red">*</i></label>
-                    <input type="date" name="tanggal" placeholder="Masukkan Tanggal" class="form-control" id='tanggal'>
+                    <input type="date" name="tanggal" placeholder="Masukkan Tanggal" class="form-control" id='tanggal' required>
                     <?php echo form_error('tanggal', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Waktu Mulai<i style="color:red">*</i></label>
-                    <input type="time" name="waktu_mulai" placeholder="Masukkan Waktu" class="form-control" id='waktu_mulai'>
+                    <input type="time" name="waktu_mulai" placeholder="Masukkan Waktu" class="form-control" id='waktu_mulai' required>
                     <?php echo form_error('waktu_mulai', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
                 <div class="form-group">
                     <label>Waktu Akhir<i style="color:red">*</i></label>
-                    <input type="time" name="waktu_selesai" placeholder="Masukkan Waktu" class="form-control" id='waktu_akhir'>
+                    <input type="time" name="waktu_selesai" placeholder="Masukkan Waktu" class="form-control" id='waktu_selesai' required>
                     <?php echo form_error('waktu_akhir', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Jam Pelajaran Ke<i style="color:red">*</i></label>
-                    <input type="text" name="jam_pelajaran_ke" placeholder="Masukkan Tema" class="form-control" id='jam_pelajaran_ke'>
+                    <input type="text" name="jam_pelajaran_ke" placeholder="Masukkan Tema" class="form-control" id='jam_pelajaran_ke' required>
                     <?php echo form_error('tema', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Tema<i style="color:red">*</i></label>
-                    <input type="text" name="tema" placeholder="Masukkan Tema" class="form-control" id='tema'>
+                    <input type="text" name="tema" placeholder="Masukkan Tema" class="form-control" id='tema' required>
                     <?php echo form_error('tema', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label> Tempat <i style="color:red">*</i></label>
-                    <select class="form-control" name='id_ruang' id='id_ruang'>
-                        <option value='0' selected>--- Pilih Ruangan ---</option>
+                    <select class="form-control" name='id_ruang' id='id_ruang' required>
+                        <option style="display:none" value="">--- Pilih Ruangan ---</option>
                         <?php foreach ($ruang as $r) { ?>
                             <option value="<?php echo $r->id_ruang; ?>"><?php echo $r->nama_ruang; ?></option>
                         <?php } ?>
@@ -93,7 +93,7 @@
 
                 <div class="form-group">
                     <label>Keterangan<i style="color:red">*</i></label>
-                    <textarea class="form-control" name="keterangan" id='tanggal' rows="3"></textarea>
+                    <textarea class="form-control" name="keterangan" id='tanggal' rows="3" required></textarea>
                     <?php echo form_error('keterangan', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 

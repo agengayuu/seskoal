@@ -84,6 +84,10 @@ class Jadwal_kuliah extends CI_Controller
         );
 
         $this->m_jadwal->savedata($data, 'tbl_jadwal_kuliah');
+
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                            Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                            <span aria-hidden="true">&times;</span> </button></div>');
         redirect('jadwal_kuliah');
         $this->load->view('templates_dosen/footer');
     }

@@ -23,18 +23,18 @@
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
-                                    <th width="10px">No</th>
-                                    <th width="50px">Nama Diklat</th>
-                                    <th width="50px">Mata Kuliah</th>
-                                    <th width="50px">Nama Dosen</th>
+                                <tr style="text-align:center">
+                                    <th>No</th>
+                                    <th>Nama Diklat</th>
+                                    <th>Mata Kuliah</th>
+                                    <th>Nama Dosen</th>
                                     <!-- <th width="50px">Kode</th> -->
-                                    <th width="50px">Tanggal</th>
-                                    <th width="50px">Waktu</th>
-                                    <th width="50px">Jam Pelajaran ke</th>
-                                    <th width="50px">Tema</th>
-                                    <th width="50px">Ruangan</th>
-                                    <th width="50px">Keterangan</th>
+                                    <th>Tanggal</th>
+                                    <th>Waktu</th>
+                                    <th>JP ke</th>
+                                    <th>Tema</th>
+                                    <th>Ruangan</th>
+                                    <th>Keterangan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -49,7 +49,7 @@
                                         <td><?= $jdw->nama ?></td>
                                         <!-- <td><?= $jdw->kode_jadwal ?></td> -->
                                         <td><?= $jdw->tanggal ?></td>
-                                        <td><?= $jdw->waktu_mulai ?></td>
+                                        <td><?= $jdw->waktu_mulai ?> - <?= $jdw->waktu_selesai ?></td>
                                         <td><?= $jdw->jam_pelajaran_ke ?></td>
                                         <td><?= $jdw->tema ?></td>
                                         <td><?= $jdw->nama_ruang ?></td>
