@@ -69,14 +69,18 @@ class Jadwal_kuliah extends CI_Controller
         $ruang = $this->input->post('id_ruang');
         $ket = $this->input->post('keterangan');
 
+        // date_default_timezone_set("Asia/Jakarta");
+        ini_set('date.timezone', 'Asia/Bangkok');
+        $date = date('Y-m-d H:i:s');
+        
         $data = array(
             'id_diklat' => $diklat,
             'id_mata_kuliah' => $matkul,
             'id_dosen' => $dosen,
             // 'kode_jadwal' => $kode,
-            'tanggal' => date('Y-m-d'),
-            'waktu_mulai' => date("h:i:sa"),
-            'waktu_selesai' => date("h:i:sa"),
+            'tanggal' => date('Y-m-d', strtotime($tgl)),
+            'waktu_mulai' => $waktu_mulai,
+            'waktu_selesai' => $waktu_selesai,
             'jam_pelajaran_ke' => $jam,
             'tema' => $tema,
             'id_ruang' => $ruang,
