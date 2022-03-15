@@ -94,7 +94,6 @@ class Main_menu extends CI_Controller {
 
         $data['jadwal'] = $this->m_jadwal->getdata();
 
-        $idterakhir = 
         $this->load->view('main_menu/siswa',$data); 
         $this->load->view('templates_dosen/footer',$data); 
     }

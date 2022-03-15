@@ -31,7 +31,9 @@
                                     <!-- <th width="50px">Kode</th> -->
                                     <th width="50px">Tanggal</th>
                                     <th width="50px">Waktu</th>
-                                    <th width="50px">Tempat</th>
+                                    <th width="50px">Jam Pelajaran ke</th>
+                                    <th width="50px">Tema</th>
+                                    <th width="50px">Ruangan</th>
                                     <th width="50px">Keterangan</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -47,7 +49,9 @@
                                         <td><?= $jdw->nama ?></td>
                                         <!-- <td><?= $jdw->kode_jadwal ?></td> -->
                                         <td><?= $jdw->tanggal ?></td>
-                                        <td><?= $jdw->waktu ?></td>
+                                        <td><?= $jdw->waktu_mulai ?></td>
+                                        <td><?= $jdw->jam_pelajaran_ke ?></td>
+                                        <td><?= $jdw->tema ?></td>
                                         <td><?= $jdw->nama_ruang ?></td>
                                         <td><?= $jdw->keterangan ?></td>
 
