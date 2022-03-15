@@ -6,10 +6,8 @@
     </div>
 
     <div class="card-header bg-white">
-    <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
             <form action="<?php echo base_url('soal_evaluasi_ujian/simpan') ?>" method="post">
-
 
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label"> Mata Kuliah<i style="color:red">*</i></label>

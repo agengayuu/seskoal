@@ -45,6 +45,7 @@
 <!-- Page level custom scripts -->
 <script src="<?php echo base_url() ?>js/demo/datatables-demo.js"></script>
 
+
 <script>
     $(function() {
         $('.form-check-input').on('click', function() {

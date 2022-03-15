@@ -1,16 +1,35 @@
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Daftar Mahasiswa Evaluasi
+            Tambah Mahasiswa Evaluasi
         </div>
     </div>
     
 
     <?php echo $this->session->flashdata('pesan') ?>
-
-
-    <?php echo anchor('peserta_evaluasi/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Evaluasi</button>') ?>
-    <?php echo anchor('peserta_evaluasi/matakuliah', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye"></i> Data Mata Kuliah</button>') ?>
+    
+    <form action="">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"> Pilih Diklat </label>
+                    <div class="col-sm-10">
+                        <select class="select2 form-control" name='id_diklat' id='id_diklat'>
+                            <option value='0' disabled="" selected>--- Pilih Mata Diklat ---</option>
+                            <?php foreach ($diklat as $d) { ?>
+                            <option value="<?php echo $d->nama_diklat; ?>"><?php echo $d->nama_diklat; ?></option>
+                        <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary btn-flat" title="Pilih Diklat">Pilih Diklat</button>
+                    </div>
+                </div>
+            </div>     
+        </div>
 
 
     <!--table -->
@@ -19,6 +38,39 @@
             <h6 class="m-0 font-weight-bold text-primary">Daftar Mahasiswa Evaluasi</h6>
         </div>
 
+        
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 ml-4 col-form-label"> Mata Kuliah <i style="color:red">*</i></label>
+                    <div class="col-sm-9">
+                        <select class="select2 form-control" name='id_mata_kuliah' id='id_mata_kuliah' required>
+                            <option value='0' disabled="" selected>--- Pilih Mata Kuliah ---</option>
+                            <?php foreach ($matakuliah as $mk) { ?>
+                            <option value="<?php echo $mk->nama_mata_kuliah; ?>"><?php echo $mk->nama_mata_kuliah; ?></option>
+                        <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 ml-4 col-form-label">Tanggal Ujian<i style="color:red">*</i></label>
+                    <div class="col-sm-9">
+                        <input type="date" name="tanggal_ujian" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 ml-4 col-form-label">Jam Ujian<i style="color:red">*</i></label>
+                    <div class="col-sm-9">
+                        <input type="time" name="jam_ujian" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 ml-4 col-form-label">Durasi Ujian<i style="color:red">*</i></label>
+                    <div class="col-sm-9">
+                        <input type="text" name="durasi_ujian" placeholder="Masukkan lama waktu ujian dalam menit" class="form-control" required>
+                    </div>
+                </div>
+            </div>     
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -26,12 +78,9 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Mahasiswa</th>
+                            <th>NIM</th>
                             <th>Diklat</th>
-                            <th>Mata Kuliah</th>
-                            <th>Waktu Ujian</th>
-                            <th>Durasi</th>
-                            <th>Aksi</th>
-                            <th>Status</th>
+                            <th>Pilih Semua</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -111,8 +160,11 @@
                     </tbody>
                 </table>
             </div>
+            <button type="submit" class="btn btn-primary mb-4 mt-4">Simpan</button>
+            <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>
         </div>
     </div>
+    </form>
 </div>
 
 <!-- Scroll to Top Button-->

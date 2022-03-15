@@ -35,4 +35,21 @@ class Peserta_evaluasi extends CI_Controller {
         $this->load->view('templates_dosen/footer'); 
     }
 
+    public function input() {
+        $data['title'] = 'Tambah Mahasiswa Evaluasi';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $query= $this->db->query("select * from tbl_diklat")->result();
+        $data['diklat'] = $query;
+
+        $query= $this->db->query("select * from tbl_mata_kuliah")->result();
+        $data['matakuliah'] = $query;
+
+        $this->load->view('peserta_evaluasi/tambah', $data); 
+        $this->load->view('templates_dosen/footer'); 
+    }
+
 } 
