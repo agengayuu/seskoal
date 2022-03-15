@@ -284,8 +284,8 @@ public function set(){
                } else if
                 ($passbaru != $passbaru1 ){
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                   Konfirmasi password tidak sesuai. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                   <span aria-hidden="true">&times;</span> </button></div>');
+                                                    Konfirmasi password tidak sesuai <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
                     redirect('login/set');
 
                     // echo"pass baru tdk sama dgn konf paass";
@@ -299,8 +299,8 @@ public function set(){
                     $this->db->where('username', $this->session->userdata('username'));
                     $this->db->update('user');
                     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                                  Password berhasil di ganti. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                  <span aria-hidden="true">&times;</span> </button></div>');
+                                                    Password berhasil di ubah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
                     redirect('login/set');
                     // echo "password berhasil di updt";die;
 

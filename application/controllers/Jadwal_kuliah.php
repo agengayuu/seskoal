@@ -62,8 +62,11 @@ class Jadwal_kuliah extends CI_Controller
         $dosen = $this->input->post('id_dosen');
         // $kode = $this->input->post('kode_jadwal');
         $tgl = $this->input->post('tanggal');
-        $waktu = $this->input->post('waktu');
-        $tempat = $this->input->post('id_ruang');
+        $waktu_mulai= $this->input->post('waktu_mulai');
+        $waktu_selesai = $this->input->post('waktu_selesai');
+        $jam = $this->input->post('jam_pelajaran_ke');
+        $tema = $this->input->post('tema');
+        $ruang = $this->input->post('id_ruang');
         $ket = $this->input->post('keterangan');
 
         $data = array(
@@ -72,8 +75,11 @@ class Jadwal_kuliah extends CI_Controller
             'id_dosen' => $dosen,
             // 'kode_jadwal' => $kode,
             'tanggal' => date('Y-m-d'),
-            'waktu' => date("h:i:sa"),
-            'id_ruang' => $tempat,
+            'waktu_mulai' => date("h:i:sa"),
+            'waktu_selesai' => date("h:i:sa"),
+            'jam_pelajaran_ke' => $jam,
+            'tema' => $tema,
+            'id_ruang' => $ruang,
             'keterangan' => $ket
         );
 
