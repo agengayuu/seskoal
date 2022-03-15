@@ -10,7 +10,6 @@
 
 
     <?php echo anchor('peserta_evaluasi/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Evaluasi</button>') ?>
-    <?php echo anchor('peserta_evaluasi/matakuliah', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye"></i> Data Mata Kuliah</button>') ?>
 
 
     <!--table -->
@@ -35,79 +34,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <?php 
+                        <?php 
                         $no =  1;
-                        foreach ($ujian as $u) : ?>
+                        foreach ($peserta as $p) : ?>
                         <tr>
                             <td width="20px"><?php echo $no++ ?></td>
-                            <td><?= $u->kode_mata_kuliah ?></td>
-                            <td><?= $u->nama_mata_kuliah ?></td>
+                            <td><?= $p->nama ?></td>
+                            <td><?= $p->id_diklat ?></td>
+                            <td><?= $p->id_mata_kuliah ?></td>
+                            <td><?php echo date('d-m-Y', strtotime($p->tanggal_ujian)); ?> | <?php echo $p->jam_ujian; ?></td>
+                            <td><?= $p->durasi_ujian ?></td>
                             <td>
-                            <?= $u->pertanyaan ?>
-                            <ol type="A">
-                                <li>
-                                    <?php if ('A'== $u->kunci_jawaban) {
-                                        echo "<b>";
-                                        echo $u->a;
-                                        echo "</b>";
-                                    } else {
-                                        echo $u->a;
+                                <?php if ($p->nilai == null) { ?>
+                                    <?php echo anchor('peserta_evaluasi/update/'.$p->id_evaluasi, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                    <?php echo anchor('peserta_evaluasi/delete/'.$p->id_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                <?php } else {
+                                        echo '-';
                                     }
-                                        ?>                                                                
-                                </li>
-                                <li>
-                                    <?php if ('B'== $u->kunci_jawaban) {
-                                        echo "<b>";
-                                        echo $u->b;
-                                        echo "</b>";
-                                    } else {
-                                        echo $u->b;
-                                    }
-                                        ?>    
-                                </li>
-                                <li>
-                                    <?php if ('C'== $u->kunci_jawaban) {
-                                        echo "<b>";
-                                        echo $u->c;
-                                        echo "</b>";
-                                    } else {
-                                        echo $u->c;
-                                    }
-                                        ?>    
-                                </li>
-                                <li>
-                                    <?php if ('D'== $u->kunci_jawaban) {
-                                        echo "<b>";
-                                        echo $u->d;
-                                        echo "</b>";
-                                    } else {
-                                        echo $u->d;
-                                    }
-                                        ?>    
-                                </li>
-                                <li>
-                                    <?php if ('E'== $u->kunci_jawaban) {
-                                        echo "<b>";
-                                        echo $u->e;
-                                        echo "</b>";
-                                    } else {
-                                        echo $u->e;
-                                    }
-                                        ?>    
-                                </li>
-                            </ol>
+                                        ?>
                             </td>
-                            <td><?= $u->kunci_jawaban ?></td>
-                            
                             <td>
-                                 <?php echo anchor('soal_evaluasi_ujian/edit/'.$u->id_soal_evaluasi, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                 <?php echo anchor('soal_evaluasi_ujian/delete/'.$u->id_soal_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                <?php if ($p->status_ujian == "1") {
+                                    echo "<span class='btn btn-xs btn-secondary'> Belum Ujian </span>";
+                                } else if ($p->status_ujian == "2") {
+                                    echo "<span class='btn btn-xs btn-success'> Selesai Ujian </span>";
+                                }
+                                ?>
                             </td>
                             
                         </tr>
                                 <?php
                             endforeach
-                            ?> -->
+                            ?>
                     </tbody>
                 </table>
             </div>
