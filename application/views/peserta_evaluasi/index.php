@@ -55,9 +55,9 @@
                             </td>
                             <td>
                                 <?php if ($p->status_ujian == "1") {
-                                    echo "<span class='btn btn-xs btn-secondary'> Belum Ujian </span>";
+                                    echo "<span class='btn btn-xs btn-warning'> Belum Ujian </span>";
                                 } else if ($p->status_ujian == "2") {
-                                    echo "<span class='btn btn-xs btn-success'> Selesai Ujian </span>";
+                                    echo "<span class='btn btn-xs btn-info'> Selesai Ujian </span>";
                                 }
                                 ?>
                             </td>
