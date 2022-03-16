@@ -9,7 +9,7 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller{
     {
         parent::__construct();
         $this->load->library('form_validation');
-        // $this->load->model('m_diklat');
+        $this->load->model('m_jadwal_mahasiswa_evaluasi');
         $this->load->library('session');
         is_logged_in('2');
        // session_start();
@@ -20,10 +20,12 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller{
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
 
-        // $data['diklatnya'] = $this->m_diklat->tampildata()->result();
         $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('jadwal_mahasiswa_evaluasi/index');
+
+        $query= $this->db->query("select * from tbl_mahasiswa_evaluasi")->result();
+        $data['mahasiswa'] = $query;
 
         $this->load->view('templates_dosen/footer'); 
 
