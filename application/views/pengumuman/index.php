@@ -3,8 +3,8 @@
         <div class="card-body">
             Pengumuman
         </div>
-</div>
-    
+    </div>
+
 
     <?php echo $this->session->flashdata('pesan') ?>
 
@@ -25,26 +25,28 @@
                             <th>Judul Pengumuman</th>
                             <th>Isi Pengumuman</th>
                             <th>Tanggal Pembuatan</th>
+                            <!-- <th>File</th> -->
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            $no =1;
-                            foreach ($pengumuman as $p) : ?>
-                        <tr>
-                            <td style="text-align: center"><?php echo $no++ ?></td>
-                            <td><?= $p->judul_pengumuman ?></td>
-                            <td><?= $p->isi_pengumuman ?></td>
-                            <td style="text-align: center"><?= $p->tgl_pembuatan ?></td>
-                            <center>
-                            <td style="text-align: center"> <?php echo anchor('pengumuman/edit/'.$p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> 
-                            <?php echo anchor('pengumuman/delete/'.$p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
-                            </center>
-                        </tr>
-                                <?php
-                            endforeach
-                            ?>
+                        $no = 1;
+                        foreach ($pengumuman as $p) : ?>
+                            <tr>
+                                <td style="text-align: center"><?php echo $no++ ?></td>
+                                <td><?= $p->judul_pengumuman ?></td>
+                                <td><?= $p->isi_pengumuman ?></td>
+                                <td style="text-align: center"><?= $p->tgl_pembuatan ?></td>
+                                <!-- <td style="text-align: center"><?= $p->dokumen ?></td> -->
+                                <center>
+                                    <td style="text-align: center"> <?php echo anchor('pengumuman/edit/' . $p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                        <?php echo anchor('pengumuman/delete/' . $p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                </center>
+                            </tr>
+                        <?php
+                        endforeach
+                        ?>
                     </tbody>
                 </table>
             </div>

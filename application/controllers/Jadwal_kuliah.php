@@ -50,8 +50,8 @@ class Jadwal_kuliah extends CI_Controller
     }
 
     public function simpan()
-
     {
+        
         $data['title'] = 'Jadwal Kuliah';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
