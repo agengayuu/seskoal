@@ -18,16 +18,20 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller{
     public function index(){
         $data['title'] = 'Jadwal Mahasiswa Evaluasi';
 
-        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
-
-        $this->load->view('templates_dosen/header',$data); 
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
+        $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
-        $this->load->view('jadwal_mahasiswa_evaluasi/index');
 
-        $query= $this->db->query("select * from tbl_mahasiswa_evaluasi")->result();
+        $data['mahasiswa'] = $this->m_jadwal_mahasiswa_evaluasi->tampil_data2()->result();
+
+        $query = $this->db->query("select a.*,b.* 
+                                    from tbl_mahasiswa_evaluasi a, tbl_mata_kuliah b
+                                    where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
+
         $data['mahasiswa'] = $query;
 
-        $this->load->view('templates_dosen/footer'); 
+        $this->load->view('jadwal_mahasiswa_evaluasi/index', $data); 
+        $this->load->view('templates_dosen/footer');  
 
     }
     

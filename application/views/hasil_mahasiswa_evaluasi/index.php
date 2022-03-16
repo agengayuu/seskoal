@@ -24,6 +24,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nama Mahasiswa</th>
+                                        <th>Nim</th>
                                         <th>Mata Kuliah</th>
                                         <th>Tanggal Ujian</th>
                                         <th>Jam Ujian</th>
@@ -39,7 +40,8 @@
                                     foreach($hasil as $d) { ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>                              
-                                            <td><?php echo $d->nama; ?></td>                                
+                                            <td><?php echo $d->nama; ?></td>   
+                                            <td><?php echo $d->nim; ?></td>                             
                                             <td><?php echo $d->id_mata_kuliah; ?></td>                                                          
                                             <td><?php echo date('d-m-Y',strtotime($d->tanggal_ujian)); ?></td>
                                             <td><?php echo date('H:i:s',strtotime($d->jam_ujian)); ?></td>

@@ -25,6 +25,7 @@ class Dosen extends CI_Controller
         $query = $this->db->query("select * from 
                         tbl_dosen ")->result();
         $data['dosen'] = $query;
+        
         $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('dosen/index');
         $this->load->view('templates_dosen/footer');

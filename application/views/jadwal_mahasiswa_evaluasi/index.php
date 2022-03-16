@@ -40,6 +40,8 @@ date_default_timezone_set('Asia/Jakarta');
                                     foreach ($mahasiswa as $mhs) : ?>
                                         <tr>
                                             <td width="20px"><?php echo $no++ ?></td>
+                                            <td><?php echo $mhs->kode_mata_kuliah; ?></td>
+                                            <td><?php echo $mhs->nama_mata_kuliah; ?></td>
                                             <td><?php echo date('d-m-Y', strtotime($mhs->tanggal_ujian)); ?> | <?php echo date('H:i:s', strtotime($mhs->jam_ujian)); ?></td>
                                             <td><?php echo $mhs->durasi_ujian; ?> Menit</td>
                                             <td>
@@ -50,7 +52,7 @@ date_default_timezone_set('Asia/Jakarta');
                                                 } else if ($mhs->status_ujian == 1) {
                                                     if ($mhs->status_ujian == 1) {
                                                         if (Date('d-m-Y', strtotime($mhs->tanggal_ujian)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->jam_ujian)) <= Date('H:i:s')) {
-                                                            echo "<a href='" . 'ruang_ujian/soal/' . "$mhs->id_peserta' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                            echo "<a href='" . 'ruang_ujian/soal/' . "$mhs->id_mahasiswa' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
                                                         } else if (Date('d-m-Y', strtotime($mhs->tanggal_ujian)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->jam_ujian)) <= Date('H:i:s')) {
                                                             echo "Waktu Ujian Habis";
                                                         } else {
@@ -62,8 +64,6 @@ date_default_timezone_set('Asia/Jakarta');
 
                                             </td>
 
-                                            
-                                            <td width="180px"> <?php echo anchor('mahasiswa_d/lm/'.$md->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?></td>
                                             </td>
                                         </tr>
                                             <?php
