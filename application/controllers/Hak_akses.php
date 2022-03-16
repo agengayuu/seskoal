@@ -71,8 +71,8 @@ class Hak_akses extends CI_Controller{
                 $this->db->delete('user_akses_menu',$data);
             }
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            Akses berhasil di ubah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-            <span aria-hidden="true">&times;</span> </button></div>');
+                                                    Akses berhasil di ubah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
 
         }
 

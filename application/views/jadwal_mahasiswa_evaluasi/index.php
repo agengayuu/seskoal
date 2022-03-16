@@ -52,7 +52,7 @@ date_default_timezone_set('Asia/Jakarta');
                                                 } else if ($mhs->status_ujian == 1) {
                                                     if ($mhs->status_ujian == 1) {
                                                         if (Date('d-m-Y', strtotime($mhs->tanggal_ujian)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->jam_ujian)) <= Date('H:i:s')) {
-                                                            echo "<a href='" . 'ruang_ujian/soal/' . "$mhs->id_mahasiswa' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                            echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
                                                         } else if (Date('d-m-Y', strtotime($mhs->tanggal_ujian)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->jam_ujian)) <= Date('H:i:s')) {
                                                             echo "Waktu Ujian Habis";
                                                         } else {

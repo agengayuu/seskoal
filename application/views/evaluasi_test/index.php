@@ -14,10 +14,6 @@
 </style>
 
 <?php
-$this->load->view('ujian/topbar');
-?>
-
-<?php
 
 if(isset($_SESSION["waktu_start"])){
     $lewat = time() - $_SESSION["waktu_start"];
@@ -52,9 +48,9 @@ if(isset($_SESSION["waktu_start"])){
                <center> <h3 class="box-title">Soal Ujian</h3> </center>
             </div><!-- /.box-header -->
             <div class="box-body" style="overflow-y: scroll;height: 525px;">
-                <form id="formSoal" role="form" action="<?php echo base_url(); ?>ruang_ujian/jawab_aksi" method="post" onsubmit="return confirm('Anda Yakin ?')">
+                <form id="formSoal" role="form" action="<?php echo base_url(); ?>evaluasi_test/jawab_aksi" method="post" onsubmit="return confirm('Anda Yakin ?')">
 
-                    <input type="hidden" name="id_peserta" value="<?php echo $id['id_peserta']; ?>">
+                    <input type="hidden" name="id_evaluasi" value="<?php echo $id['id_evaluasi']; ?>">
                     <input type="hidden" name="jumlah_soal" value="<?php echo $total_soal; ?>">
 
                     <?php $no = 0;
@@ -66,12 +62,12 @@ if(isset($_SESSION["waktu_start"])){
                                     <tr>
                                         <td width="1%"><?php echo $no; ?>.</td>
                                         <td><?php echo $s->pertanyaan; ?>
-                                            <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_ujian; ?>' />
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_ujian; ?>]" value="A" required /> <?php echo $s->a; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_ujian; ?>]" value="B" required /> <?php echo $s->b; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_ujian; ?>]" value="C" required /> <?php echo $s->c; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_ujian; ?>]" value="D" required /> <?php echo $s->d; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_ujian; ?>]" value="E" required /> <?php echo $s->e; ?>
+                                            <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_evaluasi; ?>' />
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="A" required /> <?php echo $s->a; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="B" required /> <?php echo $s->b; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="C" required /> <?php echo $s->c; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="D" required /> <?php echo $s->d; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="E" required /> <?php echo $s->e; ?>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -91,10 +87,6 @@ if(isset($_SESSION["waktu_start"])){
     
 
 </section><!-- /.content -->
-
-<?php
-$this->load->view('ujian/js');
-?>
 
 <!--tambahkan custom js disini-->
 
