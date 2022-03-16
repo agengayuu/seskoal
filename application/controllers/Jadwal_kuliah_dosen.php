@@ -9,9 +9,9 @@ class Jadwal_kuliah_dosen extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
-        // $this->load->model('m_mahasiswa');
+        $this->load->model('m_jadwal_kuliah_Dosen');
         $this->load->library('session');
-        is_logged_in('3');
+        // is_logged_in('3');
         //session_start();
     }
 
@@ -21,14 +21,13 @@ class Jadwal_kuliah_dosen extends CI_Controller
         
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data);
 
-        $this->load->view('templates_dosen/header', $data); 
-        // $data['siswa'] = $this->m_mahasiswa->tampildata()->result();
+        $data['jadwal'] = $this->m_jadwal_kuliah_dosen->getdata();
 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('jadwal_kuliah_dosen/index',$data);
         $this->load->view('templates_dosen/footer'); 
-        
     }
 
 
