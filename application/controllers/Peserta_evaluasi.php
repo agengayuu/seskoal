@@ -27,7 +27,7 @@ class Peserta_evaluasi extends CI_Controller {
         $data['peserta'] = $query;
 
         $query = $this->db->query("select a.*,b.* 
-                                from tbl_mahasiswa_evaluasi a, tbl_mahasiswa b
+                                from tbl_mahasiswa_evaluasi a, tbl_profil_mahasiswa b
                                 where a.id_mahasiswa = b.id_mahasiswa order by a.id_mahasiswa")->result();
         $data['peserta'] = $query;
     
@@ -49,11 +49,11 @@ class Peserta_evaluasi extends CI_Controller {
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['matakuliah'] = $query;
 
-        $query= $this->db->query("select * from tbl_mahasiswa")->result();
+        $query= $this->db->query("select * from tbl_profil_mahasiswa")->result();
         $data['mahasiswa'] = $query;
 
         $query = $this->db->query("select a.*,b.* 
-                                    from tbl_mahasiswa a, tbl_diklat b
+                                    from tbl_profil_mahasiswa a, tbl_diklat b
                                     where a.id_diklat = b.id_diklat order by a.id_diklat")->result();
         $data['mahasiswa'] = $query;
 
@@ -95,7 +95,7 @@ class Peserta_evaluasi extends CI_Controller {
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['matakuliah'] = $query;
 
-        $query= $this->db->query("select * from tbl_mahasiswa")->result();
+        $query= $this->db->query("select * from tbl_profil_mahasiswa")->result();
         $data['mahasiswa'] = $query;
 
         $this->load->view('peserta_evaluasi/update',$data); 

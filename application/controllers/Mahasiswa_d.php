@@ -41,7 +41,7 @@ class Mahasiswa_d extends CI_Controller{
         $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
     
-        $query= $this->db->query("select * from tbl_mahasiswa where id_diklat='".$id."' order by id_mahasiswa asc")->result();
+        $query= $this->db->query("select * from tbl_profil_mahasiswa where id_diklat='".$id."' order by id_mahasiswa asc")->result();
         $data['siswa'] = $query;
         
         $this->load->view('mahasiswa_d/lm',$data);
@@ -55,6 +55,9 @@ class Mahasiswa_d extends CI_Controller{
         $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header', $data); 
         $data['detail'] = $this->m_mahasiswa_d->detail($nim);
+
+        $query2 = $this->db->query("select * from thn_akademik")->result();
+        $data['tahunakademik'] = $query2;
 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('mahasiswa_d/detail');

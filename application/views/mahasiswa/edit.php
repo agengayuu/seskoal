@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <?php foreach($siswanya as $s) { ?>
-        <form action="<?php echo base_url('mahasiswa/adminsimpan') ?>" method="post">
+    <?php foreach ($siswanya as $s) { ?>
+        <form action="<?php echo base_url('mahasiswa/update') ?>" method="post">
             <input type="hidden" class="form-control" name="id_mahasiswa" id="id_mahasiswa" value="<?php echo $s->id_mahasiswa; ?>">
             <div class="form-group">
                 <label>NIM</label>
@@ -12,6 +12,12 @@
                 <label>Nama Mahasiswa</label>
                 <input type="text" name="nama" value="<?php echo $s->nama; ?>" class="form-control">
                 <?php echo form_error('nama', '<div class="text-danger small ml-3"></div>') ?>
+            </div>
+
+            <div class="form-group">
+                <label>Tanggal Lahir<i style="color:red">*</i></label>
+                <input type="date" name="tgl_lahir" value="<?php echo $s->tgl_lahir; ?>" placeholder="Masukkan Tanggal Lahir" class="form-control">
+                <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3"></div>') ?>
             </div>
 
             <div class="form-group">
@@ -31,19 +37,32 @@
                 <input type="text" name="tahun_akademik" value="<?php echo $s->tahun_akademik; ?>" class="form-control">
                 <?php echo form_error('tahun_akademik', '<div class="text-danger small ml-3"></div>') ?>
             </div>
-        
+
             <div class="form-group">
                 <label>Jabatan</label>
-                <input type="text" name="jabatan"value="<?php echo $s->jabatan; ?>" class="form-control">
+                <input type="text" name="jabatan" value="<?php echo $s->jabatan; ?>" class="form-control">
                 <?php echo form_error('jabatan', '<div class="text-danger small ml-3"></div>') ?>
+                
             </div>
-        
+            
+            <label> Diklat<i style="color:red">*</i></label>
+            <div class="form-group">
+                <select class="form-control" name='id_diklat' id='id_diklat' value ="<?= $s->id_diklat ?>">
+                    <option value='0' selected>--- Pilih Diklat ---</option>
+                    <?php foreach ($diklat as $d) { ?>
+                    <option value="<?php echo $d->id_diklat; ?>" <?php if ($s->id_diklat == $d->id_diklat) {
+                                                                    echo "selected";
+                                                                    } ?> ><?php echo $d->nama_diklat; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label>Email</label>
                 <input type="email" name="email" value="<?php echo $s->email; ?>" class="form-control">
                 <?php echo form_error('email', '<div class="text-danger small ml-3"></div>') ?>
             </div>
-        
+
             <div class="form-group">
                 <label>No. Telepon</label>
                 <input type="number" name="no_tlp" value="<?php echo $s->no_tlp; ?>" class="form-control">
@@ -58,8 +77,7 @@
 
             <button type="submit" class="btn btn-primary mb-4">Simpan</button>
             <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
-           
-    </form>
+        </form>
     <?php } ?>
 
     <!-- Scroll to Top Button-->
