@@ -30,6 +30,17 @@ class Main_menu extends CI_Controller {
 
         $queryaa = $this->db->query("select * from tbl_diklat")->result();
 		$querycc = $this->db->query("select * from tbl_mahasiswa")->result();
+        $querybb = $this->db->query("select * from tbl_dosen")->result();
+        $mhs= count($querycc);
+        $dsn = count($querybb);
+        // echo $mhs;
+        // echo $dsn ;die;
+        $hasil = "{ name :'Mahasiswa', value = : $mhs}, { name: 'Dosen', value: $dsn}";
+        $data ['bagian'] = $hasil;
+        $data['dosen'] = $dsn;
+        $data['mahasiswa'] = $mhs;
+      
+        // die;
 		$tomi = count($querycc);
 
 		$wx = "";
@@ -39,8 +50,11 @@ class Main_menu extends CI_Controller {
 		$hasil = $toma / $tomi * 100;
 		$wx .= '{ name :"'.$ruk->nama_diklat.'",y:'.$hasil.' },';
 		}
-  
 		$data['grafik'] = $wx;
+
+
+
+
 
         $this->load->view('main_menu/admin', $data);
         $this->load->view('templates_dosen/footer'); 
