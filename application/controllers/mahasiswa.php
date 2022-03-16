@@ -69,7 +69,7 @@ public function adminsimpan(){
     $id_diklat      = $this->input->post('id_diklat');
     $id_grup_user   = $this->input->post('id_grup_user');
     $tgl_lhr        = $this->input->post('tgl_lhr');
-    $hsl            = date('jmY', strtotime($tgl_lhr));
+    $hsl            = date('jmY', strtotime($tgl_lahir));
 
     $data = array(
         'nim' => $nim,
