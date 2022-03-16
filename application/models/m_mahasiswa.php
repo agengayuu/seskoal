@@ -24,8 +24,8 @@ class M_mahasiswa extends CI_Model{
     }
     public function simpanuser($data2){
         $a = $this->db->insert('user',$data2);
-        return $a;
-        print_r($a);die;
+        return $this->db->insert_id();
+        // print_r($a);die;
     }
     
     public function adminedit($where,$table){

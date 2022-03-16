@@ -106,7 +106,15 @@ class Profil_mahasiswa extends CI_Controller
         $no_tlp = $this->input->post('no_tlp');
 
         // $id_mahasiswa   = $this->input->post('id_mahasiswa');
-
+        $data2 = array(
+            'username' => $nim,
+            'id_grup_user' => 2,
+            'is_active' => 1,
+            'id_unique' => $nim . $hsl,
+            'date_created' => time()
+        );
+        $idmahasiswa = $this->m_profil_mahasiswa->simpanuser($data2, 'user');
+        
         $data = array(
             'nama' => $nama,
             'nim' => $nim,
@@ -131,19 +139,10 @@ class Profil_mahasiswa extends CI_Controller
             'email' => $email,
             'jabatan' => $jabatan,
             'no_tlp' => $no_tlp,
-            'created_at'  => $created_at
+            'created_at'  => $created_at,
+            'id_mahasiswa' => $idmahasiswa
         );
         $this->db->insert("tbl_profil_mahasiswa", $data);
-        $idmahasiswa = $this->db->insert_id();
-
-        $data2 = array(
-            'username' => $nim,
-            'id_grup_user' => 2,
-            'is_active' => 1,
-            'id_unique' => $nim . $hsl,
-            'date_created' => time()
-        );
-        $this->m_profil_mahasiswa->simpanuser($data2, 'user');
 
 
         $jenis = ['AYAH', 'IBU'];
@@ -303,6 +302,15 @@ class Profil_mahasiswa extends CI_Controller
         
         $id_mahasiswa   = $this->input->post('id_mahasiswa');
 
+        $data2 = array(
+            'username' => $nim,
+            'id_grup_user' => 2,
+            'is_active' => 1,
+            'id_unique' => $nim . $hsl
+        );
+        $this->db->where('username', $nim);
+        $this->db->update('user', $data2);
+        
         $data = array(
             'nama' => $nama,
             'nim' => $nim,
@@ -330,17 +338,10 @@ class Profil_mahasiswa extends CI_Controller
         );
         //$idmahasiswa = $this->db->insert_id();
 
-        $data2 = array(
-            'username' => $nim,
-            'id_grup_user' => 2,
-            'is_active' => 1,
-            'id_unique' => $nim . $hsl
-        );
+        
         $this->db->where('id_mahasiswa', $id_mahasiswa);
         $this->db->update('tbl_profil_mahasiswa', $data);
         
-        $this->db->where('username', $nim);
-        $this->db->update('user', $data2);
 
         $jenis = ['AYAH', 'IBU'];
         //$delete_ortu = $this->db->query("update from tbl_ortu_wali where id_mahasiswa='".$id_mahasiswa."'");

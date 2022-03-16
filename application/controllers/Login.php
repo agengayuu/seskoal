@@ -40,10 +40,8 @@ class Login extends CI_Controller
             // );
 
             //print_r($data);die;
-
             $user = $this->db->get_where('user',['username' => $username])->row_array();
-            
-            //var_dump($password);die();
+           
             //jika usernya ada
             if($user){
                 if($user['is_active'] == 1){
@@ -54,6 +52,7 @@ class Login extends CI_Controller
                             'username' => $user['username'],
                             'password' => $user ['password'],
                             'id_grup_user' => $user ['id_grup_user'],
+                            'id' => $user ['id'],
                             'data_created' => time()
                         ];
 
