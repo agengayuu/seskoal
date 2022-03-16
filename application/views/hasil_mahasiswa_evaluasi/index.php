@@ -24,6 +24,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nama Mahasiswa</th>
+                                        <th>Nim</th>
                                         <th>Mata Kuliah</th>
                                         <th>Tanggal Ujian</th>
                                         <th>Jam Ujian</th>
@@ -34,22 +35,54 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <?php
-                                    $no =1;
-                                    foreach ($mahasiswa_d as $md) : ?>
+                                <?php
+                                    $no=1;
+                                    foreach($hasil as $d) { ?>
                                         <tr>
-                                            <td width="20px"><?php echo $no++ ?></td>
-                                            <td><?= $md->nama_diklat ?>
+                                            <td><?php echo $no++; ?></td>                              
+                                            <td><?php echo $d->nama; ?></td>   
+                                            <td><?php echo $d->nim; ?></td>                             
+                                            <td><?php echo $d->nama_mata_kuliah; ?></td>                                                          
                                             <td><?php echo date('d-m-Y',strtotime($d->tanggal_ujian)); ?></td>
                                             <td><?php echo date('H:i:s',strtotime($d->jam_ujian)); ?></td>
-
-                                            
-                                            <td width="180px"> <?php echo anchor('mahasiswa_d/lm/'.$md->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?></td>
+                                            <td>
+                                                <?php
+                                                if($d->benar == ''){
+                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                }else {
+                                                    echo $d->benar;
+                                                }
+                                                ?>
+                                            </td>                                
+                                            <td>
+                                                <?php
+                                                if($d->salah == ''){
+                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                }else {
+                                                    echo $d->salah;
+                                                }
+                                                ?>
                                             </td>
+                                            <td>
+                                                <?php
+                                                if($d->nilai == ''){
+                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                }else {
+                                                    echo $d->nilai;
+                                                }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <?php
+                                                if($d->nilai == ''){
+                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                }else {
+                                                    echo "<a href='".'hasil_ujian/cetak/'."$d->id_peserta' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
+                                                }
+                                                ?>
+                                            </td> 
                                         </tr>
-                                            <?php
-                                        endforeach
-                                        ?> -->
+                                    <?php } ?> 
                                 </tbody>
                             </table>
                         </div>

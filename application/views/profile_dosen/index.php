@@ -17,12 +17,12 @@
                     <div class="form-horizontal form-bordered">
                         <div class="form-group row">
                             <div class="col-md-2">
-                                <?php if($p->foto!= null) { ?>
+                            <?php if($p->foto!= null) { ?>
                                     <img src="<?=base_url('./assets/uploads/'.$p->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
                                 <?php } ?>
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-md-10"> 
                                 <div class="form-group row">
                                     <div class="col-md-3">
                                         <label for="">NIP</label>

@@ -40,8 +40,8 @@
                         <tr>
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $p->nama ?></td>
-                            <td><?= $p->id_diklat ?></td>
-                            <td><?= $p->id_mata_kuliah ?></td>
+                            <td><?= $p->nama_diklat ?></td>
+                            <td><?= $p->nama_mata_kuliah ?></td>
                             <td><?php echo date('d-m-Y', strtotime($p->tanggal_ujian)); ?> | <?php echo $p->jam_ujian; ?></td>
                             <td><?= $p->durasi_ujian ?></td>
                             <td>
