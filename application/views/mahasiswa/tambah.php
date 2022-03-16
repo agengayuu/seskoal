@@ -91,7 +91,7 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <!-- <tbody>
                         <tr align="center">
                             <th>Dokumen 1</th>
                             <th><input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required></th>
@@ -104,7 +104,7 @@
                             <th>Dokumen 3</th>
                             <td><input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required></th>
                         </tr>
-                    </tbody>
+                    </tbody> -->
                 </table>
                 <!-- end document -->
 

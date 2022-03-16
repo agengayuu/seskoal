@@ -46,4 +46,10 @@ class M_mahasiswa extends CI_Model{
             return false;
         }
     }
+
+    public function update($where, $data, $table)
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
+    }
 }
