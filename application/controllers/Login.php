@@ -310,4 +310,8 @@ public function set(){
 
        }
     }
+
+    public function blocked(){
+        $this->load->view('login/blocked');
+    }
 }

@@ -71,7 +71,7 @@ class Diklat extends CI_Controller{
         $where = array('id_diklat' => $id);
         $data['diklat'] = $this->m_diklat->edit_data($where, 'tbl_diklat')->result();
 
-        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $this->load->view('diklat/update');
