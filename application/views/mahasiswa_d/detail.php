@@ -9,7 +9,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="form-horizontal form-bordered">
+                    <div class="form-horizontal form-bordered"> 
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <img src=""  style="width: 90%;" class="card shadow img-thumbnail rounded">
@@ -46,7 +46,7 @@
                                         <label for="">Tanggal Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $dt->tgl_lhr; ?></label>
+                                        <label for=""><?php echo $dt->tgl_lahir; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -54,7 +54,7 @@
                                         <label for="">Tahun Masuk</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $dt->tahun_masuk; ?></label>
+                                        <label for=""><?php echo $dt->angkatan; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -87,22 +87,6 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for=""><?php echo $dt->no_tlp; ?></label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">Diklat</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="">NIP</label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">Alamat</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="">NIP</label>
                                     </div>
                                 </div>
                             </div>

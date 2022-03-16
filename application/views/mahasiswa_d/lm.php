@@ -17,13 +17,13 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Nim</th>
-                            <th>Nama Mahasiswa</th>
-                            <th>Angkatan</th>
-                            <th>Tahun Masuk</th>
-                            <th>Email</th>
-                            <th>Aksi</th>
+                        <th>No</th>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Agama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,11 +34,11 @@
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $s->nim ?></td>
                             <td><?= $s->nama ?></td>
-                            <td><?= $s->angkatan ?></td>
-                            <td><?= $s->tahun_masuk ?></td>
-                            <td><?= $s->email ?></td>
+                            <td><?= $s->jenis_kelamin ?></td>
+                            <td><?= $s->agama ?></td>
+                            <td><?= $s->tgl_lahir ?></td>
                             
-                            <td> <?php echo anchor('mahasiswa_d/detail/'.$s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?>
+                            <td> <?php echo anchor('mahasiswa_d/detail/'.$s->nim, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?>
                             </td>
                             
                         </tr>

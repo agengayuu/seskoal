@@ -26,7 +26,7 @@
                                 <th>Tanggal Lahir</th>
                                 <th>Aksi</th>
                             </tr>
-                        </thead>
+                        </thead> 
                         <tbody>
                             <?php
                             $no =1;
