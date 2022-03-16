@@ -15,7 +15,7 @@ class M_dosen extends CI_Model{
     }
     public function simpanuser($data2){
         $a = $this->db->insert('user',$data2);
-        return $a;
+        return $this->db->insert_id();
     }
     
     public function adminedit($where, $table){
@@ -43,5 +43,3 @@ class M_dosen extends CI_Model{
     }
 
 }
-
-?>

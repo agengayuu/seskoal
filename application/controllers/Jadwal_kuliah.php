@@ -87,6 +87,8 @@ class Jadwal_kuliah extends CI_Controller
             'keterangan' => $ket
         );
 
+        // print_r($data);die;
+
         $this->m_jadwal->savedata($data, 'tbl_jadwal_kuliah');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">

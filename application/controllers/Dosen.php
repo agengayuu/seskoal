@@ -94,6 +94,17 @@ class Dosen extends CI_Controller
             
 
             $created_at = date('Y-m-d H:i:s'); 
+            
+            $data2 = array(
+                'username' => $nip,
+                'id_grup_user' => 3,
+                'is_active' =>1,
+                'id_unique' => $nip.$hsl,
+                'foto'              => $foto,
+                'date_created' => time()
+    
+            );
+            $iduser = $this->m_dosen->simpanuser($data2, 'user');
 
             $data = array(
                 'nip'               => $nip,
@@ -111,21 +122,13 @@ class Dosen extends CI_Controller
                 'agama'             => $agama,
                 'alamat'            => $alamat,
                 'foto'              => $foto,
-                'created_at'        => $created_at
+                'created_at'        => $created_at,
+                'id_user'           => $iduser
             );
 
-            $data2 = array(
-                'username' => $nip,
-                'id_grup_user' => 3,
-                'is_active' =>1,
-                'id_unique' => $nip.$hsl,
-                'foto'              => $foto,
-                'date_created' => time()
-    
-            );
 
             $this->m_dosen->adminsimpan($data, 'tbl_dosen');
-            $this->m_dosen->simpanuser($data2,'user');
+           
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
                                             Data Berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                             <span aria-hidden="true">&times;</span></button></div>');

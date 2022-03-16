@@ -34,23 +34,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- <?php
+                                <?php
                                 $no = 1;
                                 foreach ($jadwal as $jdw) : ?>
                                     <tr>
                                         <td width="20px"><?php echo $no++ ?></td>
-                                        <td><?= $jdw->nama_diklat ?></td>
-                                        <td><?= $jdw->nama_mata_kuliah ?></td>
-                                        <td><?= $jdw->tanggal ?></td>
-                                        <td><?= $jdw->waktu_mulai ?> - <?= $jdw->waktu_selesai ?></td>
-                                        <td><?= $jdw->jam_pelajaran_ke ?></td>
-                                        <td><?= $jdw->tema ?></td>
-                                        <td><?= $jdw->nama_ruang ?></td>
-                                        <td><?= $jdw->keterangan ?></td>
+                                        <td><?= $jdw['nama_diklat'] ?></td>
+                                        <td><?= $jdw['nama_mata_kuliah'] ?></td>    
+                                        <td><?= $jdw['tanggal'] ?></td>
+                                        <td><?= $jdw['waktu_mulai'] ?> - <?=  $jdw['waktu_selesai'] ?></td>
+                                        <td><?= $jdw['jam_pelajaran_ke']?></td>
+                                        <td><?= $jdw['tema'] ?></td>
+                                        <td><?= $jdw['nama_ruang'] ?></td>
+                                        <td><?= $jdw['keterangan']?></td>
                                     </tr>
                                 <?php
                                 endforeach
-                                ?> -->
+                                ?>
                             </tbody>
                         </table>
                     </div>
