@@ -89,6 +89,7 @@ public function adminsimpan(){
         'username' => $nim,
         'id_grup_user' => 2,
         'is_active' =>1,
+        'foto'   => $foto,
         'id_unique' => $nim.$hsl
     );
     $this->m_mahasiswa->adminsimpan($data,'tbl_mahasiswa');
@@ -105,6 +106,7 @@ public function adminedit($nim){
     $where = array(
         'nim' => $nim
     );
+    $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
     $data['siswanya'] = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
     $this->load->view('mahasiswa/edit', $data);
     $this->load->view('templates_dosen/footer'); 
@@ -121,7 +123,7 @@ public function adminhapus($nim){
         redirect('mahasiswa','refresh');
 }
 
-    public function admindetail($nim){
+public function admindetail($nim){
         $data['title'] = 'Detail Mahasiswa';
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array(); 
@@ -131,15 +133,68 @@ public function adminhapus($nim){
         $this->load->view('templates_dosen/sidebar_admin',$data); 
         $this->load->view('mahasiswa/detail');
         $this->load->view('templates_dosen/footer'); 
+}
+
+    public function update()
+    {
+
+        // ---------UNTUK NAMPILIN VIEW NYA-----------------------
+        $data['user'] = $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
+        $data['title'] = 'Tambah Mahasiswa';
+        $this->load->view('templates_dosen/header', $data);
+        $this->load->view('templates_dosen/sidebar_admin', $data);
+        $this->load->view('mahasiswa/tambah');
+        $this->load->view('templates_dosen/footer');
+        //-------------------END----------------------------------
+        $id             = $this->input->post('id_mahasiswa');
+        $nim            = $this->input->post('nim');
+        $nama           = $this->input->post('nama');
+        $angkatan       = $this->input->post('angkatan');
+        $tgl_lahir      = $this->input->post('tgl_lahir');
+        $tahun_masuk    = $this->input->post('tahun_masuk');
+        $tahun_akademik = $this->input->post('tahun_akademik');
+        $jabatan        = $this->input->post('jabatan');
+        $email          = $this->input->post('email');
+        $no_tlp         = $this->input->post('no_tlp');
+        $foto           = $this->input->post('foto');
+        $id_diklat      = $this->input->post('id_diklat');
+        $id_grup_user   = $this->input->post('id_grup_user');
+        $tgl_lhr        = $this->input->post('tgl_lhr');
+        $hsl            = date('jmY', strtotime($tgl_lhr));
+
+        $data = array(
+            'nim' => $nim,
+            'nama' => $nama,
+            'angkatan' => $angkatan,
+            'tgl_lahir' => $tgl_lahir,
+            'tahun_masuk' => $tahun_masuk,
+            'tahun_akademik' => $tahun_akademik,
+            'jabatan' => $jabatan,
+            'email' =>  $email,
+            'id_diklat' => $id_diklat,
+            'no_tlp' => $no_tlp,
+            'foto'   => $foto
+        );
+
+        $data2 = array(
+            'foto'   => $foto,
+        );
+
+        $where = array (
+          'id_mahasiswa' => $id
+        );
+
+       
+        $this->m_mahasiswa->adminsimpan($where, $data, 'tbl_mahasiswa');
+        $this->m_mahasiswa->simpanuser($where, $data2, 'user');
+        redirect('mahasiswa');
     }
 
-public function dosenindex(){
-
-}
-
 
 
 }
+
 
 
 ?>

@@ -11,6 +11,7 @@ class Profil_mahasiswa extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_profil_mahasiswa');
         $this->load->library('session');
+        $this->load->helper('aksesblock');
         is_logged_in('1');
         //session_start();
     }
@@ -110,7 +111,7 @@ class Profil_mahasiswa extends CI_Controller
             'nama' => $nama,
             'nim' => $nim,
             'tempat_lahir' => $tempat_lahir,
-            'tgl_lahir' => date('Y-m-d'),
+            'tgl_lahir' => $tgl_lahir,
             'jenis_kelamin' => $jenis_kelamin,
             'foto' => $foto,
             'agama' => $agama,
@@ -197,9 +198,7 @@ class Profil_mahasiswa extends CI_Controller
         $data['datadiri'] = $query3;
 
         // echo $query4;die;
-
-
-
+        
         $query4 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='AYAH' AND id_mahasiswa = " . $id_mahasiswa . "")->row();
         $data['ayah'] = $query4;
 
@@ -308,7 +307,7 @@ class Profil_mahasiswa extends CI_Controller
             'nama' => $nama,
             'nim' => $nim,
             'tempat_lahir' => $tempat_lahir,
-            'tgl_lahir' => date('Y-m-d'),
+            'tgl_lahir' => $tgl_lahir,
             'jenis_kelamin' => $jenis_kelamin,
             'foto' => ($foto == '') ? $foto_hidden :  $foto,
             'agama' => $agama,
