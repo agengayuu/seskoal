@@ -80,7 +80,7 @@
      <!-- <h3>
          <center>Selamat Datang Mahasiswa di Aplikasi Akademik SESKOAL</center>
      </h3> -->
-    
+
 
      <!-- Informasi -->
 
@@ -105,11 +105,11 @@
                                      <a href="<?php echo base_url('pengumuman_view') ?>" class="btn btn-primary btn-icon-split btn-sm">Lihat Semua</a>
                                  </div>
                              </div>
-                             <?php foreach($pengumuman as $peng) { ?>
-                             <label>Tanggal <?= $peng-> tgl_pembuatan; ?></label>
-                             <h5 class="card-title" style="font-weight:bold; color:blue;" ><?= $peng->judul_pengumuman; ?></h5>
-                             <p class="card-text"><?= $peng->isi_pengumuman?>
-                             </p>
+                             <?php foreach ($pengumuman as $peng) { ?>
+                                 <label>Tanggal <?= $peng->tgl_pembuatan; ?></label>
+                                 <h5 class="card-title" style="font-weight:bold; color:blue;"><?= $peng->judul_pengumuman; ?></h5>
+                                 <p class="card-text"><?= $peng->isi_pengumuman ?>
+                                 </p>
                              <?php } ?>
                          </div>
                      </div>
@@ -118,40 +118,39 @@
                      <div class="card">
                          <div class="card-body">
                              <h5 class="card-title">Jadwal</h5>
-                             <?php foreach($jadwal as $jad) { ?>
-                             <p class="card-text"><?= $jad->tanggal; ?></p>
-                             <div class="card mb-2">
-                                 <div class="card-body">
-                                     <div class="tw-mt-5 tw-border tw-border-gray-200 tw-rounded-xl tw-py-3 tw-px-4">
-                                         <div>
-                                             <h6 class="font-14px tw-font-bold tw-truncate">Laporan Akhir</h6>
-                                         </div>
-                                         <div>
-                                             <h6 class="tw-text-base tw-text-sp-muted-text mb-3">
-                                                 <span class="font-14px tw-inline-block tw-mr-3"> INF399 | P<span>A2</span> </span>
-                                                 <span class="font-14px tw-inline-block tw-text-xs tw-px-4 tw-py-1 tw-bg-sp-muted-text tw-text-white tw-rounded-xl">
-                                                     P
-                                                 </span>
-                                             </h6>
-                                         </div>
-                                         <div>
-                                             <div class="tw-flex tw-items-center tw-mb-2">
-                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->nama_diklat; ?></h6>
+                             <?php foreach ($jadwal as $jad) { ?>
+                                 <p class="card-text"><?= $jad->tanggal; ?></p>
+                                 <div class="card mb-2">
+                                     <div class="card-body">
+                                         <div class="tw-mt-5 tw-border tw-border-gray-200 tw-rounded-xl tw-py-3 tw-px-4">
+                                             <div>
+                                                 <h6 class="font-14px tw-font-bold tw-truncate"><?= $jad->nama_diklat; ?></h6>
                                              </div>
-                                             <div class="tw-flex tw-items-center tw-mb-2">
-                                                 <div class="bg-icon_oclock tw-mr-2"></div>
-                                                 <h6 class="font-14px tw-text-sp-muted-text">
-                                                 <?= $jad->waktu; ?>
+                                             <div>
+                                                 <h6 class="tw-text-base tw-text-sp-muted-text mb-3">
+                                                     <span class="font-14px tw-inline-block tw-mr-3"> <?= $jad->nama_mata_kuliah; ?> | <?= $jad->nama_ruang; ?>
+                                                         <span class="font-14px tw-inline-block tw-text-xs tw-px-4 tw-py-1 tw-bg-sp-muted-text tw-text-white tw-rounded-xl">
+                                                         </span>
                                                  </h6>
                                              </div>
-                                             <div class="tw-flex tw-items-center">
-                                                 <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->nama_ruang; ?></h6>
+                                             <div>
+                                                 <div class="tw-flex tw-items-center tw-mb-2">
+                                                     <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->tanggal; ?></h6>
+                                                 </div>
+                                                 <div class="tw-flex tw-items-center tw-mb-2">
+                                                     <div class="bg-icon_oclock tw-mr-2"></div>
+                                                     <h6 class="font-14px tw-text-sp-muted-text">
+                                                         <?= $jad->waktu_mulai; ?> - <?= $jad->waktu_selesai; ?>
+                                                     </h6>
+                                                 </div>
+                                                 <div class="tw-flex tw-items-center">
+                                                     <h6 class="font-14px tw-text-sp-muted-text"><?= $jad->keterangan; ?></h6>
+                                                 </div>
                                              </div>
                                          </div>
                                      </div>
                                  </div>
-                             </div>
-                             <?php }?>
+                             <?php } ?>
                              <center>
                                  <a href="#" class="btn btn-primary btn-icon-split btn-sm">Lihat Semua Jadwal</a>
                              </center>

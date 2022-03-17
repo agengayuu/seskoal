@@ -135,10 +135,7 @@ class Main_menu extends CI_Controller
             ->result();
         //print_r($last);die;
         $data['pengumuman'] = $last;
-
-        // jadwal
-
-        $data['jadwal'] = $this->m_jadwal->getdata();
+        $data['jadwal'] = $this->m_jadwal->getmainmenu();
 
         $this->load->view('main_menu/siswa', $data);
         $this->load->view('templates_dosen/footer', $data);
