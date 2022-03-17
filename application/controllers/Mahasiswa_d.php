@@ -58,6 +58,9 @@ class Mahasiswa_d extends CI_Controller{
         $data['detail'] = $this->m_mahasiswa_d->detail($nim);
 
         $query2 = $this->db->query("select * from thn_akademik")->result();
+                // $query = $this->db->query("select a.*,b.* 
+                //                     from tbl_profil_mahasiswa a, thn_akademik b
+                //                     where a.id_akademik = b.id_akademik order by a.id_akademik")->result();
         $data['tahunakademik'] = $query2;
 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
