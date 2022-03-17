@@ -1,3 +1,6 @@
+<?php
+$this->load->view('evaluasi_test/header');
+?>
 <!--tambahkan custom css disini-->
 <style>
     #timer_place{
@@ -12,6 +15,10 @@
         font-weight:bolder;
     }
 </style>
+
+<?php
+$this->load->view('evaluasi_test/topbar');
+?>
 
 <?php
 
@@ -30,11 +37,11 @@ if(isset($_SESSION["waktu_start"])){
 <section class="content">
   <div class="row">
     <div class="col-md-3">
-        <div class="box box-success">
-            <div class="box-header text-center">
-              <h4 class="box-title">Waktu Anda</h4>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h4 class="m-0 font-weight-bold text-primary" style="text-align:center">Waktu</h4>
             </div>
-            <div class="box-body" id="timer_place">
+            <div class="card-body" id="timer_place">
                 <span id="counter" align="center"></span>
             </div>
             <div class="box-footer">
@@ -43,11 +50,11 @@ if(isset($_SESSION["waktu_start"])){
         </div>
     </div>
     <div class="col-md-9">
-        <div class="box box-success box-solid">
-            <div class="box-header with-border">
-               <center> <h3 class="box-title">Soal Ujian</h3> </center>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+               <h4 style="text-align:center" class="m-0 font-weight-bold text-primary">Soal Ujian</h4>
             </div><!-- /.box-header -->
-            <div class="box-body" style="overflow-y: scroll;height: 525px;">
+            <div class="card-body" style="overflow-y: scroll;height: 525px;">
                 <form id="formSoal" role="form" action="<?php echo base_url(); ?>evaluasi_test/jawab_aksi" method="post" onsubmit="return confirm('Anda Yakin ?')">
 
                     <input type="hidden" name="id_evaluasi" value="<?php echo $id['id_evaluasi']; ?>">
@@ -62,7 +69,7 @@ if(isset($_SESSION["waktu_start"])){
                                     <tr>
                                         <td width="1%"><?php echo $no; ?>.</td>
                                         <td><?php echo $s->pertanyaan; ?>
-                                            <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_evaluasi; ?>' />
+                                            <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_evaluasi; ?>' /> <br>
                                             <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="A" required /> <?php echo $s->a; ?><br>
                                             <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="B" required /> <?php echo $s->b; ?><br>
                                             <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="C" required /> <?php echo $s->c; ?><br>
@@ -75,7 +82,7 @@ if(isset($_SESSION["waktu_start"])){
 
                         </div>
                     <?php } ?>
-                    <button type="submit" class="btn btn-primary btn-flat pull-right">Simpan</button>
+                    <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 </form>
                 <div class="box-footer">
 
@@ -87,6 +94,10 @@ if(isset($_SESSION["waktu_start"])){
     
 
 </section><!-- /.content -->
+
+<?php
+$this->load->view('evaluasi_test/js');
+?>
 
 <!--tambahkan custom js disini-->
 
@@ -135,3 +146,7 @@ window.location.hash="no-back-button";
 window.location.hash="Again-No-back-button";
 window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
+
+<?php
+$this->load->view('evaluasi_test/footer');
+?>

@@ -77,9 +77,9 @@
          </div>
      </div> -->
 
-     <h3>
+     <!-- <h3>
          <center>Selamat Datang Mahasiswa di Aplikasi Akademik SESKOAL</center>
-     </h3>
+     </h3> -->
     
 
      <!-- Informasi -->
