@@ -93,7 +93,7 @@
                             <?php foreach ($ruang as $r) { ?>
                                 <option value="<?php echo $r->id_ruang; ?>"<?php if ($jdw->id_ruang == $r->id_ruang) {
                                                                                 echo "selected";
-                                                                            } ?>><?php echo $d->nama; ?></option>
+                                                                            } ?>><?php echo $r->nama_ruang; ?></option>
                             <?php } ?>
                         </select>
                         <?php echo form_error('id_dosen', '<div class="text-danger small ml-3"></div>') ?>
