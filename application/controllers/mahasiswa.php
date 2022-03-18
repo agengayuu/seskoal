@@ -210,6 +210,73 @@ public function admindetail($nim){
     }
 
 
+    public function excel (){
+        $data['title'] = 'Export Data Mahasiswa';
+        $data['user'] = $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
+        $data['siswa'] = $this->m_mahasiswa->tampildata()->result();
+
+        require(APPPATH. 'PHPExcel-1.8/Classes/PHPExcel.php');
+        require(APPPATH. 'PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php');
+
+        $objek = new PHPexcel();
+        $objek->getProperties()->setCreator("SIAK SESKOAL");
+        $objek->getProperties()->setLastModifiedBy("SIAK SESKOAL");
+        $objek->getProperties()->setTitle("Daftar Mahasiswa");
+
+        $objek->setActiveSheetIndex(0);
+        $objek->getActiveSheet()->setCellValue('A1', 'NO');
+        $objek->getActiveSheet()->setCellValue('B1', 'NIM');
+        $objek->getActiveSheet()->setCellValue('C1', 'Nama Mahasiswa');
+        $objek->getActiveSheet()->setCellValue('D1', 'Tanggal Lahir');
+        $objek->getActiveSheet()->setCellValue('E1', 'Angkatan');
+        $objek->getActiveSheet()->setCellValue('F1', 'Tahun Masuk');
+        $objek->getActiveSheet()->setCellValue('G1', 'Tahun Akademik');
+        $objek->getActiveSheet()->setCellValue('H1', 'Jabatan');
+        $objek->getActiveSheet()->setCellValue('I1', 'Diklat');
+        $objek->getActiveSheet()->setCellValue('J1', 'Email');
+        $objek->getActiveSheet()->setCellValue('K1', 'No. Telepon');
+
+        $baris = 2;
+        $no = 1;
+
+        foreach ($data['siswa'] as $mhs){
+            $objek->getActiveSheet()->setCellValue('A'. $baris, $no++);
+            $objek->getActiveSheet()->setCellValue('B'. $baris, $mhs->nim);
+            $objek->getActiveSheet()->setCellValue('C'. $baris, $mhs->nama);
+            $objek->getActiveSheet()->setCellValue('E'. $baris, $mhs->tgl_lahir);
+            $objek->getActiveSheet()->setCellValue('D'. $baris, $mhs->angkatan);
+            $objek->getActiveSheet()->setCellValue('F'. $baris, $mhs->tahun_masuk);
+            $objek->getActiveSheet()->setCellValue('G'. $baris, $mhs->tahun_akademik);
+            $objek->getActiveSheet()->setCellValue('H'. $baris, $mhs->jabatan);
+            $objek->getActiveSheet()->setCellValue('I'. $baris, $mhs->email);
+            $objek->getActiveSheet()->setCellValue('J'. $baris, $mhs->no_tlp);
+            
+            $baris ++;
+        }
+        $filename = "Data_Mahasiswa".'.xlsx';
+        $objek->getActiveSheet()->setTitle("Data Mahasiswa");
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment; filename="'.$filename.'"');
+        header('Cache-Control: max-age = 0');
+
+        $writer= PHPExcel_IOFactory::createwriter($object, 'Excel2007');
+        $writer->save('php://output');
+
+        exit;
+
+
+
+
+        
+        $this->load->view('templates_dosen/sidebar_admin', $data);
+        $this->load->view('mahasiswa/detail');
+        $this->load->view('templates_dosen/footer'); 
+
+    }
+
+
 
 }
 
