@@ -11,7 +11,7 @@ class Jadwal_kuliah_dosen extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_jadwal_kuliah_dosen');
         $this->load->library('session');
-        // is_logged_in('3');
+        is_logged_in('3');
         //session_start();
     }
 
