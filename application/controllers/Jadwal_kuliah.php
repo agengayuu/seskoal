@@ -51,7 +51,8 @@ class Jadwal_kuliah extends CI_Controller
 
     public function simpan()
     {
-        
+
+
         $data['title'] = 'Jadwal Kuliah';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
@@ -86,10 +87,27 @@ class Jadwal_kuliah extends CI_Controller
             'id_ruang' => $ruang,
             'keterangan' => $ket
         );
+        $tanggal = $this->db->query("select tanggal from tbl_jadwal_kuliah ")->result();
+        $waktu_m = $this->db->query("select waktu_mulai from tbl_jadwal_kuliah ")->result();
+        $waktu_s = $this->db->query("select waktu_selesai from tbl_jadwal_kuliah ")->result();
 
-        // print_r($data);die;
+        // print_r($tgl); 
+        // echo "<pre>";
 
-        $this->m_jadwal->savedata($data, 'tbl_jadwal_kuliah');
+        $sama = [];
+        foreach ($tanggal as $t) {
+
+            if ($t->tanggal == $tgl) {
+                $sama[] = $tgl;
+            }
+        }
+        print_r($sama);
+        die();
+        // perbandingan ketika input
+        // if($tgl == $tanggal && $waktu_mulai == $waktu_m  && $waktu_selesai == $waktu_s ){
+        //     echo "Maaf ruangan sedang di pakai";die;
+        // }
+        // $this->m_jadwal->savedata($data, 'tbl_jadwal_kuliah');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                             Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
