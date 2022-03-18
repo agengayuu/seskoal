@@ -65,11 +65,32 @@ public function adminsimpan(){
     $jabatan        = $this->input->post('jabatan');
     $email          = $this->input->post('email');
     $no_tlp         = $this->input->post('no_tlp');
-    $foto           = $this->input->post('foto');
+    //$foto           = $this->input->post('foto');
+    $foto               = $_FILES['foto'];
+        if ($foto = '') {
+        } else {
+            $config['upload_path']      = './assets/uploads/';
+            $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
+            $config['max_size']         = 2048;
+            $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+
+            $this->load->library('upload', $config);
+            
+            if (@$_FILES['foto']['name'] != null) {
+                if (!$this->upload->do_upload('foto')) {
+                    echo 'Gagal Upload ukuran harus kurang dari 2 MB';
+                    die();
+                } else {
+                    $foto = $this->upload->data('file_name');
+                }
+            }
+        }
     $id_diklat      = $this->input->post('id_diklat');
     $id_grup_user   = $this->input->post('id_grup_user');
     // $tgl_lhr        = $this->input->post('tgl_lhr');
     $hsl            = date('jmY', strtotime($tgl_lahir));
+    $created_at     = $this->input->post('created_at');
+    $created_at     = date('Y-m-d H:i:s');
 
     $data = array(
         'nim' => $nim,
@@ -82,7 +103,8 @@ public function adminsimpan(){
         'email' =>  $email,
         'id_diklat' => $id_diklat,
         'no_tlp' => $no_tlp,
-        'foto'   => $foto
+        'foto'   => $foto,
+        'created_at' => $created_at
     );
 
     $data2 = array(
@@ -108,7 +130,8 @@ public function adminsimpan(){
         'email' =>  $email,
         'id_diklat' => $id_diklat,
         'no_tlp' => $no_tlp,
-        'foto'   => $foto
+        'foto'   => $foto,
+        'created_at' => $created_at
     );
     $this->m_mahasiswa->adminsimpan($data3, 'tbl_profil_mahasiswa');
     
