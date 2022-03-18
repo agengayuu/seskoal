@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
@@ -14,6 +15,18 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h6>
+        </div>
+
+        <div class="dropdown inline">
+            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-download">Export</i>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="<?php echo base_url('mahasiswa/ex_pdf') ?>"> PDF</a></li>
+                <li><a href="<?php echo base_url('mahasiswa/excel') ?>"> Excel</a></li>
+            </ul>
+
         </div>
 
         <div class="card-body">

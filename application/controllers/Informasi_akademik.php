@@ -14,6 +14,7 @@ class Informasi_akademik extends CI_Controller {
         if(!$this->session->userdata('username')){
             redirect('login');
         }
+        is_logged_in('3');
        // session_start();
     }
 
