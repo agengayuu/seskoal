@@ -353,6 +353,10 @@ class Dosen extends CI_Controller
     public function adminhapus($id_dosen){
 
         $where = array('id_dosen' => $id_dosen);
+        $user = $this->db->query("delete a.* from user a
+                                join tbl_dosen b on a.id = b.id_user where b.id_dosen = $id_dosen");
+        // print_r($user);die;
+      
         $this->m_dosen->adminhapus($where, 'tbl_dosen'); 
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
