@@ -48,7 +48,7 @@ class M_mahasiswa extends CI_Model
         $hasil = "SELECT tbl_mahasiswa.*, tbl_diklat.*
         FROM tbl_mahasiswa
         INNER JOIN tbl_diklat ON tbl_mahasiswa.id_diklat=tbl_diklat.id_diklat
-        where nim = $nim";
+        where nim = '$nim'";
         return $this->db->query($hasil);
     }
 

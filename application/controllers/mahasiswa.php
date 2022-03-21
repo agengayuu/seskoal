@@ -56,7 +56,7 @@ class Mahasiswa extends CI_Controller
         $this->form_validation->set_rules(
             'nim',
             'NIM',
-            'required|is_unique[user.username]|numeric',
+            'required|is_unique[user.username]',
             array(
                 'required'      => 'You have not provided %s.',
                 'is_unique'     => 'This %s already exists.'
@@ -101,7 +101,9 @@ class Mahasiswa extends CI_Controller
             $data['user'] = $this->db->get_where('user', ['username' =>
             $this->session->userdata('username')])->row_array();
             $query = $this->db->query("select * from tbl_diklat")->result();
+            $query2 = $this->db->query("select * from thn_akademik")->result();
             $data['diklat'] = $query;
+            $data['akademik'] = $query2;
             
             $this->load->view('templates_dosen/header', $data);
             $this->load->view('templates_dosen/sidebar_admin', $data);
@@ -113,7 +115,7 @@ class Mahasiswa extends CI_Controller
             $angkatan       = $this->input->post('angkatan');
             $tgl_lahir      = $this->input->post('tgl_lahir');
             $tahun_masuk    = $this->input->post('tahun_masuk');
-            $tahun_akademik = $this->input->post('tahun_akademik');
+            $id_akademik    = $this->input->post('id_akademik');
             $jabatan        = $this->input->post('jabatan');
             $email          = $this->input->post('email');
             $no_tlp         = $this->input->post('no_tlp');
@@ -151,7 +153,7 @@ class Mahasiswa extends CI_Controller
                 'angkatan' => $angkatan,
                 'tgl_lahir' => $tgl_lahir,
                 'tahun_masuk' => $tahun_masuk,
-                'tahun_akademik' => $tahun_akademik,
+                'id_akademik' => $id_akademik,
                 'jabatan' => $jabatan,
                 'email' =>  $email,
                 'id_diklat' => $id_diklat,
@@ -232,9 +234,11 @@ class Mahasiswa extends CI_Controller
         $where = array(
             'nim' => $nim
         );
-        $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
+        $test = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
+        // print_r($test);
+        // echo "<pre>";
         $data['detail'] = $this->m_mahasiswa->admindetail($nim)->result();
-
+        // print_r($data['detail']);die;
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('mahasiswa/detail');
         $this->load->view('templates_dosen/footer');
@@ -245,7 +249,7 @@ class Mahasiswa extends CI_Controller
         $this->form_validation->set_rules(
             'nim',
             'Nim',
-            'required|is_unique[user.username]|numeric',
+            'required|is_unique[user.username]',
             array(
                 'required'      => 'You have not provided %s.',
                 'is_unique'     => 'This %s already exists.'
@@ -294,7 +298,7 @@ class Mahasiswa extends CI_Controller
             $angkatan       = $this->input->post('angkatan');
             $tgl_lahir      = $this->input->post('tgl_lahir');
             $tahun_masuk    = $this->input->post('tahun_masuk');
-            $tahun_akademik = $this->input->post('tahun_akademik');
+            $id_akademik = $this->input->post('id_akademik');
             $jabatan        = $this->input->post('jabatan');
             $email          = $this->input->post('email');
             $no_tlp         = $this->input->post('no_tlp');
@@ -310,7 +314,7 @@ class Mahasiswa extends CI_Controller
                 'angkatan' => $angkatan,
                 'tgl_lahir' => $tgl_lahir,
                 'tahun_masuk' => $tahun_masuk,
-                'tahun_akademik' => $tahun_akademik,
+                'id_akademik' => $id_akademik,
                 'jabatan' => $jabatan,
                 'email' =>  $email,
                 'id_diklat' => $id_diklat,
@@ -457,35 +461,34 @@ class Mahasiswa extends CI_Controller
         $pdf = new FPDF('L', 'mm', 'Letter');
         $pdf->AddPage();
         $pdf->SetFont('Arial', 'B', 16);
-        $pdf->Cell(0, 7, 'DATA MAHASISWA ', 0, 1, 'C');
+        $pdf->Cell(0, 10, 'DATA MAHASISWA ', 0, 1, 'C');
         $pdf->Cell(10, 7, '', 0, 1);
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(10, 6, 'No', 1, 0, 'C');
-        $pdf->Cell(10, 6, 'NIM', 1, 0, 'C');
+        $pdf->Cell(30, 6, 'NIM', 1, 0, 'C');
         $pdf->Cell(90, 6, 'Nama Mahasiswa', 1, 0, 'C');
-        $pdf->Cell(120, 6, 'Tanggal Lahir', 1, 0, 'C');
-        $pdf->Cell(40, 6, 'Tahun Masuk', 1, 1, 'C');
-        $pdf->Cell(40, 6, 'Tahun Akademik', 1, 1, 'C');
-        $pdf->Cell(40, 6, 'Jabatan', 1, 1, 'C');
-        $pdf->Cell(40, 6, 'Email', 1, 1, 'C');
-        $pdf->Cell(40, 6, 'No. Telepon', 1, 1, 'C');
+        $pdf->Cell(35, 6, 'Tanggal Lahir', 1, 0, 'C');
+        $pdf->Cell(35, 6, 'Tahun Masuk', 1, 0, 'C');
+        $pdf->Cell(40, 6, 'Tahun Akademik', 1, 0, 'C');
+        $pdf->Cell(40, 6, 'Jabatan', 1, 0, 'C');
+        $pdf->Cell(40, 6, 'Email', 1, 0, 'C');
+        $pdf->Cell(40, 6, 'No. Telepon', 1, 0, 'C');
+
         $pdf->SetFont('Arial', '', 10);
-
         $data['siswa'] = $this->m_mahasiswa->tampildata()->result();
-        $no = 0;
-
+        $no = 1;
         foreach ($data['siswa'] as $s) {
             $no++;
-            $pdf->Cell(10, 6, $no, 1, 0, 'C');
-            $pdf->Cell(90, 6, $s->nim, 1, 0);
-            $pdf->Cell(120, 6, $s->nama, 1, 0);
-            $pdf->Cell(40, 6, $s->angkatan, 1, 1);
-            $pdf->Cell(40, 6, $s->tgl_lahir, 1, 1);
-            $pdf->Cell(40, 6, $s->tahun_masuk, 1, 1);
-            $pdf->Cell(40, 6, $s->tahun_akademik, 1, 1);
-            $pdf->Cell(40, 6, $s->jabatan, 1, 1);
-            $pdf->Cell(40, 6, $s->email, 1, 1);
-            $pdf->Cell(40, 6, $s->no_tlp, 1, 1);
+            $pdf->Cell(10, 6, $no++, 1, 1, 'C');
+            $pdf->Cell(30, 6, $s->nim, 1, 0, 'C') ;
+            $pdf->Cell(90, 6, $s->nama, 1, 0,'C');
+            $pdf->Cell(35, 6, $s->angkatan, 1, 0,'C');
+            $pdf->Cell(35, 6, $s->tgl_lahir, 1, 0,'C');
+            $pdf->Cell(40, 6, $s->tahun_masuk, 1, 0,'C');
+            $pdf->Cell(40, 6, $s->tahun_akademik, 1, 0,'C');
+            $pdf->Cell(40, 6, $s->jabatan, 1, 0,'C');
+            $pdf->Cell(40, 6, $s->email, 1, 0,'C');
+            $pdf->Cell(40, 6, $s->no_tlp, 1, 0,'C');
         }
         $pdf->Output();
     }
