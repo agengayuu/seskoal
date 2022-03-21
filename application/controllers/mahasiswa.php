@@ -184,7 +184,7 @@ class Mahasiswa extends CI_Controller
             'nim' => $nim
         );
         $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
-        $data['detail'] = $this->m_mahasiswa->admindetail()->result();
+        $data['detail'] = $this->m_mahasiswa->admindetail($nim)->result();
 
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('mahasiswa/detail');
