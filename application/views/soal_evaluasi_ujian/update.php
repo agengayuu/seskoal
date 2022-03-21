@@ -102,3 +102,9 @@
     </a>
 
 </div>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+     $('#id_mata_kuliah').select2();
+ });
+</script>
