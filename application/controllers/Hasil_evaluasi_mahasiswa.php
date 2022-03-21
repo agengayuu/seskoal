@@ -11,6 +11,7 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_hasil_evaluasi_mahasiswa');
         $this->load->library('session');
+
         is_logged_in('2');
        // session_start();
     }
@@ -19,7 +20,9 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller{
         $data['title'] = 'Hasil Evaluasi Mahasiswa';
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
         $userlogin= $this->session->userdata('id');
+        // print_r($userlogin);
         $array_id_mata_kuliah = $this->m_hasil_evaluasi_mahasiswa->get_id_matakuliah($userlogin);
+        // print_r($array_id_mata_kuliah);
         // print_r($userlogin);
         // echo '<pre>';
 
@@ -37,6 +40,7 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller{
         $this->load->view('templates_dosen/footer'); 
 
     }
+
     
 
 

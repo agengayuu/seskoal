@@ -11,20 +11,20 @@
             <form method="post" action="<?php echo base_url('login/set_password') ?>">
 
                 <div class="form-group">
-                    <label>Password Lama</label>
-                    <input type="password" name="passlama" id="passlama" placeholder="Masukkan Password Lama" class="form-control">
+                    <label>Password Lama<i style="color:red">*</i></label>
+                    <input type="password" name="passlama" id="passlama" placeholder="Masukkan Password Lama" class="form-control" required>
                     <?php echo form_error('passlama', '<div class="text-danger small" ml-3></div>') ?>
                 </div>
-
+ 
                 <div class="form-group">
-                    <label>Password Baru</label>
-                    <input type="password" name="passbaru" id="passbaru" placeholder="Masukkan Password Baru" class="form-control">
+                    <label>Password Baru<i style="color:red">*</i></label>
+                    <input type="password" name="passbaru" id="passbaru" placeholder="Masukkan Password Baru" class="form-control" required>
                     <?php echo form_error('passbaru', '<div class="text-danger small" ml-3></div>') ?>
                 </div>
 
                 <div class="form-group">
-                    <label> Ulangi password</label>
-                    <input type="password" name="passbaru1" id="passbaru1" placeholder="Konfirmasi Password" class="form-control">
+                    <label> Ulangi password<i style="color:red">*</i></label>
+                    <input type="password" name="passbaru1" id="passbaru1" placeholder="Konfirmasi Password" class="form-control" required>
                     <?php echo form_error('passbaru1', '<div class="text-danger small" ml-3></div>') ?>
                 </div>
 

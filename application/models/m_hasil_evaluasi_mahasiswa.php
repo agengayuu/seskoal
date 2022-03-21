@@ -38,6 +38,7 @@ class M_hasil_evaluasi_mahasiswa extends CI_Model{
 
 		return $this->db->query($query)->result();
 	}
+    
 }
 
 ?>
