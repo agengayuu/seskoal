@@ -68,3 +68,9 @@
     </a>
 
 </div>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+     $('#id_jenis_ruang').select2();
+ });
+</script>

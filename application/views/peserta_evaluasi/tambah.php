@@ -147,9 +147,18 @@
 
 	$('.alert-dismissible').alert().delay(3000).slideUp('slow');
   
-
 </script>
 
+<script type="text/javascript">
+ $(document).ready(function() {
+     $('#id_mata_kuliah').select2();
+ });
+</script>
+<script type="text/javascript">
+ $(document).ready(function() {
+     $('#id_diklat').select2();
+ });
+</script>
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
