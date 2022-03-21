@@ -51,104 +51,140 @@ class Mahasiswa extends CI_Controller
 
     public function adminsimpan()
     {
+        // print_r($_POST);die();
         // ---------UNTUK NAMPILIN VIEW NYA-----------------------
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
-        $data['title'] = 'Tambah Mahasiswa';
-        $this->load->view('templates_dosen/header', $data);
-        $this->load->view('templates_dosen/sidebar_admin', $data);
-        $this->load->view('mahasiswa/tambah');
-        $this->load->view('templates_dosen/footer');
+        // $data['user'] = $this->db->get_where('user', ['username' =>
+        // $this->session->userdata('username')])->row_array();
+        // $data['title'] = 'Tambah Mahasiswa';
+        // $this->load->view('templates_dosen/header', $data);
+        // $this->load->view('templates_dosen/sidebar_admin', $data);
+        // $this->load->view('mahasiswa/tambah');
+        // $this->load->view('templates_dosen/footer');
         //-------------------END----------------------------------
+        $this->form_validation->set_rules(
+            'nim',
+            'Nim',
+            'required|is_unique[user.username]',
+            array(
+                'required'      => 'You have not provided %s.',
+                'is_unique'     => 'This %s already exists.'
+            )
+        );
 
-        $nim            = $this->input->post('nim');
-        $nama           = $this->input->post('nama');
-        $angkatan       = $this->input->post('angkatan');
-        $tgl_lahir      = $this->input->post('tgl_lahir');
-        $tahun_masuk    = $this->input->post('tahun_masuk');
-        $tahun_akademik = $this->input->post('tahun_akademik');
-        $jabatan        = $this->input->post('jabatan');
-        $email          = $this->input->post('email');
-        $no_tlp         = $this->input->post('no_tlp');
-        //$foto           = $this->input->post('foto');
-        $foto               = $_FILES['foto'];
-        if ($foto = '') {
-        } else {
-            $config['upload_path']      = './assets/uploads/';
-            $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
-            $config['max_size']         = 2048;
-            $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+        $this->form_validation->set_rules(
+            'no_tlp',
+            'Phone number',
+            'required|is_unique[user.username]|min_length[11]',
+            array(
+                'required'      => 'You have not provided %s.',
+                'is_unique'     => 'Phone number must be at least 11.'
+            )
+        );
 
-            $this->load->library('upload', $config);
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Tambah Mahasiswa';
+            $data['user'] = $this->db->get_where('user', ['username' =>
+            $this->session->userdata('username')])->row_array();
+            $query = $this->db->query("select * from tbl_diklat")->result();
+            $data['diklat'] = $query;
             
-            if (@$_FILES['foto']['name'] != null) {
-                if (!$this->upload->do_upload('foto')) {
-                    echo 'Gagal Upload ukuran harus kurang dari 2 MB';
-                    die();
-                } else {
-                    $foto = $this->upload->data('file_name');
+            $this->load->view('templates_dosen/header', $data);
+            $this->load->view('templates_dosen/sidebar_admin', $data);
+            $this->load->view('mahasiswa/tambah', $data);
+            $this->load->view('templates_dosen/footer');
+        } else {
+            $nim            = $this->input->post('nim');
+            $nama           = $this->input->post('nama');
+            $angkatan       = $this->input->post('angkatan');
+            $tgl_lahir      = $this->input->post('tgl_lahir');
+            $tahun_masuk    = $this->input->post('tahun_masuk');
+            $tahun_akademik = $this->input->post('tahun_akademik');
+            $jabatan        = $this->input->post('jabatan');
+            $email          = $this->input->post('email');
+            $no_tlp         = $this->input->post('no_tlp');
+            //$foto           = $this->input->post('foto');
+            $foto               = $_FILES['foto'];
+            if ($foto = '') {
+            } else {
+                $config['upload_path']      = './assets/uploads/';
+                $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
+                $config['max_size']         = 2048;
+                $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+
+                $this->load->library('upload', $config);
+
+                if (@$_FILES['foto']['name'] != null) {
+                    if (!$this->upload->do_upload('foto')) {
+                        echo 'Gagal Upload ukuran harus kurang dari 2 MB';
+                        die();
+                    } else {
+                        $foto = $this->upload->data('file_name');
+                    }
                 }
             }
+
+            $id_diklat      = $this->input->post('id_diklat');
+            $id_grup_user   = $this->input->post('id_grup_user');
+            // $tgl_lhr        = $this->input->post('tgl_lhr');
+            $hsl            = date('jmY', strtotime($tgl_lahir));
+            $created_at     = $this->input->post('created_at');
+            $created_at     = date('Y-m-d H:i:s');
+
+            $data = array(
+                'nim' => $nim,
+                'nama' => $nama,
+                'angkatan' => $angkatan,
+                'tgl_lahir' => $tgl_lahir,
+                'tahun_masuk' => $tahun_masuk,
+                'tahun_akademik' => $tahun_akademik,
+                'jabatan' => $jabatan,
+                'email' =>  $email,
+                'id_diklat' => $id_diklat,
+                'no_tlp' => $no_tlp,
+                'foto'   => $foto,
+                'created_at' => $created_at
+            );
+
+            $data2 = array(
+                'username' => $nim,
+                'id_grup_user' => 2,
+                'is_active' => 1,
+                'foto'   => $foto,
+                'id_unique' => $nim . $hsl
+            );
+
+
+
+            $this->m_mahasiswa->adminsimpan($data, 'tbl_mahasiswa');
+            $idmahasiswa = $this->m_mahasiswa->simpanuser($data2, 'user');
+
+            $data3 = array(
+                'id_mahasiswa' => $idmahasiswa,
+                'nim' => $nim,
+                'nama' => $nama,
+                'angkatan' => $angkatan,
+                'tgl_lahir' => $tgl_lahir,
+                'jabatan' => $jabatan,
+                'email' =>  $email,
+                'id_diklat' => $id_diklat,
+                'no_tlp' => $no_tlp,
+                'foto'   => $foto,
+                'created_at' => $created_at
+            );
+            $this->m_mahasiswa->adminsimpan($data3, 'tbl_profil_mahasiswa');
+
+            redirect('mahasiswa');
         }
-
-        $id_diklat      = $this->input->post('id_diklat');
-        $id_grup_user   = $this->input->post('id_grup_user');
-        // $tgl_lhr        = $this->input->post('tgl_lhr');
-        $hsl            = date('jmY', strtotime($tgl_lahir));
-        $created_at     = $this->input->post('created_at');
-        $created_at     = date('Y-m-d H:i:s');
-
-        $data = array(
-            'nim' => $nim,
-            'nama' => $nama,
-            'angkatan' => $angkatan,
-            'tgl_lahir' => $tgl_lahir,
-            'tahun_masuk' => $tahun_masuk,
-            'tahun_akademik' => $tahun_akademik,
-            'jabatan' => $jabatan,
-            'email' =>  $email,
-            'id_diklat' => $id_diklat,
-            'no_tlp' => $no_tlp,
-            'foto'   => $foto,
-            'created_at' => $created_at
-        );
-
-        $data2 = array(
-            'username' => $nim,
-            'id_grup_user' => 2,
-            'is_active' => 1,
-            'foto'   => $foto,
-            'id_unique' => $nim . $hsl
-        );
-
-
-
-        $this->m_mahasiswa->adminsimpan($data, 'tbl_mahasiswa');
-        $idmahasiswa = $this->m_mahasiswa->simpanuser($data2, 'user');
-
-        $data3 = array(
-            'id_mahasiswa' => $idmahasiswa,
-            'nim' => $nim,
-            'nama' => $nama,
-            'angkatan' => $angkatan,
-            'tgl_lahir' => $tgl_lahir,
-            'jabatan' => $jabatan,
-            'email' =>  $email,
-            'id_diklat' => $id_diklat,
-            'no_tlp' => $no_tlp,
-            'foto'   => $foto,
-            'created_at' => $created_at
-        );
-        $this->m_mahasiswa->adminsimpan($data3, 'tbl_profil_mahasiswa');
-
-        redirect('mahasiswa');
     }
     public function adminedit($nim)
     {
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
         $data['title'] = 'Edit Mahasiswa';
-        $this->load->view('templates_dosen/header',$data);
+        $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $where = array(
@@ -288,7 +324,7 @@ class Mahasiswa extends CI_Controller
         // // $sheet->setLastModifiedBy("SIAK SESKOAL");
         // $sheet->setTitle("Daftar Mahasiswa");
 
-      
+
         // $sheet->setCellValue('A1', 'NO');
         // $sheet->setCellValue('B1', 'NIM');
         // $sheet->setCellValue('C1', 'Nama Mahasiswa');
@@ -351,7 +387,7 @@ class Mahasiswa extends CI_Controller
         // $sheet->getPageSetup()->setOrientation(\PhpOffice\PhpSpreadsheet\Worksheet\PageSetup::ORIENTATION_LANDSCAPE);
 
 
-        
+
         // $sheet->setTitle("Data Mahasiswa");
         // $writer = new Xlsx($spreadsheet);
         // // Proses file excel
@@ -362,9 +398,10 @@ class Mahasiswa extends CI_Controller
         // $writer->save('php://output');
     }
 
-    public function ex_pdf(){
-        $this->load->library('Pdf'); 
-        
+    public function ex_pdf()
+    {
+        $this->load->library('Pdf');
+
         error_reporting(0); // AGAR ERROR MASALAH VERSI PHP TIDAK MUNCUL
         $pdf = new FPDF('L', 'mm', 'Letter');
         $pdf->AddPage();
@@ -398,12 +435,7 @@ class Mahasiswa extends CI_Controller
             $pdf->Cell(40, 6, $s->jabatan, 1, 1);
             $pdf->Cell(40, 6, $s->email, 1, 1);
             $pdf->Cell(40, 6, $s->no_tlp, 1, 1);
-           
         }
         $pdf->Output();
-
-
     }
-
-
 }
