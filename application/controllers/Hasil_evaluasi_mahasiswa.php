@@ -20,15 +20,17 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller{
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
         $userlogin= $this->session->userdata('id');
         $array_id_mata_kuliah = $this->m_hasil_evaluasi_mahasiswa->get_id_matakuliah($userlogin);
-        // print_r($userlogin);
         // echo '<pre>';
+        // print_r( $this->m_hasil_evaluasi_mahasiswa->get_mahasiswa($array_id_mata_kuliah));
+        // die();
 
-       
-        // 
-        $data['mahasiswa'] = $this->m_hasil_evaluasi_mahasiswa->get_mahasiswa($array_id_mata_kuliah);
-        // echo "<pre>";print_r($data);die;
+        if(count($array_id_mata_kuliah) > 0){
+            $data['mahasiswa'] = $this->m_hasil_evaluasi_mahasiswa->get_mahasiswa($array_id_mata_kuliah);
+        } else {
+            $data['mahasiswa'] = [];
+        }
         
-
+        // echo "<pre>";print_r($data);die;
         // $data['diklatnya'] = $this->m_diklat->tampildata()->result();
         $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 

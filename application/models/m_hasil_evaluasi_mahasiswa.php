@@ -18,6 +18,7 @@ class M_hasil_evaluasi_mahasiswa extends CI_Model{
 	{
         $array_id_matakuliah = array_column($id_mata_kuliah, 'id_mata_kuliah');
         $explode_id_mata_kuliah = implode(', ', $array_id_matakuliah);
+        // echo "<pre>";print_r($explode_id_mata_kuliah);die();
 		// $this->db->select('*');
 		// $this->db->from('tbl_mahasiswa_evaluasi');
 		// $this->db->join('tbl_mata_kuliah', 'tbl_mahasiswa_evaluasi.id_mata_kuliah=tbl_mata_kuliah.id_mata_kuliah');
