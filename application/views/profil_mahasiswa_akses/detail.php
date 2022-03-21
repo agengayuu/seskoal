@@ -4,6 +4,8 @@
             Data Diri
         </div>
     </div>
+
+    <?php echo form_open_multipart('profil_mahasiswa_akses/update'); ?>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
@@ -12,19 +14,16 @@
                             <h6 class="m-0 font-weight-bold text-primary">Data Diri</h6>
                         </div> -->
                         <div class="card-body">
-                <form action="<?php echo base_url('profil_mahasiswa/detail') ?>">
+                <!-- <form action="<?php echo base_url('profil_mahasiswa_akses/detail') ?>"> -->
                     <input type="hidden" name="id_mahasiswa" value="<?php echo ($datadiri->id_mahasiswa) ? $datadiri->id_mahasiswa : '' ?>">
-                            <div class="text-center">
-                                <?php if($datadiri != '' && $datadiri->foto != null) { ?>
-                                    <img src="<?=base_url('./assets/uploads/'.$datadiri->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
-                                <?php } ?>
-                            </div>
-                        </div>
-                    <h5 class="text-center card-title" style="font-weight:bold;"> <?php echo ($datadiri->nama) ? $datadiri->nama : '' ?></h5>
                     <div class="mb-4 ml-4 mr-4" >
                         <div class="form-group">
                             <label for="">NIM</i></label>
-                            <input type="text" name="nim" class="form-control" placeholder="Masukkan NIM" id="nim" value="<?php echo ($datadiri->nim) ? $datadiri->nim : '' ?>">
+                            <input type="text" name="nim" class="form-control" placeholder="Masukkan NIM" id="nim" value="<?php echo ($datadiri->nim) ? $datadiri->nim : '' ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nama<i style="color:red">*</i></label>
+                            <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" id="nama" value="<?php echo ($datadiri->nama) ? $datadiri->nama : '' ?>">
                         </div>
                         <div class="form-group">
                             <label for="">Tempat Lahir</label>
@@ -44,6 +43,16 @@
                         <div class="form-check form-check-inline mb-2">
                             <input class="form-check-input" type="radio" name="jenis_kelamin" id="perempuan" value="Perempuan" <?php echo ($datadiri->jenis_kelamin == 'Perempuan') ? 'checked' : '' ?>>
                             <label class="form-check-label">Perempuan</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Foto<i style="color:red"></i></label>
+                            <div class="form-group">
+                                <?php if ($datadiri->foto != null) { ?>
+                                    <img src="<?= base_url('/assets/uploads/' . $datadiri->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
+                                <?php } ?>
+                                <input type="file" name="foto" class="form-control" accept="image/*" value="">
+                                <input type="hidden" name="foto_hidden" value="<?= ($datadiri->foto != '') ? $datadiri->foto : '' ?>">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="">Agama</label>
@@ -213,31 +222,31 @@
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">NIK </label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" name="nik_ortu[]" class="form-control" placeholder="Masukkan NIK" id="nik"  value="<?php echo ($ayah != '') ? $ayah->nik_ortu :''?>" >
+                                                                                    <input type="text" name="nik_ortu[]" class="form-control" placeholder="Masukkan NIK" id="nik"  value="<?php echo ($ayah != '') ? $ayah->nik_ortu :''?>" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Nama</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" name="nama_ortu[]" class="form-control" placeholder="Masukkan Nama" id="nama"  value="<?php echo ($ayah != '') ? $ayah->nama_ortu : '' ?>">
+                                                                                    <input type="text" name="nama_ortu[]" class="form-control" placeholder="Masukkan Nama" id="nama"  value="<?php echo ($ayah != '') ? $ayah->nama_ortu : '' ?>" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Tempat Lahir</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" name="tempat_lahir_ortu[]" class="form-control" placeholder="Masukkan Tempat Lahir" id="tempat_lahir"  value="<?php echo ($ayah != '') ? $ayah->tempat_lahir_ortu : '' ?>">
+                                                                                    <input type="text" name="tempat_lahir_ortu[]" class="form-control" placeholder="Masukkan Tempat Lahir" id="tempat_lahir"  value="<?php echo ($ayah != '') ? $ayah->tempat_lahir_ortu : '' ?>" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Tanggal Lahir</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="date" name="tgl_lahir_ortu[]" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir"  value="<?php echo ($ayah != '') ? $ayah->tgl_lahir_ortu : '' ?>">
+                                                                                    <input type="date" name="tgl_lahir_ortu[]" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir"  value="<?php echo ($ayah != '') ? $ayah->tgl_lahir_ortu : '' ?>" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Pekerjaan</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <select class="form-control" name="pekerjaan_ortu[]" id="pekerjaan">
+                                                                                    <select class="form-control" name="pekerjaan_ortu[]" id="pekerjaan" required>
                                                                                         <option value="" style="display:none;">--- Pilih Pekerjaan ---</option>
                                                                                         <option value="Pegawai Negeri Sipil" <?php echo ($ayah != '') ? (($ayah->pekerjaan_ortu == 'Pegawai Negeri Sipil') ? 'selected' : '' ): '' ?>>Pegawai Negeri Sipil</option>
                                                                                         <option value="Pegawai Swasta" <?php echo ($ayah != '') ? (($ayah->pekerjaan_ortu == 'Pegawai Swasta') ? 'selected' : ''): '' ?>>Pegawai Swasta</option>
@@ -250,7 +259,7 @@
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Pendidikan</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <select class="form-control" name="pendidikan_ortu[]" id="pekerjaan">
+                                                                                    <select class="form-control" name="pendidikan_ortu[]" id="pekerjaan" required>
                                                                                         <option value="" style="display:none;">--- Pilih Pendidikan ---</option>
                                                                                         <option value="SD/Sederajat" <?php echo ($ayah != '') ? (($ayah->pendidikan_ortu == 'SD/Sederajat') ? 'selected' : '' ): ''?>>SD/Sederajat</option>
                                                                                         <option value="SMP/Sederajat" <?php echo ($ayah != '') ? (($ayah->pendidikan_ortu == 'SMP/Sederajat') ? 'selected' : '' ): '' ?>>SMP/Sederajat</option>
@@ -264,7 +273,7 @@
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Penghasilan</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <select class="form-control" name="penghasilan_ortu[]" id="penghasilan">
+                                                                                    <select class="form-control" name="penghasilan_ortu[]" id="penghasilan"required>
                                                                                         <option value="" style="display:none;">--- Pilih Penghasilan ---</option>
                                                                                         <option value="Kurang dari 3 juta" <?php echo ($ayah != '') ? ( ($ayah->penghasilan_ortu == 'Kurang dari 3 juta') ? 'selected' : '' ): '' ?>>Kurang Dari 3 juta</option>
                                                                                         <option value="3 juta - 5 juta" <?php echo ($ayah != '') ? ( ($ayah->penghasilan_ortu == '3 juta - 5 juta') ? 'selected' : '' ): ''?>>3 juta - 5 juta</option>
@@ -281,35 +290,35 @@
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">NIK</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" name="nik_ortu[]" class="form-control" placeholder="Masukkan NIK" id="nik" value="<?php echo ($ibu != '') ? $ibu->nik_ortu : '' ?>">
+                                                                                    <input type="text" name="nik_ortu[]" class="form-control" placeholder="Masukkan NIK" id="nik" value="<?php echo ($ibu != '') ? $ibu->nik_ortu : '' ?>" required>
                                                                                 </div>
                                                                                 <?php echo form_error('nik', '<div class="text-danger small ml-3"></div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Nama</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" name="nama_ortu[]" class="form-control" placeholder="Masukkan Nama" id="nama" value="<?php echo ($ibu != '') ? $ibu->nama_ortu : '' ?>">
+                                                                                    <input type="text" name="nama_ortu[]" class="form-control" placeholder="Masukkan Nama" id="nama" value="<?php echo ($ibu != '') ? $ibu->nama_ortu : '' ?>" required>
                                                                                 </div>
                                                                                 <?php echo form_error('nama', '<div class="text-danger small ml-3"></div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Tempat Lahir</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" name="tempat_lahir_ortu[]" class="form-control" placeholder="Masukkan Tempat Lahir" id="tempat_lahir" value="<?php echo ($ibu != '') ? $ibu->tempat_lahir_ortu : '' ?>">
+                                                                                    <input type="text" name="tempat_lahir_ortu[]" class="form-control" placeholder="Masukkan Tempat Lahir" id="tempat_lahir" value="<?php echo ($ibu != '') ? $ibu->tempat_lahir_ortu : '' ?>" required>
                                                                                 </div>
                                                                                 <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3"></div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Tanggal Lahir</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="date" name="tgl_lahir_ortu[]" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir" value="<?php echo ($ibu != '') ? $ibu->tgl_lahir_ortu : '' ?>">
+                                                                                    <input type="date" name="tgl_lahir_ortu[]" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir" value="<?php echo ($ibu != '') ? $ibu->tgl_lahir_ortu : '' ?>" required>
                                                                                 </div>
                                                                                 <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3"></div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Pekerjaan</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <select class="form-control" name="pekerjaan_ortu[]" id="pekerjaan">
+                                                                                    <select class="form-control" name="pekerjaan_ortu[]" id="pekerjaan" required>
                                                                                         <option value="" style="display:none;">--- Pilih Pekerjaan ---</option>
                                                                                         <option value="Pegawai Negeri Sipil" <?php echo ($ibu != '') ? ( ($ibu->pekerjaan_ortu == 'Pegawai Negeri Sipil') ? 'selected' : ''): '' ?>>Pegawai Negeri Sipil</option>
                                                                                         <option value="Pegawai Swasta" <?php echo ($ibu != '') ? ( ($ibu->pekerjaan_ortu == 'Pegawai Swasta') ? 'selected' : '' ): '' ?>>Pegawai Swasta</option>
@@ -322,7 +331,7 @@
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Pendidikan</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <select class="form-control" name="pendidikan_ortu[]" id="pendidikan">
+                                                                                    <select class="form-control" name="pendidikan_ortu[]" id="pendidikan" required>
                                                                                         <option value="" style="display:none;">--- Pilih Pendidikan ---</option>
                                                                                         <option value="SD/Sederajat" <?php echo ($ibu != '') ? ( ($ibu->pendidikan_ortu == 'SD/Sederajat') ? 'selected' : '' ): ''?>>SD/Sederajat</option>
                                                                                         <option value="SMP/Sederajat" <?php echo ($ibu != '') ? (($ibu->pendidikan_ortu == 'SMP/Sederajat') ? 'selected' : '' ): ''?>>SMP/Sederajat</option>
@@ -336,7 +345,7 @@
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Penghasilan</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <select class="form-control" name="penghasilan_ortu[]" id="penghasilan">
+                                                                                    <select class="form-control" name="penghasilan_ortu[]" id="penghasilan" required>
                                                                                         <option value="" style="display:none;">--- Pilih Penghasilan ---</option>
                                                                                         <option value="Kurang dari 3 juta" <?php echo ($ibu != '') ? (($ibu->penghasilan_ortu == 'Kurang dari 3 juta') ? 'selected' : '' ): '' ?>>Kurang Dari 3 juta</option>
                                                                                         <option value="3 juta - 5 juta" <?php echo ($ibu != '') ? ( ($ibu->penghasilan_ortu == '3 juta - 5 juta') ? 'selected' : '' ): ''?>>3 juta - 5 juta</option>
@@ -357,9 +366,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <button type="submit" class="btn btn-primary mt-3 mb-4">Simpan</button>
                             <button type="button" value="Cancel" class="btn btn-danger mt-3 mb-4" onclick=self.history.back()>Kembali</button>
+                    </div>
+                <!-- </form> -->
                 </div>
-                </form>
             </div>
         </div>
     </div>
@@ -370,5 +381,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-</div>  
+</div> 
+<?php form_close(); ?> 
 </div>

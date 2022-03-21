@@ -18,7 +18,8 @@ class M_jadwal extends CI_Model{
         join tbl_dosen
         on tbl_jadwal_kuliah.id_dosen = tbl_dosen.id_dosen
         join tbl_ruang
-        on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang";
+        on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
+        ";
 
         return $this->db->query($query)->result();
        //return $this->db->get('tbl_jadwal_kuliah')->result();
@@ -33,8 +34,11 @@ class M_jadwal extends CI_Model{
         join tbl_dosen
         on tbl_jadwal_kuliah.id_dosen = tbl_dosen.id_dosen
         join tbl_ruang
-        on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang";
-       $last2 = $this->db->order_by('id_jadwal_kuliah', 'desc')
+        on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
+        where tbl_jadwal_kuliah.tanggal >= CURDATE()
+        order by tbl_jadwal_kuliah.tanggal asc
+        limit 5";
+        $last2 = $this->db->order_by('id_jadwal_kuliah', 'desc')
             ->limit(1)
             ->query($query)
             ->result();

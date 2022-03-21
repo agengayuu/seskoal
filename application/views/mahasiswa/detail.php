@@ -11,11 +11,12 @@
                 <div class="col-md-12">
                     <div class="form-horizontal form-bordered">
                         <div class="form-group row">
+                        <?php foreach($detail as $dt) : ?>
                             <div class="col-md-2">
-                                <img src=""  style="width: 90%;" class="card shadow img-thumbnail rounded">
+                                <?php if($dt->foto!= null) { ?>
+                                    <img src="<?=base_url('./assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
+                                <?php } ?>
                             </div>
-                            <?php foreach($detail as $dt) : ?>
-
                             <div class="col-md-10">
                                 <div class="form-group row">
                                     <div class="col-md-3">
@@ -46,7 +47,7 @@
                                         <label for="">Tanggal Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $dt->tgl_lhr; ?></label>
+                                        <label for=""><?php echo $dt->tgl_lahir; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">

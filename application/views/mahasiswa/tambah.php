@@ -5,10 +5,11 @@
         </div>
     </div>
 
+    <?php echo form_open_multipart('mahasiswa/adminsimpan'); ?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
-            <form action="<?php echo base_url('mahasiswa/adminsimpan') ?>" method="post">
+            <!-- <form action="<?php echo base_url('mahasiswa/adminsimpan') ?>" method="post" > -->
 
                 <div class="form-group">
                     <label>NIM<i style="color:red">*</i></label>
@@ -76,7 +77,7 @@
 
                 <div class="form-group">
                     <label>Foto<i style="color:red">*</i></label>
-                    <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control" required>
+                    <input type="file" name="foto" multiple accept="image/*" class="form-control" required>
                     <?php echo form_error('foto', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
@@ -110,8 +111,8 @@
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
-            </form>
-
+            <!-- </form> -->
+            <?php form_close(); ?>
     </div>
 </div>
 

@@ -67,25 +67,24 @@ class Main_menu extends CI_Controller
                                         tbl_jadwal_kuliah
                                     where 
                                         CONCAT(`tanggal`, ' ', `waktu_mulai`) >= '$tgl'")
-                                    ->result();
+            ->result();
 
-        
+
         $now = new DateTime("now");
         $array_kosong = [];
-        foreach($kosong as $k){
+        foreach ($kosong as $k) {
             $now = new DateTime("now");
             $open = new DateTime($k->timestamp_waktu_mulai);
             $close = new DateTime($k->timestamp_waktu_selesai);
-           
-            if ($open > $now && $close < $now) {
-               $array_kosong[]= $k->timestamp_waktu_mulai;
-            } else if($open > $now && $close > $now){
-                $array_kosong[]= $k->timestamp_waktu_mulai;
-            } 
 
+            if ($open > $now && $close < $now) {
+                $array_kosong[] = $k->timestamp_waktu_mulai;
+            } else if ($open > $now && $close > $now) {
+                $array_kosong[] = $k->timestamp_waktu_mulai;
+            }
         }
         $data['kosong'] = count($array_kosong);
-     
+
         $this->load->view('main_menu/admin', $data);
         $this->load->view('templates_dosen/footer');
     }
@@ -123,6 +122,7 @@ class Main_menu extends CI_Controller
     public function siswa()
     {
         is_logged_in('2');
+        $data['title'] = 'Menu Siswa';
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
