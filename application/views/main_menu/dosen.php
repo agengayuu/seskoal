@@ -5,12 +5,6 @@
         <div class="card-body">
             Selamat Datang <?= $user['username'];?> di Dashboard Dosen
             <hr>
-            <b>Petunjuk Penggunaan</b>
-            <br />
-            <p>
-                <span><b>1. Dashboard Utama</b></span><br />
-                <span><b>2. Set Password</b></span>
-            </p>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                 <i class="fas fa-cogs"></i> Control Panel
             </button>
@@ -29,38 +23,48 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url('profile_dosen') ?>"><p class="nav-link small text-info">PROFILE</p></a>
-                        <i class="fas fa-3x fa-id-card-alt"></i>
+                        <a href="<?php echo base_url('main_menu/dosen') ?>"><p class="nav-link small text-info">DASHBOARD</p></a>
+                        <i class="fas fa-3x fa-tachometer-alt"></i>
                     </div>
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">INFORMASI KAMPUS</p></a>
+                        <a href="<?php echo base_url('informasi_akademik') ?>"><p class="nav-link small text-info">INFORMASI AKADEMIK</p></a>
                         <i class="fas fa-3x fa-bullhorn"></i>
                     </div>
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
+                        <a href="<?php echo base_url('mahasiswa_d') ?>"><p class="nav-link small text-info">MAHASISWA</p></a>
                         <i class="fas fa-3x fa-user-graduate"></i>
                     </div>
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">Evaluasi Ujian</p></a>
-                        <i class="fas fa-3x fa-book"></i>
+                        <a href="<?php echo base_url('jadwal_kuliah_dosen') ?>"><p class="nav-link small text-info">JADWAL KULIAH</p></a>
+                        <i class="fas fa-3x fa-calendar-alt"></i>
                     </div>
                 </div><hr>
                 <div class="row">
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">INPUT NILAI</p></a>
+                        <a href="<?php echo base_url('profile_dosen') ?>"><p class="nav-link small text-info">PROFILE DOSEN</p></a>
+                        <i class="fas fa-3x fa-id-card-alt"></i>
+                    </div>
+                    <div class="col-md-3 text-info text-center">
+                        <a href="<?php echo base_url('soal_evaluasi_ujian') ?>"><p class="nav-link small text-info">SOAL EVALUASI MAHASISWA</p></a>
+                        <i class="fas fa-3x fa-book"></i>
+                    </div>
+                    <div class="col-md-3 text-info text-center">
+                        <a href="<?php echo base_url('peserta_evaluasi') ?>"><p class="nav-link small text-info">KELOLA MAHASISWA EVALUASI</p></a>
+                        <i class="fas fa-3x fa-plus"></i>
+                    </div>
+                    <div class="col-md-3 text-info text-center">
+                        <a href="<?php echo base_url('hasil_mahasiswa_evaluasi') ?>"><p class="nav-link small text-info">HASIL EVALUASI</p></a>
+                        <i class="fas fa-3x fa-clipboard"></i>
+                    </div>
+                </div><hr>
+                <div class="row">
+                    <div class="col-md-3 text-info text-center">
+                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">PENILAIAN</p></a>
                         <i class="fas fa-3x fa-sort-numeric-down"></i>
                     </div>
                     <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">JADWAL</p></a>
-                        <i class="fas fa-3x fa-calendar-alt"></i>
-                    </div>
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">RUANGAN</p></a>
-                        <i class="fas fa-3x fa-landmark"></i>
-                    </div>
-                    <div class="col-md-3 text-info text-center">
-                        <a href="<?php echo base_url() ?>"><p class="nav-link small text-info">Mata Kuliah</p></a>
-                        <i class="fas fa-3x fa-user-graduate"></i>
+                        <a href="<?php echo base_url('login/set') ?>"><p class="nav-link small text-info">SET PASSWORD</p></a>
+                        <i class="fas fa-3x fa-key"></i>
                     </div>
                 </div>
             </div>

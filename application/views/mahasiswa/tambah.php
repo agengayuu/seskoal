@@ -82,7 +82,7 @@
                 </div>
 
                 <!-- document -->
-                <br />
+                <!-- <br />
                 <hr>
                 <br />
                 <table class="table table-bordered mb-4">
@@ -91,7 +91,7 @@
                             <th>Jenis Dokumen</th>
                             <th>Aksi</th>
                         </tr>
-                    </thead>
+                    </thead> -->
                     <!-- <tbody>
                         <tr align="center">
                             <th>Dokumen 1</th>

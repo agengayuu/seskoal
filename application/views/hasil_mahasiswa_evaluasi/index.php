@@ -77,7 +77,7 @@
                                                 if($d->nilai == ''){
                                                     echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
                                                 }else {
-                                                    echo "<a href='".'hasil_ujian/cetak/'."$d->id_peserta' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
+                                                    echo "<a href='".'hasil_ujian/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
                                                 }
                                                 ?>
                                             </td> 

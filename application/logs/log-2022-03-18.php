@@ -403,6 +403,145 @@ ERROR - 2022-03-18 01:57:22 --> 404 Page Not Found: Js/sb-admin-2.min.js
 ERROR - 2022-03-18 01:57:22 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-03-18 01:57:22 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-03-18 01:57:22 --> 404 Page Not Found: Js/demo
+<<<<<<< HEAD
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:57:55 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 01:58:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:12 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:58:12 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:58:14 --> Severity: Notice --> Undefined variable: heading C:\laragon\www\seskoal-siak\seskoal\application\views\login\blocked.php 72
+ERROR - 2022-03-18 01:58:14 --> Severity: Notice --> Undefined variable: message C:\laragon\www\seskoal-siak\seskoal\application\views\login\blocked.php 73
+ERROR - 2022-03-18 01:58:14 --> 404 Page Not Found: Login/assets
+ERROR - 2022-03-18 01:58:14 --> 404 Page Not Found: Login/assets
+ERROR - 2022-03-18 01:58:15 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 01:58:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:15 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 01:58:17 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 12 - Invalid query: select 
+                    tbl_profil_mahasiswa.*, 
+                    user.*, 
+                    tbl_mahasiswa_evaluasi.*,
+                    tbl_mata_kuliah.nama_mata_kuliah
+                from 
+                    tbl_profil_mahasiswa 
+                join user on tbl_profil_mahasiswa.id_mahasiswa = user.id
+                join tbl_mahasiswa_evaluasi on tbl_profil_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa 
+                join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_mahasiswa_evaluasi.id_mata_kuliah 
+                where 
+                tbl_mahasiswa_evaluasi.id_mata_kuliah in ()
+ERROR - 2022-03-18 01:58:21 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 01:58:21 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:32 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 12 - Invalid query: select 
+                    tbl_profil_mahasiswa.*, 
+                    user.*, 
+                    tbl_mahasiswa_evaluasi.*,
+                    tbl_mata_kuliah.nama_mata_kuliah
+                from 
+                    tbl_profil_mahasiswa 
+                join user on tbl_profil_mahasiswa.id_mahasiswa = user.id
+                join tbl_mahasiswa_evaluasi on tbl_profil_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa 
+                join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_mahasiswa_evaluasi.id_mata_kuliah 
+                where 
+                tbl_mahasiswa_evaluasi.id_mata_kuliah in ()
+ERROR - 2022-03-18 01:58:39 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 01:58:40 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 01:58:44 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 12 - Invalid query: select 
+                    tbl_profil_mahasiswa.*, 
+                    user.*, 
+                    tbl_mahasiswa_evaluasi.*,
+                    tbl_mata_kuliah.nama_mata_kuliah
+                from 
+                    tbl_profil_mahasiswa 
+                join user on tbl_profil_mahasiswa.id_mahasiswa = user.id
+                join tbl_mahasiswa_evaluasi on tbl_profil_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa 
+                join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_mahasiswa_evaluasi.id_mata_kuliah 
+                where 
+                tbl_mahasiswa_evaluasi.id_mata_kuliah in ()
+ERROR - 2022-03-18 01:58:53 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:53 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:54 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 01:58:54 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 12 - Invalid query: select 
+                    tbl_profil_mahasiswa.*, 
+                    user.*, 
+                    tbl_mahasiswa_evaluasi.*,
+                    tbl_mata_kuliah.nama_mata_kuliah
+                from 
+                    tbl_profil_mahasiswa 
+                join user on tbl_profil_mahasiswa.id_mahasiswa = user.id
+                join tbl_mahasiswa_evaluasi on tbl_profil_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa 
+                join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_mahasiswa_evaluasi.id_mata_kuliah 
+                where 
+                tbl_mahasiswa_evaluasi.id_mata_kuliah in ()
+ERROR - 2022-03-18 02:00:12 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 02:00:31 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:31 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 02:00:32 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:32 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-18 02:00:34 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-18 02:47:14 --> 404 Page Not Found: Assets/global
+=======
 ERROR - 2022-03-18 09:51:36 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
 ERROR - 2022-03-18 09:51:36 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
 ERROR - 2022-03-18 09:51:36 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
@@ -671,3 +810,4 @@ ERROR - 2022-03-18 10:26:10 --> Could not find the specified $config['composer_a
 ERROR - 2022-03-18 10:26:10 --> 404 Page Not Found: Js/sb-admin-2.min.js
 ERROR - 2022-03-18 10:26:10 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-03-18 10:26:10 --> 404 Page Not Found: Vendor/datatables
+>>>>>>> 17f76b9167fba4e0b8e77105d7bcccd32bf29959

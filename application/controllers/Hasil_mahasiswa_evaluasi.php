@@ -29,9 +29,9 @@ class Hasil_mahasiswa_evaluasi extends CI_Controller{
         //                             from tbl_mahasiswa_evaluasi a, tbl_profil_mahasiswa b
         //                             where a.id_mahasiswa = b.id_mahasiswa order by a.id_mahasiswa")->result();
 
-        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.nim, tbl_mahasiswa.nama , tbl_mata_kuliah.nama_mata_kuliah
+        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_profil_mahasiswa.nim, tbl_profil_mahasiswa.nama , tbl_mata_kuliah.nama_mata_kuliah
                                     from tbl_mahasiswa_evaluasi
-                                    join tbl_mahasiswa on tbl_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa
+                                    join tbl_profil_mahasiswa on tbl_profil_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa
                                     join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_mahasiswa_evaluasi.id_mata_kuliah")->result();
 
         $data['hasil'] = $query;
