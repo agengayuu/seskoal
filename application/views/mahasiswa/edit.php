@@ -32,10 +32,16 @@
                 <?php echo form_error('tahun_masuk', '<div class="text-danger small ml-3"></div>') ?>
             </div>
 
+            <label>Tahun Akademik</label>
             <div class="form-group">
-                <label>Tahun Akademik</label>
-                <input type="text" name="tahun_akademik" value="<?php echo $s->tahun_akademik; ?>" class="form-control">
-                <?php echo form_error('tahun_akademik', '<div class="text-danger small ml-3"></div>') ?>
+                <select class="form-control" name='id_akademik' id='id_akademik' value ="<?= $s->id_akademik ?>">
+                    <option value='0' selected>--- Pilih Tahun Akademik ---</option>
+                    <?php foreach ($akademik as $ak) { ?>
+                    <option value="<?php echo $ak->id_akademik; ?>" <?php if ($s->id_akademik == $ak->id_akademik) {
+                                                                    echo "selected";
+                                                                    } ?> ><?php echo $ak->tahun_akademik; ?></option>
+                    <?php } ?>
+                </select>
             </div>
 
             <div class="form-group">

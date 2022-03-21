@@ -45,8 +45,12 @@
 
             <div class="form-group">
                 <label>Tahun Akademik<i style="color:red">*</i></label>
-                <input type="text" name="tahun_akademik" value="<?php echo set_value('tahun_akademik'); ?>" placeholder="Masukkan Tahun Akademik" class="form-control">
-                <?php echo form_error('tahun_akademik', '<div class="text-danger small ml-3">','</div>') ?>
+                <select class="form-control" name='id_akademik' id='id_akademik'>
+                    <option value='0' selected>--- Pilih Tahun Akademik ---</option>
+                    <?php foreach ($akademik as $ak) { ?>
+                        <option value="<?php echo $ak->id_akademik; ?>"><?php echo $ak->tahun_akademik; ?></option>
+                    <?php } ?>
+                </select>
             </div>
 
             <div class="form-group">

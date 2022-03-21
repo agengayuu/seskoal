@@ -42,8 +42,10 @@ class Mahasiswa extends CI_Controller
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
+        $query2 = $this->db->query("select * from thn_akademik")->result();
         $query = $this->db->query("select * from tbl_diklat")->result();
         $data['diklat'] = $query;
+        $data['akademik'] = $query2;
 
         $this->load->view('mahasiswa/tambah', $data);
         $this->load->view('templates_dosen/footer');
@@ -51,20 +53,10 @@ class Mahasiswa extends CI_Controller
 
     public function adminsimpan()
     {
-        // print_r($_POST);die();
-        // ---------UNTUK NAMPILIN VIEW NYA-----------------------
-        // $data['user'] = $this->db->get_where('user', ['username' =>
-        // $this->session->userdata('username')])->row_array();
-        // $data['title'] = 'Tambah Mahasiswa';
-        // $this->load->view('templates_dosen/header', $data);
-        // $this->load->view('templates_dosen/sidebar_admin', $data);
-        // $this->load->view('mahasiswa/tambah');
-        // $this->load->view('templates_dosen/footer');
-        //-------------------END----------------------------------
         $this->form_validation->set_rules(
             'nim',
-            'Nim',
-            'required|is_unique[user.username]',
+            'NIM',
+            'required|is_unique[user.username]|numeric',
             array(
                 'required'      => 'You have not provided %s.',
                 'is_unique'     => 'This %s already exists.'
@@ -82,12 +74,22 @@ class Mahasiswa extends CI_Controller
         );
 
         $this->form_validation->set_rules(
-            'no_tlp',
-            'Phone number',
+            'angkatan',
+            'Angkatan',
             'required|regex_match[/(?<=^)M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(?=$)/]',
             array(
                 'required'      => 'You have not provided %s.',
-                'regex_match'     => 'Phone number must be at least 11 number and max 14 number.'
+                'regex_match'     => 'Class must be in roman numerals.'
+            )
+        );
+
+        $this->form_validation->set_rules(
+            'tahun_masuk',
+            'Tahun Masuk',
+            'required|numeric|min_length[4]',
+            array(
+                'required'      => 'You have not provided %s.',
+                'numeric'     => 'Tahun masuk must be at least 4 number.'
             )
         );
 
@@ -201,6 +203,7 @@ class Mahasiswa extends CI_Controller
             'nim' => $nim
         );
 
+        $data['akademik'] = $this->db->query("select * from thn_akademik")->result();
         $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
         $data['siswanya'] = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
 
@@ -239,58 +242,96 @@ class Mahasiswa extends CI_Controller
 
     public function update()
     {
-
-        // ---------UNTUK NAMPILIN VIEW NYA-----------------------
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
-        $data['title'] = 'Tambah Mahasiswa';
-        $this->load->view('templates_dosen/header', $data);
-        $this->load->view('templates_dosen/sidebar_admin', $data);
-        $this->load->view('mahasiswa/tambah');
-        $this->load->view('templates_dosen/footer');
-        //-------------------END----------------------------------
-        $id             = $this->input->post('id_mahasiswa');
-        $nim            = $this->input->post('nim');
-        $nama           = $this->input->post('nama');
-        $angkatan       = $this->input->post('angkatan');
-        $tgl_lahir      = $this->input->post('tgl_lahir');
-        $tahun_masuk    = $this->input->post('tahun_masuk');
-        $tahun_akademik = $this->input->post('tahun_akademik');
-        $jabatan        = $this->input->post('jabatan');
-        $email          = $this->input->post('email');
-        $no_tlp         = $this->input->post('no_tlp');
-        $foto           = $this->input->post('foto');
-        $id_diklat      = $this->input->post('id_diklat');
-        $id_grup_user   = $this->input->post('id_grup_user');
-        $tgl_lhr        = $this->input->post('tgl_lhr');
-        $hsl            = date('jmY', strtotime($tgl_lhr));
-
-        $data = array(
-            'nim' => $nim,
-            'nama' => $nama,
-            'angkatan' => $angkatan,
-            'tgl_lahir' => $tgl_lahir,
-            'tahun_masuk' => $tahun_masuk,
-            'tahun_akademik' => $tahun_akademik,
-            'jabatan' => $jabatan,
-            'email' =>  $email,
-            'id_diklat' => $id_diklat,
-            'no_tlp' => $no_tlp,
-            'foto'   => $foto
+        $this->form_validation->set_rules(
+            'nim',
+            'Nim',
+            'required|is_unique[user.username]|numeric',
+            array(
+                'required'      => 'You have not provided %s.',
+                'is_unique'     => 'This %s already exists.'
+            )
         );
 
-        $data2 = array(
-            'foto'   => $foto,
+        $this->form_validation->set_rules(
+            'no_tlp',
+            'Phone number',
+            'required|regex_match[/^[0-9]{11,14}$/]',
+            array(
+                'required'      => 'You have not provided %s.',
+                'regex_match'     => 'Phone number must be at least 11 number and max 14 number.'
+            )
         );
 
-        $where = array(
-            'id_mahasiswa' => $id
+        $this->form_validation->set_rules(
+            'angkatan',
+            'Class',
+            'required|regex_match[/(?<=^)M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(?=$)/]',
+            array(
+                'required'      => 'You have not provided %s.',
+                'regex_match'     => 'Class must be in roman numerals.'
+            )
         );
 
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
 
-        $this->m_mahasiswa->adminsimpan($where, $data, 'tbl_mahasiswa');
-        $this->m_mahasiswa->simpanuser($where, $data2, 'user');
-        redirect('mahasiswa');
+        if ($this->form_validation->run() == false) {
+            // ---------UNTUK NAMPILIN VIEW NYA-----------------------
+            $data['user'] = $this->db->get_where('user', ['username' =>
+            $this->session->userdata('username')])->row_array();
+            $data['title'] = 'Tambah Mahasiswa';
+            $this->load->view('templates_dosen/header', $data);
+            $this->load->view('templates_dosen/sidebar_admin', $data);
+            $this->load->view('mahasiswa/tambah');
+            $this->load->view('templates_dosen/footer');
+            //-------------------END----------------------------------
+            
+        } else{
+
+            $id             = $this->input->post('id_mahasiswa');
+            $nim            = $this->input->post('nim');
+            $nama           = $this->input->post('nama');
+            $angkatan       = $this->input->post('angkatan');
+            $tgl_lahir      = $this->input->post('tgl_lahir');
+            $tahun_masuk    = $this->input->post('tahun_masuk');
+            $tahun_akademik = $this->input->post('tahun_akademik');
+            $jabatan        = $this->input->post('jabatan');
+            $email          = $this->input->post('email');
+            $no_tlp         = $this->input->post('no_tlp');
+            $foto           = $this->input->post('foto');
+            $id_diklat      = $this->input->post('id_diklat');
+            $id_grup_user   = $this->input->post('id_grup_user');
+            $tgl_lhr        = $this->input->post('tgl_lhr');
+            $hsl            = date('jmY', strtotime($tgl_lhr));
+    
+            $data = array(
+                'nim' => $nim,
+                'nama' => $nama,
+                'angkatan' => $angkatan,
+                'tgl_lahir' => $tgl_lahir,
+                'tahun_masuk' => $tahun_masuk,
+                'tahun_akademik' => $tahun_akademik,
+                'jabatan' => $jabatan,
+                'email' =>  $email,
+                'id_diklat' => $id_diklat,
+                'no_tlp' => $no_tlp,
+                'foto'   => $foto
+            );
+    
+            $data2 = array(
+                'foto'   => $foto,
+            );
+    
+            $where = array(
+                'id_mahasiswa' => $id
+            );
+    
+    
+            $this->m_mahasiswa->adminsimpan($where, $data, 'tbl_mahasiswa');
+            $this->m_mahasiswa->simpanuser($where, $data2, 'user');
+            redirect('mahasiswa');
+            
+        }
     }
 
 
