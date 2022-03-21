@@ -74,10 +74,20 @@ class Mahasiswa extends CI_Controller
         $this->form_validation->set_rules(
             'no_tlp',
             'Phone number',
-            'required|is_unique[user.username]|min_length[11]',
+            'required|regex_match[/^[0-9]{11,14}$/]',
             array(
                 'required'      => 'You have not provided %s.',
-                'is_unique'     => 'Phone number must be at least 11.'
+                'regex_match'     => 'Phone number must be at least 11 number and max 14 number.'
+            )
+        );
+
+        $this->form_validation->set_rules(
+            'no_tlp',
+            'Phone number',
+            'required|regex_match[/(?<=^)M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(?=$)/]',
+            array(
+                'required'      => 'You have not provided %s.',
+                'regex_match'     => 'Phone number must be at least 11 number and max 14 number.'
             )
         );
 
