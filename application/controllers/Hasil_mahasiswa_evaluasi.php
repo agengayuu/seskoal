@@ -11,6 +11,7 @@ class Hasil_mahasiswa_evaluasi extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_hasil');
         $this->load->library('session');
+        $this->load->library('mypdf');
         is_logged_in('3');
        // session_start();
     }
@@ -39,6 +40,24 @@ class Hasil_mahasiswa_evaluasi extends CI_Controller{
         $this->load->view('hasil_mahasiswa_evaluasi/index', $data); 
         $this->load->view('templates_dosen/footer'); 
 
+    }
+
+    public function print_all()
+	{	
+		if (isset($_GET['id'])) {
+			$id = $this->input->get('id');
+			$data['cetak'] = $this->m_hasil->get_peserta2($id);
+		} else {
+			$data['cetak'] = $this->m_hasil->get_peserta3();
+		}
+		$this->mypdf->generate('hasil_mahasiswa_evaluasi/cetak', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
+	}
+
+    public function cetak($id) {
+        $where = array('id_evaluasi' => $id);
+        $id = $where['id_evaluasi'];
+        $data['cetak'] = $this->m_hasil->cetak($id);
+        $this->mypdf->generate('hasil_mahasiswa_evaluasi/cetak', $data, 'Cetak Hasil Ujian Ujian', 'A4', 'Landscape');
     }
     
 

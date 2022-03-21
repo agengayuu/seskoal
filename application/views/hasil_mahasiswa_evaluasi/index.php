@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <?php echo anchor('soal_evaluasi_ujian/matakuliah', '<button class="btn btn-sm btn-info mb-3 " ><i class="fas fa-print"></i> Data Mata Kuliah</button>') ?>
+    <?php echo anchor('hasil_mahasiswa_evaluasi/print_all', '<button class="btn btn-sm btn-info mb-3 " ><i class="fas fa-print"></i> Data Mata Kuliah</button>') ?>
 
     <!--table -->
     <div class="card shadow mb-4">
@@ -77,7 +77,7 @@
                                                 if($d->nilai == ''){
                                                     echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
                                                 }else {
-                                                    echo "<a href='".'hasil_ujian/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
+                                                    echo "<a href='".'hasil_mahasiswa_evaluasi/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
                                                 }
                                                 ?>
                                             </td> 
