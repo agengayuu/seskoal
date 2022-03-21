@@ -20,7 +20,7 @@
                         </select>
                     </div>
                 </div>
-
+ 
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Tulis Soal Ujian<i style="color:red">*</i></label>
                     <div class="col-sm-10">
@@ -98,6 +98,12 @@
     $('.select2').select2();
 
     $('.alert-message').alert().delay(3000).slideUp('slow');
+</script>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+     $('#id_mata_kuliah').select2();
+ });
 </script>
 
 
