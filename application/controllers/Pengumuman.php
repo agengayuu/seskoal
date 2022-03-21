@@ -51,30 +51,32 @@ class Pengumuman extends CI_Controller
         } else {
             $judul_pengumuman = $this->input->post('judul_pengumuman', TRUE);
             $isi_pengumuman   = $this->input->post('isi_pengumuman', TRUE);
-            // $dokumen             = $_FILES['dokumen'];
-            // if ($dokumen = '') {
-            // } else {
-            //     $config['upload_path']      = './assets/file/';
-            //     $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff|pdf';
-            //     $config['max_size']         = 2048;
-            //     $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+            $status   = $this->input->post('status', TRUE);
+            $dokumen             = $_FILES['dokumen'];
+            if ($dokumen = '') {
+            } else {
+                $config['upload_path']      = './assets/file/';
+                $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff|pdf';
+                $config['max_size']         = 2048;
+                $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
-            //     $this->load->library('upload', $config);
+                $this->load->library('upload', $config);
 
-            //     if (@$_FILES['dokumen']['name'] != null) {
-            //         if (!$this->upload->do_upload('dokumen')) {
-            //             echo 'Gagal Upload';
-            //             die();
-            //         } else {
-            //             $foto = $this->upload->data('file_name');
-            //         }
-            //     }
-            // }
+                if (@$_FILES['dokumen']['name'] != null) {
+                    if (!$this->upload->do_upload('dokumen')) {
+                        echo 'Gagal Upload';
+                        die();
+                    } else {
+                        $foto = $this->upload->data('file_name');
+                    }
+                }
+            }
             $data = array(
                 'judul_pengumuman' => $judul_pengumuman,
                 'isi_pengumuman' => $isi_pengumuman,
-                // 'dokumen' => $dokumen,
-                'tgl_pembuatan' => date('Y-m-d')
+                'dokumen' => $dokumen,
+                'tgl_pembuatan' => date('Y-m-d'),
+                'status' => $status
             );
 
             $this->m_pengumuman->addsimpan($data, 'tbl_pengumuman');
@@ -111,10 +113,12 @@ class Pengumuman extends CI_Controller
         $id_pengumuman = $this->input->post('id_pengumuman');
         $judul_pengumuman = $this->input->post('judul_pengumuman');
         $isi_pengumuman = $this->input->post('isi_pengumuman');
+        $status = $this->input->post('status');
 
         $data = array(
             'judul_pengumuman' => $judul_pengumuman,
-            'isi_pengumuman' => $isi_pengumuman
+            'isi_pengumuman' => $isi_pengumuman,
+            'status'  => $status
         );
 
         $where = array(

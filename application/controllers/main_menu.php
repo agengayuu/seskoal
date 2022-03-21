@@ -84,6 +84,14 @@ class Main_menu extends CI_Controller
             }
         }
         $data['kosong'] = count($array_kosong);
+        // end function
+
+        //function menghitung  pengumuman
+        $peng = $this->db->query("select id_pengumuman as total_data 
+                            from tbl_pengumuman 
+                             where status = '1'")->result();
+        $data['pengumuman'] = count($peng);
+        // print_r ($data['pengumuman']);die;
 
         $this->load->view('main_menu/admin', $data);
         $this->load->view('templates_dosen/footer');

@@ -15,9 +15,26 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Nama Mata Kuliah<i style="color:red">*</i></label>
+                    <label>Isi Pengumuman<i style="color:red">*</i></label>
                     <textarea name="isi_pengumuman" class="form-control" id="" cols="30" rows="10" placeholder="Isi Pengumuman" required><?php echo $p->isi_pengumuman; ?></textarea>
                     <?php echo form_error('isi_pengumuman', '<div class="text-danger small ml-3"></div>') ?>
+                </div>
+
+                <div class="form-group">
+                    <label>Dokumen<i style="color:red"> (Opsional)</i></label>
+                    <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
+                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
+                </div>
+
+                <div class="form-group">
+                    <label>Status<i style="color:red">*</i></label>
+                    <select class="form-control" name='status' id='status' required>
+                        <option value='0' selected>--- Pilih Status ---</option>
+                        <option value="1">Aktif</option>
+                        <option value="0">Tidak Aktif</option>
+                    </select>
+                    
+                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
