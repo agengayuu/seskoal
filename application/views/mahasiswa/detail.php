@@ -95,19 +95,10 @@
                                         <label for="">Diklat</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="">NIP</label>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-3">
-                                        <label for="">Alamat</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="">NIP</label>
+                                        <label for=""><?php echo $dt->nama_diklat; ?></label>
                                     </div>
                                 </div>
                             </div>
-
                             <?php endforeach; ?>
                         </div>
                     </div>

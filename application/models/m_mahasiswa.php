@@ -38,13 +38,11 @@ class M_mahasiswa extends CI_Model{
         $this->db->delete($table);
     }
 
-    public function admindetail($nim){
-        $hasil = $this->db->where('nim', $nim)->get('tbl_mahasiswa');
-        if($hasil->num_rows() > 0){
-            return $hasil->result();
-        } else {
-            return false;
-        }
+    public function admindetail(){
+        $hasil = "SELECT tbl_mahasiswa.*, tbl_diklat.*
+        FROM tbl_mahasiswa
+        INNER JOIN tbl_diklat ON tbl_mahasiswa.id_diklat=tbl_diklat.id_diklat";
+        return $this->db->query($hasil);
     }
 
     public function update($where, $data, $table)

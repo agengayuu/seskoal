@@ -148,13 +148,16 @@ class Mahasiswa extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
         $data['title'] = 'Edit Mahasiswa';
-        $this->load->view('templates_dosen/header');
+        $this->load->view('templates_dosen/header',$data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
+
         $where = array(
             'nim' => $nim
         );
+
         $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
         $data['siswanya'] = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
+
         $this->load->view('mahasiswa/edit', $data);
         $this->load->view('templates_dosen/footer');
     }
@@ -176,7 +179,12 @@ class Mahasiswa extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
-        $data['detail'] = $this->m_mahasiswa->admindetail($nim);
+
+        $where = array(
+            'nim' => $nim
+        );
+        $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
+        $data['detail'] = $this->m_mahasiswa->admindetail()->result();
 
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('mahasiswa/detail');
