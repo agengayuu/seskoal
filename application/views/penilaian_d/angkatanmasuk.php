@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            <span><i class="fa fa-plus"></i> Penilaian Mahasiswa</span>
+            <span><i class="fa fa-plus"></i> Angkatan Masuk</span>
         </div>
     </div>
     <!--table -->
@@ -16,23 +16,32 @@
                 <div class="table-responsive">                
                     <div class="card-body">
                         <div class="table-responsive">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-2"><b>Diklat</b> <b><?php echo ": ".$nama_diklat; ?></b></label>
+                                    </div>
+                                </div>
+                            </div>
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Diklat</th>
+                                        <th>Tahun Masuk</th>
+                                        <th>Angkatan</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $no =1;
-                                    foreach ($penilaian_d as $pd) : ?>
+                                    foreach ($angkatan as $ak) : ?>
                                         <tr>
                                             <td width="20px"><?php echo $no++ ?></td>
-                                            <td><?= $pd->nama_diklat ?>
+                                            <td><?= $ak->tahun_masuk ?>
+                                            <td><?= $ak->angkatan ?>
                                             
-                                            <td width="180px"> <?php echo anchor('penilaian_dosen/angkatanmasuk/'.$pd->id_diklat, '<div class="btn btn-sm btn-primary"> Selanjutnya <i class="fa fa-arrow-right"></i></div>' ) ?></td>
+                                            <td width="180px"> <?php echo anchor('penilaian_dosen/angkatanmasuk/' .$idnya.'/'. $ak->tahun_masuk . '/'.$ak->angkatan, '<div class="btn btn-sm btn-primary"> List Kategori Penilaian <i class="fa fa-arrow-right"></i></div>' ) ?></td>
                                             </td>
                                         </tr>
                                             <?php
