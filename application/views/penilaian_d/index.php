@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            <span>Penilaian Mahasiswa</span>
+            <span><i class="fa fa-plus"></i> Penilaian Mahasiswa</span>
         </div>
     </div>
     <!--table -->
