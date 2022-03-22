@@ -84,5 +84,83 @@ class Penilaian_dosen extends CI_Controller{
 	}
     
 
+    public function jasmaninilai($id,$id2,$id3){
+		$data['title'] = "Penilaian Jasmani";
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin', $data); 
+
+		$queryzx = $this->db->query("select * from tbl_diklat where id_diklat='".$id."'")->result();
+			foreach ($queryzx as $ruk){ $nama_diklat = $ruk->nama_diklat;}
+		$query = $this->db->query("select c.*, d.*
+						from tbl_mahasiswa c, tbl_profil_mahasiswa d 
+						
+						where c.nim = d.nim and c.id_diklat ='".$id."' and c.tahun_masuk='".$id2."' and c.angkatan='".$id3."'")->result();
+
+        $data['penilaian_d'] = $query;
+        $data['idnya'] = $id;
+        $data['tahun_masuknya'] = $id2;
+        $data['angkatannya'] = $id3;
+        $data['nama_diklat'] = $nama_diklat;
+
+        $this->load->view('penilaian_d/jasmaninilai', $data);
+
+        $this->load->view('templates_dosen/footer'); 
+		
+	}
+
+    public function kepribadiannilai($id,$id2,$id3){
+		$data['title'] = "Kepribadian Jasmani";
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin', $data); 
+
+		$queryzx = $this->db->query("select * from tbl_diklat where id_diklat='".$id."'")->result();
+			foreach ($queryzx as $ruk){ $nama_diklat = $ruk->nama_diklat;}
+		$query = $this->db->query("select c.*, d.*
+						from tbl_mahasiswa c, tbl_profil_mahasiswa d 
+						
+						where c.nim = d.nim and c.id_diklat ='".$id."' and c.tahun_masuk='".$id2."' and c.angkatan='".$id3."'")->result();
+
+        $data['penilaian_d'] = $query;
+        $data['idnya'] = $id;
+        $data['tahun_masuknya'] = $id2;
+        $data['angkatannya'] = $id3;
+        $data['nama_diklat'] = $nama_diklat;
+
+        $this->load->view('penilaian_d/kepribadiannilai', $data);
+
+        $this->load->view('templates_dosen/footer'); 
+		
+	}
+
+    public function perseorangannilai($id,$id2,$id3){
+		$data['title'] = "Perseorangan Jasmani";
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin', $data); 
+
+		$queryzx = $this->db->query("select * from tbl_diklat where id_diklat='".$id."'")->result();
+			foreach ($queryzx as $ruk){ $nama_diklat = $ruk->nama_diklat;}
+		$query = $this->db->query("select c.*, d.*
+						from tbl_mahasiswa c, tbl_profil_mahasiswa d 
+						
+						where c.nim = d.nim and c.id_diklat ='".$id."' and c.tahun_masuk='".$id2."' and c.angkatan='".$id3."'")->result();
+
+        $data['penilaian_d'] = $query;
+        $data['idnya'] = $id;
+        $data['tahun_masuknya'] = $id2;
+        $data['angkatannya'] = $id3;
+        $data['nama_diklat'] = $nama_diklat;
+
+        $this->load->view('penilaian_d/perseorangannilai', $data);
+
+        $this->load->view('templates_dosen/footer'); 
+		
+	}
+
 
 }
