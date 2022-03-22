@@ -41,7 +41,7 @@
                                             <td><?= $ak->tahun_masuk ?>
                                             <td><?= $ak->angkatan ?>
                                             
-                                            <td width="180px"> <?php echo anchor('penilaian_dosen/angkatanmasuk/' .$idnya.'/'. $ak->tahun_masuk . '/'.$ak->angkatan, '<div class="btn btn-sm btn-primary"> List Kategori Penilaian <i class="fa fa-arrow-right"></i></div>' ) ?></td>
+                                            <td width="180px"> <?php echo anchor('penilaian_dosen/listkapen/' .$idnya.'/'. $ak->tahun_masuk . '/'.$ak->angkatan, '<div class="btn btn-sm btn-primary"> List Kategori Penilaian <i class="fa fa-arrow-right"></i></div>' ) ?></td>
                                             </td>
                                         </tr>
                                             <?php
