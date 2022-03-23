@@ -14,6 +14,9 @@
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Mahasiswa</h6>
+        </div>
+        <!-- <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h6>
         </div>
 
@@ -26,8 +29,8 @@
                 <li><a href="<?php echo base_url('mahasiswa/ex_pdf') ?>"> PDF</a></li>
                 <li><a href="<?php echo base_url('mahasiswa/excel') ?>"> Excel</a></li>
             </ul>
+        </div> -->
 
-        </div>
 
         <div class="card-body">
             <div class="table-responsive">
