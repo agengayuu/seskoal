@@ -14,10 +14,12 @@ class Peserta_evaluasi extends CI_Controller {
         if(!$this->session->userdata('username')){
             redirect('login');
         }
+
+        is_logged_in('3');
         //session_start();
     }
 
-    public function index() {
+    public function index()  {
         $data['title'] = 'Mahasiswa Evaluasi';
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header',$data);  
