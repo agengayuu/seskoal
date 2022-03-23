@@ -92,7 +92,7 @@ class Matakuliah extends CI_Controller
 
             $this->m_matakuliah->adminsimpan($data);
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
-                                                    Data Berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span></button></div>');
             redirect('matakuliah');
         }

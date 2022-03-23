@@ -55,21 +55,21 @@ class Mahasiswa extends CI_Controller
     {
         $this->form_validation->set_rules(
             'nim',
-            'NIM',
+            'Nim',
             'required|is_unique[user.username]',
             array(
                 'required'      => 'You have not provided %s.',
-                'is_unique'     => 'This %s already exists.'
+                'is_unique'     => '%s sudah ada.'
             )
         );
 
         $this->form_validation->set_rules(
             'no_tlp',
-            'Phone number',
-            'required|regex_match[/^[0-9]{11,14}$/]',
+            'Nomor telepon',
+            'required|numeric|min_length[11]',
             array(
                 'required'      => 'You have not provided %s.',
-                'regex_match'     => 'Phone number must be at least 11 number and max 14 number.'
+                'numeric'     => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.'
             )
         );
 
@@ -79,7 +79,7 @@ class Mahasiswa extends CI_Controller
             'required|regex_match[/(?<=^)M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(?=$)/]',
             array(
                 'required'      => 'You have not provided %s.',
-                'regex_match'     => 'Class must be in roman numerals.'
+                'regex_match'     => 'Angkatan harus angka romawi.'
             )
         );
 
@@ -89,7 +89,7 @@ class Mahasiswa extends CI_Controller
             'required|numeric|min_length[4]',
             array(
                 'required'      => 'You have not provided %s.',
-                'numeric'     => 'Tahun masuk must be at least 4 number.'
+                'numeric'     => 'Tahun masuk minimal harus 4 nomor.'
             )
         );
 
@@ -119,6 +119,7 @@ class Mahasiswa extends CI_Controller
             $jabatan        = $this->input->post('jabatan');
             $email          = $this->input->post('email');
             $no_tlp         = $this->input->post('no_tlp');
+            // print_r($no_tlp);die;
             //$foto           = $this->input->post('foto');
             $foto               = $_FILES['foto'];
             if ($foto = '') {
@@ -161,6 +162,8 @@ class Mahasiswa extends CI_Controller
                 'foto'   => $foto,
                 'created_at' => $created_at
             );
+            // echo "<pre>";
+            // print_r($data);die;
 
             $data2 = array(
                 'username' => $nim,
@@ -216,6 +219,7 @@ class Mahasiswa extends CI_Controller
     {
 
         $where = array('nim' => $nim);
+           
         $this->m_mahasiswa->adminhapus($where, 'tbl_mahasiswa');
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
@@ -246,51 +250,15 @@ class Mahasiswa extends CI_Controller
 
     public function update()
     {
-        $this->form_validation->set_rules(
-            'nim',
-            'Nim',
-            'required|is_unique[user.username]',
-            array(
-                'required'      => 'You have not provided %s.',
-                'is_unique'     => 'This %s already exists.'
-            )
-        );
-
-        $this->form_validation->set_rules(
-            'no_tlp',
-            'Phone number',
-            'required|regex_match[/^[0-9]{11,14}$/]',
-            array(
-                'required'      => 'You have not provided %s.',
-                'regex_match'     => 'Phone number must be at least 11 number and max 14 number.'
-            )
-        );
-
-        $this->form_validation->set_rules(
-            'angkatan',
-            'Class',
-            'required|regex_match[/(?<=^)M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})(?=$)/]',
-            array(
-                'required'      => 'You have not provided %s.',
-                'regex_match'     => 'Class must be in roman numerals.'
-            )
-        );
-
-        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
-
-        if ($this->form_validation->run() == false) {
             // ---------UNTUK NAMPILIN VIEW NYA-----------------------
             $data['user'] = $this->db->get_where('user', ['username' =>
             $this->session->userdata('username')])->row_array();
             $data['title'] = 'Tambah Mahasiswa';
             $this->load->view('templates_dosen/header', $data);
             $this->load->view('templates_dosen/sidebar_admin', $data);
-            $this->load->view('mahasiswa/tambah');
+            $this->load->view('mahasiswa/edit');
             $this->load->view('templates_dosen/footer');
             //-------------------END----------------------------------
-            
-        } else{
 
             $id             = $this->input->post('id_mahasiswa');
             $nim            = $this->input->post('nim');
@@ -298,7 +266,7 @@ class Mahasiswa extends CI_Controller
             $angkatan       = $this->input->post('angkatan');
             $tgl_lahir      = $this->input->post('tgl_lahir');
             $tahun_masuk    = $this->input->post('tahun_masuk');
-            $id_akademik = $this->input->post('id_akademik');
+            $id_akademik    = $this->input->post('id_akademik');
             $jabatan        = $this->input->post('jabatan');
             $email          = $this->input->post('email');
             $no_tlp         = $this->input->post('no_tlp');
@@ -329,14 +297,22 @@ class Mahasiswa extends CI_Controller
             $where = array(
                 'id_mahasiswa' => $id
             );
+            $where2 = array(
+                'id' => $id
+            );
+            // echo "<pre>";
+            // print_r($data);
+            // echo "<pre>";
+            // print_r($data2);
+            
+            // print_r($where);die;
     
     
-            $this->m_mahasiswa->adminsimpan($where, $data, 'tbl_mahasiswa');
-            $this->m_mahasiswa->simpanuser($where, $data2, 'user');
+            $this->m_mahasiswa->update($where, $data, 'tbl_mahasiswa');
+            $this->m_mahasiswa->update($where2, $data2, 'user');
             redirect('mahasiswa');
             
         }
-    }
 
 
     public function excel()

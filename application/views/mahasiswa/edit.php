@@ -4,7 +4,7 @@
             <input type="hidden" class="form-control" name="id_mahasiswa" id="id_mahasiswa" value="<?php echo $s->id_mahasiswa; ?>">
             <div class="form-group">
                 <label>NIM</label>
-                <input type="text" name="nim" value="<?php echo $s->nim; ?>" class="form-control" required>
+                <input type="text" name="nim" value="<?php echo $s->nim; ?>" class="form-control" required readonly>
                 <?php echo form_error('nim', '<div class="text-danger small ml-3"></div>') ?>
             </div>
 

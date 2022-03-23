@@ -10,6 +10,7 @@ class Pengumuman extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_pengumuman');
         $this->load->library('session');
+        $this->load->helper('download');
         //session_start();
         is_logged_in('1');
     }
@@ -57,7 +58,7 @@ class Pengumuman extends CI_Controller
             } else {
                 $config['upload_path']      = './assets/file/';
                 $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff|pdf';
-                $config['max_size']         = 2048;
+                $config['max_size']         = 5000;
                 $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
                 $this->load->library('upload', $config);
@@ -67,7 +68,7 @@ class Pengumuman extends CI_Controller
                         echo 'Gagal Upload';
                         die();
                     } else {
-                        $foto = $this->upload->data('file_name');
+                        $dokumen = $this->upload->data('file_name');
                     }
                 }
             }
@@ -78,6 +79,7 @@ class Pengumuman extends CI_Controller
                 'tgl_pembuatan' => date('Y-m-d'),
                 'status' => $status
             );
+            // print_r ($data);die;
 
             $this->m_pengumuman->addsimpan($data, 'tbl_pengumuman');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -114,12 +116,33 @@ class Pengumuman extends CI_Controller
         $judul_pengumuman = $this->input->post('judul_pengumuman');
         $isi_pengumuman = $this->input->post('isi_pengumuman');
         $status = $this->input->post('status');
+        $dokumen             = $_FILES['dokumen'];
+            if ($dokumen = '') {
+            } else {
+                $config['upload_path']      = './assets/file/';
+                $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff|pdf';
+                $config['max_size']         = 5000;
+                $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
-        $data = array(
-            'judul_pengumuman' => $judul_pengumuman,
-            'isi_pengumuman' => $isi_pengumuman,
-            'status'  => $status
-        );
+                $this->load->library('upload', $config);
+
+                if (@$_FILES['dokumen']['name'] != null) {
+                    if (!$this->upload->do_upload('dokumen')) {
+                        echo 'Gagal Upload';
+                        die();
+                    } else {
+                        $dokumen = $this->upload->data('file_name');
+                    }
+                }
+            }
+
+         $data = array(
+                'judul_pengumuman' => $judul_pengumuman,
+                'isi_pengumuman' => $isi_pengumuman,
+                'dokumen' => $dokumen,
+                'tgl_pembuatan' => date('Y-m-d'),
+                'status' => $status
+            );
 
         $where = array(
             'id_pengumuman' => $id_pengumuman
@@ -144,4 +167,12 @@ class Pengumuman extends CI_Controller
 
         redirect('pengumuman');
     }
+
+    function download($id)
+	{
+		$data = $this->db->get_where('tbl_pengumuman',['dokumen'=>$id])->row();
+		// $test = force_download($data->dokumen,$data);
+        force_download(FCPATH.'/assets/file/'.$data->dokumen, null);
+        // print_r($test);die;
+	}
 }

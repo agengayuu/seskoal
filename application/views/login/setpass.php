@@ -7,6 +7,11 @@
 
     <div class="card-header bg-white">
         <div class="card-body">
+            <?php
+            if($this->session->flashdata('pesan')) {
+                echo $this->session->flashdata('pesan');
+            }
+            ?>
 
             <form method="post" action="<?php echo base_url('login/set_password') ?>">
 
@@ -41,3 +46,14 @@
     </a>
 
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

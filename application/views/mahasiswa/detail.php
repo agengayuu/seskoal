@@ -63,7 +63,7 @@
                                         <label for="">Tahun Akademik</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $dt->id_akademik; ?></label>
+                                        <label for=""><?php echo $dt->tahun_akademik; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">

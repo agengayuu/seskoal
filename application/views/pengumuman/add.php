@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-black-800">Tambah Pengumuman</h1>
-
+    <?php echo form_open_multipart('pengumuman/addsimpan'); ?>
     <div class="card-header bg-white">
         <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
-            <form action="<?php echo base_url('pengumuman/addsimpan') ?>" method="post">
+            <!-- <form action="<?php echo base_url('pengumuman/addsimpan') ?>" method="post"> -->
 
                 <div class="form-group">
                     <label>Judul Pengumuman<i style="color:red">*</i></label>
@@ -32,13 +32,14 @@
                         <option value="0">Tidak Aktif</option>
                     </select>
                     
-                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('status', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick=self.history.back()>Batal</button>
-            </form>
+            <!-- </form> -->
         </div>
+         <?php form_close(); ?>
     </div>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">

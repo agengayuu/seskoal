@@ -39,11 +39,14 @@
                                 <td><?= $p->judul_pengumuman ?></td>
                                 <td><?= $p->isi_pengumuman ?></td>
                                 <td style="text-align: center"><?= $p->tgl_pembuatan ?></td>
-                                <td style="text-align: center"><?= $p->dokumen ?></td>
-                                <td style="text-align: center"><?= $p->status ?></td>
+                                <center>
+                                <td style="text-align: center"><?php echo anchor('pengumuman/download/'.$p->dokumen, '<div class="btn btn-sm btn-primary"><i class="fas fa-download"></i></div>') ?>
+                                </td>
+                                </center>
+                                
                                 <center>
                                     <td style="text-align: center"> <?php echo anchor('pengumuman/edit/' . $p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                        <?php echo anchor('pengumuman/delete/' . $p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                    <?php echo anchor('pengumuman/delete/' . $p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
                                 </center>
                             </tr>
                         <?php
