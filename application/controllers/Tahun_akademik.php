@@ -113,7 +113,7 @@ class Tahun_akademik extends CI_Controller
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
     
-        redirect('mahasiswa','refresh');
+        redirect('tahun_akademik','refresh');
     }
 
     

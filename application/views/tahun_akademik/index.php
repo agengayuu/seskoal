@@ -41,7 +41,7 @@
                                         <td><?= $a->semester ?></td>
                                         <td><?= $a->status ?></td>
                                         <td width="20px"> <?php echo anchor('tahun_akademik/edit/'.$a->id_akademik, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                        <?php echo anchor('diklat/adminhapus/'.$a->id_akademik, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                        <?php echo anchor('tahun_akademik/hapus/'.$a->id_akademik, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                     </tr>
                                         <?php
                                     endforeach
