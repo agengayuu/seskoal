@@ -8,7 +8,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php foreach($user as $p) {?>
+    <?php foreach($detail as $dt) {?>
         
     <div class="card-header bg-white">
         <div class="card-body">
@@ -17,21 +17,21 @@
                     <div class="form-horizontal form-bordered">
                         <div class="form-group row">
                             <div class="col-md-2">
-                            <?php if($p->foto!= null) { ?>
-                                    <img src="<?=base_url('./assets/uploads/'.$p->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
+                                <?php if($dt->foto!= null) { ?>
+                                    <img src="<?=base_url('./assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
                                 <?php } ?>
                             </div>
-
+ 
                             <div class="col-md-10"> 
                                 <div class="form-group row">
                                     <div class="col-md-3">
                                         <label for="">NIP</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?= $p->nip;?></label>
+                                        <label for=""><?= $dt->nip;?></label>
                                     </div>
                                     <div>
-                                    <?php echo anchor('profile_dosen/edit/'.$p->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-edit"></i> Edit</div>' ) ?>
+                                    <?php echo anchor('profile_dosen/edit/'.$dt->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-edit"></i> Edit</div>' ) ?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -39,7 +39,7 @@
                                         <label for="">NIK</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?= $p->nik;?></label>
+                                        <label for=""><?= $dt->nik;?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -47,7 +47,7 @@
                                         <label for="">NPWP</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?= $p->npwp;?></label>
+                                        <label for=""><?= $dt->npwp;?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -55,7 +55,7 @@
                                         <label for="">Kewarganegaraan</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?= $p->kewarganegaraan;?></label>
+                                        <label for=""><?= $dt->kewarganegaraan;?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -63,7 +63,7 @@
                                         <label for="">Nama Lengkap</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->gelar_depan; ?>&nbsp;<?php echo $p->nama; ?>&nbsp;<?php echo $p->gelar_belakang; ?></label>
+                                        <label for=""><?php echo $dt->gelar_depan; ?>&nbsp;<?php echo $dt->nama; ?>&nbsp;<?php echo $dt->gelar_belakang; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -71,7 +71,7 @@
                                         <label for="">Email</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->email; ?></label>
+                                        <label for=""><?php echo $dt->email; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -79,7 +79,7 @@
                                         <label for="">No Telpon</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->no_tlp; ?></label>
+                                        <label for=""><?php echo $dt->no_tlp; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -87,7 +87,7 @@
                                         <label for="">Tempat Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->tempat_lahir; ?></label>
+                                        <label for=""><?php echo $dt->tempat_lahir; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -95,7 +95,7 @@
                                         <label for="">Tanggal Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->tgl_lahir; ?></label>
+                                        <label for=""><?php echo $dt->tgl_lahir; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -103,7 +103,7 @@
                                         <label for="">Jenis Kelamin</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->jk; ?></label>
+                                        <label for=""><?php echo $dt->jk; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -111,7 +111,7 @@
                                         <label for="">Agama</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->agama; ?></label>
+                                        <label for=""><?php echo $dt->agama; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -119,7 +119,7 @@
                                         <label for="">Alamat</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $p->alamat; ?></label>
+                                        <label for=""><?php echo $dt->alamat; ?></label>
                                     </div>
                                 </div>
                             </div>

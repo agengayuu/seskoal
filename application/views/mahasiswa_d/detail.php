@@ -54,7 +54,7 @@
                                         <label for="">Tahun Masuk</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $dt->angkatan; ?></label>
+                                        <label for=""><?php echo $dt->tahun_masuk; ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">

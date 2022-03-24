@@ -47,22 +47,24 @@ class Mahasiswa_d extends CI_Controller{
         
         $this->load->view('mahasiswa_d/lm',$data);
         $this->load->view('templates_dosen/footer');
-    }
+    } 
 
     public function detail($nim){
         $data['title'] = 'Detail Mahasiswa';
+        $data['user'] = $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
 
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array(); 
-        $this->load->view('templates_dosen/header', $data); 
-        $data['detail'] = $this->m_mahasiswa_d->detail($nim);
-
-        $query2 = $this->db->query("select * from thn_akademik")->result();
-        $data['tahunakademik'] = $query2;
-
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
-        $this->load->view('mahasiswa_d/detail');
-        $this->load->view('templates_dosen/footer'); 
+        $where = array( 
+            'nim' => $nim
+        );
+        // print_r($test);
+        // echo "<pre>";
+        $data['detail'] = $this->m_mahasiswa_d->detail($nim)->result();
+        // print_r($data['detail']);die;
+        $this->load->view('templates_dosen/sidebar_admin', $data);
+        $this->load->view('mahasiswa/detail');
+        $this->load->view('templates_dosen/footer');
     }
     
 

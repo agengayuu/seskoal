@@ -25,7 +25,7 @@ class Profile_dosen extends CI_Controller{
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
-        $this->load->view('templates_dosen/sidebar_admin', $data); 
+        $this->load->view('templates_dosen/sidebar_admin', $data);  
 
         $userlogin = $this->session->userdata('username');
         $dosen = $this->db->query("SELECT tbl_dosen.*, user.*
@@ -33,8 +33,8 @@ class Profile_dosen extends CI_Controller{
                         JOIN user ON tbl_dosen.nip = user.username
                         WHERE tbl_dosen.nip = $userlogin ")->result();
 
-        $data['user'] = $dosen; 
-        $data['profilnya'] = $this->db->query("select * from tbl_dosen")->result();
+        $data['detail'] = $dosen; 
+        // $data['profilnya'] = $this->db->query("select * from tbl_dosen")->result();
         
         $this->load->view('profile_dosen/index', $data); 
         $this->load->view('templates_dosen/footer'); 
