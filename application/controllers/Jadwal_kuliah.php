@@ -94,20 +94,20 @@ class Jadwal_kuliah extends CI_Controller
         // print_r($tgl); 
         // echo "<pre>";
 
-        $sama = [];
-        foreach ($tanggal as $t) {
+        // $sama = [];
+        // foreach ($tanggal as $t) {
 
-            if ($t->tanggal == $tgl) {
-                $sama[] = $tgl;
-            }
-        }
-        print_r($sama);
-        die();
+        //     if ($t->tanggal == $tgl) {
+        //         $sama[] = $tgl;
+        //     }
+        // }
+        // print_r($sama);
+        // die();
         // perbandingan ketika input
         // if($tgl == $tanggal && $waktu_mulai == $waktu_m  && $waktu_selesai == $waktu_s ){
         //     echo "Maaf ruangan sedang di pakai";die;
         // }
-        // $this->m_jadwal->savedata($data, 'tbl_jadwal_kuliah');
+        $this->m_jadwal->savedata($data, 'tbl_jadwal_kuliah');
 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                             Data berhasil dimasukkan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
