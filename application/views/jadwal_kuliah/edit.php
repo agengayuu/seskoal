@@ -101,9 +101,10 @@
 
                     <div class="form-group">
                         <label>Keterangan<i style="color:red">*</i></label>
-                        <textarea class="form-control" name="keterangan" id='tanggal' rows="3" required></textarea>
+                        <textarea class="form-control" name="keterangan" id='tanggal' rows="3" required><?= $r->keterangan; ?></textarea>
                         <?php echo form_error('keterangan', '<div class="text-danger small ml-3"></div>') ?>
                     </div>
+
                     <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                     <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
 

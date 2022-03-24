@@ -84,7 +84,7 @@ class Matakuliah extends CI_Controller
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', TRUE),
                 'bobot' => $this->input->post('bobot', TRUE),
-                'id_dosen' => $this->input->post('id_dosen', TRUE)
+                // 'id_dosen' => $this->input->post('id_dosen', TRUE)
                 
             );
 
