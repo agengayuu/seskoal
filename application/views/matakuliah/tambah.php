@@ -18,7 +18,7 @@
                     <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Dosen Mata Kuliah<i style="color:red">*</i></label>
                     <select class="form-control" name='id_dosen' id='id_dosen'>
                     <option value='0' selected>--- Pilih Dosen ---</option>
@@ -26,7 +26,7 @@
                     <option value="<?php echo $d->id_dosen; ?>"><?php echo $d->nama; ?></option>
 			    <?php } ?>
 		        </select>
-                </div>
+                </div> -->
 
                 <div class="form-group">
                     <label>Bobot<i style="color:red">*</i></label>

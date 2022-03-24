@@ -78,6 +78,7 @@
                                                     echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
                                                 }else {
                                                     echo "<a href='".'hasil_mahasiswa_evaluasi/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
+                                                    
                                                 }
                                                 ?>
                                             </td> 
