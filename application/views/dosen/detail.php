@@ -7,7 +7,7 @@
 
     <?php foreach($detail as $dt) : ?>
         
-    <div class="card-header bg-white">
+    <div class="card-header bg-white"> 
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">

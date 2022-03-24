@@ -235,7 +235,7 @@ class Mahasiswa extends CI_Controller
         $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
 
-        $where = array(
+        $where = array( 
             'nim' => $nim
         );
         $test = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();

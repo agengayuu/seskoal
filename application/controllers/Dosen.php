@@ -368,7 +368,7 @@ class Dosen extends CI_Controller
     public function admindetail($id_dosen){
         $data['title'] = 'Detail Dosen';
         $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array(); 
+        $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header', $data); 
         $data['detail'] = $this->m_dosen->admindetail($id_dosen);
 

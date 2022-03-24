@@ -70,7 +70,7 @@
                                     <div class="col-md-3">
                                         <label for="">Jabatan</label>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6"> 
                                         <label for=""><?php echo $dt->jabatan; ?></label>
                                     </div>
                                 </div>
