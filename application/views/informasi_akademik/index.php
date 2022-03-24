@@ -15,7 +15,7 @@
                                     <h5 class="card-title" style="font-weight: bolder;">Informasi/Pengumuman</h5>
                                 </div>
                                 <div class="col-2">
-                                    <a href="<?php echo base_url('pengumuman_view') ?>" class="btn btn-info">Lihat Semua</a>
+                                    <a href="<?php echo base_url('informasi_akademik/info') ?>" class="btn btn-info">Lihat Semua</a>
                                 </div>
                             </div>
                             <?php foreach ($pengumuman as $peng) { ?>

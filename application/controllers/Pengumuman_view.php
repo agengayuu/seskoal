@@ -12,7 +12,7 @@ class Pengumuman_view extends CI_Controller{
         $this->load->model('m_pengumuman_v');
         $this->load->library('session');
         $this->load->helper('aksesblock');
-        is_logged_in('2');
+        // is_logged_in('2');
        // session_start();
     }
  

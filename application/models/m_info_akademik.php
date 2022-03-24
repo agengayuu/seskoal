@@ -75,4 +75,9 @@ class M_info_akademik extends CI_Model{
          $this->db->where($where);
          $this->db->update($table, $data);
      }
+
+     public function tampil_data(){
+        $this->db->select('id_pengumuman', 'judul_pengumuman', 'tgl_pengumuman')->from('tbl_pengumuman')->get();
+        return $this->db->get('tbl_pengumuman');
+    }
 }

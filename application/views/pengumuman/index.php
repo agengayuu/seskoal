@@ -43,7 +43,7 @@
                                 <td style="text-align: center"><?php echo anchor('pengumuman/download/'.$p->dokumen, '<div class="btn btn-sm btn-primary"><i class="fas fa-download"></i></div>') ?>
                                 </td>
                                 </center>
-                                
+                                <td><?= $p->status ?></td>
                                 <center>
                                     <td style="text-align: center"> <?php echo anchor('pengumuman/edit/' . $p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
                                     <?php echo anchor('pengumuman/delete/' . $p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>

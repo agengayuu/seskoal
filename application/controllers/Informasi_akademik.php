@@ -19,15 +19,6 @@ class Informasi_akademik extends CI_Controller {
     }
 
     public function index() {
-        // $data['title'] = 'Informasi Akademik';
-
-        // $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
-        // $this->load->view('templates_dosen/header',$data);  
-        // $this->load->view('templates_dosen/sidebar_admin',$data); 
-
-        // $this->load->view('informasi_akademik/index', $data); 
-        // $this->load->view('templates_dosen/footer'); 
-
         is_logged_in('3');
         $data['title'] = 'Informasi Akademik';
         $data['user'] = $this->db->get_where('user', ['username' =>
@@ -46,6 +37,34 @@ class Informasi_akademik extends CI_Controller {
 
         $this->load->view('informasi_akademik/index', $data);
         $this->load->view('templates_dosen/footer', $data);
+    }
+
+    public function info() {
+        $data['title'] = 'Informasi Akademik';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+
+        $data['pengumuman'] = $this->m_info_akademik->tampil_data()->result();
+
+        $this->load->view('templates_dosen/sidebar_admin', $data); 
+        $this->load->view('informasi_akademik/informasi_detail', $data);
+        $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function detail($id_pengumuman) {
+        $data['title'] = 'Detail Pengumuman';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array(); 
+        $this->load->view('templates_dosen/header', $data); 
+        // $data['pengumuman'] = $this->m_pengumuman_v->detail($id_pengumuman);
+        $data['pengumuman'] = $this->db->query("select * from tbl_pengumuman")->result_array();
+
+
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        // $this->load->view('mahasiswa/detail');
+        $this->load->view('templates_dosen/footer');
     }
 }
  
