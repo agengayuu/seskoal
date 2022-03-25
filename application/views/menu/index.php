@@ -20,9 +20,9 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Menu</th>
-                            <th width="100px">Aksi</th>
+                            <th >No</th>
+                            <th width="50%">Menu</th>
+                            <th width="50%">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
