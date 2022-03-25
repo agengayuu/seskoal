@@ -54,6 +54,8 @@ class Dosen extends CI_Controller
         $created_at = date('Y-m-d H:i:s'); 
 
         $this->_rules();
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
 
         if($this->form_validation->run() == FALSE) {
             $this->admintambah();
@@ -193,15 +195,24 @@ class Dosen extends CI_Controller
     }
 
     public function _rules() {
-        $this->form_validation->set_rules('nip', 'nip', 'required', ['required' => 'NIP Wajib diisi!']);
-        $this->form_validation->set_rules('nik', 'nik', 'required', ['required' => 'NIK Wajib diisi!']);
-        $this->form_validation->set_rules('npwp', 'npwp', 'required', ['required' => 'NPWP Wajib diisi!']);
+        $this->form_validation->set_rules('nip', 'NIP', 'required|is_unique[user.username]', ['required' => 'NIP Wajib diisi!',
+                                                                                               'is_unique' => '%s sudah ada']);
+
+        $this->form_validation->set_rules('nik', 'nik', 'required|is_unique[user.username]', ['required' => 'NIK Wajib diisi!',
+                                                                                                'is_unique' => '%s sudah ada']);  
+
+        $this->form_validation->set_rules('npwp', 'npwp', 'required|is_unique[user.username]', ['required' => 'NPWP Wajib diisi!',
+                                                                                                 'is_unique' => '%s sudah ada']);
+                                                                                                 
         $this->form_validation->set_rules('kewarganegaraan', 'kewarganegaraan', 'required', ['required' => 'Kewarganegaraan Wajib diisi!']);
         $this->form_validation->set_rules('nama', 'nama', 'required', ['required' => 'Nama Wajib diisi!']);
-        $this->form_validation->set_rules('email', 'email', 'required', ['required' => 'Email Wajib diisi!']);
-        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required', ['required' => 'No Telpon Wajib diisi!']);
-        $this->form_validation->set_rules('gelar_depan', 'gelar_depan', 'required', ['required' => 'Gelar Depan Wajib diisi!']);
-        $this->form_validation->set_rules('gelar_belakang', 'gelar_belakang', 'required', ['required' => 'Gelar Belakang Wajib diisi!']);
+        $this->form_validation->set_rules('email', 'email', 'required|valid_email', ['required' => 'Email Wajib diisi!',
+                                                                                      'valid_email' => 'Masukan email yang benar']);
+
+        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required|numeric|min_length[11]', ['required' => 'No Telpon Wajib diisi!',
+                                                                                                   'min_length' => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.']);
+        // $this->form_validation->set_rules('gelar_depan', 'gelar_depan', 'required', ['required' => 'Gelar Depan Wajib diisi!']);
+        // $this->form_validation->set_rules('gelar_belakang', 'gelar_belakang', 'required', ['required' => 'Gelar Belakang Wajib diisi!']);
         $this->form_validation->set_rules('tempat_lahir', 'tempat_lahir', 'required', ['required' => 'Tempat Lahir Wajib diisi!']);
         $this->form_validation->set_rules('tgl_lahir', 'tgl_lahir', 'required', ['required' => 'Tanggal Lahir Wajib diisi!']);
         $this->form_validation->set_rules('jk', 'jk', 'required', ['required' => 'Jenis Kelamin Wajib diisi!']);

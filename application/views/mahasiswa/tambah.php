@@ -82,8 +82,9 @@
             </div>
 
             <div class="form-group">
-                <label>Foto<i style="color:red">*</i></label>
+                <label>Foto</i></label>
                 <input type="file" name="foto" multiple accept="image/*" class="form-control" required>
+                 <label><i>hanya file ekstensi .png, .jpeg</i></label>
                 <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
             </div>
 

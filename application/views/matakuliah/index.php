@@ -24,6 +24,7 @@
                             <th>No</th>
                             <th>Kode</th>
                             <th>Nama Mata Kuliah</th>
+                            <th>Dosen</th>
                             <th>Bobot</th>
                             <th>Aksi</th>
                         </tr>
@@ -36,6 +37,7 @@
                             <td><?php echo $no++ ?></td>
                             <td><?= $m->kode_mata_kuliah ?></td>
                             <td><?= $m->nama_mata_kuliah ?></td>
+                            <td><?= $m->nama ?></td>
                             <td><?= $m->bobot ?></td>
                             <td> <?php echo anchor('matakuliah/adminedit/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                             <?php echo anchor('matakuliah/adminhapus/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>

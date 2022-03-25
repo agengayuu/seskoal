@@ -9,7 +9,7 @@
             <div class="form-group">
                 <label>Tahun Akademik<i style="color:red">*</i></label>
                 <!-- <div class="col-md-4"> -->
-                <input type="text" name="id_akademik" value="<?php echo $ak->id_akademik ?>">
+                <input type="hidden" name="id_akademik" value="<?php echo $ak->id_akademik ?>">
                 <input type="text" name="tahun_akademik" placeholder="Masukkan Tahun Akademik" class="form-control" value="<?= $ak->tahun_akademik; ?>" required>
                 <?php echo form_error('tahun_akademik', '<div class="text-danger small ml-3"></div>') ?>
             </div>

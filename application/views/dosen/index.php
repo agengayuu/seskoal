@@ -7,6 +7,7 @@
     
 
     <?php echo $this->session->flashdata('pesan') ?>
+    <!-- <?php echo form_open_multipart('dosen/adminsimpan'); ?> -->
 
     <?php echo anchor('dosen/admintambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Dosen</button>') ?>
 
@@ -21,11 +22,12 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th width = "5px%" >No</th>
                             <th>NIP</th>
                             <th>Nama</th>
                             <th>Email</th>
-                            <th>Aksi</th>
+                            <th><centerAksi</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -39,9 +41,13 @@
                             <td><?= $d->gelar_depan ?> <?= $d->nama ?> <?= $d->gelar_belakang ?> </td>
                             <td><?= $d->email ?></td>
                             
-                            <td> <?php echo anchor('dosen/admindetail/'.$d->id_dosen, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> 
+                            <td> 
+                                <center>
+                                <?php echo anchor('dosen/admindetail/'.$d->id_dosen, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> 
                                 <?php echo anchor('dosen/adminedit/'.$d->id_dosen, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                            <?php echo anchor('dosen/adminhapus/'.$d->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                <?php echo anchor('dosen/adminhapus/'.$d->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                </center>
+                            </td>
                             
                         </tr>
                         <?php

@@ -69,7 +69,7 @@ class Mahasiswa extends CI_Controller
             'required|numeric|min_length[11]',
             array(
                 'required'      => 'You have not provided %s.',
-                'numeric'     => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.'
+                'min_length'     => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.'
             )
         );
 
