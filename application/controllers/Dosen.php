@@ -209,9 +209,8 @@ class Dosen extends CI_Controller
         $this->form_validation->set_rules('email', 'email', 'required|valid_email', ['required' => 'Email Wajib diisi!',
                                                                                       'valid_email' => 'Masukan email yang benar']);
 
-        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required|numeric|min_length[11]| max_length[14]', ['required' => 'No Telpon Wajib diisi!',
-                                                                                                   'min_length' => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.',
-                                                                                                   'max_length' => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.',]);
+        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required|numeric|min_length[11]', ['required' => 'No Telpon Wajib diisi!',
+                                                                                                   'min_length' => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.']);
         // $this->form_validation->set_rules('gelar_depan', 'gelar_depan', 'required', ['required' => 'Gelar Depan Wajib diisi!']);
         // $this->form_validation->set_rules('gelar_belakang', 'gelar_belakang', 'required', ['required' => 'Gelar Belakang Wajib diisi!']);
         $this->form_validation->set_rules('tempat_lahir', 'tempat_lahir', 'required', ['required' => 'Tempat Lahir Wajib diisi!']);

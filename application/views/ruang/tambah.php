@@ -4,15 +4,17 @@
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
-            
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
+    <?php echo form_open_multipart('ruang/simpan'); ?> 
     <!-- Form -->
     <form method="post" action="<?php echo base_url('ruang/simpan') ?>">
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>ID Ruang<i style="color:red">*</i></label>
             <input type="text" name="id_ruang" placeholder="Masukkan ID Ruang" class="form-control">
             <?php echo form_error('id_ruang', '<div class="text-danger small ml-3"></div>') ?>
-        </div>
+        </div> -->
 
         <div class="form-group">
             <label>Nama Ruang<i style="color:red">*</i></label>

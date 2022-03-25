@@ -24,9 +24,9 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th width="10px">No</th>
-                                    <th width="50px">Diklat</th>
-                                    <th>Aksi</th>
+                                    <th >No</th>
+                                    <th >Diklat</th>
+                                    <th style="text-align:center"width = "40%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,7 +36,8 @@
                                     <tr>
                                         <td width="20px"><?php echo $no++ ?></td>
                                         <td><?= $d->nama_diklat ?></td>
-                                        <td width="20px"> <?php echo anchor('diklat/adminedit/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                        <td style="text-align:center" width="20px"> 
+                                        <?php echo anchor('diklat/adminedit/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                                         <?php echo anchor('diklat/adminhapus/'.$d->id_diklat, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                     </tr>
                                         <?php

@@ -58,7 +58,7 @@
 
         <div class="form-group">
             <label>Gelar Depan</label>
-            <input type="text" name="gelar_depan" placeholder="Masukkan Gelar Depan" class="form-control" value="<?php echo $d->gelar_depan ?>" required>
+            <input type="text" name="gelar_depan" placeholder="Masukkan Gelar Depan" class="form-control" value="<?php echo $d->gelar_depan ?>">
             <?php echo form_error('gelar_depan', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
@@ -114,8 +114,9 @@
             <?php foreach($detail as $dt) : ?>
                 <img src="<?php echo base_url().'assets/uploads/' .$d->foto ?>" style="width: 200px">
                 <?php endforeach; ?><br><br>
-                <label>Foto<i style="color:red">*</i></label>
+                <label>Foto</label>
             <input type="file" name="userfile" class="form-control"  value = "<?= $d->foto;?>">
+            <label><i>hanya file ekstensi .png, .jpeg</i></label>
         </div>
 
         <button type="submit" class="btn btn-info mb-4">Update</button>

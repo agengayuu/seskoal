@@ -54,13 +54,13 @@
         </div>
 
         <div class="form-group">
-            <label>Gelar Depan<i style="color:red">*</i></label>
+            <label>Gelar Depan</label>
             <input type="text" name="gelar_depan" value="<?php echo set_value('gelar_depan'); ?>" placeholder="Masukkan Gelar Depan" class="form-control">
             <?php echo form_error('gelar_depan', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
-            <label>Gelar Belakang<i style="color:red">*</i></label>
+            <label>Gelar Belakang</label>
             <input type="text" name="gelar_belakang" value="<?php echo set_value('gelar_belakang'); ?> " placeholder="Masukkan Gelar Belakang" class="form-control">
             <?php echo form_error('gelar_belakang', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
@@ -115,7 +115,7 @@
             <label class="custom-file-label" for="foto">Pilih Foto</label>
             </div> -->
             <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control">
-            <label><i style="color:red">hanya file ekstensi .png, .jpeg</i></label>
+            <label><i>hanya file ekstensi .png, .jpeg</i></label>
             <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 

@@ -72,6 +72,14 @@ exit('No direct script access allowed');
         }
 
         public function simpan() {
+
+            $this->_rules();
+            $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+
+            if($this->form_validation->run() == FALSE) {
+            $this->input();
+        }else{
             $id_ruang = $this->input->post('id_ruang');
             $nama_ruang = $this->input->post('nama_ruang' );
             $id_jenis_ruang =$this->input->post('id_jenis_ruang');
@@ -97,14 +105,16 @@ exit('No direct script access allowed');
 
              redirect('ruang');
         }
+    }
 
             public function _rules(){
-                $this->form_validation->set_rules('id_ruang', 'id_ruang', 'required', ['required' => 'Id Ruang wajib diisi!']);
+                // $this->form_validation->set_rules('id_ruang', 'id_ruang', 'required', ['required' => 'Id Ruang wajib diisi!']);
                 $this->form_validation->set_rules('nama_ruang', 'nama_ruang', 'required' , ['required' => 'Nama Ruang wajib diisi!']);
                 $this->form_validation->set_rules('id_jenis_ruang', 'id_jenis_ruang', 'required' , ['required' => 'Jenis Ruang wajib diisi!']);
-                $this->form_validation->set_rules('kapasitas', 'kapasitas', 'required' , ['required' => 'Kapasitas wajib diisi!']);
-                $this->form_validation->set_rules('lantai', 'lantai', 'required' , ['required' => 'Lantai wajib diisi!']);
+                $this->form_validation->set_rules('kapasitas', 'kapasitas', 'required|numeric' , ['required' => 'Kapasitas wajib diisi!',
+                                                                                                    'numeric' => 'Kapasitas wajib di isi dengan angka']);
                 $this->form_validation->set_rules('gedung', 'gedung', 'required' , ['required' => 'Gedung wajib diisi!']);
+                $this->form_validation->set_rules('lantai', 'lantai', 'required' , ['required' => 'Lantai wajib diisi!']);
                 $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Keterangan wajib diisi!']);
             }
 
@@ -113,7 +123,7 @@ exit('No direct script access allowed');
                 $data['title'] = "Edit Ruangan";
                 $data['user'] = $this->db->get_where('user', ['username'=> 
                 $this->session->userdata('username')])->row_array();
-                $this->load->view('templates_dosen/header'); 
+                $this->load->view('templates_dosen/header',$data); 
                 $this->load->view('templates_dosen/sidebar_admin',$data);
 
                 $data['jenisnya'] = $this->db->query("Select * from tbl_jenis_ruang")->result();

@@ -84,11 +84,11 @@ class Matakuliah extends CI_Controller
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', TRUE),
                 'bobot' => $this->input->post('bobot', TRUE),
-                // 'id_dosen' => $this->input->post('id_dosen', TRUE)
+                'id_dosen' => $this->input->post('id_dosen', TRUE)
                 
             );
 
-            print_r($data);
+
 
             $this->m_matakuliah->adminsimpan($data);
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -110,10 +110,14 @@ class Matakuliah extends CI_Controller
         $data['title'] = 'Edit Mata Kuliah';
         $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $data['dosen'] = $this->db->query("Select * from tbl_dosen")->result();
+
         $where = array(
             'kode_mata_kuliah' => $kode_mata_kuliah
         );
         $data['matakuliahnya'] = $this->m_matakuliah->adminedit($where, 'tbl_mata_kuliah')->result();
+       
         $this->load->view('matakuliah/edit', $data);
         $this->load->view('templates_dosen/footer'); 
 
@@ -132,6 +136,7 @@ class Matakuliah extends CI_Controller
             'bobot' => $bobot,
             'id_dosen' => $id_dosen
         );
+    
 
         $where = array(
             'kode_mata_kuliah' => $kode_mata_kuliah
