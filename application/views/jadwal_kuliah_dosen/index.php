@@ -41,7 +41,8 @@
                                         <td width="20px"><?php echo $no++ ?></td>
                                         <td><?= $jdw['nama_diklat'] ?></td>
                                         <td><?= $jdw['nama_mata_kuliah'] ?></td>    
-                                        <td><?= $jdw['tanggal'] ?></td>
+                                        <!-- <td><?= $jdw['tanggal'] ?></td> -->
+                                        <td><?php echo date('d-m-Y', strtotime($jdw['tanggal'])); ?></td>
                                         <td><?= $jdw['waktu_mulai'] ?> - <?=  $jdw['waktu_selesai'] ?></td>
                                         <td><?= $jdw['jam_pelajaran_ke']?></td>
                                         <td><?= $jdw['tema'] ?></td>

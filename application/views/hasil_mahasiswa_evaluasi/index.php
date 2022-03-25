@@ -48,7 +48,7 @@
                                             <td>
                                                 <?php
                                                 if($d->benar == ''){
-                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                    echo "<span style='color:red'>Belum Ujian</span>";
                                                 }else {
                                                     echo $d->benar;
                                                 }
@@ -57,7 +57,7 @@
                                             <td>
                                                 <?php
                                                 if($d->salah == ''){
-                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                    echo "<span style='color:red'>Belum Ujian</span>";
                                                 }else {
                                                     echo $d->salah;
                                                 }
@@ -66,7 +66,7 @@
                                             <td>
                                                 <?php
                                                 if($d->nilai == ''){
-                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                    echo "<span style='color:red'>Belum Ujian</span>";
                                                 }else {
                                                     echo $d->nilai;
                                                 }
@@ -75,7 +75,7 @@
                                             <td>
                                                 <?php
                                                 if($d->nilai == ''){
-                                                    echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
+                                                    echo "<span style='color:red'>Belum Ujian</span>";
                                                 }else {
                                                     echo "<a href='".'hasil_mahasiswa_evaluasi/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
                                                     

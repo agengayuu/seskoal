@@ -40,7 +40,7 @@
                         <tr>
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $p->nama ?></td>
-                            <td><?= $p->nama_diklat ?></td>
+                            <td><?= $p->nama_diklat ?></td> 
                             <td><?= $p->nama_mata_kuliah ?></td>
                             <td><?php echo date('d-m-Y', strtotime($p->tanggal_ujian)); ?> | <?php echo $p->jam_ujian; ?></td>
                             <td><?= $p->durasi_ujian ?></td>
@@ -55,7 +55,7 @@
                             </td>
                             <td>
                                 <?php if ($p->status_ujian == "1") {
-                                    echo "<span class='btn btn-xs btn-warning'> Belum Ujian </span>";
+                                    echo "<span style='color:red'> Belum Ujian </span>";
                                 } else if ($p->status_ujian == "2") {
                                     echo "<span class='btn btn-xs btn-info'> Selesai Ujian </span>";
                                 }

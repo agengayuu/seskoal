@@ -8,7 +8,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
     
-    <form action="" method="get">
+    <!-- <form action="" method="get">
         <div class="card shadow mb-4">
             <div class="card-body">
                 <div class="form-group row">
@@ -30,7 +30,7 @@
                 </div>
             </div>     
         </div>
-    </form>
+    </form> -->
 
 
     <!--table -->
