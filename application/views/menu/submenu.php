@@ -25,7 +25,7 @@
                             <th>Menu</th>
                             <th>URL</th>
                             <th>Icon</th>
-                            <th>Active</th>
+                            <th>Status</th>
                             <th width="70px">Aksi</th>
                         </tr>
                     </thead>
@@ -39,7 +39,11 @@
                             <td><?= $s->nama_menu?></td>
                             <td><?= $s->url?></td>
                             <td><?= $s->icon?></td>
-                            <td style="text-align: center;"><?= $s->is_active?></td>
+                            <td style="text-align: center;"><?php if($s->is_active == 1){
+                                echo "Aktif"; 
+                            }else{
+                                echo "Tidak Aktif";
+                            }?></td>
                             <td width="20px"> <?php echo anchor('menu/subedit/'.$s->id_sub_menu, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                             <?php echo anchor('menu/subdelete/'.$s->id_sub_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             </tr>
