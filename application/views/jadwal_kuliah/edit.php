@@ -101,7 +101,7 @@
 
                     <div class="form-group">
                         <label>Keterangan<i style="color:red">*</i></label>
-                        <textarea class="form-control" name="keterangan" id='tanggal' rows="3" required><?= $r->keterangan; ?></textarea>
+                        <textarea class="form-control" name="keterangan" id='tanggal' rows="3" required><?= $jdw->keterangan; ?></textarea>
                         <?php echo form_error('keterangan', '<div class="text-danger small ml-3"></div>') ?>
                     </div>
 
