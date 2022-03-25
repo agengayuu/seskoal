@@ -7,6 +7,7 @@
     
 
     <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo form_open_multipart('dosen/adminsimpan'); ?>
 
     <?php echo anchor('dosen/admintambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Dosen</button>') ?>
 

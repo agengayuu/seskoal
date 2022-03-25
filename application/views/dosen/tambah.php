@@ -115,6 +115,7 @@
             <label class="custom-file-label" for="foto">Pilih Foto</label>
             </div> -->
             <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control">
+            <label><i style="color:red">hanya file ekstensi .png, .jpeg</i></label>
             <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
