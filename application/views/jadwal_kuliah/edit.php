@@ -1,5 +1,9 @@
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-black-800">Tambah Jadwal Kuliah</h1>
+    <div class="card mb-4 py-0 border-left-primary">
+            <div class="card-body">
+                <span>Edit Jadwal Kuliah</span>
+            </div>
+    </div>
 
     <div class="card-header bg-white">
         <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
