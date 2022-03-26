@@ -12,8 +12,8 @@
     <!-- <form action="<?php echo base_url('dosen/adminsimpan') ?>" method="post" enctype="multipart/form-data"> -->
 
         <div class="form-group">
-            <label>NIP<i style="color:red">*</i></label>
-            <input type="number" name="nip"  value="<?php echo set_value('nip'); ?>" placeholder="Masukkan NIP" class="form-control">
+            <label>NID<i style="color:red">*</i></label>
+            <input type="number" name="nip"  value="<?php echo set_value('nip'); ?>" placeholder="Masukkan NID" class="form-control">
             <?php echo form_error('nip', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 

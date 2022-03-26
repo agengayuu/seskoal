@@ -23,10 +23,10 @@
                     <thead>
                         <tr>
                             <th width = "5px%" >No</th>
-                            <th>NIP</th>
+                            <th>NID</th>
                             <th>Nama</th>
                             <th>Email</th>
-                            <th><centerAksi</th>
+                            <th style="text-align:center ">Aksi</th>
                            
                         </tr>
                     </thead>
