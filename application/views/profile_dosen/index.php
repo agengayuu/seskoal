@@ -25,7 +25,7 @@
                             <div class="col-md-10"> 
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">NIP</label>
+                                        <label for="">NID</label>
                                     </div>
                                     <div class="col-md-6">
                                         <label for=""><?= $dt->nip;?></label>

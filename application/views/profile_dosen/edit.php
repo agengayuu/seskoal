@@ -15,7 +15,7 @@
     <input type="hidden" class="form-control" name="id_dosen" id="id_dosen" value="<?php echo $d->id_dosen; ?>">
 
         <div class="form-group">
-            <label>NIP<i style="color:red">*</i></label>
+            <label>NID<i style="color:red">*</i></label>
             <input type="number" name="nip" id="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" readonly>
             <?php echo form_error('nip', '<div class="text-danger small ml-3">','</div>') ?>
         </div>

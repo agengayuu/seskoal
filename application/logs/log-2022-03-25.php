@@ -9530,3 +9530,460 @@ ERROR - 2022-03-25 16:09:49 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-03-25 16:09:49 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-03-25 16:09:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
 ERROR - 2022-03-25 16:09:49 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:10:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:10:59 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:10:59 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:00 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:04 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:07 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:09 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:21 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:11:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:11:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:12:10 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:12:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:12:17 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:12:17 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:13:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:13:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:13:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:06 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:13:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:13:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:13:17 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:14:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:02 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:14:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:14:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:14:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:06 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:14:06 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:14:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:14:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:14:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:06 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:14:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:14:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:13 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:15:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:15:39 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:15:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:15:57 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:16:07 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:16:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:16:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Js/demo
+ERROR - 2022-03-25 16:16:16 --> 404 Page Not Found: Vendor/datatables
