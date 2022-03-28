@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+/* @import url(https://fonts.googleapis.com/css?family=Segoe300); */
 
 * {
     box-sizing: border-box;
@@ -18,7 +18,7 @@ html {
 }
 
 button {
-    font-family: "Roboto", sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #003366;
@@ -47,6 +47,7 @@ section h3 {
 }
 
 nav{
+    font-family: "Segoe UI", sans-serif;
     background: #abc7db;
     height: 80px;
     width: 100%;
@@ -115,6 +116,7 @@ button:hover {
 }
 
 #berita {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-1.png) no-repeat;
     background-size:  100%;
     height: auto;
@@ -283,6 +285,7 @@ button:hover {
 } */
 
 #bantuan {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-2.png) no-repeat;
     background-size:  100%;
     height: auto;
@@ -323,6 +326,7 @@ ul.arrows {
 }
 
 #gallery {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-1.png) no-repeat;
     background-size:  100%;
     height: auto;
@@ -382,6 +386,7 @@ ul.arrows {
 }
 
 #download {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-3.png) no-repeat;
     background-size:  100%;
     height: auto;
@@ -407,7 +412,7 @@ ul.arrows {
 }
 
 footer {
-    font-family: "Roboto", sans-serif;
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/footer.png) no-repeat;
     background-size:  100%;
     /* position: fixed; */
