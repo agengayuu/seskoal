@@ -1,6 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
 
 body {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg.png) no-repeat;  
     height: auto;
     background-size:  100%;
