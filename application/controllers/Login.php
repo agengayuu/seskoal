@@ -27,6 +27,7 @@ class Login extends CI_Controller
         
         $this->form_validation->set_rules('username','Username','trim|required|xss_clean');
         $this->form_validation->set_rules('password','Password','trim|required|xss_clean');
+
         if($this->form_validation->run() == false){
             $this->load->view('login/index');
         } else {
@@ -242,7 +243,12 @@ public function set(){
 
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['password'] = $this->db->get_where('user', ['password' => $this->session->userdata('password')])->row_array();
-       
+        $this->form_validation->set_rules('passbaru','Password','trim|required|xss_clean|min_length[6]');
+        $this->form_validation->set_rules('passbaru1','Password2','trim|required|xss_clean|min_length[6]');
+        
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+
         // $data['set_password'] = $this->m_set_password->tampil_data()->result();
        if(!$this->form_validation->run() == false ){
         $this->load->view('templates_dosen/header', $data);

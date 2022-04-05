@@ -100,7 +100,7 @@ class Pengumuman extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
         $data['title'] = 'Edit Pengumuman';
-        $this->load->view('templates_dosen/header');
+        $this->load->view('templates_dosen/header',$data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $where = array(
             'id_pengumuman' => $id_pengumuman

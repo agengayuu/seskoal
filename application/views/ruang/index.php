@@ -29,7 +29,7 @@
                                         <th>Kapasitas</th>
                                         <th>Lantai</th>
                                         <th>Keterangan</th>
-                                        <th>Aksi</th>
+                                        <th style="text-align:center"width="15%" >Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -44,7 +44,7 @@
                                                 <td><?php echo $rgn->kapasitas ?></td>
                                                 <td><?php echo $rgn->lantai ?></td>
                                                 <td><?php echo $rgn->keterangan ?></td>
-                                                <td width="20px"> <?php echo anchor('ruang/edit/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                                <td style="text-align:center" width="20px"> <?php echo anchor('ruang/edit/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
                                                 <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                                             </tr>
                                             <?php

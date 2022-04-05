@@ -33,7 +33,7 @@
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $m->nama_menu?></td>
                             <td width="20px"> <?php echo anchor('menu/edit/'.$m->id_menu, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                            <?php echo anchor('menu/hapus/'.$m->id_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            <!-- <?php echo anchor('menu/hapus/'.$m->id_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td> -->
                             </tr>
                                 <?php
                             endforeach

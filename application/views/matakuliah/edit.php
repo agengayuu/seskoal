@@ -9,7 +9,7 @@
             <input type="hidden" class="form-control" name="id_mata_kuliah" id="id_mata_kuliah" value="<?php echo $m->id_mata_kuliah; ?>">
                 <div class="form-group">
                     <label>Kode Mata Kuliah</label>
-                    <input class="form-control" type="text" name="kode_mata_kuliah" value="<?php echo $m->kode_mata_kuliah; ?>"readonly>
+                    <input class="form-control" type="text" name="kode_mata_kuliah" value="<?php echo $m->kode_mata_kuliah; ?>">
                     <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
@@ -17,6 +17,18 @@
                     <label>Nama Mata Kuliah</label>
                     <input type="text" name="nama_mata_kuliah" value="<?php echo $m->nama_mata_kuliah; ?>" class="form-control">
                     <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
+                </div>
+
+               <div class="form-group">
+                    <label>Nama Dosen <i style="color:red">*</i></label>
+                    <select class="form-control" name='id_dosen' id='id_dosen' value="<?php echo $m->id_dosen; ?>">
+                    <option value='0' selected>--- Pilih Dosen ---</option>
+                    <?php foreach ($dosen as $d) { ?>
+                    <option value="<?php echo $d->id_dosen; ?>" <?php if($d->id_dosen == $m->id_dosen){
+                                                                        echo "selected"; 
+                                                                    } ?>><?php echo $d->nama; ?></option>
+			    <?php } ?>
+		        </select>
                 </div>
 
                 <div class="form-group">

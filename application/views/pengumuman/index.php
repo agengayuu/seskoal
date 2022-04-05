@@ -38,7 +38,7 @@
                                 <td style="text-align: center"><?php echo $no++ ?></td>
                                 <td><?= $p->judul_pengumuman ?></td>
                                 <td><?= $p->isi_pengumuman ?></td>
-                                <td style="text-align: center"><?= $p->tgl_pembuatan ?></td>
+                                <td style="text-align: center"><?= date('d-m-Y',strtotime($p->tgl_pembuatan)); ?></td>
                                 <center>
                                 <td style="text-align: center"><?php echo anchor('pengumuman/download/'.$p->dokumen, '<div class="btn btn-sm btn-primary"><i class="fas fa-download"></i></div>') ?>
                                 </td>
