@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            Jadwal Kuliah
+        <i class="fas fa-fw fa-calendar-alt"></i> Jadwal Kuliah
         </div>
     </div>
 

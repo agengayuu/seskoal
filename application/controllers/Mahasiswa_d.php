@@ -63,7 +63,7 @@ class Mahasiswa_d extends CI_Controller{
         $data['detail'] = $this->m_mahasiswa_d->detail($nim)->result();
         // print_r($data['detail']);die;
         $this->load->view('templates_dosen/sidebar_admin', $data);
-        $this->load->view('mahasiswa/detail');
+        $this->load->view('mahasiswa_d/detail');
         $this->load->view('templates_dosen/footer');
     }
     

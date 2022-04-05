@@ -36,7 +36,7 @@
                             <td><?= $s->nama ?></td>
                             <td><?= $s->jenis_kelamin ?></td>
                             <td><?= $s->agama ?></td>
-                            <td><?= $s->tgl_lahir ?></td>
+                            <td><?= date('d-m-Y', strtotime($s->tgl_lahir)); ?></td>
                             
                             <td> <?php echo anchor('mahasiswa_d/detail/'.$s->nim, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i> Lihat Data</div>' ) ?>
                             </td>

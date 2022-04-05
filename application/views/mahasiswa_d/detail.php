@@ -46,7 +46,7 @@
                                         <label for="">Tanggal Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for=""><?php echo $dt->tgl_lahir; ?></label>
+                                        <label for=""><?php echo date('d-m-Y', strtotime($dt->tgl_lahir)); ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -87,6 +87,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for=""><?php echo $dt->no_tlp; ?></label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-3">
+                                        <label for="">Diklat</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for=""><?php echo $dt->nama_diklat; ?></label>
                                     </div>
                                 </div>
                             </div>
