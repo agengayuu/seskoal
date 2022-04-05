@@ -18,7 +18,7 @@ class M_jadwal_kuliah_dosen extends CI_Model{
             tbl_mata_kuliah.nama_mata_kuliah, 
             tbl_diklat.nama_diklat, 
             tbl_ruang.nama_ruang
-        from 
+        from  
             tbl_jadwal_kuliah 
             left join tbl_dosen on tbl_jadwal_kuliah.id_dosen = tbl_dosen.id_dosen
             left join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_jadwal_kuliah.id_mata_kuliah
