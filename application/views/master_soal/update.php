@@ -108,3 +108,7 @@
      $('#id_mata_kuliah').select2();
  });
 </script>
+
+<script>
+    CKEDITOR.replace('pertanyaan');
+</script>

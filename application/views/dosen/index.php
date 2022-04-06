@@ -22,7 +22,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th width = "5px%" >No</th>
+                            <th width = "5px" >No</th>
                             <th>NID</th>
                             <th>Nama</th>
                             <th>Email</th>

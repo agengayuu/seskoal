@@ -27,7 +27,7 @@
                             <th>Mata Kuliah</th>
                             <th>Soal </th>
                             <th>Kunci Jawaban</th>
-                            <th>Aksi</th>
+                            <th width="10%">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
