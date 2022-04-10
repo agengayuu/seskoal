@@ -1,18 +1,18 @@
 
 <div class="container-fluid">
 
-    <div class="card mb-4 py-1 border-left-primary">
-        <div class="card-body">
+    <!-- <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body"> -->
             <!-- Selamat Datang <?= $user['username'];?> di Dashboard Dosen -->
-            Selamat Datang di Dashboard Dosen
-            <hr>
+            <!-- Selamat Datang di Dashboard Dosen -->
+            <!-- <hr>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                 <i class="fas fa-cogs"></i> Control Panel
             </button>
         </div>
-    </div>
+    </div> -->
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -75,7 +75,7 @@
             </div>
         </div>
         </div>
-        <br />
+        <br /> -->
     <h3>
         <center>Selamat Datang di Aplikasi Akademik SESKOAL</center>
     </h3>
@@ -115,18 +115,15 @@
             }
         },
         plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    }
-                }
-            }
-        },
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
         series: [{
             name: "Brands",
             colorByPoint: true,
