@@ -9,7 +9,7 @@ class Master_soal extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_master_soal');
         $this->load->library('session');
-        is_logged_in('3');
+        // is_logged_in('3');
         //session_start();
     }
 

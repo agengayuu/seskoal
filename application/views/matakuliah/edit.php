@@ -32,9 +32,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Bobot</label>
-                    <input type="number" name="bobot" value="<?php echo $m->bobot; ?>" class="form-control">
-                    <?php echo form_error('bobot', '<div class="text-danger small ml-3"></div>') ?>
+                    <label>SKS</label>
+                    <input type="number" name="sks" value="<?php echo $m->SKS; ?>" class="form-control">
+                    <?php echo form_error('sks', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>

@@ -1,5 +1,10 @@
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-black-800">Tambah Mata Kuliah</h1>
+    <div class="card mb-4 py-1 border-left-primary">
+        <div class="card-body">
+            Tambah Mata Kuliah
+            
+        </div>
+    </div>
 
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
@@ -8,13 +13,13 @@
 
                 <div class="form-group">
                     <label>Kode Mata Kuliah<i style="color:red">*</i></label>
-                    <input type="text" name="kode_mata_kuliah" class="form-control" required>
+                    <input type="text" name="kode_mata_kuliah" class="form-control" placeholder="Masukan Kode mata kuliah" required>
                     <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Nama Mata Kuliah<i style="color:red">*</i></label>
-                    <input type="text" name="nama_mata_kuliah" class="form-control">
+                    <input type="text" name="nama_mata_kuliah" class="form-control" placeholder="Masukan Nama mata kuliah">
                     <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
@@ -29,9 +34,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Bobot<i style="color:red">*</i></label>
-                    <input type="number" name="bobot" class="form-control">
-                    <?php echo form_error('bobot', '<div class="text-danger small ml-3"></div>') ?>
+                    <label>SKS<i style="color:red">*</i></label>
+                    <input type="number" name="sks" class="form-control" placeholder="Masukan SKS">
+                    <?php echo form_error('sks', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>

@@ -59,13 +59,13 @@ class Matakuliah extends CI_Controller
 
         $kode_mata_kuliah   = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah   = $this->input->post('nama_mata_kuliah');
-        $bobot              = $this->input->post('bobot');
+        $sks              = $this->input->post('sks');
         $id_dosen              = $this->input->post('id_dosen');
 
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
-            'bobot' => $bobot,
+            'sks' => $sks,
             'id_dosen' => $id_dosen
         );
         $this->m_matakuliah->adminsimpan($data,'tbl_mata_kuliah');
@@ -83,7 +83,7 @@ class Matakuliah extends CI_Controller
             $data = array(
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', TRUE),
-                'bobot' => $this->input->post('bobot', TRUE),
+                'sks' => $this->input->post('sks', TRUE),
                 'id_dosen' => $this->input->post('id_dosen', TRUE)
                 
             );
@@ -101,7 +101,7 @@ class Matakuliah extends CI_Controller
     public function _rules() {
         $this->form_validation->set_rules('kode_mata_kuliah', 'kode_mata_kuliah', 'required', ['required' => 'Kode Mata Kuliah Wajib diisi!']);
         $this->form_validation->set_rules('nama_mata_kuliah', 'nama_mata_kuliah', 'required', ['required' => 'Nama Mata Kuliah Wajib diisi!']);
-        $this->form_validation->set_rules('bobot', 'bobot', 'required', ['required' => 'Bobot Wajib diisi!']);
+        $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks Wajib diisi!']);
     }
 
     public function adminedit($kode_mata_kuliah){
@@ -127,13 +127,13 @@ class Matakuliah extends CI_Controller
 
         $kode_mata_kuliah = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah = $this->input->post('nama_mata_kuliah');
-        $bobot = $this->input->post('bobot');
+        $sks = $this->input->post('sks');
         $id_dosen              = $this->input->post('id_dosen');
 
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
-            'bobot' => $bobot,
+            'sks' => $sks,
             'id_dosen' => $id_dosen
         );
     
