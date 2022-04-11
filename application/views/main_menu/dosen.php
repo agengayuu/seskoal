@@ -80,7 +80,7 @@
         <center>Selamat Datang di Aplikasi Akademik SESKOAL</center>
     </h3>
     <br />
-    <div class="row">
+    <div class="row shadow p-3 mb-5 bg-white rounded">
         <div class="col-md-12">
             <div class="form-group">
                 

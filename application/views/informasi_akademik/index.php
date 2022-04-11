@@ -1,14 +1,14 @@
 <section class="content">
         <div class="container-fluid">
-            <div class="card mb-4 py-0 border-left-primary">
+            <!-- <div class="card mb-4 py-0 border-left-primary">
                 <div class="card-body">
                     <h3>Informasi Akademik</h3>
                     Informasi Umum Akademik dan Kemahasiswaan
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="card">
+                    <div class="card mb-4 py-0 border-left-primary">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-10">
