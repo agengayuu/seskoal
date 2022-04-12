@@ -10,6 +10,7 @@ class Matakuliah extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('m_matakuliah');
+        $this->load->model('m_akademik');
         $this->load->library('session');
         is_logged_in('1');
         //session_start();
@@ -161,6 +162,72 @@ class Matakuliah extends CI_Controller
 
         redirect('matakuliah');
         
+    }
+
+    public function thn_akademik(){
+
+        $data['title'] = 'Tahun Akademik';
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
+        $this->load->view('templates_dosen/sidebar_admin', $data);
+        $data['akademik'] = $this->m_akademik->getdata();
+
+        $this->load->view('matakuliah/tahun', $data);
+        $this->load->view('templates_dosen/footer');
+    }
+
+    public function daftarmatkul($id){
+        $data['title'] = 'Daftar Mata Kuliah';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        $join = $this->db->query("Select tbl_daftar_matkul.*, tbl_mata_kuliah.*, thn_akademik.*, tbl_dosen.*
+                                    from tbl_mata_kuliah
+                                    join tbl_daftar_matkul
+                                    on tbl_mata_kuliah.id_mata_kuliah = tbl_daftar_matkul.id_mata_kuliah
+                                    join thn_akademik
+                                    on thn_akademik.id_akademik = tbl_daftar_matkul.id_akademik
+                                    join tbl_dosen
+                                    on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen
+                                    where tbl_daftar_matkul.id_akademik = $id")->result();
+        // echo"<pre>";
+        // print_r($join);die;
+        $data['daftarmatkul'] = $join;
+     
+        $this->load->view('matakuliah/daftarmatkul',$data);
+        $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function tambahdaftar(){
+        $data['title'] = 'Tambah Daftar Mata Kuliah';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $akademik = $this->db->query("select * from thn_akademik")->result();
+        $matkul   = $this->db->query("select * from tbl_mata_kuliah")->result();
+        $data['matkul'] = $matkul;
+        $data['akademik']=$akademik;
+
+        $this->load->view('matakuliah/tambahdaftar',$data);
+        $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function simpanmatkul(){
+    
+            $data = array(
+                'id_akademik' => $this->input->post('id_akademik', TRUE),
+                'id_mata_kuliah' => $this->input->post('id_mata_kuliah', TRUE),
+            );
+
+            $this->m_matakuliah->daftarsimpan($data);
+            $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
+                                                    Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span></button></div>');
+            redirect('matakuliah/daftarmatkul','refresh');
+
     }
 }
 
