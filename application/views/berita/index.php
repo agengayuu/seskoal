@@ -25,6 +25,7 @@
                             <th>Judul Berita</th>
                             <th>Isi Berita</th>
                             <th>Gambar</th>
+                            <th>link</th>
                             <th>Tanggal Pembuatan</th>
                             <th>Aksi</th>
                         </tr>
@@ -38,6 +39,7 @@
                                 <td><?= $b->judul_berita ?></td>
                                 <td><?= $b->isi?></td>
                                 <td><?= $b->dokumen?></td>
+                                <td><?= $b->link?></td>
                                 <td style="text-align: center"><?= date('d-m-Y',strtotime($b->created_at)); ?></td>
                                 <center>
                                 </td>

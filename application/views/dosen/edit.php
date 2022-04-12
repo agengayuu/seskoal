@@ -16,7 +16,7 @@
 
         <div class="form-group">
             <label>NID<i style="color:red">*</i></label>
-            <input type="number" name="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" required readonly>
+            <input type="number" name="nip" id="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" required readonly>
             <?php echo form_error('nip', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 

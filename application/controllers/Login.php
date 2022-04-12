@@ -1,4 +1,8 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
 
 if(!defined('BASEPATH'))
 exit('No direct script access allowed');
@@ -12,6 +16,8 @@ class Login extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_user');
         $this->load->library('session');
+        $this->load->library('email');
+        
        // session_start();
         //$this->load->view('login/index');
     }
@@ -101,38 +107,6 @@ class Login extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> you have been logged out</div>');
         redirect('login');
     }
-
-
-    // public function admin(){
-    //     $data['user'] = $this->db->get_where('user', ['username'=> 
-    //     $this->session->userdata('username')])->row_array(); 
-    //     $this->load->view('templates_dosen/header',$data); 
-    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
-    //     $this->load->view('main_menu/admin',$data);
-    //     $this->load->view('templates_dosen/footer'); 
-        
-    // }
-    
-   
-    // public function siswa(){
-    //     $data['user'] = $this->db->get_where('user', ['username'=> 
-    //     $this->session->userdata('username')])->row_array();  
-    //     $this->load->view('templates_dosen/header'); 
-    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
-    //     $this->load->view('main_menu/siswa');
-    //     $this->load->view('templates_dosen/footer'); 
-        
-    // }
-
-    // public function dosen(){
-    //     $data['user'] = $this->db->get_where('user', ['username'=> 
-    //     $this->session->userdata('username')])->row_array();  
-    //     $this->load->view('templates_dosen/header'); 
-    //     $this->load->view('templates_dosen/sidebar_admin', $data); 
-    //     $this->load->view('main_menu/dosen');
-    //     $this->load->view('templates_dosen/footer'); 
-        
-    // }
 
     public function buatpass(){
         $this->load->view('login/buatpass');
@@ -312,4 +286,123 @@ public function set(){
     public function blocked(){
         $this->load->view('login/blocked');
     }
+
+    private function _sendEmail($token,$type){
+    $mail = new PHPMailer(true);
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'sseskoal@gmail.com';                     //SMTP username
+    $mail->Password   = 'Seskoal0609';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;    
+
+        if($type == 'verify'){
+            $this->email->subject('testing');
+            $this->email->message('hellow');
+        }else if ($type =='forgot'){
+
+            $mail->setFrom('no-reply@seskoal.com', 'SESKOAL');
+            $mail->addAddress($this->input->post('email'), 'User');     //Add a recipient
+
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Reset password';
+            $mail->Body    = 'Klik link di bawah untuk reset password anda:
+            <a href="'.base_url().'login/resetpass?email='.$this->input->post('email')
+            . '&token'. urlencode($token) . '">Reset</a>';
+            if( $mail->send()){
+                return true;
+            }else{
+                echo $this->email->print_debugger();
+    
+            };
+        }
+        
+}
+public function lupapass()
+{
+    $this->form_validation->set_rules('email','Email','trim|required|valid_email');
+    $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+    if($this->form_validation->run() == false ){
+    $this->load->view('login/lupapass');
+    }else{
+        $email = $this->input->post('email');
+        $user = $this->db->get_where('user',['email' => $email, 'is_active' => 1])->row_array();
+        if($user){
+            $token = base64_encode(random_bytes(32));
+            $user_token = [
+                'email' => $email,
+                'token' => $token,
+            ];
+
+            $this->db->insert('user_token',$user_token);
+            $this->_sendEmail($token, 'forgot');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                    Silahkan cek email anda. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
+            redirect('login/lupapass');
+        }else{
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                    Email belum terdaftar atau belum aktif. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
+        redirect('login/lupapass');
+         }
+    }
+}
+
+public function resetpass(){
+    $email = $this->input->get('email');
+    $token = $this->input->get('token');
+    $user = $this->db->get_where('user',['email' => $email])->row_array();
+    // print_r($user);die;
+    if($user){
+        $user_token = $this->db->get_where('user_token',['email' => $email])->row_array();  //mau pake token atau email boleh
+        // print_r($user_token);die;
+        if($user_token){
+            $this->session->set_userdata('reset_email',$email);
+            $this->gantipass();
+        }else{
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                        Reset password gagal! email token. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                        <span aria-hidden="true">&times;</span> </button></div>');
+            redirect('login','refresh');
+        }
+
+    }else{
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                    Reset password gagal! email salah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
+        redirect('login','refresh');
+    }
+}
+
+public function gantipass(){
+
+    if(!$this->session->userdata('reset_email')){
+        redirect('login','refresh');
+    }
+
+   $this->form_validation->set_rules('password','Password','trim|required|xss_clean|min_length[3]|matches[password]');
+     $this->form_validation->set_rules('password2','Password2','trim|required|xss_clean|min_length[3]|matches[password2]');
+        if($this->form_validation->run() == false){
+        $this->load->view('login/gantipass');
+    }else{
+          $password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+          $email = $this->session->userdata('reset_email');
+
+        //   print_r($password);die;
+          
+          $this->db->set('password', $password);
+          $this->db->where('email',$email);
+          $this->db->update('user');
+
+          $this->session->unset_userdata('reset_email');
+          $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                   Password berhasil di ubah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
+          redirect('login','refresh');
+    }
+}
 }

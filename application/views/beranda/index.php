@@ -53,91 +53,22 @@
         <div class="news-area">
             <h3>Berita Terbaru</h3>
             <div class="swiper mySwiper container">
-                    <div class="swiper-wrapper content">
+                <div class="swiper-wrapper content">
+                        <?php foreach($berita as $brt) { ?>
                         <div class="swiper-slide card">
                             <div class="card-content">
                                 <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-4.png" alt="" class="first-news">
+                                    <img  src="<?= base_url('./assets/file/' . $brt->dokumen) ?>" alt="" class="first-news" style="height:auto">
                                 </div>
                                 <div class="news-title">
-                                    <span><b>Untuk Lindungi Masyarakat, Kemendag Blokir 622 Situs Web Tanpa Izin Bappeti</b></span>
+                                    <span><b><?= $brt->judul_berita;?></b></span>
                                 </div>
                                 <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
+                                    <button class="selengkapnya"><a href="<?= $brt->link;?>" target="_blank">Selengkapnya<i class="fa-solid fa-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Bappeti Kembali Blokir 137 Entitas Tak Berizin, Termasuk Penawaran ini ...</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-6.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Optimalkan Pemanfaatan SRG sebagai Instrumen Perdagangan, Wamendag: SR..</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Serbuan Vaksinasi Tahap ke-2 Lanud Abd Saleh di Detasemen TNI AU Senggreng</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Dalam sehari "Serbuan Vaksinasi" Lanud Abd Saleh Jangkau Empat Lokasi</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Satkes Dema Mako Korphaskas Gelar Vaksinasi Covid Lanjutan di Gedung...</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        
+                        <?php } ?>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>

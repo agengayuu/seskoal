@@ -98,6 +98,7 @@ class Dosen extends CI_Controller
             $created_at = date('Y-m-d H:i:s'); 
             
             $data2 = array(
+                'email'             => $email,
                 'username' => $nip,
                 'id_grup_user' => 3,
                 'is_active' =>1,
@@ -302,14 +303,23 @@ class Dosen extends CI_Controller
                     'agama'             => $agama,
                     'alamat'            => $alamat,
                     
-                    
+                );
+
+                $data2 = array(
+                    'email'             => $email,
                 );
 
                 $where = array( 
                     'id_dosen' => $id_dosen
                 );
+
+                $where2 = array(
+                    'username'=> $nip     
+
+                );
     
                 $this->m_dosen->adminupdate($where, $data, 'tbl_dosen');
+                $this->m_dosen->adminupdate($where2, $data2, 'user');
                 $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                 Data berhasil di Update. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');

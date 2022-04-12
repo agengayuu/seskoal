@@ -166,6 +166,7 @@ class Mahasiswa extends CI_Controller
             // print_r($data);die;
 
             $data2 = array(
+                'email' =>  $email,
                 'username' => $nim,
                 'id_grup_user' => 2,
                 'is_active' => 1,
@@ -192,6 +193,9 @@ class Mahasiswa extends CI_Controller
                 'created_at' => $created_at
             );
             $this->m_mahasiswa->adminsimpan($data3, 'tbl_profil_mahasiswa');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil ditambah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
 
             redirect('mahasiswa');
         }
@@ -292,13 +296,14 @@ class Mahasiswa extends CI_Controller
     
             $data2 = array(
                 'foto'   => $foto,
+                'email' =>  $email,
             );
     
             $where = array(
                 'id_mahasiswa' => $id
             );
             $where2 = array(
-                'id' => $id
+                'username' => $nim
             );
             // echo "<pre>";
             // print_r($data);

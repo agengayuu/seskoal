@@ -10,6 +10,7 @@
     <?php echo $this->session->flashdata('pesan') ?>
 
     <?php echo anchor('mahasiswa/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Mahasiswa</button>') ?>
+    <?php echo anchor('mahasiswa/CSV', '<button class="btn btn-sm btn-warning mb-3"><i class="fas fa-plus fa-sm"></i> Import CSV</button>') ?>
 
     <!--table -->
     <div class="card shadow mb-4">

@@ -1,20 +1,20 @@
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-        <i class="fas fa-plus fa-sm"></i> Master Soal
+        Data Mata kuliah
         </div>
     </div>
     
 
     <?php echo $this->session->flashdata('pesan') ?>
-
-    <?php echo anchor('master_soal/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Master Soal</button>') ?>
+<!-- 
+    <?php echo anchor('master_soal/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Master Soal</button>') ?> -->
     <!-- <?php echo anchor('soal_evaluasi_ujian/matakuliah', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye"></i> Data Mata Kuliah</button>') ?> -->
 
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Master Soal</h6>
+            <h6 class="m-0 font-weight-bold text-primary"> Data Mata kuliah</h6>
         </div>
 
         <div class="card-body">
@@ -35,7 +35,7 @@
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $mk->nama_mata_kuliah ?></td>
                             <td>
-                                 <?php echo anchor('master_soal_admin/getmahasiswa/'.$mk->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
+                                 <?php echo anchor('master_soal_admin/getpaket/'.$mk->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
                         </tr>
                                 <?php
                             endforeach
