@@ -182,6 +182,11 @@ class Matakuliah extends CI_Controller
         $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $thn = $this->db->query("select * from thn_akademik where id_akademik = $id")->row_array();
+        $data["thn"] = $thn;
+
+        // print_r($thn);die;
         $join = $this->db->query("Select tbl_daftar_matkul.*, tbl_mata_kuliah.*, thn_akademik.*, tbl_dosen.*
                                     from tbl_mata_kuliah
                                     join tbl_daftar_matkul
@@ -229,7 +234,32 @@ class Matakuliah extends CI_Controller
             redirect('matakuliah/daftarmatkul','refresh');
 
     }
+
+    public function daftarhapus($id){
+        $where = array('id_daftar_matkul' => $id);
+        $this->m_matakuliah->hapus_data($where, 'tbl_daftar_matkul'); 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+        redirect('matakuliah','refresh');
+    }
+
+    public function edit(){
+
+
+    }
+
+    public function update(){
+
+
+    }
+
+
 }
+
+
+
 
 
 ?>
