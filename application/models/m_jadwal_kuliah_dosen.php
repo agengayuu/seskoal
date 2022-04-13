@@ -31,4 +31,6 @@ class M_jadwal_kuliah_dosen extends CI_Model{
         return $this->db->query($query)->result_array();
     }
 
+    
+
 }

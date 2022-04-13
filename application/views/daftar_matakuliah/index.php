@@ -40,8 +40,7 @@
                                         <td><?= $dmk['nama_mata_kuliah'] ?></td>    
                                         <td><?= $dmk['bobot']?></td>
                                         <td><?= $dmk['keterangan']?></td>
-                                        <td width="180px"> <?php echo anchor('daftar_matakuliah/lpe/', '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i> Detail</div>' ) ?>
-                                        </td>
+                                        <td width="180px"> <?php echo anchor('daftar_matakuliah/lpe/'.$dmk['id_mata_kuliah'], '<div class="btn btn-sm btn-warning"> Detail <i class="fa fa-eye"></i></div>' ) ?></td>
                                     </tr>
                                 <?php
                                 endforeach

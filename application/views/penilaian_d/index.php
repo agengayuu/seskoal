@@ -33,7 +33,6 @@
                                             <td><?= $pd->nama_diklat ?>
                                             
                                             <td width="180px"> <?php echo anchor('penilaian_dosen/angkatanmasuk/'.$pd->id_diklat, '<div class="btn btn-sm btn-primary"> Selanjutnya <i class="fa fa-arrow-right"></i></div>' ) ?></td>
-                                            </td>
                                         </tr>
                                             <?php
                                         endforeach

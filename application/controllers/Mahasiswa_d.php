@@ -28,7 +28,7 @@ class Mahasiswa_d extends CI_Controller{
         $this->load->view('templates_dosen/sidebar_admin', $data); 
         $this->load->view('mahasiswa_d/index', $data); 
 
-
+ 
         $data['diklatnya'] = $this->m_mahasiswa_d->tampil_data()->result();
         $this->load->view('templates_dosen/footer'); 
 

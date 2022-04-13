@@ -95,7 +95,6 @@
                                         <label for="">Tanggal Lahir</label>
                                     </div>
                                     <div class="col-md-6">
-                                        
                                         <label for=""><?php echo date('d-m-Y', strtotime($dt->tgl_lahir)); ?></label>
                                     </div>
                                 </div>
