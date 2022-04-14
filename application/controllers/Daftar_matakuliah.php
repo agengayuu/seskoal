@@ -44,14 +44,21 @@ class Daftar_matakuliah extends CI_Controller{
         $queryy= $this->db->query("select * from tbl_paket_evaluasi where id_mata_kuliah='".$id."'")->result();
         $data['paket_evaluasi'] = $queryy;
 
-        $queryyy= $this->db->query("select kode_mata_kuliah, nama_mata_kuliah, bobot, keterangan
-                                     from tbl_mata_kuliah where id_mata_kuliah='".$id."' group by kode_mata_kuliah, nama_mata_kuliah")->result();
-        foreach ($queryyy as $ruk){ $nama_mata_kuliah = $ruk->nama_mata_kuliah; $kode_mata_kuliah = $ruk->kode_mata_kuliah; $bobot = $ruk->bobot; $keterangan = $ruk->keterangan;}
+        $queryyy= $this->db->query("select *
+                                     from tbl_mata_kuliah 
+                                     where id_mata_kuliah='".$id."' 
+                                     group by kode_mata_kuliah, nama_mata_kuliah")->result();
+        foreach ($queryyy as $ruk){ $id_mata_kuliah = $ruk->id_mata_kuliah; 
+                                    $nama_mata_kuliah = $ruk->nama_mata_kuliah; 
+                                    $kode_mata_kuliah = $ruk->kode_mata_kuliah; 
+                                    $sks = $ruk->sks; 
+                                    $keterangan = $ruk->keterangan;}
         
+        $data['id_mata_kuliah'] = $id;
         $data['kode_mata_kuliah'] = $queryyy;
         $data['idnya'] = $id;
         $data['kode_mata_kuliah'] = $kode_mata_kuliah;
-        $data['bobot'] = $bobot;
+        $data['sks'] = $sks;
         $data['keterangan'] = $keterangan;
         $data['tt'] = $nama_mata_kuliah;
 
@@ -60,14 +67,19 @@ class Daftar_matakuliah extends CI_Controller{
         $this->load->view('templates_dosen/footer');
     } 
 
-    public function input() {
+    public function input($id) {
         $data['title'] = 'Tambah Soal Evaluasi';
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $query= $this->db->query("select * from tbl_master_soal")->result();
+        // $data = [
+        //     'id_mata_kuliah' => 
+        // ];
+
+        // print_r($data);die;
+        $query= $this->db->query("select * from tbl_master_soal where id_mata_kuliah = $id")->result();
         $data['mastersoal'] = $query;
 
         // $query= $this->db->query("select * from tbl_profil_mahasiswa")->result();

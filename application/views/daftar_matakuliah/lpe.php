@@ -21,13 +21,13 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-8"><b>Kode Matakuliah</b> <b><?php echo ": ".$kode_mata_kuliah; ?></b></label><br />
                                         <label class="control-label col-md-8"><b>Nama Matakuliah</b> <b><?php echo ": ".$tt; ?></b></label><br />
-                                        <label class="control-label col-md-8"><b>Bobot</b> <b><?php echo ": ".$bobot; ?></b></label><br />
+                                        <label class="control-label col-md-8"><b>Bobot</b> <b><?php echo ": ".$sks; ?></b></label><br />
                                         <label class="control-label col-md-8"><b>Keterangan</b> <b><?php echo ": ".$keterangan; ?></b></label>
                                     </div>
                                 </div>
                             </div>
                             
-                            <?php echo anchor('daftar_matakuliah/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Paket Evaluasi</button>') ?>
+                            <?php echo anchor('daftar_matakuliah/input/'.$id_mata_kuliah, '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Paket Evaluasi</button>') ?>
                             
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>

@@ -25,8 +25,8 @@
                                     <th>No</th>
                                     <th>Kode Matakuliah</th>
                                     <th>Mata Kuliah</th>
-                                    <th>Bobot</th>
-                                    <th>Keterangan</th>
+                                    <th>SKS</th>
+                                    <!-- <th>Keterangan</th> -->
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -38,8 +38,8 @@
                                         <td width="20px"><?php echo $no++ ?></td>
                                         <td><?= $dmk['kode_mata_kuliah'] ?></td>
                                         <td><?= $dmk['nama_mata_kuliah'] ?></td>    
-                                        <td><?= $dmk['bobot']?></td>
-                                        <td><?= $dmk['keterangan']?></td>
+                                        <td><?= $dmk['sks']?></td>
+                                        <!-- <td><?= $dmk['keterangan']?></td> -->
                                         <td width="180px"> <?php echo anchor('daftar_matakuliah/lpe/'.$dmk['id_mata_kuliah'], '<div class="btn btn-sm btn-warning"> Detail <i class="fa fa-eye"></i></div>' ) ?></td>
                                     </tr>
                                 <?php
