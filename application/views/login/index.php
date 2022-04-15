@@ -66,7 +66,12 @@
                             <div class="float-right">
                                 <a href="<?= base_url('login/buatpass');?>">Buat password</a>
                             </div>
-                            <div class="float-right">
+                        </div>
+                        <div class="form-group">
+                            <label class="rmb">
+                                <span></span>   
+                            </label>
+                            <div class="float-right2">
                                 <a href="<?= base_url('login/lupapass');?>">Lupa password</a>
                             </div>
                         </div>

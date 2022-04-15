@@ -11,6 +11,9 @@ body {
 .float-right {
     float: right !important;
 }
+.float-right2 {
+  float: right !important;
+}
 
 label {
     display: inline-block;
@@ -66,7 +69,7 @@ a:link {
     padding-bottom: 10px;
 }
 
-input[type=text], input[type=password], input[type=date] {
+input[type=text], input[type=password], input[type=date], input[type=email] {
     outline: 0;
     background: #fffff7;
     width: 100%;

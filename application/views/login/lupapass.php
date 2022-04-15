@@ -66,7 +66,7 @@
                         <input type="hidden" id="token" name="token">
                             <button type="submit" class="btn green">
                                 Reset Password <i class="m-icon-swapright m-icon-white"></i>
-                            </button>
+                            </button> 
 					
                     </form>
                     <!-- END LOGIN FORM -->
