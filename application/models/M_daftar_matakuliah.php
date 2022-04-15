@@ -41,8 +41,8 @@ class M_daftar_matakuliah extends CI_Model{
 				'waktu_evaluasi_mulai'  => $this->input->post('waktu_evaluasi_mulai'),
 				'waktu_evaluasi_selesai' 	 => $this->input->post('waktu_evaluasi_selesai'),
 				'durasi_ujian' 	 => $durasi_ujian,
-				'timer_ujian' 	 => $timer_ujian
-				// 'status_ujian' 	 => 1
+				'timer_ujian' 	 => $timer_ujian,
+				'status_ujian' 	 => 1
 
 			);
 		}
