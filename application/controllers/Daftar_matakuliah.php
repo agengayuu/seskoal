@@ -74,25 +74,32 @@ class Daftar_matakuliah extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        // $data = [
-        //     'id_mata_kuliah' => 
-        // ];
-
-        // print_r($data);die;
         $query= $this->db->query("select * from tbl_master_soal where id_mata_kuliah = $id")->result();
         $data['mastersoal'] = $query;
-
-        // $query= $this->db->query("select * from tbl_profil_mahasiswa")->result();
-        // $data['mahasiswa'] = $query;
-
-        $query = $this->db->query("select a.*,b.* 
-                                    from tbl_profil_mahasiswa a, tbl_diklat b
-                                    where a.id_diklat = b.id_diklat order by a.id_diklat")->result();
-        $data['mahasiswa'] = $query;
 
         $this->load->view('daftar_matakuliah/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
     }
+
+    public function simpan(){
+		$id_mata_kuliah 	            = $this->input->post('id_mata_kuliah');
+        $nama_paket_evaluasi            = $this->input->post('nama_paket_evaluasi');
+		$waktu_evaluasi_mulai		    = $this->input->post('waktu_evaluasi_mulai');
+		$waktu_evaluasi_selesai			= $this->input->post('waktu_evaluasi_selesai');
+		$durasi_ujian		            = $this->input->post('durasi_ujian');
+
+		
+		if ($id_mata_kuliah =='' || $nama_paket_evaluasi =='' || $nama_paket_evaluasi =='' || $waktu_evaluasi_mulai == '' || $waktu_evaluasi_selesai == '' || $durasi_ujian == '') {
+			$this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><i class="icon fa fa-check"></i> Input Data Gagal ! Cek kembali data yang diinputkan.</div>');
+			redirect(base_url('daftar_matakuliah'));
+		} else {
+			$result = $this->m_daftar_matakuliah->insert_multiple();
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                    Data berhasil di Tambah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
+			redirect(base_url('daftar_matakuliah'));
+		}
+    } 
 
     public function delete($id) {
 

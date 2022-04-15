@@ -21,7 +21,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-8"><b>Kode Matakuliah</b> <b><?php echo ": ".$kode_mata_kuliah; ?></b></label><br />
                                         <label class="control-label col-md-8"><b>Nama Matakuliah</b> <b><?php echo ": ".$tt; ?></b></label><br />
-                                        <label class="control-label col-md-8"><b>Bobot</b> <b><?php echo ": ".$sks; ?></b></label><br />
+                                        <label class="control-label col-md-8"><b>SKS</b> <b><?php echo ": ".$sks; ?></b></label><br />
                                         <label class="control-label col-md-8"><b>Keterangan</b> <b><?php echo ": ".$keterangan; ?></b></label>
                                     </div>
                                 </div>
@@ -47,11 +47,12 @@
                                         <tr>
                                             <td width="20px"><?php echo $no++ ?></td>
                                             <td><?= $pe->nama_paket_evaluasi ?></td>
-                                            <td><?= $pe->nama_paket_evaluasi ?></td>
-                                            <td><?= $pe->nama_paket_evaluasi ?></td>
-                                            <td><?= $pe->nama_paket_evaluasi ?></td>
+                                            <td><?= $pe->waktu_evaluasi_mulai ?></td>
+                                            <td><?= $pe->waktu_evaluasi_selesai ?></td>
+                                            <td><?= $pe->durasi_ujian ?></td>
                                             
-                                            <td width="100px"> <?php echo anchor('paket_evaluasi/update/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i> Detail</div>' ) ?>
+                                            <td width="100px"> <?php echo anchor('daftar_matakuliah/update/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?>
+                                            <?php echo anchor('daftar_matakuliah/delete/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
                                             </td>
                                         </tr>
                                             <?php

@@ -95,7 +95,7 @@ class Peserta_evaluasi extends CI_Controller {
                                                     <span aria-hidden="true">&times;</span> </button></div>');
 			redirect(base_url('peserta_evaluasi'));
 		}
-    }
+    } 
 
     public function update($id){
         $data['title'] = 'Edit Mahasiswa Evaluasi';
