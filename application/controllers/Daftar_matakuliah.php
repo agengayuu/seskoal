@@ -82,14 +82,14 @@ class Daftar_matakuliah extends CI_Controller{
     }
 
     public function simpan(){
-		$id_mata_kuliah 	            = $this->input->post('id_mata_kuliah');
+		// $id_mata_kuliah 	            = $this->input->post('id_mata_kuliah');
         $nama_paket_evaluasi            = $this->input->post('nama_paket_evaluasi');
 		$waktu_evaluasi_mulai		    = $this->input->post('waktu_evaluasi_mulai');
 		$waktu_evaluasi_selesai			= $this->input->post('waktu_evaluasi_selesai');
 		$durasi_ujian		            = $this->input->post('durasi_ujian');
 
 		
-		if ($id_mata_kuliah =='' || $nama_paket_evaluasi =='' || $nama_paket_evaluasi =='' || $waktu_evaluasi_mulai == '' || $waktu_evaluasi_selesai == '' || $durasi_ujian == '') {
+		if ( $nama_paket_evaluasi =='' || $nama_paket_evaluasi =='' || $waktu_evaluasi_mulai == '' || $waktu_evaluasi_selesai == '' || $durasi_ujian == '') {
 			$this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><i class="icon fa fa-check"></i> Input Data Gagal ! Cek kembali data yang diinputkan.</div>');
 			redirect(base_url('daftar_matakuliah'));
 		} else {

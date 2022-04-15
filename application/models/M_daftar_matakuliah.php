@@ -25,7 +25,7 @@ class M_daftar_matakuliah extends CI_Model{
         return $this->db->query($query)->result_array();
     }
 
-    public function insert_multiple($id)
+    public function insert_multiple()
 	{
 		$durasi_ujian		= $this->input->post('durasi_ujian');
 				
@@ -36,7 +36,7 @@ class M_daftar_matakuliah extends CI_Model{
 		foreach ($count as $i => $value) {
 			$entri[] = array(
 				'id_master_soal' 	 => $this->input->post('id_master_soal')[$i],
-				'id_mata_kuliah' => [$id],
+				// 'id_mata_kuliah' => [$id],
                 'nama_paket_evaluasi'  => $this->input->post('nama_paket_evaluasi'),
 				'waktu_evaluasi_mulai'  => $this->input->post('waktu_evaluasi_mulai'),
 				'waktu_evaluasi_selesai' 	 => $this->input->post('waktu_evaluasi_selesai'),
