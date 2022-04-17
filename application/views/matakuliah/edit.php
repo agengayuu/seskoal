@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-black-800">Edit Mata Kuliah</h1>
 
-    <?php foreach($matakuliahnya as $m) { ?>
+<?php foreach($matakuliahnya as $m) { ?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
@@ -27,13 +27,37 @@
                     <option value="<?php echo $d->id_dosen; ?>" <?php if($d->id_dosen == $m->id_dosen){
                                                                         echo "selected"; 
                                                                     } ?>><?php echo $d->nama; ?></option>
-			    <?php } ?>
-		        </select>
+			        <?php } ?>
+		            </select>
+                </div>
+
+               <div class="form-group">
+                    <label>Nama Diklat <i style="color:red">*</i></label>
+                    <select class="form-control" name='id_diklat' id='id_diklat' value="<?php echo $m->id_diklat; ?>">
+                    <option value='0' selected>--- Pilih Diklat ---</option>
+                    <?php foreach ($diklat as $di) { ?>
+                    <option value="<?php echo $di->id_diklat; ?>" <?php if($di->id_diklat == $m->id_diklat){
+                                                                        echo "selected"; 
+                                                                    } ?>><?php echo $di->nama_diklat; ?></option>
+			        <?php } ?>
+		            </select>
+                </div>
+
+               <div class="form-group">
+                    <label>Tahun Akademik <i style="color:red">*</i></label>
+                    <select class="form-control" name='id_akademik' id='id_akademik' value="<?php echo $m->id_akademik; ?>">
+                    <option value='0' selected>--- Pilih Tahun akademik ---</option>
+                    <?php foreach ($akademik as $ak) { ?>
+                    <option value="<?php echo $ak->id_akademik; ?>" <?php if($ak->id_akademik == $m->id_akademik){
+                                                                        echo "selected"; 
+                                                                    } ?>><?php echo $ak->tahun_akademik; ?></option>
+			        <?php } ?>
+		            </select>
                 </div>
 
                 <div class="form-group">
                     <label>SKS</label>
-                    <input type="number" name="sks" value="<?php echo $m->SKS; ?>" class="form-control">
+                    <input type="number" name="sks" value="<?php echo $m->sks; ?>" class="form-control">
                     <?php echo form_error('sks', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
@@ -42,9 +66,9 @@
             </form>
         </div>
     </div>
+    <?php } ?>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    <?php } ?>
 </div>

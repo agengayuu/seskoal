@@ -41,6 +41,8 @@ class Matakuliah extends CI_Controller
         $query= $this->db->query("select * from tbl_mata_kuliah")->result();
         $data['mata_kuliah'] = $query;
         $data['dosen'] = $this->db->query("select * from tbl_dosen")->result();
+        $data['diklat'] = $this->db->query("select * from tbl_diklat")->result();
+        $data['akademik'] = $this->db->query("Select * from thn_akademik where status = 'Aktif'")->result();
         
         $this->load->view('matakuliah/tambah',$data);
         $this->load->view('templates_dosen/footer'); 
@@ -62,12 +64,16 @@ class Matakuliah extends CI_Controller
         $nama_mata_kuliah   = $this->input->post('nama_mata_kuliah');
         $sks              = $this->input->post('sks');
         $id_dosen              = $this->input->post('id_dosen');
+        $id_diklat              = $this->input->post('id_diklat');
+        $id_akademik             = $this->input->post('id_akademik');
 
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
             'sks' => $sks,
-            'id_dosen' => $id_dosen
+            'id_dosen' => $id_dosen,
+            'id_diklat' => $id_diklat,
+            'id_akademik' => $id_akademik
         );
         $this->m_matakuliah->adminsimpan($data,'tbl_mata_kuliah');
         redirect('matakuliah');
@@ -85,7 +91,9 @@ class Matakuliah extends CI_Controller
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', TRUE),
                 'sks' => $this->input->post('sks', TRUE),
-                'id_dosen' => $this->input->post('id_dosen', TRUE)
+                'id_dosen' => $this->input->post('id_dosen', TRUE),
+                'id_diklat' => $this->input->post('id_diklat', TRUE),
+                'id_akademik' => $this->input->post('id_akademik', TRUE)
                 
             );
 
@@ -113,6 +121,9 @@ class Matakuliah extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $data['dosen'] = $this->db->query("Select * from tbl_dosen")->result();
+        $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
+        $data['akademik'] = $this->db->query("Select * from thn_akademik")->result();
+       
 
         $where = array(
             'kode_mata_kuliah' => $kode_mata_kuliah
@@ -130,13 +141,19 @@ class Matakuliah extends CI_Controller
         $nama_mata_kuliah = $this->input->post('nama_mata_kuliah');
         $sks = $this->input->post('sks');
         $id_dosen              = $this->input->post('id_dosen');
+        $id_diklat             = $this->input->post('id_diklat');
+        $id_akademik            = $this->input->post('id_akademik');
 
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
             'sks' => $sks,
-            'id_dosen' => $id_dosen
+            'id_dosen' => $id_dosen,
+            'id_diklat' => $id_diklat,
+            'id_akademik' => $id_akademik
         );
+
+    //    
     
 
         $where = array(
@@ -176,6 +193,8 @@ class Matakuliah extends CI_Controller
         $this->load->view('templates_dosen/footer');
     }
 
+   
+
     public function daftarmatkul($id){
         $data['title'] = 'Daftar Mata Kuliah';
         $data['user'] = $this->db->get_where('user', ['username'=> 
@@ -187,21 +206,36 @@ class Matakuliah extends CI_Controller
         $data["thn"] = $thn;
 
         // print_r($thn);die;
-        $join = $this->db->query("Select tbl_daftar_matkul.*, tbl_mata_kuliah.*, thn_akademik.*, tbl_dosen.*
+        $join = $this->db->query("Select tbl_mata_kuliah.*, thn_akademik.*, tbl_dosen.*, tbl_diklat.*
                                     from tbl_mata_kuliah
-                                    join tbl_daftar_matkul
-                                    on tbl_mata_kuliah.id_mata_kuliah = tbl_daftar_matkul.id_mata_kuliah
                                     join thn_akademik
-                                    on thn_akademik.id_akademik = tbl_daftar_matkul.id_akademik
+                                    on thn_akademik.id_akademik = tbl_mata_kuliah.id_akademik
                                     join tbl_dosen
                                     on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen
-                                    where tbl_daftar_matkul.id_akademik = $id")->result();
+                                    join tbl_diklat
+                                    on tbl_mata_kuliah.id_diklat = tbl_diklat.id_diklat
+                                    where tbl_mata_kuliah.id_akademik = $id")->result();
         // echo"<pre>";
         // print_r($join);die;
         $data['daftarmatkul'] = $join;
      
         $this->load->view('matakuliah/daftarmatkul',$data);
         $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function daftardiklat(){
+        $data['title'] = 'Daftar Mata Kuliah';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $diklat = $this->db->query("select * from tbl_diklat")->result();
+        $data['diklat'] = $diklat;
+
+        $this->load->view('matakuliah/daftardiklat',$data);
+        $this->load->view('templates_dosen/footer'); 
+
     }
 
     public function tambahdaftar(){
@@ -231,7 +265,7 @@ class Matakuliah extends CI_Controller
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
                                                     Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span></button></div>');
-            redirect('matakuliah/daftarmatkul','refresh');
+            redirect('matakuliah/daftarmatkul');
 
     }
 
@@ -245,21 +279,5 @@ class Matakuliah extends CI_Controller
         redirect('matakuliah','refresh');
     }
 
-    public function edit(){
-
-
-    }
-
-    public function update(){
-
-
-    }
-
-
 }
-
-
-
-
-
 ?>

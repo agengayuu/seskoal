@@ -19,7 +19,7 @@
                                 </div>
                             </div>
                             
-                            <?php echo anchor('matakuliah/tambahdaftar', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Daftar Mata Kuliah</button>') ?>
+                            <!-- <?php echo anchor('matakuliah/tambahdaftar', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Daftar Mata Kuliah</button>') ?> -->
 
     
                             <div class="card shadow mb-4">
@@ -33,9 +33,11 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
+                                                    <th>Nama Diklat</th>
                                                     <th>Nama Mata Kuliah</th>
                                                     <th>Nama Dosen</th>
-                                                    <th>Aksi</th>
+                                                    <th>SKS</th>
+                                                    <!-- <th>Aksi</th> -->
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -44,10 +46,14 @@
                                                     foreach ($daftarmatkul as $daf) : ?>
                                                 <tr>
                                                     <td><?php echo $no++ ?></td>
+                                                    <td><?= $daf->nama_diklat ?></td>
                                                     <td><?= $daf->nama_mata_kuliah ?></td>
                                                     <td><?= $daf->nama ?></td>
-                                                    <td> <?php echo anchor('matakuliah/daftaredit/'.$daf->id_daftar_matkul, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                                    <?php echo anchor('matakuliah/daftarhapus/'.$daf->id_daftar_matkul, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                                    <td><?= $daf->sks ?></td>
+                                            
+                                                    <!-- <td>  -->
+                                                        <!-- <?php echo anchor('matakuliah/daftaredit/'.$daf->id_daftar_matkul, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?> -->
+                                                    <!-- <?php echo anchor('matakuliah/daftarhapus/'.$daf->id_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td> -->
                                                     </center>
                                                 </tr>
                                                         <?php

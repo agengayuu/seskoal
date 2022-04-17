@@ -34,6 +34,26 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Nama diklat<i style="color:red">*</i></label>
+                    <select class="form-control" name='id_diklat' id='id_diklat'>
+                    <option value='0' selected>--- Pilih Diklat ---</option>
+                    <?php foreach ($diklat as $di) { ?>
+                    <option value="<?php echo $di->id_diklat; ?>"><?php echo $di->nama_diklat; ?></option>
+			    <?php } ?>
+		        </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tahun akademik<i style="color:red">*</i></label>
+                    <select class="form-control" name='id_akademik' id='id_akademik'>
+                    <option value='0' selected>--- Pilih tahun akademik ---</option>
+                    <?php foreach ($akademik as $ak) { ?>
+                    <option value="<?php echo $ak->id_akademik; ?>"><?php echo $ak->tahun_akademik ?></option>
+			    <?php } ?>
+		        </select>
+                </div>
+
+                <div class="form-group">
                     <label>SKS<i style="color:red">*</i></label>
                     <input type="number" name="sks" class="form-control" placeholder="Masukan SKS">
                     <?php echo form_error('sks', '<div class="text-danger small ml-3"></div>') ?>

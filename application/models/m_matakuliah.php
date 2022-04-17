@@ -11,9 +11,10 @@ class M_matakuliah extends CI_Model{
 
     public function tampildata(){
         $data['title'] = 'Mata kuliah';
-        $hasil = "SELECT tbl_mata_kuliah.*, tbl_dosen.nama
+        $hasil = "SELECT tbl_mata_kuliah.*, tbl_dosen.nama, tbl_diklat.nama_diklat
         FROM tbl_mata_kuliah
-        INNER JOIN tbl_dosen ON tbl_mata_kuliah.id_dosen=tbl_dosen.id_dosen";
+        INNER JOIN tbl_dosen ON tbl_mata_kuliah.id_dosen=tbl_dosen.id_dosen
+        INNER JOIN tbl_diklat ON tbl_mata_kuliah.id_diklat = tbl_diklat.id_diklat";
         return $this->db->query($hasil);
     }
 
