@@ -60,6 +60,7 @@ class Login extends CI_Controller
                             'password' => $user ['password'],
                             'id_grup_user' => $user ['id_grup_user'],
                             'id' => $user ['id'],
+                            'foto' => $user ['foto'],
                             'data_created' => time()
                         ];
 
