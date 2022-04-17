@@ -51,6 +51,36 @@ class Master_soal_admin  extends CI_Controller{
 
     }
 
+    public function getallsoal($id){
+        $data['title'] = 'Master Soal';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $soal = $this->db->query("select * from tbl_soal_evaluasi where id_mata_kuliah='".$id."'")->result();
+        $data['soal'] = $soal;    
+
+        $this->load->view('master_soal_admin/getsoal', $data); 
+        $this->load->view('templates_dosen/footer'); 
+
+
+    }
+
+    public function getpaket($id){
+        $data['title'] = 'Master Soal';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $paket = $this->db->query("select * from tbl_paket_evaluasi where id_mata_kuliah='".$id."'")->result();
+        $data['paket'] = $paket;    
+
+        $this->load->view('master_soal_admin/getpaket', $data); 
+        $this->load->view('templates_dosen/footer'); 
+    }
+
     public function getmahasiswa($id){
         $data['title'] = 'Master Soal';
 
