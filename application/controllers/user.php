@@ -19,6 +19,12 @@ class User extends CI_Controller
    
 
     }
+
+    public function adminhapus($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }
 
 ?>

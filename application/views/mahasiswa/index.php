@@ -13,11 +13,11 @@
     <?php echo anchor('mahasiswa/CSV', '<button class="btn btn-sm btn-warning mb-3"><i class="fas fa-plus fa-sm"></i> Import CSV</button>') ?>
 
     <!--table -->
-    <div class="card shadow mb-4">
+    <!-- <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Daftar Mahasiswa</h6>
         </div>
-        <!-- <div class="card-header py-3">
+        <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h6>
         </div>
 
@@ -81,3 +81,14 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

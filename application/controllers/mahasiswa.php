@@ -223,8 +223,11 @@ class Mahasiswa extends CI_Controller
     {
 
         $where = array('nim' => $nim);
+        $where2 = array('username' => $nim);
            
         $this->m_mahasiswa->adminhapus($where, 'tbl_mahasiswa');
+        $this->m_mahasiswa->adminhapus($where2, 'user');
+
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');

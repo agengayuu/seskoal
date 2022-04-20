@@ -111,6 +111,24 @@ class Diklat extends CI_Controller{
 
         redirect('diklat','refresh');
     }
+
+
+    public function getmhs($id){
+        $data['title'] = "Mahasiswa per Diklat";
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+    
+        $data['mhs'] = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
+        // print_r($data['mhs']);die;
+
+        $this->load->view('templates_dosen/header',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $this->load->view('diklat/getmhs',$data);
+        $this->load->view('templates_dosen/footer'); 
+
+
+
+    }
     
 
 
