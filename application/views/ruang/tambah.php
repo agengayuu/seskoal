@@ -1,21 +1,20 @@
 <div class="container-fluid">
 <h1 class="h3 mb-2 text-black-800">Tambah Ruangan</h1>
+<?php echo $this->session->flashdata('pesan') ?>
+<?php echo validation_errors(); ?>
+
+<!-- Fungsi ini akan membuat atribut tambahan berupa 
+enctype=”multipart/form-data” pada form pembuka yang mengizinkan 
+kita untuk mengunggah berkas. -->
+<?php echo form_open_multipart('ruang/simpan'); ?>  
+
 
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
-    <?php echo $this->session->flashdata('pesan') ?>
-    <?php echo validation_errors(); ?>
-    <?php echo form_open_multipart('ruang/simpan'); ?> 
+
     <!-- Form -->
     <form method="post" action="<?php echo base_url('ruang/simpan') ?>">
-
-        <!-- <div class="form-group">
-            <label>ID Ruang<i style="color:red">*</i></label>
-            <input type="text" name="id_ruang" placeholder="Masukkan ID Ruang" class="form-control">
-            <?php echo form_error('id_ruang', '<div class="text-danger small ml-3"></div>') ?>
-        </div> -->
-
         <div class="form-group">
             <label>Nama Ruang<i style="color:red">*</i></label>
             <input type="text" name="nama_ruang" placeholder="Masukkan Nama Ruang" class="form-control">
@@ -75,4 +74,15 @@
  $(document).ready(function() {
      $('#id_jenis_ruang').select2();
  });
+</script>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
 </script>

@@ -56,6 +56,7 @@ class Tahun_akademik extends CI_Controller
             'status' => $status
         );
 
+
         $this->m_akademik->savedata($data,'thn_akademik');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
         Data berhasil disimpan. <button type="button" class="close" data-dismiss="alert" aria-label="close">

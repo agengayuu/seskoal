@@ -114,7 +114,8 @@ exit('No direct script access allowed');
                 $this->form_validation->set_rules('kapasitas', 'kapasitas', 'required|numeric' , ['required' => 'Kapasitas wajib diisi!',
                                                                                                     'numeric' => 'Kapasitas wajib di isi dengan angka']);
                 $this->form_validation->set_rules('gedung', 'gedung', 'required' , ['required' => 'Gedung wajib diisi!']);
-                $this->form_validation->set_rules('lantai', 'lantai', 'required' , ['required' => 'Lantai wajib diisi!']);
+                $this->form_validation->set_rules('lantai', 'lantai', 'required|numeric' , ['required' => 'Lantai wajib diisi!',
+                                                                                                    'numeric' => 'Lantai wajib di isi dengan angka']);
                 $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Keterangan wajib diisi!']);
             }
 
@@ -136,34 +137,54 @@ exit('No direct script access allowed');
             }
 
             public function update_aksi(){
+                $this->_rules();
+                $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+    
+                if($this->form_validation->run() == FALSE) {
+                    $data['title'] = "Edit Ruangan";
+                    $data['user'] = $this->db->get_where('user', ['username'=> 
+                    $this->session->userdata('username')])->row_array();
+                    $this->load->view('templates_dosen/header',$data); 
+                    $this->load->view('templates_dosen/sidebar_admin',$data);
 
-                $id_ruang = $this->input->post('id_ruang');
-                $nama_ruang = $this->input->post('nama_ruang' );
-                $id_jenis_ruang =$this->input->post('id_jenis_ruang');
-                $kapasitas =  $this->input->post('kapasitas');
-                $gedung = $this->input->post('gedung');
-                $lantai = $this->input->post('lantai');
-                $keterangan = $this->input->post('keterangan');
+                    $id_ruang	            = $this->input->post('id_ruang');
 
-                $data = array(
-                    'id_ruang'      =>  $id_ruang,
-                    'nama_ruang'    =>  $nama_ruang,
-                    'id_jenis_ruang'=>  $id_jenis_ruang,
-                    'kapasitas'     =>  $kapasitas,
-                    'gedung'        =>  $gedung,
-                    'lantai'        =>  $lantai ,
-                    'keterangan'    =>  $keterangan
-                );
- 
-                $where = array(
-                    'id_ruang'=> $id_ruang
-                );
-                $this->m_ruang->updateaksi($where,$data, 'tbl_ruang');
-                $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                                Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                <span aria-hidden="true">&times;</span> </button></div>');
+                    $data['jenisnya'] = $this->db->query("Select * from tbl_jenis_ruang")->result();
+                    $data['ruangnya'] = $this->db->query("Select * from tbl_ruang where id_ruang = $id_ruang")->result();
+                    $this->load->view('ruang/update',$data); 
+                    $this->load->view('templates_dosen/footer',$data); 
+                }else{
+                    
+                    $id_ruang = $this->input->post('id_ruang');
+                    $nama_ruang = $this->input->post('nama_ruang' );
+                    $id_jenis_ruang =$this->input->post('id_jenis_ruang');
+                    $kapasitas =  $this->input->post('kapasitas');
+                    $gedung = $this->input->post('gedung');
+                    $lantai = $this->input->post('lantai');
+                    $keterangan = $this->input->post('keterangan');
+    
+                    $data = array(
+                        'id_ruang'      =>  $id_ruang,
+                        'nama_ruang'    =>  $nama_ruang,
+                        'id_jenis_ruang'=>  $id_jenis_ruang,
+                        'kapasitas'     =>  $kapasitas,
+                        'gedung'        =>  $gedung,
+                        'lantai'        =>  $lantai ,
+                        'keterangan'    =>  $keterangan
+                    );
+     
+                    $where = array(
+                        'id_ruang'=> $id_ruang
+                    );
+                    $this->m_ruang->updateaksi($where,$data, 'tbl_ruang');
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                    Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                    <span aria-hidden="true">&times;</span> </button></div>');
+    
+                    redirect('ruang'); 
+                }
 
-                redirect('ruang'); 
             }
 
             public function delete($id) {

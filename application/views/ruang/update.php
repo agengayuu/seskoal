@@ -4,6 +4,8 @@
          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Edit Ruangan 
         </div>
     </div> 
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
     <div class="card-header bg-white">
         <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
@@ -70,3 +72,14 @@
     </a>
 
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

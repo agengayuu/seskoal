@@ -33,10 +33,10 @@ class Diklat extends CI_Controller{
         $data['title'] = 'Tambah Diklat';
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array();
-        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $this->load->view('diklat/tambah');
+        $this->load->view('diklat/tambah',$data);
         $this->load->view('templates_dosen/footer'); 
     }
 
