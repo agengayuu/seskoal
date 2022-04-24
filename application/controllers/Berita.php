@@ -40,15 +40,18 @@ class Berita extends CI_Controller
 
      public function _rules()
     {
-        $this->form_validation->set_rules('judul_berita', 'judul_berita', 'required', ['required' => 'Judul Pengumuman wajib diisi!']);
+        $this->form_validation->set_rules('judul_berita', 'judul_berita', 'required', ['required' => 'Judul berita wajib diisi!']);
         $this->form_validation->set_rules('isi', 'isi', 'required', ['required' => 'Isi berita wajib diisi!']);
     }
 
 
     public function simpan(){
         $this->_rules();
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+
         if ($this->form_validation->run() == FALSE) {
-            $this->add();
+            $this->tambah();
         } else {
             $judul_berita = $this->input->post('judul_berita', TRUE);
             $isi   = $this->input->post('isi', TRUE);

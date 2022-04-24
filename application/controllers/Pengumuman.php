@@ -47,6 +47,9 @@ class Pengumuman extends CI_Controller
     public function addsimpan()
     {
         $this->_rules();
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+
         if ($this->form_validation->run() == FALSE) {
             $this->add();
         } else {

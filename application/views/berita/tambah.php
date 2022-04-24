@@ -4,6 +4,8 @@
             <span>Tambah Berita</span>
         </div>
     </div>
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
     <?php echo form_open_multipart('berita/simpan'); ?>
     <div class="card-header bg-white">
@@ -14,20 +16,20 @@
                 <div class="form-group">
                     <label>Judul Berita<i style="color:red">*</i></label>
                     <input type="text" name="judul_berita" class="form-control" placeholder="Judul Berita">
-                    <?php echo form_error('judul_berita', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('judul_berita', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Isi<i style="color:red">*</i></label>
                     <textarea name="isi" class="form-control" id="" cols="30" rows="10" placeholder="Isi"></textarea>
-                    <?php echo form_error('isi', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('isi', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Gambar<i> (Opsional)</i></label>
                     <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
                     <label><i>hanya file ekstensi .png, .jpeg .pdf</i></label>
-                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <!-- <div class="form-group">
@@ -38,7 +40,7 @@
                         <option value="0">Tidak Aktif</option>
                     </select>
                     
-                    <?php echo form_error('status', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('status', '<div class="text-danger small ml-3">','</div>') ?>
                 </div> -->
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
@@ -53,3 +55,13 @@
     </a>
 
 </div>
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

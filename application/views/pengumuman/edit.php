@@ -1,9 +1,11 @@
 <div class="container-fluid">
 <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            <span>Tambah Pengumuman</span>
+            <span>Edit Pengumuman</span>
         </div>
     </div>
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
 
     <?php foreach($pengumumannya as $p) { ?>
@@ -16,19 +18,19 @@
                     <label>Judul Pengumuman<i style="color:red">*</i></label>
                     <input type="hidden" name="id_pengumuman" id="id_pengumuman" value="<?= $p->id_pengumuman; ?>" >
                     <input type="text" name="judul_pengumuman" value="<?php echo $p->judul_pengumuman; ?>" class="form-control" placeholder="Judul Pengumuman" required>
-                    <?php echo form_error('judul_pengumuman', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('judul_pengumuman', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Isi Pengumuman<i style="color:red">*</i></label>
                     <textarea name="isi_pengumuman" class="form-control" id="" cols="30" rows="10" placeholder="Isi Pengumuman" required><?php echo $p->isi_pengumuman; ?></textarea>
-                    <?php echo form_error('isi_pengumuman', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('isi_pengumuman', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
-                    <label>Dokumen<i style="color:red"> (Opsional)</i></label>
+                    <label>Dokumen<i> (Opsional)</i></label>
                     <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
-                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <!-- <div class="form-group">
@@ -39,7 +41,7 @@
                         <option value="0">Tidak Aktif</option>
                     </select>
                     
-                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div> -->
 
                 <div class="form-group">

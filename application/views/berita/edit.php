@@ -4,6 +4,8 @@
             <span>Edit Berita</span>
         </div>
     </div>
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
 
     <?php foreach($beritanya as $b) { ?>
@@ -16,13 +18,13 @@
                     <label>Judul Berita<i style="color:red">*</i></label>
                     <input type="hidden" name="id_berita" id="id_berita" value="<?= $b->id_berita; ?>" >
                     <input type="text" name="judul_berita" value="<?php echo $b->judul_berita; ?>" class="form-control" placeholder="Judul Berita" required>
-                    <?php echo form_error('judul_berita', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('judul_berita', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Isi<i style="color:red">*</i></label>
                     <textarea name="isi" class="form-control" id="" cols="30" rows="10" placeholder="Isi " required><?php echo $b->isi; ?></textarea>
-                    <?php echo form_error('isi', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('isi', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
@@ -31,7 +33,7 @@
                             </div>
                     <label>Dokumen<i> (Opsional)</i></label>
                     <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
-                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <!-- <div class="form-group">
@@ -56,3 +58,14 @@
     </a>
     <?php } ?>
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>
