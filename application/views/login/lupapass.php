@@ -26,7 +26,7 @@
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
         </head>
         
-        <?php echo $this->session->flashdata('pesan') ?>
+        <?php echo $this->session->flashdata('message') ?>
         <body>
         <!-- BEGIN LOGIN -->
         <div class="login-page">
@@ -46,21 +46,12 @@
                             </h2>
                         </div>
                         <div class="form-group">
+                        <?php echo $this->session->flashdata('pesan') ?>
                             <div class="input-icon">
                                 <i class="fa fa-user"></i>
                                 <input type="email" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan Email" name="email" value="<?= set_value('email');?>" />
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
-                            <!-- <div class="input-icon">
-                                <i class="fa fa-user"></i>
-                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan Email" name="subject" value="<?= set_value('email');?>" />
-                                <?= form_error('to', '<small class="text-danger pl-3">', '</small>');?>
-                            </div>
-                            <div class="input-icon">
-                                <i class="fa fa-user"></i>
-                                <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan Email" name="pesan" value="<?= set_value('email');?>" />
-                                <?= form_error('pesan', '<small class="text-danger pl-3">', '</small>');?>
-                            </div> -->
                         </div>
 
                         <input type="hidden" id="token" name="token">

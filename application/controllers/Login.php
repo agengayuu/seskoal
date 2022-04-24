@@ -79,7 +79,7 @@ class Login extends CI_Controller
 
                         //arahkan ke view sesuai dengan grup
                     }else{
-                        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Wrong password </div>');
+                        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password salah</div>');
                         //echo password_hash($password, PASSWORD_DEFAULT);die;
                         redirect('login');
                     }
@@ -90,7 +90,7 @@ class Login extends CI_Controller
                     redirect('login');
                 }
             } else{
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Username is not registerd!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Username belum terdaftar!</div>');
                 //echo "user tidak ada";die; 
                 redirect('login');
             }
@@ -105,7 +105,7 @@ class Login extends CI_Controller
         $this->session->sess_destroy();
         // $this->session->unset_usedata('username');
         // $this->session->unset_usedata('id_grup_user');
-        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> you have been logged out</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> anda sudah logged out</div>');
         redirect('login');
     }
 

@@ -25,27 +25,28 @@
 
             <!-- CSS -->
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
-    </head>
-
-    <body>
-        <!-- BEGIN LOGIN -->
-        <div class="login-page">
-            <div class="container">
-                <!-- BEGIN LOGIN FORM -->
-                <div class="form">
-                    <form class="login-form" action="<?= base_url('login/validasi_pass') ?>" method="post">
-                        <div class="container">
-                            <center>
-                                <div class="logo">
-                                    <div class="seskoal"></div>
-                                </div>
-                            </center>
-                        </div>
-                        <div class="form-header">
-                            <h2 style="text-align: center;">Buat Password<br />
+        </head>
+        
+        <body>
+            <!-- BEGIN LOGIN -->
+            <div class="login-page">
+                <div class="container">
+                    <!-- BEGIN LOGIN FORM -->
+                    <div class="form">
+                        <form class="login-form" action="<?= base_url('login/validasi_pass') ?>" method="post">
+                            <div class="container">
+                                <center>
+                                    <div class="logo">
+                                        <div class="seskoal"></div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="form-header">
+                                <h2 style="text-align: center;">Buat Password<br />
                             </h2>
                         </div>
                         <div class="form-group">
+                            <?php echo $this->session->flashdata('message') ?>
                             <div class="input-icon">
 
                                 <i class="fa fa-user"></i>

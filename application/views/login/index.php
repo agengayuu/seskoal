@@ -25,28 +25,28 @@
 
             <!-- CSS -->
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
-            <?php echo $this->session->flashdata('pesan') ?>
         </head>
-
-    <body>
-        <!-- BEGIN LOGIN -->
-        <div class="login-page">
-            <div class="container">
-                <!-- BEGIN LOGIN FORM -->
-                <div class="form">
-                    <form class="login-form" action="<?= base_url('login/cek_login') ?>" method="post">
-                        <div class="container">
-                            <center>
-                                <div class="logo">
-                                    <div class="seskoal"></div>
-                                </div>
-                            </center>
-                        </div>
-                        <div class="form-header">
-                            <h2>Selamat Datang<br />
-                            Academic Information System</h2>
-                        </div>
-                        <div class="form-group">
+        
+        <body>
+            <!-- BEGIN LOGIN -->
+            <div class="login-page">
+                <div class="container">
+                    <!-- BEGIN LOGIN FORM -->
+                    <div class="form">
+                        <form class="login-form" action="<?= base_url('login/cek_login') ?>" method="post">
+                            <div class="container">
+                                <center>
+                                    <div class="logo">
+                                        <div class="seskoal"></div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="form-header">
+                                <h2>Selamat Datang<br />
+                                Academic Information System</h2>
+                            </div>
+                            <div class="form-group">
+                            <?php echo $this->session->flashdata('message') ?>
                             <div class="input-icon">
                                 <i class="fas fa-user"></i>
                                 <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Username" name="username" value="<?= set_value('username');?>" />
