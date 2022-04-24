@@ -46,6 +46,9 @@ class Jenis_ruang extends CI_Controller{
     public function simpan() {
 
         $this->_rules();
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+
 
         if($this->form_validation->run()== FALSE) {
             $this->input();
@@ -57,9 +60,10 @@ class Jenis_ruang extends CI_Controller{
             // print_r($data);
 
             $this->m_jenis_ruang->input_data($data);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
-                                                    Data Berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span></button></div>');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil disimpan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+    
             redirect('jenis_ruang');
         }
     }

@@ -35,7 +35,7 @@
                 <div>
                     <?php echo form_radio('status','Tidak Aktif',FALSE)?> Tidak Aktif
                 </div>
-            </div>  
+        </div>  
             
         <button type="submit" class="btn btn-primary mb-4">Simpan</button>
         <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>

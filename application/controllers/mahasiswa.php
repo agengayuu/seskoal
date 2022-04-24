@@ -14,6 +14,7 @@ class Mahasiswa extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('m_mahasiswa');
         $this->load->library('session');
+     
         is_logged_in('1');
 
         //session_start();
@@ -318,6 +319,9 @@ class Mahasiswa extends CI_Controller
     
             $this->m_mahasiswa->update($where, $data, 'tbl_mahasiswa');
             $this->m_mahasiswa->update($where2, $data2, 'user');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
             redirect('mahasiswa');
             
         }
@@ -476,4 +480,6 @@ class Mahasiswa extends CI_Controller
         }
         $pdf->Output();
     }
+
+
 }

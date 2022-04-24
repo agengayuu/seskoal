@@ -1,6 +1,7 @@
 <div class="container-fluid">
     <h1 class="h3 mb-2 text-black-800">Edit Mata Kuliah</h1>
-
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 <?php foreach($matakuliahnya as $m) { ?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
@@ -10,13 +11,13 @@
                 <div class="form-group">
                     <label>Kode Mata Kuliah</label>
                     <input class="form-control" type="text" name="kode_mata_kuliah" value="<?php echo $m->kode_mata_kuliah; ?>">
-                    <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Nama Mata Kuliah</label>
                     <input type="text" name="nama_mata_kuliah" value="<?php echo $m->nama_mata_kuliah; ?>" class="form-control">
-                    <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                <div class="form-group">
@@ -58,7 +59,7 @@
                 <div class="form-group">
                     <label>SKS</label>
                     <input type="number" name="sks" value="<?php echo $m->sks; ?>" class="form-control">
-                    <?php echo form_error('sks', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('sks', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
@@ -72,3 +73,14 @@
         <i class="fas fa-angle-up"></i>
     </a>
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

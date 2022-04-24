@@ -4,8 +4,9 @@
             Jenis Ruangan
         </div>
     </div>
-
     <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
+
 
     <?php echo anchor('jenis_ruang/input', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Jenis Ruangan</button>') ?>
 
@@ -53,3 +54,14 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

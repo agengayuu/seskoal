@@ -6,6 +6,8 @@
         </div>
     </div>
 
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
@@ -14,13 +16,14 @@
                 <div class="form-group">
                     <label>Kode Mata Kuliah<i style="color:red">*</i></label>
                     <input type="text" name="kode_mata_kuliah" class="form-control" placeholder="Masukan Kode mata kuliah" required>
-                    <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('kode_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <div class="form-group">
                     <label>Nama Mata Kuliah<i style="color:red">*</i></label>
                     <input type="text" name="nama_mata_kuliah" class="form-control" placeholder="Masukan Nama mata kuliah">
-                    <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('nama_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
+                    
                 </div>
 
                 <div class="form-group">
@@ -56,7 +59,7 @@
                 <div class="form-group">
                     <label>SKS<i style="color:red">*</i></label>
                     <input type="number" name="sks" class="form-control" placeholder="Masukan SKS">
-                    <?php echo form_error('sks', '<div class="text-danger small ml-3"></div>') ?>
+                    <?php echo form_error('sks', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
@@ -68,5 +71,15 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

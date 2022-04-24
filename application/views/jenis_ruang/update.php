@@ -4,6 +4,8 @@
             Update Jenis Ruangan
         </div>
     </div>
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
     <?php foreach($jenis_ruang as $jr ) : ?>
 
@@ -21,3 +23,14 @@
 
     <?php endforeach; ?>
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

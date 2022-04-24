@@ -83,9 +83,12 @@ class Matakuliah extends CI_Controller
     public function adminsimpanaksi() {
 
         $this->_rules();
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+    
 
         if($this->form_validation->run()== FALSE) {
-            $this->adminsimpan();
+            $this->tambah();
         } else {
             $data = array(
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
@@ -110,10 +113,10 @@ class Matakuliah extends CI_Controller
     public function _rules() {
         $this->form_validation->set_rules('kode_mata_kuliah', 'kode_mata_kuliah', 'required', ['required' => 'Kode Mata Kuliah Wajib diisi!']);
         $this->form_validation->set_rules('nama_mata_kuliah', 'nama_mata_kuliah', 'required', ['required' => 'Nama Mata Kuliah Wajib diisi!']);
-        $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks Wajib diisi!']);
+        $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks wajib diisi!']);
     }
 
-    public function adminedit($kode_mata_kuliah){
+    public function adminedit($id){
         $data['user'] = $this->db->get_where('user', ['username'=> 
         $this->session->userdata('username')])->row_array();
         $data['title'] = 'Edit Mata Kuliah';
@@ -126,7 +129,7 @@ class Matakuliah extends CI_Controller
        
 
         $where = array(
-            'kode_mata_kuliah' => $kode_mata_kuliah
+            'id_mata_kuliah' => $id
         );
         $data['matakuliahnya'] = $this->m_matakuliah->adminedit($where, 'tbl_mata_kuliah')->result();
        
@@ -136,7 +139,30 @@ class Matakuliah extends CI_Controller
     }
 
     public function admineditaksi(){
+        $this->_rules();
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
 
+      if($this->form_validation->run()== FALSE) {
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $data['title'] = 'Edit Mata Kuliah';
+        $this->load->view('templates_dosen/header',$data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $data['dosen'] = $this->db->query("Select * from tbl_dosen")->result();
+        $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
+        $data['akademik'] = $this->db->query("Select * from thn_akademik")->result();
+
+        $id_mata_kuliah= $this->input->post('id_mata_kuliah');
+        $data['matakuliahnya'] = $this->db->query("Select * from tbl_mata_kuliah where id_mata_kuliah = $id_mata_kuliah")->result();
+        // print_r($data['matakuliahnya']);die;
+        $this->load->view('matakuliah/edit', $data);
+        $this->load->view('templates_dosen/footer'); 
+
+
+        } else {
+        $id_mata_kuliah = $this->input->post('id_mata_kuliah');
         $kode_mata_kuliah = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah = $this->input->post('nama_mata_kuliah');
         $sks = $this->input->post('sks');
@@ -145,6 +171,7 @@ class Matakuliah extends CI_Controller
         $id_akademik            = $this->input->post('id_akademik');
 
         $data = array(
+            'id_mata_kuliah' => $id_mata_kuliah,
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
             'sks' => $sks,
@@ -152,21 +179,17 @@ class Matakuliah extends CI_Controller
             'id_diklat' => $id_diklat,
             'id_akademik' => $id_akademik
         );
-
-    //    
-    
-
         $where = array(
-            'kode_mata_kuliah' => $kode_mata_kuliah
+            'id_mata_kuliah' => $id_mata_kuliah
         );
-
+    
         $this->m_matakuliah->admineditaksi($where, $data, 'tbl_mata_kuliah');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                 Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
-
+    
         redirect('matakuliah');
-
+    }    
     }
 
     public function adminhapus($kode_mata_kuliah){

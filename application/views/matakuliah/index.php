@@ -7,6 +7,7 @@
     
 
     <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
     <?php echo anchor('matakuliah/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Mata Kuliah</button>') ?>
     <?php echo anchor('matakuliah/thn_akademik', '<button class="btn btn-sm btn-success mb-3">Daftar Mata Kuliah</button>') ?>
@@ -42,8 +43,8 @@
                             <td><?= $m->nama ?></td>
                             <td><?= $m->nama_diklat ?></td>
                             <td><?= $m->sks ?></td>
-                            <td> <?php echo anchor('matakuliah/adminedit/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                            <?php echo anchor('matakuliah/adminhapus/'.$m->kode_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                            <td> <?php echo anchor('matakuliah/adminedit/'.$m->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                            <?php echo anchor('matakuliah/adminhapus/'.$m->id_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             </center>
                         </tr>
                                 <?php
@@ -60,3 +61,14 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

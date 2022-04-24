@@ -26,7 +26,7 @@
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Status<i style="color:red">*</i></label>
                     <select class="form-control" name='status' id='status' required>
                         <option value='0' selected>--- Pilih Status ---</option>
@@ -35,7 +35,19 @@
                     </select>
                     
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
-                </div>
+                </div> -->
+
+                <div class="form-group">
+                    <div>
+                        <label>Status<i style="color:red">*</i></label>
+                    </div>
+                    <div>
+                        <?php echo form_radio('status','Aktif',FALSE)?>Aktif
+                    </div>
+                    <div>
+                        <?php echo form_radio('status','Tidak Aktif',FALSE)?> Tidak Aktif
+                    </div>
+                </div> 
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick=self.history.back()>Batal</button>
@@ -48,3 +60,14 @@
     </a>
     <?php } ?>
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

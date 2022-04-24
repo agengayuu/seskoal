@@ -4,6 +4,8 @@
             Tambah Jenis Ruangan
         </div>
     </div>
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
 
     <div class="card-header bg-white">
         <div class="card-body">
@@ -12,7 +14,7 @@
             <div class="form-group">
                 <label>Nama Jenis Ruang<i style="color:red">*</i></label>
                 <input type="text" name="nama_jenis_ruang" placeholder="Masukkan Jenis Ruangan" class="form-control">
-                <?php echo form_error('nama_jenis_ruang', '<div class="text-danger small" ml-3></div>') ?>
+                <?php echo form_error('nama_jenis_ruang', '<div class="text-danger small" ml-3>','</div>') ?>
             </div>
 
             <button type="submit" class="btn btn-primary mb-4">Simpan</button>
@@ -28,3 +30,14 @@
     </a>
 
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>
