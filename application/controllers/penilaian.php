@@ -58,6 +58,20 @@ class Penilaian extends CI_Controller
         $this->load->view('templates_dosen/footer'); 
     }
 
+    public function getrekap($id){
+
+        $data['title'] = 'Penilaian';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $mhs = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
+        $data['mhs'] = $mhs;
+
+        $this->load->view('penilaian/getrekap',$data);
+        $this->load->view('templates_dosen/footer'); 
+    }
 
 
 

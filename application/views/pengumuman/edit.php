@@ -49,10 +49,10 @@
                         <label>Status<i style="color:red">*</i></label>
                     </div>
                     <div>
-                        <?php echo form_radio('status','Aktif',FALSE)?>Aktif
+                        <?php echo form_radio('status',1)?>Aktif
                     </div>
                     <div>
-                        <?php echo form_radio('status','Tidak Aktif',FALSE)?> Tidak Aktif
+                        <?php echo form_radio('status',0)?> Tidak Aktif
                     </div>
                 </div> 
 

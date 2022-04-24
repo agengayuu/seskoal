@@ -48,7 +48,7 @@
                                                     <td><?= $daf->sks ?></td>
                                             
                                                     <td> 
-                                                        <?php echo anchor('penilaian/getmhs/'.$daf->id_mata_kuliah, '<div class="btn btn-sm btn-success"><i class="fa fa-eye">Mahasiswa</i></div>' ) ?>
+                                                        <?php echo anchor('penilaian/getmhs/'.$daf->id_mata_kuliah, '<div class="btn btn-sm btn-success">Mahasiswa</div>' ) ?>
                                                         <!-- <?php echo anchor('matakuliah/daftarhapus/'.$daf->id_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?> -->
                                                      </td>
                                                     </center>
