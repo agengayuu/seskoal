@@ -1,5 +1,10 @@
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-black-800">Tambah Berita</h1>
+<div class="card mb-4 py-0 border-left-primary">
+        <div class="card-body">
+            <span>Tambah Berita</span>
+        </div>
+    </div>
+
     <?php echo form_open_multipart('berita/simpan'); ?>
     <div class="card-header bg-white">
         <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
@@ -21,6 +26,7 @@
                 <div class="form-group">
                     <label>Gambar<i> (Opsional)</i></label>
                     <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
+                    <label><i>hanya file ekstensi .png, .jpeg .pdf</i></label>
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
                 </div>
 

@@ -1,5 +1,10 @@
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-black-800">Edit Pengumuman</h1>
+<div class="card mb-4 py-0 border-left-primary">
+        <div class="card-body">
+            <span>Tambah Pengumuman</span>
+        </div>
+    </div>
+
 
     <?php foreach($pengumumannya as $p) { ?>
     <div class="card-header bg-white">

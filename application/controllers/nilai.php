@@ -60,10 +60,7 @@ class Nilai extends CI_Controller{
                  'mutu'  => $mutu,
                  'keterangan' => $ket
              );
-       
         }
-
-
         $this->m_nilai->adminsimpan($data, 'tbl_nilai');
         redirect('nilai');
     }

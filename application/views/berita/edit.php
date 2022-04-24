@@ -1,5 +1,10 @@
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-black-800">Edit Berita</h1>
+<div class="card mb-4 py-0 border-left-primary">
+        <div class="card-body">
+            <span>Edit Berita</span>
+        </div>
+    </div>
+
 
     <?php foreach($beritanya as $b) { ?>
     <div class="card-header bg-white">
