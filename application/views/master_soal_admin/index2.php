@@ -30,7 +30,7 @@
                         <?php 
                         $no =  1;
                         foreach ($matkul as $mk) : ?>
-                        <tr>
+                        <!-- <input type="text" name="id_mata_kuliah" value="<?php echo $mk->id_mata_kuliah ?>"> -->
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $mk->nama_mata_kuliah ?></td>
                             <td>

@@ -36,7 +36,8 @@
                         <?php 
                         $no =  1;
                         foreach ($soal as $so) : ?>
-                        <tr>
+                        <tr> 
+                            <!-- <input type="text" name="id_mata_kuliah" value="<?php echo $so->id_mata_kuliah ?>"> -->
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $so->pertanyaan ?></td>
                             <td><?= $so->a ?></td>

@@ -68,7 +68,7 @@ class Master_soal_admin  extends CI_Controller{
     }
 
     public function getpaket($id){
-        $data['title'] = 'Master Soal';
+        $data['title'] = 'Paket Soal';
 
         $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
         $this->load->view('templates_dosen/header',$data);  
@@ -101,6 +101,26 @@ class Master_soal_admin  extends CI_Controller{
         $data['mhs'] = $mhs;
         $this->load->view('master_soal_admin/index3', $data); 
         $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function getsoal_paket($id_paket, $id_matkul){
+
+        // mengambil data soal dari mata kuliah dan paekt yang dipilih
+        $data['title'] = 'Master Soal';
+
+        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
+        $this->load->view('templates_dosen/header',$data);  
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+     
+        $soal_paket = $this->db->query("select * from tbl_soal_evaluasi where id_paket_evaluasi = $id_paket && id_mata_kuliah = $id_matkul")->result();
+        $data['list'] = $soal_paket;
+
+        // echo "<pre>";
+        // print_r($soal_paket);die;
+
+        $this->load->view('master_soal_admin/listsoal', $data); 
+        $this->load->view('templates_dosen/footer'); 
+
     }
 }
     
