@@ -80,7 +80,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Angkatan</label>
-                            <input type="text" name="angkatan" class="form-control" placeholder="Masukkan Angkatan" id="angkatan" value="<?php echo ($datadiri->angkatan) ? $datadiri->angkatan : '' ?>" >
+                            <input type="text" name="angkatan" class="form-control" placeholder="Masukkan Angkatan" id="angkatan" value="<?php echo ($datadiri->angkatan) ? $datadiri->angkatan : '' ?>">
                         </div>
                         <div class="form-group">
                             <label for="">Tahun Akademik</label>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Jabatan</label>
-                            <input type="text" name="jabatan" class="form-control" placeholder="Masukkan jabatan" id="jabatan" value="<?php echo ($datadiri->jabatan) ? $datadiri->jabatan : '' ?>">
+                            <input type="text" name="jabatan" class="form-control" placeholder="Masukkan Jabatan" id="jabatan" value="<?php echo ($datadiri->jabatan) ? $datadiri->jabatan : '' ?>">
                         </div>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">

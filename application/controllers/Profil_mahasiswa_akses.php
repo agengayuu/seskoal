@@ -88,7 +88,12 @@ class Profil_mahasiswa_akses extends CI_Controller
         $this->load->view('profil_mahasiswa_akses/index', $data);
         $this->load->view('templates_dosen/footer');
     }
-
+    function editku($id_mahasiswa){
+        $where = array('id' => $id_mahasiswa);
+        $data['user'] = $this->m_profil_mahasiswa_akses->edit_data($where,'user')->result();
+        $this->load->view('profil_mahasiswa_akses/detail', $data);
+    }
+   
     public function edit()
     {
         $data['title'] = 'Data Diri';
@@ -155,8 +160,6 @@ class Profil_mahasiswa_akses extends CI_Controller
         $this->load->view('templates_dosen/footer');
     }
 
-
-
     public function update()
     {
         $nama   = $this->input->post('nama', NULL);
@@ -196,6 +199,10 @@ class Profil_mahasiswa_akses extends CI_Controller
         $kode_pos = $this->input->post('kode_pos', NULL);
         $foto_hidden = $this->input->post('foto_hidden', NULL);
         $id_mahasiswa   = $this->input->post('id_mahasiswa');
+        $no_tlp = $this->input->post('no_tlp');//tambah ini
+        $tgl_lahir = $this->input->post('tgl_lahir');//tambah ini
+        $jabatan = $this->input->post('jabatan');//tambah ini
+        $id_diklat    = $this->input->post('id_diklat', NULL);
 
         $data = array(
             'nama' => $nama,
@@ -214,7 +221,11 @@ class Profil_mahasiswa_akses extends CI_Controller
             'kelurahan' => $kelurahan,
             'kecamatan' => $kecamatan,
             'kode_pos' => $kode_pos,
-            'id_mahasiswa' => $id_mahasiswa
+            'id_mahasiswa' => $id_mahasiswa,
+            'no_tlp' =>$no_tlp,//tambah ini
+            'tgl_lahir' =>$tgl_lahir, //tambah ini
+            'jabatan' =>$jabatan, //tambah ini
+            'id_diklat' =>$id_diklat, //tambah ini
         );
         //  echo "<pre>";print_r($data);die;
         $this->db->where('id_mahasiswa', $id_mahasiswa);
@@ -263,4 +274,5 @@ class Profil_mahasiswa_akses extends CI_Controller
                                                             <span aria-hidden="true">&times;</span> </button></div>');
         redirect('profil_mahasiswa_akses');
     }
+
 }
