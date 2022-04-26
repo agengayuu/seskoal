@@ -22,11 +22,11 @@
                             <thead>
                                 <tr style="text-align:center">
                                     <th>No</th>
-                                    <th>Nama Diklat</th>
+                                    <!-- <th>Nama Diklat</th> -->
                                     <th>Mata Kuliah</th>
                                     <th>Nama Dosen</th>
                                     <!-- <th width="50px">Kode</th> -->
-                                    <th>Tanggal</th>
+                                    <th>Hari</th>
                                     <th>Waktu</th>
                                     <th>JP ke</th>
                                     <th>Tema</th>
@@ -40,10 +40,37 @@
                                 foreach ($jadwal as $jdw) : ?>
                                     <tr>
                                         <td width="20px"><?php echo $no++ ?></td>
-                                        <td><?= $jdw['nama_diklat'] ?></td>
+                                        <!-- <td><?= $jdw['nama_diklat'] ?></td> -->
                                         <td><?= $jdw['nama_mata_kuliah'] ?></td>
                                         <td><?= $jdw['nama'] ?></td>   
-                                        <td><?= $jdw['tanggal'] ?></td>
+                                        <!-- <td><?= $jdw['tanggal'] ?></td> -->
+                                        <td><?php $hari = $jdw['tanggal'];
+                                            $ubah = date('l', strtotime($hari));
+
+                                            switch ($ubah) {
+                                            case "Sunday":
+                                                echo "Minggu";
+                                                break;
+                                            case "Monday":
+                                                echo "Senin";
+                                                break;
+                                            case "Tuesday":
+                                                echo "Selasa";
+                                                break;
+                                            case "Wednesday":
+                                                echo "Rabu";
+                                                break;
+                                            case "Thursday":
+                                                echo "Kamis";
+                                                break;
+                                            case "Friday":
+                                                echo "Jumat";
+                                                break;
+                                            case "Saturday":
+                                                echo "Sabtu";
+                                                break;
+                                            }
+                                        ?></td>
                                         <td><?= $jdw['waktu_mulai'] ?> - <?=  $jdw['waktu_selesai'] ?></td>
                                         <td><?= $jdw['jam_pelajaran_ke']?></td>
                                         <td><?= $jdw['tema'] ?></td>
