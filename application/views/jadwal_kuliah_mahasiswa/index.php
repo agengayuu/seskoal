@@ -36,7 +36,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                $no = 1;
+                                $no = 1; 
                                 foreach ($jadwal as $jdw) : ?>
                                     <tr>
                                         <td width="20px"><?php echo $no++ ?></td>

@@ -122,6 +122,15 @@ class Main_menu extends CI_Controller
 
         $data['grafik'] = $wx;
 
+        $query = $this->db->query("select * from tbl_pengumuman")->result();
+        $last = $this->db->order_by('id_pengumuman', 'desc')
+            ->limit(1)
+            ->get('tbl_pengumuman')
+            ->result();
+        //print_r($last);die;
+        $data['pengumuman'] = $last;
+        $data['jadwal'] = $this->m_jadwal->getmainmenu();
+
         $this->load->view('main_menu/dosen', $data);
         $this->load->view('templates_dosen/footer', $data);
     }

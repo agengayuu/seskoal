@@ -51,7 +51,30 @@ class M_daftar_matakuliah extends CI_Model{
 		$this->db->insert_batch('tbl_paket_evaluasi', $entri);
 		return true;
 	}
+
+    // public function getMataKuliah()
+    // {
+    //     $this->db->select('*');    
+    //     $this->db->from('tbl_paket_evaluasi');
+    //     $this->db->join('tbl_mata_kuliah', 'tbl_paket_evaluasi.id_paket_evaluasi = tbl_mata_kuliah.id_mata_kuliah');
+    //     $query = $this->db->get();
+    // }
+
+    // public function insert_multiple($data)
+    // {
+    //     $this->db->insert('tbl_paket_evaluasi', $data);
+    // }
+
+    // public function getMataKuliah()
+    // {
+    //     $query = $this->db->get('tbl_mata_kuliah')->result_array();
+    //     return $query;
+    // }
     
+    public function edit_data($where, $table) {
+        return $this->db->get_where($table, $where);
+     }
+     
     public function hapus_data($where, $table){
         $this->db->where($where);
         $this->db->delete($table);

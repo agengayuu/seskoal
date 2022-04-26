@@ -74,8 +74,9 @@ class Daftar_matakuliah extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $query= $this->db->query("select * from tbl_master_soal where id_mata_kuliah = $id")->result();
+        $query= $this->db->query("select * from tbl_master_soal where id_mata_kuliah = $id")->result_array();
         $data['mastersoal'] = $query;
+
 
         $this->load->view('daftar_matakuliah/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
@@ -99,21 +100,34 @@ class Daftar_matakuliah extends CI_Controller{
                                                     <span aria-hidden="true">&times;</span> </button></div>');
 			redirect(base_url('daftar_matakuliah'));
 		}
+        // if ($_POST) {
+        //     $id_mata_kuliah                 = $this->m_daftar_matakuliah->getMataKuliah();
+        //     $matakuliah                     = implode(',', $id_mata_kuliah);
+        //     $nama_paket_evaluasi            = $this->input->post('nama_paket_evaluasi');
+        //     $waktu_evaluasi_mulai		    = $this->input->post('waktu_evaluasi_mulai');
+        //     $waktu_evaluasi_selesai			= $this->input->post('waktu_evaluasi_selesai');
+        //     $durasi_ujian		            = $this->input->post('durasi_ujian');
+        //     $checkboxes                     = $this->input->post('id_master_soal');
+        //     $soal                           = implode(',', $checkboxes);
+
+        //     $data = array (
+        //         'nama_paket_evaluasi' => $nama_paket_evaluasi,
+        //         'waktu_evaluasi_mulai' => $waktu_evaluasi_mulai,
+        //         'waktu_evaluasi_selesai' => $waktu_evaluasi_selesai,
+        //         'durasi_ujian' => $durasi_ujian,
+        //         'id_master_soal' => $soal,
+        //     );
+
+        //     $where = array (
+        //         'id_mata_kuliah' => $matakuliah
+        //     );
+
+        //     $this->m_daftar_matakuliah->insert_multiple($where, 'tbl_paket_evaluasi', $data);
+            
+
+        //     redirect(base_url('daftar_matakuliah'));
+        // }
     } 
-
-    public function update($id) {
-        $data['title'] = 'Update Jenis Ruangan';
-
-        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array(); 
-        $this->load->view('templates_dosen/header',$data);  
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
-
-        $where = array('id_paket_evaluasi' => $id);
-        $data['daftar_matakuliah'] = $this->m_daftar_matakuliah->edit_data($where, 'tbl_paket_evaluasi')->result();
-
-        $this->load->view('daftar_matakuliah/update', $data); 
-        $this->load->view('templates_dosen/footer'); 
-    }
 
     public function delete($id) {
 
