@@ -37,6 +37,7 @@
                                         <th>Tanggal Waktu Mulai</th>
                                         <th>Tanggal Waktu Selesai</th>
                                         <th>Durasi</th>
+                                        <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -50,8 +51,17 @@
                                             <td><?= $pe->waktu_evaluasi_mulai ?></td>
                                             <td><?= $pe->waktu_evaluasi_selesai ?></td>
                                             <td><?= $pe->durasi_ujian ?></td>
+                                            <td>
+                                                <?php if ($pe->status_ujian == "1") {
+                                                    echo "<span style='color:red'> Belum Ujian </span>";
+                                                } else if ($pe->status_ujian == "2") {
+                                                    echo "<span class='btn btn-xs btn-info'> Selesai Ujian </span>";
+                                                }
+                                                ?>
+                                            </td>
                                             
                                             <td width="100px"> <?php echo anchor('daftar_matakuliah/update/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?>
+                                            <?php echo anchor('daftar_matakuliah/edit/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-pen"></i></div>' ) ?>
                                             <?php echo anchor('daftar_matakuliah/delete/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
                                             </td>
                                         </tr>
