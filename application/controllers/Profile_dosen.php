@@ -80,8 +80,9 @@ class Profile_dosen extends CI_Controller{
             $jk                 = $this->input->post('jk');
             $agama              = $this->input->post('agama');
             $alamat             = $this->input->post('alamat');
+            $foto_hidden        = $this->input->post('foto_hidden', NULL);
             $foto               = $_FILES['userfile']['name'];
-            if ($foto){
+            if ($foto = ''){
                 $config['upload_path']      = './assets/uploads/';
                 $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
                 $config['max_size']         = 2048;
@@ -89,16 +90,18 @@ class Profile_dosen extends CI_Controller{
 
                 $this->load->library('upload', $config);
 
-                
-                    if($this->upload->do_upload('userfile')){
-                        $userfile = $this->upload->data('file_name');
-                        $this->db->set('foto', $userfile);
+                if (@$_FILES['foto']['name'] != null) {
+                    if (!$this->upload->do_upload('foto')) {
+                        echo 'Gagal Upload';
+                        die();
                     } else {
-                        echo "Gagal Upload";
+                        $foto = $this->upload->data('file_name');
                     }
+                }
                 }
                 
                 $data = array(
+                    'foto' => ($foto == '') ? $foto_hidden :  $foto,
                     'nip'               => $nip,
                     'nik'               => $nik,
                     'npwp'              => $npwp,
