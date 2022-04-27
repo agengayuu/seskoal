@@ -103,7 +103,7 @@ class Profil_mahasiswa extends CI_Controller
         $kode_pos = $this->input->post('kode_pos');
         $email = $this->input->post('email');
         $jabatan = $this->input->post('jabatan');
-        $no_tlp = $this->input->post('no_tlp');
+        $no_tlp = $this->input->post('no_tlp'); 
 
         // $id_mahasiswa   = $this->input->post('id_mahasiswa');
         $data2 = array(
@@ -299,7 +299,7 @@ class Profil_mahasiswa extends CI_Controller
         $jabatan = $this->input->post('jabatan', NULL);
         $no_tlp = $this->input->post('no_tlp', NULL);
         $foto_hidden = $this->input->post('foto_hidden', NULL);
-        
+
         $id_mahasiswa   = $this->input->post('id_mahasiswa');
 
         $data2 = array(

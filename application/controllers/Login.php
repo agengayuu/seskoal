@@ -117,7 +117,7 @@ class Login extends CI_Controller
      }
 
     public function validasi_pass(){
-       $this->form_validation->set_rules('tgl_lhr','Tanggal Lahir','trim|required|xss_clean');
+       $this->form_validation->set_rules('tgl_lhr','Birth','trim|required|xss_clean');
        $this->form_validation->set_rules('username','Username','trim|required|xss_clean');
     //     $this->form_validation->set_rules('password','Password','trim|required|xss_clean|min_length[3]|matches[new_password2]');
     //     $this->form_validation->set_rules('password2','Password2','trim|required|xss_clean|min_length[3]|matches[new_password]');

@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Jabatan</label>
-                            <input type="text" name="jabatan" class="form-control" placeholder="Masukkan jabatan" id="jabatan" value="<?php echo ($datadiri->jabatan) ? $datadiri->jabatan : '' ?>" readonly>
+                            <input type="text" name="jabatan" class="form-control" placeholder="Masukkan Jabatan" id="jabatan" value="<?php echo ($datadiri->jabatan) ? $datadiri->jabatan : '' ?>" readonly>
                         </div>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
