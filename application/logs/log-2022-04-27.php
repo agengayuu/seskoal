@@ -549,3 +549,13 @@ ERROR - 2022-04-27 07:37:57 --> 404 Page Not Found: Js/demo
 ERROR - 2022-04-27 07:37:57 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-04-27 07:37:57 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-04-27 07:37:57 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-04-27 07:41:50 --> 404 Page Not Found: Assets/global
+ERROR - 2022-04-27 07:41:50 --> 404 Page Not Found: Assets/global
+ERROR - 2022-04-27 07:41:50 --> 404 Page Not Found: Assets/global
+ERROR - 2022-04-27 07:41:52 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-04-27 07:41:52 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-04-27 07:41:52 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-04-27 07:41:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-04-27 07:41:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-04-27 07:41:52 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-04-27 07:41:53 --> 404 Page Not Found: Js/demo

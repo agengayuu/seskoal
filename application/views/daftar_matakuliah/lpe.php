@@ -39,6 +39,7 @@
                                         <th>Durasi</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
+                                        <th>contoh</th>
                                     </tr>
                                 </thead>
                                 <tbody>
