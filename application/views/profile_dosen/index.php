@@ -9,6 +9,7 @@
     <?php echo $this->session->flashdata('pesan') ?>
 
     <?php foreach($detail as $dt) {?>
+        <?php echo form_open_multipart('profile_dosen/update'); ?> 
         
     <div class="card-header bg-white">
         <div class="card-body">
@@ -20,6 +21,7 @@
                                 <?php if($dt->foto!= null) { ?>
                                     <img src="<?=base_url('./assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
                                 <?php } ?>
+                                
                             </div>
  
                             <div class="col-md-10"> 
@@ -124,6 +126,7 @@
                                 </div>
                             </div>
 
+                            <?php form_close(); ?>
                             <?php } ?> 
                         </div>
                     </div>
