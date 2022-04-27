@@ -14,7 +14,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Daftar Paket Evaluasi </h6>
         </div>
 
-        <form action="<?php echo base_url('daftar_matakuliah/simpan') ?>" method="post">
+        <form action="<?php echo base_url('daftar_matakuliah/simpan/'. $mastersoal[0]['id_mata_kuliah']) ?>" method="post">
             <div class="card-body">
                 <div class="form-group row">
                     <label class="col-sm-2 ml-4 col-form-label">Nama Paket<i style="color:red">*</i></label>
@@ -43,7 +43,7 @@
                 <div class="form-group row">
                     <label class="col-sm-2 ml-4 col-form-label">Durasi Waktu<i style="color:red">*</i></label>
                     <div class="col-sm-9">
-                        <input type="text" name="durasi_ujian" id="durasi_ujian" placeholder="Masukkan lama waktu ujian dalam menit" class="form-control" required>
+                        <input type="text" name="durasi_ujian" id="durasi_jam" placeholder="Masukkan lama waktu ujian dalam menit" class="form-control" required>
                     </div>
                 </div>
             </div>     
@@ -61,19 +61,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php var_dump($mastersoal) ?>
                                 <?php 
                                 $no =  1;
                                 foreach ($mastersoal as $ms) : ?>
                                 <tr>
                                     <td width="20px"><?php echo $no++ ?></td>
-                                    <td><?= $ms->pertanyaan ?></td>
+                                    <td><?= $ms['pertanyaan'] ?></td>
                                     
                                     <td>
-                                        <input type="checkbox" name="id_master_soal[]" value="<?php echo $ms->id_master_soal; ?>"/>
+                                        <input type="checkbox" name="id_master_soal[]" value="<?php echo $ms['id_master_soal']; ?>"/>
                                     </td>
                                     
                                 </tr>
-                                        <?php
+                                        <?php 
                                     endforeach
                                     ?>
                             </tbody>
@@ -83,7 +84,7 @@
                     <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>
                 </div>
             </div>
-        </form>
+    </form>
 </div>
 <script type="text/javascript">
   $('#cek-semua').click(function(){
