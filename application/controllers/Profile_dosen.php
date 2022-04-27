@@ -135,7 +135,7 @@ class Profile_dosen extends CI_Controller{
                 );
     
                 $this->m_profil_dosen->update($where, $data, 'tbl_dosen');
-                $this->m_profil_dosen->update($where2, $data2, 'user');
+                $this->m_profil_dosen->insert($where2, $data2, 'user');
                 $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                 Data berhasil di Update. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
