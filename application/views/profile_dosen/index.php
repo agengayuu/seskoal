@@ -18,7 +18,7 @@
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <?php if($dt->foto!= null) { ?>
-                                    <img src="<?=base_url('./assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
+                                    <img src="<?=base_url('./assets/uploads/'.$user['foto'])?>" class="img-fluid" alt="avatar" style="width: 200px">
                                 <?php } ?>
                             </div>
  

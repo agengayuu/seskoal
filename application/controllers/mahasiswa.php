@@ -481,5 +481,63 @@ class Mahasiswa extends CI_Controller
         $pdf->Output();
     }
 
+    public function importcsv(){
 
+        if ( isset($_POST['import'])) {
+
+            $file = $_FILES['filecsv']['tmp_name'];
+            // echo $file;die();
+			// Medapatkan ekstensi file csv yang akan diimport.
+			$ekstensi  = explode('.', $_FILES['filecsv']['name']);
+
+			// Tampilkan peringatan jika submit tanpa memilih menambahkan file.
+			if (empty($file)) {
+				echo 'File tidak boleh kosong!';
+			} else {
+				// Validasi apakah file yang diupload benar-benar file csv.
+				if (strtolower(end($ekstensi)) === 'csv' && $_FILES["filecsv"]["size"] > 0) {
+
+					$i = 0;
+					$handle = fopen($file, "r");
+					while (($row = fgetcsv($handle, 2048))) {
+						$i++;
+						if ($i == 1) continue;
+                        $mhs = explode(";" , $row[0]);
+						// Data yang akan disimpan ke dalam databse
+						$data = [
+							'nim' =>  $mhs[0],
+							'nama' =>  $mhs[2],
+							'angkatan' =>  $mhs[2],
+							'id_diklat' =>$mhs[3],
+							'tahun_masuk' => $mhs[4],
+							'email' => $mhs[5],
+                            'tgl_lahir' => mhs[6]
+						];
+
+                        // print_r($data);
+
+						// Simpan data ke database.
+                        $this->m_mahasiswa->adminsimpan($data, 'tbl_mahasiswa');
+                        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil ditambah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+					}
+
+					fclose($handle);
+					redirect('mahasiswa');
+
+				} else {
+					echo 'Format file tidak valid!';
+				}
+			}
+        }
+	}
+        // $id_mahasiswa   = $data[0];
+        // $nim = $data[1];
+        // $nama  = $data[2];
+        // $angkatan  = $data[3];
+        // $id_diklat  = $data[10];
+        // $tahun_masuk   = $data[5];
+        // $email         = $data[8]
 }
