@@ -48,37 +48,8 @@
                 </div>
             </div>     
 
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Pertanyaan</th>
-                                    <th width="13%">
-                                        <input type="checkbox" class="check-all" id="cek-semua"/> Pilih Semua
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                $no =  1;
-                                foreach ($mastersoal as $ms) : ?>
-                                <tr>
-                                    <td width="20px"><?php echo $no++ ?></td>
-                                    <td><?= $ms->pertanyaan ?></td>
-                                    
-                                    <td>
-                                        <input type="checkbox" name="id_master_soal[]" value="<?php echo $ms->id_master_soal; ?>"/>
-                                    </td>
-                                    
-                                </tr>
-                                        <?php
-                                    endforeach
-                                    ?>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="ml-5">
+                    <input type="hidden" name="id_mata_kuliah" value="<?= $id_mata_kuliah; ?>">
                     <button type="submit" class="btn btn-primary mb-4 mt-4">Simpan</button>
                     <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>
                 </div>

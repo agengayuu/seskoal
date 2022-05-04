@@ -39,7 +39,6 @@
                                         <th>Durasi</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
-                                        <th>contoh</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -61,8 +60,8 @@
                                                 ?>
                                             </td>
                                             
-                                            <td width="100px"> <?php echo anchor('daftar_matakuliah/update/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?>
-                                            <?php echo anchor('daftar_matakuliah/edit/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-pen"></i></div>' ) ?>
+                                            <td width="100px"> <?php echo anchor('daftar_matakuliah/detail/'.$pe->id_paket_evaluasi.'/'.$pe->id_mata_kuliah, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?>
+                                            <?php echo anchor('daftar_matakuliah/update/'.$pe->id_paket_evaluasi.'/'.$pe->id_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-pen"></i></div>' ) ?>
                                             <?php echo anchor('daftar_matakuliah/delete/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
                                             </td>
                                         </tr>

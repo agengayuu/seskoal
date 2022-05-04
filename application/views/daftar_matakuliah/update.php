@@ -12,8 +12,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Update Paket Evaluasi </h6>
         </div>
 
-        <form method="post" action="<?php echo base_url('daftar_matakuliah/update_aksi')?>">
-
+        <form method="post" action="<?php echo base_url('daftar_matakuliah/updateEval')?>">
                 <div class="card-body">
                     <div class="form-group row">
                         <label class="col-sm-2 ml-4 col-form-label">Nama Paket<i style="color:red">*</i></label>
@@ -25,13 +24,13 @@
                     <div class="form-group row">
                         <label class="col-sm-2 ml-4 col-form-label">Jam Mulai<i style="color:red">*</i></label>
                         <div class="col-sm-9">
-                            <input type="datetime-local" name="waktu_evaluasi_mulai" id="waktu_evaluasi_mulai" class="form-control" value="<?php echo $dmk->waktu_evaluasi_mulai ?>">
+                            <input type="datetime-local" required name="waktu_evaluasi_mulai" id="waktu_evaluasi_mulai" class="form-control" value="<?php echo $dmk->waktu_evaluasi_mulai ?>">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 ml-4 col-form-label">Jam Selesai<i style="color:red">*</i></label>
                         <div class="col-sm-9">
-                            <input type="datetime-local" name="waktu_evaluasi_selesai" id="waktu_evaluasi_selesai" class="form-control" value="<?php echo $dmk->waktu_evaluasi_selesai ?>">
+                            <input type="datetime-local" required name="waktu_evaluasi_selesai" id="waktu_evaluasi_selesai" class="form-control" value="<?php echo $dmk->waktu_evaluasi_selesai ?>">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -41,7 +40,8 @@
                         </div>
                     </div>
                 </div>  
-
+            <input type="hidden" name="id_paket_evaluasi" value="<?= $id_eval; ?>">
+            <input type="hidden" name="id_mata_kuliah" value="<?= $id_matkul; ?>">
             <button type="submit" class="btn btn-info mb-4 ml-4">Update</button>
             <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
         

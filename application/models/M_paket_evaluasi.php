@@ -23,5 +23,20 @@
             $this->db->delete($table);
         }
 
+        public function updateEval()
+        {
+            $query = $this->db->set('id_mata_kuliah', $this->input->post('id_mata_kuliah'))
+                              ->set('nama_paket_evaluasi', $this->input->post('nama_paket_evaluasi'))
+                              ->set('waktu_evaluasi_mulai', $this->input->post('waktu_evaluasi_mulai'))
+                              ->set('waktu_evaluasi_selesai', $this->input->post('waktu_evaluasi_selesai'))
+                              ->set('durasi_ujian', $this->input->post('durasi_ujian'))
+                              ->set('timer_ujian', $this->input->post('durasi_ujian'))
+                              ->set('status_ujian', 1)
+                              ->set('status_ujian_ujian', $this->input->post('status_ujian_ujian'))
+                              ->where('id_paket_evaluasi', $this->input->post('id_paket_evaluasi'))
+                              ->update('tbl_paket_evaluasi');
+            return $query;
+        }
+
     }
 ?>
