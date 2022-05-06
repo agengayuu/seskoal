@@ -58,7 +58,7 @@ class Berita extends CI_Controller
             $dokumen             = $_FILES['dokumen'];
             if ($dokumen = '') {
             } else {
-                $config['upload_path']      = './assets/file/';
+                $config['upload_path']      = './assets/uploads/';
                 $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff|pdf';
                 $config['max_size']         = 5000;
                 $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
@@ -112,25 +112,23 @@ class Berita extends CI_Controller
             $judul_berita = $this->input->post('judul_berita', TRUE);
             $isi   = $this->input->post('isi', TRUE);
             $id_berita = $this->input->post('id_berita', TRUE);
-            $dokumen             = $_FILES['dokumen'];
-            if ($dokumen = '') {
-            } else {
-                $config['upload_path']      = './assets/file/';
-                $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff|pdf';
-                $config['max_size']         = 5000;
-                $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+            $dokumen               = $_FILES['dokumen']['name'];
+            if  ($dokumen){
+                $config['upload_path']      = './assets/uploads/';
+                $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
+                $config['max_size']         = 2048;
+                $config['file_name']        = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
 
                 $this->load->library('upload', $config);
 
-                if (@$_FILES['dokumen']['name'] != null) {
-                    if (!$this->upload->do_upload('dokumen')) {
-                        echo 'Gagal Upload';
-                        die();
-                    } else {
+                
+                    if($this->upload->do_upload('dokumen')){
                         $dokumen = $this->upload->data('file_name');
+                        $this->db->set('dokumen', $dokumen);
+                    } else {
+                        echo "Gagal Upload";
                     }
                 }
-            }
 
         $data = array(
                 'judul_berita' => $judul_berita,
@@ -139,7 +137,6 @@ class Berita extends CI_Controller
                 'created_at' => date('Y-m-d'),
             );
 
-            print_r($data);die;
         $where = array(
             'id_berita' => $id_berita
         );

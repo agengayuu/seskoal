@@ -32,9 +32,20 @@ class Beranda extends CI_Controller {
         
         // bantuan
 
-
-
         // end bantuan
+
+        // galeri
+
+         $galeri = $this->db->order_by('id_galeri', 'desc')
+            ->limit(4)
+            ->get('tbl_galeri')
+            ->result();
+            // echo"<pre>";
+            // print_r($galeri);die;
+        $data['galeri'] = $galeri;
+        // end galeri
+
+
         $this->load->view('beranda/index', $data);
   
     }

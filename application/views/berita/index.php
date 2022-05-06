@@ -39,6 +39,9 @@
                                 <td><?= $b->judul_berita ?></td>
                                 <td><?= $b->isi?></td>
                                 <td><?= $b->dokumen?></td>
+                                 <td>
+                                    <img src="<?= base_url('./assets/uploads/' . $b->dokumen) ?>" class="img-fluid" alt="avatar" style="width: 80px">
+                                </td>
                                 <td><?= $b->link?></td>
                                 <td style="text-align: center"><?= date('d-m-Y',strtotime($b->created_at)); ?></td>
                                 <center>
