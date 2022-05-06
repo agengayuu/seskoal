@@ -62,7 +62,7 @@
                                 <td><?= $s->email ?></td>
 
                                 <td> <?php echo anchor('mahasiswa/admindetail/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>') ?>
-                                    <?php echo anchor('mahasiswa/adminedit/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                    <?php echo anchor('mahasiswa/adminedit/' . $s->id_mahasiswa, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
                                     <?php echo anchor('mahasiswa/adminhapus/' . $s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?>
                                 </td>
 

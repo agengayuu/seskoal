@@ -397,4 +397,58 @@ class Dosen extends CI_Controller
         $this->load->view('dosen/detail');
         $this->load->view('templates_dosen/footer'); 
     }
+
+
+    public function importcsv(){
+
+        if ( isset($_POST['import'])) {
+
+            $file = $_FILES['filecsv']['tmp_name'];
+            // echo $file;die();
+			// Medapatkan ekstensi file csv yang akan diimport.
+			$ekstensi  = explode('.', $_FILES['filecsv']['name']);
+
+			// Tampilkan peringatan jika submit tanpa memilih menambahkan file.
+			if (empty($file)) {
+				echo 'File tidak boleh kosong!';
+			} else {
+				// Validasi apakah file yang diupload benar-benar file csv.
+				if (strtolower(end($ekstensi)) === 'csv' && $_FILES["filecsv"]["size"] > 0) {
+
+					$i = 0;
+					$handle = fopen($file, "r");
+					while (($row = fgetcsv($handle, 2048))) {
+						$i++;
+						if ($i == 1) continue;
+                        $dsn = explode(";" , $row[0]);
+						// Data yang akan disimpan ke dalam databse
+						$data = [
+							'nip' =>  $dsn[0],
+							'nik' =>  $dsn[1],
+							'npwp' =>  $dsn[2],
+							'nama' =>  $dsn[3],
+							'email' => $dsn[4],
+							'tempat_lahir' => $dsn[5],
+                            'tgl_lahir' => $dsn[6]
+						];
+
+                        // print_r($data);die;
+
+						// Simpan data ke database.
+                        $this->m_dosen->adminsimpan($data, 'tbl_dosen');
+                        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                Data berhasil ditambah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+
+					}
+
+					fclose($handle);
+					redirect('dosen');
+
+				} else {
+					echo 'Format file tidak valid!';
+				}
+			}
+        }
+	}
 }

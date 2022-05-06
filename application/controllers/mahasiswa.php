@@ -145,9 +145,9 @@ class Mahasiswa extends CI_Controller
             $id_diklat      = $this->input->post('id_diklat');
             $id_grup_user   = $this->input->post('id_grup_user');
             // $tgl_lhr        = $this->input->post('tgl_lhr');
-            $hsl            = date('jmY', strtotime($tgl_lahir));
+            $hsl            = date('d-m-Y', strtotime($tgl_lahir));
             $created_at     = $this->input->post('created_at');
-            $created_at     = date('Y-m-d H:i:s');
+            $created_at     = date('d-m-Y H:i:s');
 
             $data = array(
                 'nim' => $nim,
@@ -201,7 +201,7 @@ class Mahasiswa extends CI_Controller
             redirect('mahasiswa');
         }
     }
-    public function adminedit($nim)
+    public function adminedit($id)
     {
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
@@ -210,7 +210,7 @@ class Mahasiswa extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $where = array(
-            'nim' => $nim
+            'id_mahasiswa' => $id
         );
 
         $data['akademik'] = $this->db->query("select * from thn_akademik")->result();
@@ -511,10 +511,10 @@ class Mahasiswa extends CI_Controller
 							'id_diklat' =>$mhs[3],
 							'tahun_masuk' => $mhs[4],
 							'email' => $mhs[5],
-                            'tgl_lahir' => mhs[6]
+                            'tgl_lahir' => $mhs[6]
 						];
 
-                        // print_r($data);
+                        print_r($data);
 
 						// Simpan data ke database.
                         $this->m_mahasiswa->adminsimpan($data, 'tbl_mahasiswa');
