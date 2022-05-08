@@ -116,7 +116,7 @@
                 <?php endforeach; ?><br><br>
                 <label>Foto<i style="color:red">*</i></label>
             <input type="file" name="userfile" class="form-control"  value = "<?= $d->foto;?>">
-            <input type="hidden" name="foto_hidden" value="<?= ($d->foto != '') ? $d->foto : '' ?>">
+            <label><i>hanya file ekstensi .png, .jpg .jpeg</i></label>
         </div>
 
         <button type="submit" class="btn btn-info mb-4">Update</button>

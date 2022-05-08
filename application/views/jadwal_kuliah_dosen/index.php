@@ -8,7 +8,9 @@
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
-
+ 
+    <?php echo anchor('jadwal_kuliah_dosen/matakuliah_dosen', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye fa-sm"></i> Lihat Matakuliah Dosen</button>') ?>
+    
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

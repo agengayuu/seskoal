@@ -80,28 +80,25 @@ class Profile_dosen extends CI_Controller{
             $jk                 = $this->input->post('jk');
             $agama              = $this->input->post('agama');
             $alamat             = $this->input->post('alamat');
-            $foto_hidden        = $this->input->post('foto_hidden', NULL);
             $foto               = $_FILES['userfile']['name'];
-            if ($foto = ''){
+            if ($foto){
                 $config['upload_path']      = './assets/uploads/';
-                $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
+                $config['allowed_types']    = 'jpg|png|jpeg|tiff';
                 $config['max_size']         = 2048;
                 $config['file_name']        = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
 
                 $this->load->library('upload', $config);
 
-                if (@$_FILES['foto']['name'] != null) {
-                    if (!$this->upload->do_upload('foto')) {
-                        echo 'Gagal Upload';
-                        die();
+                
+                    if($this->upload->do_upload('userfile')){
+                        $userfile = $this->upload->data('file_name');
+                        $this->db->set('foto', $userfile);
                     } else {
-                        $foto = $this->upload->data('file_name');
+                        echo "Gagal Upload";
                     }
-                }
                 }
                 
                 $data = array(
-                    'foto' => ($foto == '') ? $foto_hidden :  $foto,
                     'nip'               => $nip,
                     'nik'               => $nik,
                     'npwp'              => $npwp,
@@ -116,26 +113,15 @@ class Profile_dosen extends CI_Controller{
                     'jk'                => $jk,
                     'agama'             => $agama,
                     'alamat'            => $alamat,
-                    'foto'              => $foto
                     
                     
-                );
-
-                $data2 = array (
-                    'foto'              =>$foto,
-                    'email'             =>$email
                 );
 
                 $where = array( 
                     'id_dosen' => $id_dosen
                 );
-
-                $where2 = array(
-                    'username' => $nip
-                );
     
                 $this->m_profil_dosen->update($where, $data, 'tbl_dosen');
-                $this->m_profil_dosen->insert($where2, $data2, 'user');
                 $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                 Data berhasil di Update. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');

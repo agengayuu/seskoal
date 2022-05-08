@@ -33,6 +33,21 @@ class Jadwal_kuliah_dosen extends CI_Controller
         $this->load->view('templates_dosen/footer'); 
     }
 
+    public function matakuliah_dosen(){
+        $data['title'] = 'Matakuliah Dosen';
+
+        $data['user'] = $this->db->get_where('user', ['username'=>$this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
+
+        $query = $this->m_jadwal_kuliah_dosen->getmatakuliah();
+        $data['matakuliah'] = $query;
+
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        $this->load->view('jadwal_kuliah_dosen/matakuliah_dosen',$data);
+        $this->load->view('templates_dosen/footer'); 
+        
+    }
+
 
 
 
