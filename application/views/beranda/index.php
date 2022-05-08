@@ -58,7 +58,7 @@
                         <div class="swiper-slide card">
                             <div class="card-content">
                                 <div class="image">
-                                    <img  src="<?= base_url('./assets/file/' . $brt->dokumen) ?>" alt="" class="first-news" style="height:auto">
+                                    <img  src="<?= base_url('./assets/uploads/' . $brt->dokumen) ?>" alt="" class="first-news" style="height:auto">
                                 </div>
                                 <div class="news-title">
                                     <span><b><?= $brt->judul_berita;?></b></span>
@@ -124,37 +124,19 @@
     </section>
     <!-- END Bantuan -->
 
-    <!-- Bantuan-->
+    <!-- Galeri-->
     <section id="gallery">
         <div class="container">
             <h3>Gallery</h3>
             <div class="slider-container">
                 <ul class="slider-list">
                     <li class="slider-item">
+                        <?php foreach($galeri as $g) { ?>
                         <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-1.png" alt="" class="img-slider">
+                            <img src="<?= base_url('./assets/uploads/' . $g->foto) ?>" alt="" class="img-slider">
                         </a>
+                        <?php } ?>
                     </li>
-                    <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-2.png" alt="" class="img-slider">
-                        </a>
-                    </li>
-                    <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-3.png" alt="" class="img-slider">
-                        </a>
-                    </li>
-                    <!-- <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-4.png" alt="" class="img-slider">
-                        </a>
-                    </li>
-                    <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-5.png" alt="" class="img-slider">
-                        </a>
-                    </li> -->
                 </ul>
                 <div class="slider-arrows">
                     <img src="<?= base_url(); ?>assets/assets/images/arr-left.png" alt="" class="slider-arrow-prev">
@@ -163,7 +145,7 @@
             </div>
         </div>
     </section>
-    <!-- END Bantuan -->
+    <!-- END Galeri -->
 
     <!-- Download Manual-->
     <section id="download">

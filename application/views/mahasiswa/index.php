@@ -10,10 +10,8 @@
     <?php echo $this->session->flashdata('pesan') ?>
 
     <?php echo anchor('mahasiswa/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Mahasiswa</button>') ?>
-    <?php echo anchor('mahasiswa/csv', '<button class="btn btn-sm btn-warning mb-3"><i class="fas fa-plus fa-sm"></i> Import CSV</button>') ?>
-					<label>Pilih File Excel</label>
-					<input type="file" name="fileExcel">
-
+    <button type="button" class="btn btn-sm btn-warning mb-3" data-toggle="modal" data-target="#exampleModal"> Import CSV</button>
+    
     <!--table -->
     <!-- <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -64,7 +62,7 @@
                                 <td><?= $s->email ?></td>
 
                                 <td> <?php echo anchor('mahasiswa/admindetail/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>') ?>
-                                    <?php echo anchor('mahasiswa/adminedit/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                    <?php echo anchor('mahasiswa/adminedit/' . $s->id_mahasiswa, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
                                     <?php echo anchor('mahasiswa/adminhapus/' . $s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?>
                                 </td>
 
@@ -79,6 +77,46 @@
     </div>
 </div>
 
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+        <form action="<?php echo base_url('mahasiswa/importcsv'); ?>" class="horizontal-form" method="post" enctype="multipart/form-data">
+        <div class="modal-header" style="background-color:#3f6096;">
+            <h5 class="modal-title" id="exampleModalLabel"><font color="white">Form import data mahasiswa via File CSV</font></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label class="control-label">Upload File CSV</label>
+                        <input type="file" name="filecsv" id="filecsv" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <HR>
+                <br>
+                contoh file csv bisa klik <a target="_blank" href="<?php echo base_url('assets/siswa.csv'); ?>">disini</a>					
+                <br/>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" name="import" class="btn btn-primary">Import</button>
+        </div>
+        </form>
+        </div>
+  </div>
+  
+</div>
+
+
+<form action="<?php echo base_url('siswa/simpancsv'); ?>" class="horizontal-form" method="post" enctype="multipart/form-data">
+                                       
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>

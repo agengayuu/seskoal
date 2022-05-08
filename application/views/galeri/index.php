@@ -1,19 +1,19 @@
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Berita
+            Galeri
         </div>
     </div>
 
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('berita/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Berita</button>') ?>
+    <?php echo anchor('galeri/tambah', '<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Galeri</button>') ?>
 
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Daftar Berita</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Daftar Galeri</h6>
         </div>
 
         <div class="card-body">
@@ -22,10 +22,8 @@
                     <thead>
                         <tr style="text-align: center">
                             <th>No</th>
-                            <th>Judul Berita</th>
-                            <th>Isi Berita</th>
-                            <th>Gambar</th>
-                            <th>link</th>
+                            <th>Nama Galeri</th>
+                            <th>Foto</th>
                             <th>Tanggal Pembuatan</th>
                             <th>Aksi</th>
                         </tr>
@@ -33,21 +31,18 @@
                     <tbody>
                         <?php
                         $no = 1;
-                        foreach ($berita as $b) : ?>
+                        foreach ($galeri as $g) : ?>
                             <tr>
                                 <td style="text-align: center"><?php echo $no++ ?></td>
-                                <td><?= $b->judul_berita ?></td>
-                                <td><?= $b->isi?></td>
-                                <td><?= $b->dokumen?></td>
-                                 <td>
-                                    <img src="<?= base_url('./assets/uploads/' . $b->dokumen) ?>" class="img-fluid" alt="avatar" style="width: 80px">
+                                <td><?= $g->nama_kegiatan ?></td>
+                                <td>
+                                    <img src="<?= base_url('./assets/uploads/' . $g->foto) ?>" class="img-fluid" alt="avatar" style="width: 80px">
                                 </td>
-                                <td><?= $b->link?></td>
-                                <td style="text-align: center"><?= date('d-m-Y',strtotime($b->created_at)); ?></td>
+                                <td style="text-align: center"><?= date('d-m-Y',strtotime($g->created_at)); ?></td>
                                 <center>
                                 </td>
-                                    <td style="text-align: center"> <?php echo anchor('berita/edit/' . $b->id_berita, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                    <?php echo anchor('berita/hapus/' . $b->id_berita, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                    <td style="text-align: center"> <?php echo anchor('galeri/edit/' . $g->id_galeri, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                    <?php echo anchor('galeri/hapus/' . $g->id_galeri, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
                                 </center>
                             </tr>
                         <?php
