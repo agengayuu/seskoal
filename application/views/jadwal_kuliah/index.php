@@ -54,7 +54,6 @@
                                         <td><?= $jdw->tema ?></td>
                                         <td><?= $jdw->nama_ruang ?></td>
                                         <td><?= $jdw->keterangan ?></td>
-
                                         <td width="20px"> <?php echo anchor('jadwal_kuliah/edit/' . $jdw->id_jadwal_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
                                             <?php echo anchor('jadwal_kuliah/hapus/' . $jdw->id_jadwal_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
                                     </tr>

@@ -37,12 +37,15 @@ class Jadwal_kuliah extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $diklatnya =  $this->db->query("select * from tbl_diklat")->result();
-        $matkulnya =  $this->db->query("select * from tbl_mata_kuliah")->result();
-        $dosennya = $this->db->query("select * from tbl_dosen")->result();
+        $matkulnya =  $this->db->query("select tbl_mata_kuliah.*, tbl_dosen.*
+                                         from tbl_mata_kuliah
+                                         join tbl_dosen 
+                                         on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen")->result();
+        // $dosennya = $this->db->query("select * from tbl_dosen")->result();
         $ruangnya = $this->db->query("select * from tbl_ruang")->result();
         $data['diklat'] = $diklatnya;
         $data['matkul'] = $matkulnya;
-        $data['dosen'] =  $dosennya;
+        // $data['dosen'] =  $dosennya;
         $data['ruang'] =  $ruangnya;
 
         $this->load->view('jadwal_kuliah/tambah', $data);
@@ -72,7 +75,7 @@ class Jadwal_kuliah extends CI_Controller
     
             $diklat = $this->input->post('id_diklat');
             $matkul = $this->input->post('id_mata_kuliah');
-            $dosen = $this->input->post('id_dosen');
+            // $dosen = $this->input->post('id_dosen');
             // $kode = $this->input->post('kode_jadwal');
             $tgl = $this->input->post('tanggal');
             $waktu_mulai = $this->input->post('waktu_mulai');
@@ -89,7 +92,7 @@ class Jadwal_kuliah extends CI_Controller
             $data = array(
                 'id_diklat' => $diklat,
                 'id_mata_kuliah' => $matkul,
-                'id_dosen' => $dosen,
+                // 'id_dosen' => $dosen,
                 // 'kode_jadwal' => $kode,
                 'tanggal' => date('Y-m-d', strtotime($tgl)),
                 'waktu_mulai' => $waktu_mulai,
@@ -145,12 +148,17 @@ class Jadwal_kuliah extends CI_Controller
 
         // print_r($id); die;
         $diklatnya =  $this->db->query("select * from tbl_diklat")->result();
-        $matkulnya =  $this->db->query("select * from tbl_mata_kuliah")->result();
-        $dosennya = $this->db->query("select * from tbl_dosen")->result();
+        $matkulnya =  $this->db->query("select tbl_mata_kuliah.*, tbl_dosen.nama
+                                         from tbl_mata_kuliah
+                                         join tbl_dosen 
+                                         on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen")->result();
+        // echo "<pre>";
+        // print_r($matkulnya);die;
+        // $dosennya = $this->db->query("select * from tbl_dosen")->result();
         $ruangnya = $this->db->query("select * from tbl_ruang")->result();
         $data['diklat'] = $diklatnya;
         $data['matkul'] = $matkulnya;
-        $data['dosen'] =  $dosennya;
+        // $data['dosen'] =  $dosennya;
         $data['ruang'] =  $ruangnya;
 
         $jdw = $this->db->query("select * from tbl_jadwal_kuliah where id_jadwal_kuliah ='" . $id . "'")->result();
@@ -175,12 +183,15 @@ class Jadwal_kuliah extends CI_Controller
     
             $id = $this->input->post('id_jadwal_kuliah');
             $diklatnya =  $this->db->query("select * from tbl_diklat")->result();
-            $matkulnya =  $this->db->query("select * from tbl_mata_kuliah")->result();
-            $dosennya = $this->db->query("select * from tbl_dosen")->result();
+            $matkulnya =  $this->db->query("select tbl_mata_kuliah.*, tbl_dosen.*
+                                         from tbl_mata_kuliah
+                                         join tbl_dosen 
+                                         on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen")->result();
+            // $dosennya = $this->db->query("select * from tbl_dosen")->result();
             $ruangnya = $this->db->query("select * from tbl_ruang")->result();
             $data['diklat'] = $diklatnya;
             $data['matkul'] = $matkulnya;
-            $data['dosen'] =  $dosennya;
+            // $data['dosen'] =  $dosennya;
             $data['ruang'] =  $ruangnya;
     
             $jdw = $this->db->query("select * from tbl_jadwal_kuliah where id_jadwal_kuliah ='" . $id . "'")->result();
@@ -197,7 +208,7 @@ class Jadwal_kuliah extends CI_Controller
             $id = $this->input->post('id_jadwal_kuliah');
             $diklat = $this->input->post('id_diklat');
             $matkul = $this->input->post('id_mata_kuliah');
-            $dosen = $this->input->post('id_dosen');
+            // $dosen = $this->input->post('id_dosen');
             // $kode = $this->input->post('kode_jadwal');
             $tgl = $this->input->post('tanggal');
             $waktu_mulai = $this->input->post('waktu_mulai');
@@ -214,7 +225,7 @@ class Jadwal_kuliah extends CI_Controller
             $data = array(
                 'id_diklat' => $diklat,
                 'id_mata_kuliah' => $matkul,
-                'id_dosen' => $dosen,
+                // 'id_dosen' => $dosen,
                 // 'kode_jadwal' => $kode,
                 'tanggal' => date('Y-m-d', strtotime($tgl)),
                 'waktu_mulai' => $waktu_mulai,
@@ -242,6 +253,7 @@ class Jadwal_kuliah extends CI_Controller
 
     public function hapus($id)
     {
+
         $this->db->query("delete from tbl_jadwal_kuliah where id_jadwal_kuliah ='" . $id . "'");
 
         redirect('jadwal_kuliah', 'refresh');
