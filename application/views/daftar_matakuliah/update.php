@@ -12,7 +12,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Update Paket Evaluasi </h6>
         </div>
 
-        <form method="post" action="<?php echo base_url('daftar_matakuliah/update_aksi')?>">
+        <form method="post" action="<?php echo base_url('daftar_matakuliah/updateEval')?>">
 
                 <div class="card-body">
                     <div class="form-group row">
@@ -41,6 +41,9 @@
                         </div>
                     </div>
                 </div>  
+                
+            <input type="hidden" name="id_paket_evaluasi" value="<?= $id_eval; ?>">
+            <input type="hidden" name="id_mata_kuliah" value="<?= $id_matkul; ?>">
 
             <button type="submit" class="btn btn-info mb-4 ml-4">Update</button>
             <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>

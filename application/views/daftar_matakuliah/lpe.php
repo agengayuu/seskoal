@@ -60,9 +60,12 @@
                                                 ?>
                                             </td>
                                             
-                                            <td width="100px"> <?php echo anchor('daftar_matakuliah/update/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?>
-                                            <?php echo anchor('daftar_matakuliah/edit/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-pen"></i></div>' ) ?>
-                                            <?php echo anchor('daftar_matakuliah/delete/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                            <td width="100px">
+                                                <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <?php echo anchor('daftar_matakuliah/detail/'.$pe->id_paket_evaluasi.'/'.$pe->id_mata_kuliah, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?>
+                                                    <?php echo anchor('daftar_matakuliah/update/'.$pe->id_paket_evaluasi.'/'.$pe->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                                    <?php echo anchor('daftar_matakuliah/delete/'.$pe->id_paket_evaluasi, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                                </div>
                                             </td>
                                         </tr>
                                             <?php

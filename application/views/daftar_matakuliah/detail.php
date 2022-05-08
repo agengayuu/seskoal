@@ -4,7 +4,7 @@
         <i class="fas fa-plus fa-sm"></i> Tambah Paket Evaluasi
         </div>
     </div>
-    
+
 
     <?php echo $this->session->flashdata('pesan') ?>
 
@@ -14,42 +14,9 @@
             <h6 class="m-0 font-weight-bold text-primary">Daftar Paket Evaluasi </h6>
         </div>
 
-        <form action="<?php echo base_url('daftar_matakuliah/simpan') ?>" method="post">
-            <div class="card-body">
-                <div class="form-group row">
-                    <label class="col-sm-2 ml-4 col-form-label">Nama Paket<i style="color:red">*</i></label>
-                    <div class="col-sm-9">
-                        <input type="text" name="nama_paket_evaluasi" id="nama_paket_evaluasi" placeholder="Masukkan Nama Paket" class="form-control" required>
-                    </div>
-                </div>
-                <!-- <div class="form-group row">
-                    <label class="col-sm-2 ml-4 col-form-label">Tanggal Ujian<i style="color:red">*</i></label>
-                    <div class="col-sm-9">
-                        <input type="date" name="tanggal_ujian" id="tanggal_ujian" class="form-control">
-                    </div>
-                </div> -->
-                <div class="form-group row">
-                    <label class="col-sm-2 ml-4 col-form-label">Jam Mulai<i style="color:red">*</i></label>
-                    <div class="col-sm-9">
-                        <input type="datetime-local" name="waktu_evaluasi_mulai" id="waktu_evaluasi_mulai" class="form-control" required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 ml-4 col-form-label">Jam Selesai<i style="color:red">*</i></label>
-                    <div class="col-sm-9">
-                        <input type="datetime-local" name="waktu_evaluasi_selesai" id="waktu_evaluasi_selesai" class="form-control" required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 ml-4 col-form-label">Durasi Waktu<i style="color:red">*</i></label>
-                    <div class="col-sm-9">
-                        <input type="text" name="durasi_ujian" id="durasi_ujian" placeholder="Masukkan lama waktu ujian dalam menit" class="form-control" required>
-                    </div>
-                </div>
-            </div>     
-
+        <form action="<?php echo base_url('daftar_matakuliah/addMasterEval') ?>" method="post">   
                 <div class="card-body">
-                    <!-- <div class="table-responsive">
+                    <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
@@ -67,20 +34,24 @@
                                 <tr>
                                     <td width="20px"><?php echo $no++ ?></td>
                                     <td><?= $ms->pertanyaan ?></td>
-                                    
+
                                     <td>
-                                        <input type="checkbox" name="id_master_soal[]" value="<?php echo $ms->id_master_soal; ?>"/>
+                                        <input type="checkbox" name="id_master_soal[]" value="<?php echo $ms->id_master_soal; ?>"
+                                        <?php if(in_array($ms->id_master_soal, $checkEval)){
+                                            echo "checked";
+                                        } else{
+                                            echo "";
+                                        }; ?>/>
                                     </td>
-                                    
+
                                 </tr>
                                         <?php
                                     endforeach
                                     ?>
                             </tbody>
-                        </table> -->
-                    <input type="hidden" name="id_mata_kuliah" value="<?= $id_mata_kuliah; ?>">
-                    
+                        </table>
                     </div>
+                    <input type="hidden" name="id_eval" value="<?= $id_eval; ?>">
                     <button type="submit" class="btn btn-primary mb-4 mt-4">Simpan</button>
                     <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>
                 </div>
@@ -118,7 +89,7 @@
   $('.select2').select2();
 
 	$('.alert-dismissible').alert().delay(3000).slideUp('slow');
-  
+
 </script>
 
 <!-- <script type="text/javascript">
