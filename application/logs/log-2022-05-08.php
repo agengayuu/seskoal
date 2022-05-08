@@ -1053,3 +1053,859 @@ ERROR - 2022-05-08 04:04:25 --> 404 Page Not Found: Js/sb-admin-2.min.js
 ERROR - 2022-05-08 04:04:25 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-05-08 04:04:25 --> 404 Page Not Found: Js/demo
 ERROR - 2022-05-08 04:04:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:10 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:12 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:13 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:14 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:25 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:29 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:30 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:38 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:45 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:46 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:05:54 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:05:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:05:54 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:05:55 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:05:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:55 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:05:55 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:05:55 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:05:55 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:01 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 45
+ERROR - 2022-05-08 04:06:05 --> Severity: Notice --> Undefined property: stdClass::$durasi_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\peserta_evaluasi\index.php 46
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:08 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:13 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:31 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:37 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:43 --> Severity: Notice --> Undefined variable: menunya C:\laragon\www\seskoal-siak\seskoal\application\views\menu\tambahsub.php 14
+ERROR - 2022-05-08 04:06:43 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\menu\tambahsub.php 14
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:43 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:51 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:54 --> Severity: Notice --> Undefined variable: menunya C:\laragon\www\seskoal-siak\seskoal\application\views\menu\tambahsub.php 14
+ERROR - 2022-05-08 04:06:54 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\menu\tambahsub.php 14
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:06:54 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:06:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:03 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:07:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:06 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:07:06 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:07:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:07 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:07:07 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:07:07 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:28 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:07:37 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:07:41 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:07:51 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:08:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:07 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:08 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:08:09 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:08:09 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:20 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:08:21 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:08:21 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:21 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:08:21 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:21 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:08:21 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:08:26 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:08:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:09:25 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:09:29 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:29 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:29 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:29 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:09:29 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:09:30 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:09:30 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:09:30 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:09:30 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:30 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:34 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:35 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:09:45 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:09:52 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:09:52 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:09:52 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:09:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:09:53 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:09:53 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:09:53 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:10:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:10:14 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:10:14 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:10:14 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:10:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:10:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:10:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:12:43 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:12:52 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:12:52 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:12:52 --> Severity: Notice --> Undefined index: nama_diklat C:\laragon\www\seskoal-siak\seskoal\application\views\jadwal_kuliah_dosen\matakuliah_dosen.php 34
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:12:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:14:46 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:14:52 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:14:52 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:14:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:14:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:06 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:15:12 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:15:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:13 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:15 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:16 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:20 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:22 --> Severity: Notice --> Undefined variable: title C:\laragon\www\seskoal-siak\seskoal\application\views\templates_dosen\header.php 12
+ERROR - 2022-05-08 04:15:22 --> Severity: Notice --> Trying to get property 'id_mata_kuliah' of non-object C:\laragon\www\seskoal-siak\seskoal\application\views\master_soal\update.php 20
+ERROR - 2022-05-08 04:15:22 --> Severity: Notice --> Trying to get property 'id_mata_kuliah' of non-object C:\laragon\www\seskoal-siak\seskoal\application\views\master_soal\update.php 20
+ERROR - 2022-05-08 04:15:22 --> Severity: Notice --> Trying to get property 'id_mata_kuliah' of non-object C:\laragon\www\seskoal-siak\seskoal\application\views\master_soal\update.php 20
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:22 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:15:56 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:15:58 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:00 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:09 --> Severity: Notice --> Undefined variable: mastersoal C:\laragon\www\seskoal-siak\seskoal\application\views\daftar_matakuliah\tambah.php 66
+ERROR - 2022-05-08 04:16:09 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\daftar_matakuliah\tambah.php 66
+ERROR - 2022-05-08 04:16:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:10 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:11 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:17 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:24 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:24 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:24 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:24 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:24 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:25 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:25 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:25 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:32 --> Severity: Notice --> Undefined variable: mastersoal C:\laragon\www\seskoal-siak\seskoal\application\views\daftar_matakuliah\tambah.php 66
+ERROR - 2022-05-08 04:16:32 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\daftar_matakuliah\tambah.php 66
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:32 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:35 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:35 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:38 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:41 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:41 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:42 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:43 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:43 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:16:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:43 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:43 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:43 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:16:47 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:04 --> Severity: Notice --> Undefined variable: mastersoal C:\laragon\www\seskoal-siak\seskoal\application\views\daftar_matakuliah\tambah.php 66
+ERROR - 2022-05-08 04:17:04 --> Severity: Warning --> Invalid argument supplied for foreach() C:\laragon\www\seskoal-siak\seskoal\application\views\daftar_matakuliah\tambah.php 66
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:04 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:05 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:17:05 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:05 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:16 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:17:18 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:17:25 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:25 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:17:28 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:30 --> Severity: Notice --> Undefined property: stdClass::$angkatan C:\laragon\www\seskoal-siak\seskoal\application\views\penilaian_tahun\tahunakademik.php 44
+ERROR - 2022-05-08 04:17:30 --> Severity: Notice --> Undefined property: stdClass::$angkatan C:\laragon\www\seskoal-siak\seskoal\application\views\penilaian_tahun\tahunakademik.php 44
+ERROR - 2022-05-08 04:17:30 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:30 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:17:31 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:18:04 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:18:07 --> Severity: Notice --> Undefined property: stdClass::$angkatan C:\laragon\www\seskoal-siak\seskoal\application\views\penilaian_tahun\tahunakademik.php 44
+ERROR - 2022-05-08 04:18:07 --> Severity: Notice --> Undefined property: stdClass::$angkatan C:\laragon\www\seskoal-siak\seskoal\application\views\penilaian_tahun\tahunakademik.php 44
+ERROR - 2022-05-08 04:18:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:22:37 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$tanggal_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 46
+ERROR - 2022-05-08 04:22:42 --> Severity: Notice --> Undefined property: stdClass::$jam_ujian C:\laragon\www\seskoal-siak\seskoal\application\views\hasil_mahasiswa_evaluasi\index.php 47
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:22:42 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:23:33 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:24:57 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:06 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:25:12 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:14 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:15 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:25:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:25 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:25:26 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Vendor/bootstrap
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Vendor/jquery
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Js/sb-admin-2.min.js
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Vendor/jquery-easing
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Js/demo
+ERROR - 2022-05-08 04:29:00 --> 404 Page Not Found: Vendor/datatables
+ERROR - 2022-05-08 04:30:45 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:30:48 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:30:50 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:30:58 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:31:02 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:31:04 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:31:07 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:31:23 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-08 04:31:25 --> Query error: Table 'seskoal.tbl_galeri' doesn't exist - Invalid query: SELECT *
+FROM `tbl_galeri`
+ORDER BY `id_galeri` DESC
+ LIMIT 4

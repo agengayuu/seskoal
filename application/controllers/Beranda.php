@@ -10,14 +10,13 @@ class Beranda extends CI_Controller {
         $this->load->library('session');
         $this->load->helper('download');
         //session_start();
-        is_logged_in('1');
+        // is_logged_in('1');
     }
     
     public function index() {
 
         $data['title'] = 'Beranda';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         // $data['berita'] = $this->db->query("Select * from tbl_berita")->result();
 
         // berita terbaru
