@@ -18,11 +18,7 @@
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <?php if($dt->foto!= null) { ?>
-<<<<<<< HEAD
                                     <img src="<?=base_url('assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
-=======
-                                    <img src="<?=base_url('./assets/uploads/'.$user['foto'])?>" class="img-fluid" alt="avatar" style="width: 200px">
->>>>>>> 054f2bae39477f6c65a4448770ede45b62965d46
                                 <?php } ?>
                             </div>
  
