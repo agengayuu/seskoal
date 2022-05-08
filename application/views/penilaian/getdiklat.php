@@ -34,7 +34,7 @@
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $d->nama_diklat ?></td>
                             <td>
-                                 <?php echo anchor('penilaian/getmatkul/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
+                                 <?php echo anchor('penilaian/getakademik/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
                                  <?php echo anchor('penilaian/getrekap/'.$d->id_diklat, '<div class="btn btn-sm btn-success">Rekapitulasi</div>' ) ?> 
                         </tr>
                                 <?php

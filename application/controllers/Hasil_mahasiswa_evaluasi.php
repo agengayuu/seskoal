@@ -35,6 +35,7 @@ class Hasil_mahasiswa_evaluasi extends CI_Controller{
                                     join tbl_profil_mahasiswa on tbl_profil_mahasiswa.id_mahasiswa = tbl_mahasiswa_evaluasi.id_mahasiswa
                                     join tbl_mata_kuliah on tbl_mata_kuliah.id_mata_kuliah = tbl_mahasiswa_evaluasi.id_mata_kuliah")->result();
 
+                                    // print_r($query);die;
         $data['hasil'] = $query;
 
         $this->load->view('hasil_mahasiswa_evaluasi/index', $data); 
