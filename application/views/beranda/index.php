@@ -58,7 +58,7 @@
                         <div class="swiper-slide card">
                             <div class="card-content" style="height:310px" align="center">
                                 <div class="image">
-                                    <img  src="<?= base_url('./assets/uploads/' . $brt->dokumen) ?>" alt="" class="first-news" style="width:190px;height:190px;">
+                                    <img  src="<?= base_url('./assets/uploads/' . $brt->dokumen) ?>" alt="" class="first-news" style="width:265px;height:190px;">
                                 </div>
                                 <div class="news-title">
                                     <span><b><?= $brt->judul_berita;?></b></span>
