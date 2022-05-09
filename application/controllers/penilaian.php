@@ -97,7 +97,7 @@ class Penilaian extends CI_Controller
 
     }
 
-    public function getrekap($id){
+    public function getrekap_mhs($id){
 
         $data['title'] = 'Penilaian';
         $data['user'] = $this->db->get_where('user', ['username'=> 
@@ -108,8 +108,23 @@ class Penilaian extends CI_Controller
         $mhs = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
         $data['mhs'] = $mhs;
 
-        $this->load->view('penilaian/getrekap',$data);
+        $this->load->view('penilaian/getrekap_mhs',$data);
         $this->load->view('templates_dosen/footer'); 
+    }
+
+    public function rekap_diklat(){
+        $data['title'] = 'Penilaian';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+
+        $diklat = $this->db->query("select * from tbl_diklat")->result();
+        $data['diklat'] = $diklat;
+
+        $this->load->view('penilaian/rekap_diklat',$data);
+        $this->load->view('templates_dosen/footer'); 
+
     }
 
 
