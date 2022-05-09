@@ -188,6 +188,7 @@ class Profil_mahasiswa_akses extends CI_Controller
         $agama      = $this->input->post('agama', NULL);
         $id_akademik    = $this->input->post('id_akademik', NULL);
         $kewarganegaraan = $this->input->post('kewarganegaraan', NULL);
+        $nim = $this->input->post('nim', NULL);
         $nik = $this->input->post('nik', NULL);
         $npwp = $this->input->post('npwp', NULL);
         $jalan = $this->input->post('jalan', NULL);
@@ -227,9 +228,17 @@ class Profil_mahasiswa_akses extends CI_Controller
             'jabatan' =>$jabatan, //tambah ini
             'id_diklat' =>$id_diklat, //tambah ini
         );
-        //  echo "<pre>";print_r($data);die;
+
         $this->db->where('id_mahasiswa', $id_mahasiswa);
         $this->db->update('tbl_profil_mahasiswa', $data);
+
+        $data2 = array(
+            'foto' => ($foto == '') ? $foto_hidden :  $foto
+        );
+        $this->db->where('username', $nim);
+        $this->db->update('user', $data2);
+
+        //  echo "<pre>";print_r($data);die;
 
         $jenis = ['AYAH', 'IBU'];
 
@@ -273,6 +282,18 @@ class Profil_mahasiswa_akses extends CI_Controller
                                                             Data berhasil di Update. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                             <span aria-hidden="true">&times;</span> </button></div>');
         redirect('profil_mahasiswa_akses');
+    }
+
+    public function _rules(){
+        // $this->form_validation->set_rules('id_ruang', 'id_ruang', 'required', ['required' => 'Id Ruang wajib diisi!']);
+        $this->form_validation->set_rules('nama_ruang', 'nama_ruang', 'required' , ['required' => 'Nama Ruang wajib diisi!']);
+        $this->form_validation->set_rules('id_jenis_ruang', 'id_jenis_ruang', 'required' , ['required' => 'Jenis Ruang wajib diisi!']);
+        $this->form_validation->set_rules('kapasitas', 'kapasitas', 'required|numeric' , ['required' => 'Kapasitas wajib diisi!',
+                                                                                            'numeric' => 'Kapasitas wajib di isi dengan angka']);
+        $this->form_validation->set_rules('gedung', 'gedung', 'required' , ['required' => 'Gedung wajib diisi!']);
+        $this->form_validation->set_rules('lantai', 'lantai', 'required|numeric' , ['required' => 'Lantai wajib diisi!',
+                                                                                            'numeric' => 'Lantai wajib di isi dengan angka']);
+        $this->form_validation->set_rules('keterangan', 'keterangan', 'required' , ['required' => 'Keterangan wajib diisi!']);
     }
 
 }
