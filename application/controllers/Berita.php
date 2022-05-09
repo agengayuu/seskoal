@@ -55,6 +55,7 @@ class Berita extends CI_Controller
         } else {
             $judul_berita = $this->input->post('judul_berita', TRUE);
             $isi   = $this->input->post('isi', TRUE);
+            $link   = $this->input->post('link', TRUE);
             $dokumen             = $_FILES['dokumen'];
             if ($dokumen = '') {
             } else {
@@ -77,6 +78,7 @@ class Berita extends CI_Controller
             $data = array(
                 'judul_berita' => $judul_berita,
                 'isi' => $isi,
+                'link' => $link,
                 'dokumen' => $dokumen,
                 'created_at' => date('Y-m-d'),
             );
@@ -111,6 +113,7 @@ class Berita extends CI_Controller
     {
             $judul_berita = $this->input->post('judul_berita', TRUE);
             $isi   = $this->input->post('isi', TRUE);
+            $link   = $this->input->post('link', TRUE);
             $id_berita = $this->input->post('id_berita', TRUE);
             $dokumen               = $_FILES['dokumen']['name'];
             if  ($dokumen){
@@ -133,6 +136,7 @@ class Berita extends CI_Controller
         $data = array(
                 'judul_berita' => $judul_berita,
                 'isi' => $isi,
+                'link' => $link,
                 'dokumen' => $dokumen,
                 'created_at' => date('Y-m-d'),
             );

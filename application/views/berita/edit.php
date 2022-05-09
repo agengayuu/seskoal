@@ -29,6 +29,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Link<i style="color:red">*</i></label>
+                    <input name="link" class="form-control" id="link" value= "<?php echo $b->link; ?>" placeholder="Link"></input>
+                    <?php echo form_error('isi', '<div class="text-danger small ml-3">','</div>') ?>
+                </div>
+
+                <div class="form-group">
                      <div class="col-md-2">
                               <img src="<?php echo base_url().'assets/uploads/' .$b->dokumen ?>" style="width: 200px">
                             </div>
