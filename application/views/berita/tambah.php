@@ -26,9 +26,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Gambar<i> (Opsional)</i></label>
+                    <label>Link<i style="color:red">*</i></label>
+                    <input name="link" class="form-control" id="link" cols="30" rows="10" placeholder="Link"></input>
+                    <?php echo form_error('link', '<div class="text-danger small ml-3">','</div>') ?>
+                </div>
+
+                <div class="form-group">
+                    <label>Gambar<i style="color:red">*</i></label>
                     <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
-                    <label><i>hanya file ekstensi .png, .jpeg .pdf</i></label>
+                    <!-- <label><i>hanya file ekstensi .png, .jpeg .pdf</i></label> -->
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
