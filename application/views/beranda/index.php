@@ -64,7 +64,7 @@
                                     <span><b><?= $brt->judul_berita;?></b></span>
                                 </div>
                                 <div class="button">
-                                    <button class="selengkapnya"><a href="<?= $brt->link;?>" target="_blank">Selengkapnya<i class="fa-solid fa-arrow-right"></i></button>
+                                    <button class="selengkapnya"><a href="<?= $brt->link;?>" target="_blank">Selengkapnya<i class="fa-solid fa-arrow-right"></i></a></button>
                                 </div>
                             </div>
                         </div>
