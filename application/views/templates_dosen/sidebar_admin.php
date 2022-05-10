@@ -64,8 +64,11 @@
                     <?php
                     // echo "<pre>";
                     //      print_r($sm['url']);die;
+                    // var_dump($this->uri->uri_string());
+                    // var_dump($sm['url']);
                     ?>
-                    <li class="nav-item test">
+                   
+                    <li class="nav-item <?= $this->uri->uri_string() == $sm['url'] ? 'active' : '' ?>">
                         <a class="nav-link pb-0" href="<?= base_url() . $sm['url']; ?>">
                             <i class="<?= $sm['icon']; ?>"></i>
                             <span><?= $sm['title']; ?></span></a>

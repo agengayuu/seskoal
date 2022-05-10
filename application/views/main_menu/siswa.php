@@ -19,7 +19,7 @@
                                 </div>
                             </div>
                             <?php foreach ($pengumuman as $peng) { ?>
-                                <label>Tanggal <?= $peng->tgl_pembuatan; ?></label>
+                                <label>Tanggal <?= date("d-m-Y", strtotime($peng->tgl_pembuatan)); ?></label>
                                 <h5 class="card-title" style="font-weight:bold; color:blue;"><?= $peng->judul_pengumuman; ?></h5>
                                 <p class="card-text"><?= $peng->isi_pengumuman ?>
                                 </p>
@@ -34,10 +34,10 @@
                             <?php foreach ($jadwal as $key => $jad) { ?>
                                 <?php
                                 if ($key == 0) { ?>
-                                    <p class="card-text"><?= $jad->tanggal; ?></p>
+                                    <p class="card-text"><?= date("d-m-Y", strtotime($jad->tanggal)); ?></p>
                                 <?php }
                                 if ($key != 0 && $jadwal[$key - 1]->tanggal != $jad->tanggal) { ?>
-                                    <p class="card-text"><?= $jad->tanggal; ?></p>
+                                    <p class="card-text"><?= date("d-m-Y", strtotime($jad->tanggal)); ?></p>
                                 <?php } ?>
 
                             <?php
@@ -56,7 +56,7 @@
                                             </div>
                                             <div>
                                                 <div class="tw-flex tw-items-center tw-mb-2">
-                                                    <h6 class="font-14px tw-text-sp-muted-text">' . $jad->tanggal . '</h6>
+                                                    <h6 class="font-14px tw-text-sp-muted-text">' . date("d-m-Y", strtotime($jad->tanggal)) . '</h6>
                                                 </div>
                                                 <div class="tw-flex tw-items-center tw-mb-2">
                                                     <div class="bg-icon_oclock tw-mr-2"></div>

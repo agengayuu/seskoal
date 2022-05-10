@@ -24,14 +24,17 @@
                         <div class="form-group">
                             <label for="">Nama<i style="color:red">*</i></label>
                             <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" id="nama" value="<?php echo ($datadiri->nama) ? $datadiri->nama : '' ?>">
+                            <?php echo form_error('nama', '<div class="text-danger small ml-3">','</div>') ?>
                         </div>
                         <div class="form-group">
                             <label for="">Tempat Lahir</label>
                             <input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan Tempat Lahir" id="tempat_lahir" value="<?php echo ($datadiri->tempat_lahir) ? $datadiri->tempat_lahir : '' ?>">
+                            <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3">','</div>') ?>
                         </div>
                         <div class="form-group">
                             <label for="">Tanggal Lahir</label>
                             <input type="date" name="tgl_lahir" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir" value="<?php echo ($datadiri->tgl_lahir) ? $datadiri->tgl_lahir : '' ?>">
+                            <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3">','</div>') ?>
                         </div>
                         <div class="radio-group">
                             <label for="">Jenis Kelamin</label>
@@ -51,7 +54,9 @@
                                     <img src="<?= base_url('/assets/uploads/' . $datadiri->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
                                 <?php } ?>
                                 <input type="file" name="foto" class="form-control" accept="image/*" value="">
+                                <label><i>hanya file ekstensi .png, .jpeg .jpg</i></label>
                                 <input type="hidden" name="foto_hidden" value="<?= ($datadiri->foto != '') ? $datadiri->foto : '' ?>">
+                                <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
                             </div>
                         </div>
                         <div class="form-group">
@@ -66,12 +71,12 @@
                                     <option value="Buddha" <?php echo ($datadiri->agama == 'Buddha') ? 'selected' : '' ?>>Buddha</option>
                                     <option value="Konghucu" <?php echo ($datadiri->agama == 'Konghucu') ? 'selected' : '' ?>>Konghucu</option>
                                 </select>
-                                <?php echo form_error('agama', '<div class="text-danger small ml-3"></div>') ?>
+                                <?php echo form_error('agama', '<div class="text-danger small ml-3">','</div>') ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Diklat</label>
-                            <select class="form-control" name='id_diklat' id='id_diklat'>
+                            <select class="form-control" name='id_diklat' id='id_diklat' readonly>
                                 <option value="" style="display:none;">-- Pilih Diklat --</option>
                                 <?php foreach($diklat as $val){ ?>
                                     <option value="<?php echo $val->id_diklat ?>" <?php echo ($datadiri->id_diklat == $val->id_diklat) ? 'selected' : '' ?>><?php echo $val->nama_diklat ?></option>
@@ -81,10 +86,11 @@
                         <div class="form-group">
                             <label for="">Angkatan</label>
                             <input type="text" name="angkatan" class="form-control" placeholder="Masukkan Angkatan" id="angkatan" value="<?php echo ($datadiri->angkatan) ? $datadiri->angkatan : '' ?>">
+                            <?php echo form_error('angkatan', '<div class="text-danger small ml-3">','</div>') ?>
                         </div>
                         <div class="form-group">
                             <label for="">Tahun Akademik</label>
-                            <select class="form-control" name='id_akademik' id='id_akademik' value="<?php echo ($datadiri->id_akademik) ? $datadiri->tgl_lahir : '' ?>" >
+                            <select class="form-control" name='id_akademik' id='id_akademik' value="<?php echo ($datadiri->id_akademik) ? $datadiri->tgl_lahir : '' ?>" readonly>
                                 <option value="" style="display:none;">-- Pilih Tahun Diklat --</option>
                                 <?php foreach($tahunakademik as $val){ ?>
                                     <option value="<?php echo $val->id_akademik ?>" <?php echo ($datadiri->id_akademik == $val->id_akademik) ? 'selected' : '' ?>><?php echo $val->tahun_akademik ?></option>
@@ -94,6 +100,7 @@
                         <div class="form-group">
                             <label for="">Jabatan</label>
                             <input type="text" name="jabatan" class="form-control" placeholder="Masukkan Jabatan" id="jabatan" value="<?php echo ($datadiri->jabatan) ? $datadiri->jabatan : '' ?>">
+                            <?php echo form_error('jabatan', '<div class="text-danger small ml-3">','</div>') ?>
                         </div>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -120,72 +127,85 @@
                                                                                     <label for="" class="col-sm-3 col-form-label">Kewarganegaraan</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="kewarganegaraan" class="form-control" placeholder="Masukkan Kewarganegaraan" id="kewarganegaraan" value="<?php echo ($datadiri->kewarganegaraan) ? $datadiri->kewarganegaraan : '' ?>">
+                                                                                        <?php echo form_error('kewarganegaraan', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">NIK</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="nik" class="form-control" placeholder="Masukkan NIK" id="nik" value="<?php echo ($datadiri->nik) ? $datadiri->nik : '' ?>">
+                                                                                        <?php echo form_error('nik', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">NPWP</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="npwp" class="form-control" placeholder="Masukkan NPWP" id="npwp" value="<?php echo ($datadiri->npwp) ? $datadiri->npwp : '' ?>">
+                                                                                        <label><i>Contoh format : 99.999.999.9-999.999</i></label>
+                                                                                        <?php echo form_error('npwp', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Jalan</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="jalan" class="form-control" placeholder="Masukkan Jalan" id="jalan" value="<?php echo ($datadiri->jalan) ? $datadiri->jalan : '' ?>">
+                                                                                        <?php echo form_error('jalan', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Dusun</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="dusun" class="form-control" placeholder="Masukkan Dusun" id="dusun"value="<?php echo ($datadiri->dusun) ? $datadiri->dusun : '' ?>">
+                                                                                        <?php echo form_error('dusun', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">RT</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="rt" class="form-control" placeholder="Masukkan RT" id="rt" value="<?php echo ($datadiri->rt) ? $datadiri->rt : '' ?>">
+                                                                                        <?php echo form_error('rt', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">RW</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="rw" class="form-control" placeholder="Masukkan RW" id="rw" value="<?php echo ($datadiri->rw) ? $datadiri->rw : '' ?>">
+                                                                                        <?php echo form_error('rw', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Kelurahan</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="kelurahan" class="form-control" placeholder="Masukkan Kelurahan" id="kelurahan" value="<?php echo ($datadiri->kelurahan) ? $datadiri->kelurahan : '' ?>">
+                                                                                        <?php echo form_error('kelurahan', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Kecamatan</i></label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="kecamatan" class="form-control" placeholder="Masukkan Kecamatan" id="kecamatan" value="<?php echo ($datadiri->kecamatan) ? $datadiri->kecamatan : '' ?>">
+                                                                                        <?php echo form_error('kecamatan', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Kode Pos</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="kode_pos" class="form-control" placeholder="Masukkan Kode Pos" id="kode_pos" value="<?php echo ($datadiri->kode_pos) ? $datadiri->kode_pos : '' ?>">
+                                                                                        <?php echo form_error('kode_pos', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Telepon</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="text" name="no_tlp" class="form-control" placeholder="Masukkan Telepon" id="no_tlp" value="<?php echo ($datadiri->no_tlp) ? $datadiri->no_tlp : '' ?>">
+                                                                                        <?php echo form_error('no_tlp', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label for="" class="col-sm-3 col-form-label">Email</label>
                                                                                     <div class="col-sm-6">
                                                                                         <input type="email" name="email" class="form-control" placeholder="Masukkan Email" id="email" value="<?php echo ($datadiri->email) ? $datadiri->email : '' ?>">
+                                                                                        <?php echo form_error('email', '<div class="text-danger small ml-3">','</div>') ?>
                                                                                     </div>
                                                                                 </div>
                                                                             </form>

@@ -23,11 +23,17 @@
         </div>
     </div>
 
-    <h3>
+    <!-- <h3>
         <center>Selamat Datang di Aplikasi Akademik SESKOAL</center>
-    </h3>
-    <br />
-    <div class="row">
+    </h3> -->
+
+    <div class="container-fluid">
+
+    <div class="align-items-center mb-4">
+        <center><h1 class="h3 mb-0 text-gray-800">Selamat Datang di Aplikasi Akademik SESKOAL</h1></center>
+    </div>
+
+    <div class="row d-flex justify-content-center">
         <!-- Ruangan Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
@@ -66,7 +72,7 @@
         </div>
 
         <!-- Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <!-- <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -81,10 +87,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <!-- <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -99,7 +105,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+    </div>
     </div>
 
     <div class="row">

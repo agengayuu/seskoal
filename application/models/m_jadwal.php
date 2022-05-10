@@ -10,15 +10,15 @@ class M_jadwal extends CI_Model{
     }
  
     public function getdata(){
-        $query = "select tbl_jadwal_kuliah.*, tbl_diklat.nama_diklat, tbl_mata_kuliah.nama_mata_kuliah, tbl_dosen.nama, tbl_ruang.nama_ruang
+        $query = "select tbl_jadwal_kuliah.*, tbl_diklat.nama_diklat, tbl_mata_kuliah.*, tbl_ruang.nama_ruang, tbl_dosen.nama
         from tbl_jadwal_kuliah join tbl_diklat 
         on tbl_jadwal_kuliah.id_diklat = tbl_diklat.id_diklat
         join tbl_mata_kuliah 
         on tbl_jadwal_kuliah.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
-        join tbl_dosen
-        on tbl_jadwal_kuliah.id_dosen = tbl_dosen.id_dosen
         join tbl_ruang
         on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
+        join tbl_dosen
+        on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen
         ";
 
         return $this->db->query($query)->result();
@@ -26,13 +26,11 @@ class M_jadwal extends CI_Model{
     }
 
     public function getmainmenu(){
-        $query = "select tbl_jadwal_kuliah.*, tbl_diklat.nama_diklat, tbl_mata_kuliah.nama_mata_kuliah, tbl_dosen.nama, tbl_ruang.nama_ruang
+        $query = "select tbl_jadwal_kuliah.*, tbl_diklat.nama_diklat, tbl_mata_kuliah.*, tbl_ruang.nama_ruang
         from tbl_jadwal_kuliah join tbl_diklat 
         on tbl_jadwal_kuliah.id_diklat = tbl_diklat.id_diklat
         join tbl_mata_kuliah 
         on tbl_jadwal_kuliah.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
-        join tbl_dosen
-        on tbl_jadwal_kuliah.id_dosen = tbl_dosen.id_dosen
         join tbl_ruang
         on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
         where tbl_jadwal_kuliah.tanggal >= CURDATE()

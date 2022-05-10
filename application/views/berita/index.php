@@ -25,7 +25,7 @@
                             <th>Judul Berita</th>
                             <th>Isi Berita</th>
                             <th>Gambar</th>
-                            <th>link</th>
+                            <th>Link</th>
                             <th>Tanggal Pembuatan</th>
                             <th>Aksi</th>
                         </tr>
@@ -38,7 +38,6 @@
                                 <td style="text-align: center"><?php echo $no++ ?></td>
                                 <td><?= $b->judul_berita ?></td>
                                 <td><?= $b->isi?></td>
-                                <td><?= $b->dokumen?></td>
                                  <td>
                                     <img src="<?= base_url('./assets/uploads/' . $b->dokumen) ?>" class="img-fluid" alt="avatar" style="width: 80px">
                                 </td>

@@ -14,7 +14,8 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="control-label col-md-8"><b>Diklat</b> <b><?php echo ": ".$diklat['nama_diklat']; ?></b></label><br />
+                                        <label class="control-label col-md-8"><b>Diklat</b> <b><?php echo ": ".$diklat->nama_diklat; ?></b></label><br />
+                                        <label class="control-label col-md-8"><b>Tahun Akademik </b> <b><?php echo ": ".$akademik->tahun_akademik; ?></b></label><br />
                                     </div>
                                 </div>
                             </div>
@@ -34,22 +35,22 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Nama Mata Kuliah</th>
-                                                    <th>SKS</th>
+                                                    <!-- <th>SKS</th> -->
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
                                                     $no =1;
-                                                    foreach ($matkul as $daf) : ?>
+                                                    foreach ($matkul as $mat) : ?>
                                                 <tr>
                                                     <td><?php echo $no++ ?></td>
-                                                    <td><?= $daf->nama_mata_kuliah ?></td>
-                                                    <td><?= $daf->sks ?></td>
+                                                    <td><?= $mat->nama_mata_kuliah ?></td>
+                                                    <!-- <td><?= $mat->sks ?></td> -->
                                             
                                                     <td> 
-                                                        <?php echo anchor('penilaian/getmhs/'.$daf->id_mata_kuliah, '<div class="btn btn-sm btn-success">Mahasiswa</div>' ) ?>
-                                                        <!-- <?php echo anchor('matakuliah/daftarhapus/'.$daf->id_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?> -->
+                                                        <?php echo anchor('penilaian/hasil_evalmhs/'.$mat->id_mata_kuliah, '<div class="btn btn-sm btn-success">Mahasiswa</div>' ) ?>
+                                                        <!-- <?php echo anchor('matakuliah/daftarhapus/'.$mat->id_mata_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?> -->
                                                      </td>
                                                     </center>
                                                 </tr>

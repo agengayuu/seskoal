@@ -35,7 +35,7 @@
                     <?php echo form_error('id_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label> Nama Dosen <i style="color:red">*</i></label>
                     <select class="form-control" name='id_dosen' id='id_dosen' required>
                         <option style="display:none" value="">--- Pilih Dosen ---</option>
@@ -44,7 +44,7 @@
                         <?php } ?>
                     </select>
                     <?php echo form_error('id_dosen', '<div class="text-danger small ml-3">','</div>') ?>
-                </div>
+                </div> -->
 
                 <!-- <div class="form-group">
             <label>Kode Jadwal<i style="color:red">*</i></label>
