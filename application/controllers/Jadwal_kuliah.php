@@ -101,7 +101,8 @@ class Jadwal_kuliah extends CI_Controller
                 'tema' => $tema,
                 'id_ruang' => $ruang,
                 'keterangan' => $ket
-            );
+            ); 
+            //print_r($data);die;
             $tanggal = $this->db->query("select tanggal from tbl_jadwal_kuliah ")->result();
             $waktu_m = $this->db->query("select waktu_mulai from tbl_jadwal_kuliah ")->result();
             $waktu_s = $this->db->query("select waktu_selesai from tbl_jadwal_kuliah ")->result();

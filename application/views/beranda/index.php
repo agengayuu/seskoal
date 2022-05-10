@@ -25,7 +25,7 @@
                 <li><a href="#berita">Berita</a></li>
                 <li><a href="#bantuan">Bantuan</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#download">Dowload Manual</a></li>
+                <li><a href="#download">Download Manual</a></li>
                 <li>
                     <a href="<?= base_url('login'); ?>">
                         <button>Masuk</button>
