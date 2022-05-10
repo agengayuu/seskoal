@@ -1,9 +1,11 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            Tambah Master Soal
+           <i class="fas fa-plus"></i> Tambah Master Soal
         </div>
     </div>
+
+    <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()"><i class="fas fa-arrow-left"></i> Kembali</button>
 
     <div class="card-header bg-white">
         <div class="card-body">
@@ -84,7 +86,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
-                <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
+                <button type="reset" value="Cancel" class="btn btn-danger mb-4">Batal</button>
             </form>
 
     </div>

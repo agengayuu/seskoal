@@ -5,6 +5,8 @@
         </div>
     </div>
 
+    <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()"><i class="fas fa-arrow-left"></i> Kembali</button>
+
     <div class="card-header bg-white">
         <div class="card-body">
             <div class="row">
@@ -104,8 +106,8 @@
                     </div>
                 </div>
             </div>
+        </div>
             
-            <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Kembali</button>
         </div>
     </div>
 </div>

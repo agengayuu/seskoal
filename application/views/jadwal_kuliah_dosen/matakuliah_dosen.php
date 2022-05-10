@@ -7,6 +7,8 @@
         </div>
     </div>
     
+    <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()"><i class="fas fa-arrow-left"></i> Kembali</button>
+
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
