@@ -163,6 +163,31 @@ class Penilaian extends CI_Controller
 		$this->mypdf->generate('penilaian/cetak', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
 	}
 
+    public function print_rekap($idmhs){
+
+        $mahasiswa = $this->db->query("Select tbl_mahasiswa.*, tbl_diklat.*, thn_akademik.*
+                                        from tbl_mahasiswa
+                                        join tbl_diklat 
+                                        on tbl_diklat.id_diklat = tbl_mahasiswa.id_diklat
+                                        join thn_akademik
+                                        on thn_akademik.id_akademik = tbl_mahasiswa.id_akademik
+                                        where id_mahasiswa = $idmhs")->row_array();
+        $data['mhs'] = $mahasiswa;
+        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*, tbl_mata_kuliah.*
+                                            from tbl_mahasiswa_evaluasi
+                                            join tbl_mahasiswa 
+                                            on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_mahasiswa.id_mahasiswa 
+                                            join tbl_mata_kuliah
+                                            on tbl_mahasiswa_evaluasi.id_mata_kuliah= tbl_mata_kuliah.id_mata_kuliah
+                                            where tbl_mahasiswa_evaluasi.id_mahasiswa = $idmhs")->result();
+                                            // echo"<pre>";
+                                            // print_r( $data['rekap'] );die;
+
+        $data['rekap'] = $query;
+		$this->mypdf->generate('penilaian/cetak_rekap', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
+
+    }
+
 
 
 

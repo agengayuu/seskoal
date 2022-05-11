@@ -83,8 +83,9 @@
 			</section><br><br><br>
 			<div align="center">
 				<?php 
-				$date = Date("d/m/Y");
-				$jam = Date("H:i:s");
+				date_default_timezone_set('Asia/Jakarta'); 
+				$date = Date('d-m-Y' );
+				$jam = Date('h:i:s');
 				echo "Laporan dicetak pada tanggal $date Jam $jam"; 
 				?>
 			</div>

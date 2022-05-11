@@ -50,7 +50,7 @@
                                                             $no=1;
                                                             foreach($hasil as $d) { ?>
                                                                 <tr>
-                                                                    <input type="text" name="id_mata_kuliah" value="<?php echo $matakul->id_mata_kuliah ?>">
+                                                                    <!-- <input type="hidden" name="id_mata_kuliah" value="<?php echo $matakul->id_mata_kuliah ?>"> -->
                                                                     <td><?php echo $no++; ?></td>                              
                                                                     <td><?php echo $d->nama; ?></td>   
                                                                     <td><?php echo $d->nim; ?></td>                                                                                     
