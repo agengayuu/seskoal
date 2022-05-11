@@ -26,14 +26,29 @@ class M_jadwal_kuliah_mahasiswa extends CI_Model{
         INNER JOIN tbl_dosen ON tbl_dosen.id_dosen = tbl_mata_kuliah.id_dosen
         INNER JOIN tbl_diklat ON tbl_jadwal_kuliah.id_diklat = tbl_diklat.id_diklat
         INNER JOIN tbl_ruang ON tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
-        where 
-            tbl_profil_mahasiswa.id_mahasiswa = $userlogin
-        order by tbl_jadwal_kuliah.tanggal desc";
+    WHERE 
+        tbl_profil_mahasiswa.id_mahasiswa = $userlogin
+    ORDER BY
+        tbl_jadwal_kuliah.tanggal desc";
 
 
 // print_r($userlogin);die;
         return $this->db->query($query)->result_array();
        //return $this->db->get('tbl_jadwal_kuliah')->result();
+    }
+
+    public function getakademik(){
+        $userlogin = $this->session->userdata('id');
+        $query1 = "SELECT
+        thn_akademik.*,
+        tbl_profil_mahasiswa.id_mahasiswa
+    FROM
+    thn_akademik
+        INNER JOIN tbl_profil_mahasiswa ON thn_akademik.id_akademik = tbl_profil_mahasiswa.id_akademik
+    WHERE 
+        tbl_profil_mahasiswa.id_mahasiswa = $userlogin";
+        
+    return $this->db->query($query1)->result_array();
     }
 
 }
