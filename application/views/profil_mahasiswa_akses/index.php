@@ -5,6 +5,9 @@
         </div>
     </div>
 
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
+
     <?php echo form_open_multipart('profil_mahasiswa_akses/update'); ?>
         <div class="card-body">
             <div class="row">
@@ -35,7 +38,7 @@
                             <input type="text" name="nim" class="form-control" placeholder="Masukkan NIM" id="nim" value="<?php echo ($datadiri->nim) ? $datadiri->nim : '' ?>" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="">Nama<i style="color:red">*</i></label>
+                            <label for="">Nama<i style="color:red"></i></label>
                             <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" id="nama" value="<?php echo ($datadiri->nama) ? $datadiri->nama : '' ?>" readonly>
                         </div>
                         <div class="form-group">
@@ -386,3 +389,14 @@
 </div> 
 <?php form_close(); ?> 
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

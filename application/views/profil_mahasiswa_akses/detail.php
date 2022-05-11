@@ -5,6 +5,9 @@
         </div>
     </div>
 
+    <?php echo $this->session->flashdata('pesan') ?>
+    <?php echo validation_errors(); ?>
+
     <?php echo form_open_multipart('profil_mahasiswa_akses/update'); ?>
         <div class="card-body">
             <div class="row">
@@ -312,28 +315,28 @@
                                                                                 <div class="col-sm-6">
                                                                                     <input type="text" name="nik_ortu[]" class="form-control" placeholder="Masukkan NIK" id="nik" value="<?php echo ($ibu != '') ? $ibu->nik_ortu : '' ?>" required>
                                                                                 </div>
-                                                                                <?php echo form_error('nik', '<div class="text-danger small ml-3"></div>') ?>
+                                                                                <?php echo form_error('nik', '<div class="text-danger small ml-3">','</div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Nama</label>
                                                                                 <div class="col-sm-6">
                                                                                     <input type="text" name="nama_ortu[]" class="form-control" placeholder="Masukkan Nama" id="nama" value="<?php echo ($ibu != '') ? $ibu->nama_ortu : '' ?>" required>
                                                                                 </div>
-                                                                                <?php echo form_error('nama', '<div class="text-danger small ml-3"></div>') ?>
+                                                                                <?php echo form_error('nama', '<div class="text-danger small ml-3">','</div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Tempat Lahir</label>
                                                                                 <div class="col-sm-6">
                                                                                     <input type="text" name="tempat_lahir_ortu[]" class="form-control" placeholder="Masukkan Tempat Lahir" id="tempat_lahir" value="<?php echo ($ibu != '') ? $ibu->tempat_lahir_ortu : '' ?>" required>
                                                                                 </div>
-                                                                                <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3"></div>') ?>
+                                                                                <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3">','</div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Tanggal Lahir</label>
                                                                                 <div class="col-sm-6">
                                                                                     <input type="date" name="tgl_lahir_ortu[]" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir" value="<?php echo ($ibu != '') ? $ibu->tgl_lahir_ortu : '' ?>" required>
                                                                                 </div>
-                                                                                <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3"></div>') ?>
+                                                                                <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3">','</div>') ?>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label for="" class="col-sm-3 col-form-label">Pekerjaan</label>
@@ -404,3 +407,14 @@
 </div> 
 <?php form_close(); ?> 
 </div>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>
