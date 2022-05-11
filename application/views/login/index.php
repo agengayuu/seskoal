@@ -60,8 +60,8 @@
                         </div>
                         <div class="form-group">
                             <label class="rmb">
-                                <input type="checkbox" value="remember" name="remember">
-                                <span>remember me</span>   
+                                <!-- <input type="checkbox" value="remember" name="remember">
+                                <span>remember me</span>    -->
                             </label>
                             <div class="float-right">
                                 <a href="<?= base_url('login/buatpass');?>">Buat password</a>

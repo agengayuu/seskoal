@@ -41,6 +41,8 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller{
 
         $this->load->view('templates_dosen/footer'); 
 
+
+        
     }
 
     

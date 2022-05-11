@@ -40,7 +40,7 @@
                                 <td><?= $m->angkatan ?></td>
                                 <td><?= $m->tahun_masuk ?></td>
 
-                                <td> <?php echo anchor('penilaian/rekap/' . $m->nim, '<div class="btn btn-sm btn-warning"><i class="fa fa-print"></i></div>') ?>
+                                <td> <?php echo anchor('penilaian/print_rekap/' . $m->id_mahasiswa, '<div class="btn btn-sm btn-warning"><i class="fa fa-print"></i></div>') ?>
                                 </td>
 
                             </tr>

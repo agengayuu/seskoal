@@ -272,6 +272,7 @@ class Profil_mahasiswa_akses extends CI_Controller
             $tgl_lahir = $this->input->post('tgl_lahir');//tambah ini
             $jabatan = $this->input->post('jabatan');//tambah ini
             $id_diklat    = $this->input->post('id_diklat', NULL);
+            $angkatan    = $this->input->post('angkatan', NULL);
 
             $data = array(
                 'nama' => $nama,
@@ -291,11 +292,15 @@ class Profil_mahasiswa_akses extends CI_Controller
                 'kecamatan' => $kecamatan,
                 'kode_pos' => $kode_pos,
                 'id_mahasiswa' => $id_mahasiswa,
-                'no_tlp' =>$no_tlp,//tambah ini
-                'tgl_lahir' =>$tgl_lahir, //tambah ini
-                'jabatan' =>$jabatan, //tambah ini
-                'id_diklat' =>$id_diklat, //tambah ini
+                'no_tlp' => $no_tlp,//tambah ini
+                'tgl_lahir' => $tgl_lahir, //tambah ini
+                'jabatan' => $jabatan, //tambah ini
+                'id_diklat' => $id_diklat, //tambah ini
+                'angkatan' => $angkatan
             );
+
+            // echo "<pre>";
+            // print_r($data);die;
 
             $this->db->where('id_mahasiswa', $id_mahasiswa);
             $this->db->update('tbl_profil_mahasiswa', $data);
@@ -355,13 +360,13 @@ class Profil_mahasiswa_akses extends CI_Controller
         $this->form_validation->set_rules('tempat_lahir', 'tempat_lahir');
         $this->form_validation->set_rules('jabatan', 'jabatan');
         $this->form_validation->set_rules('kewarganegaraan', 'kewarganegaraan');
-        $this->form_validation->set_rules('npwp', 'npwp', 'numeric', ['numeric' => 'NPWP wajib diisi sesuai contoh format'] );
+        $this->form_validation->set_rules('npwp', 'npwp', 'min_length[20]', ['min_length' => 'NPWP wajib diisi sesuai contoh format'] );
         $this->form_validation->set_rules('jalan', 'jalan');
         $this->form_validation->set_rules('rt', 'rt', 'numeric', ['numeric' => 'RT wajib diisi dengan angka']);
         $this->form_validation->set_rules('rw', 'rw', 'numeric', ['numeric' => 'RW wajib diisi dengan angka']);
         $this->form_validation->set_rules('kelurahan', 'kelurahan');
         $this->form_validation->set_rules('kecamatan', 'kecamatan');
-        $this->form_validation->set_rules('kode_pos', 'kode_pos', 'numeric', ['numeric' => 'Kode pos wajib diisi dengan angka']);
+        $this->form_validation->set_rules('kode_pos', 'kode_pos','numeric', ['numeric' => 'Kode pos wajib diisi dengan angka']); 
         $this->form_validation->set_rules('email', 'email');
         $this->form_validation->set_rules(
             'no_tlp',
@@ -387,6 +392,7 @@ class Profil_mahasiswa_akses extends CI_Controller
             'required|numeric|min_length[16]',
             array(
                 'required'      => 'You have not provided %s.',
+                'numeric'       => 'hanya number',
                 'min_length'     => 'NIK harus terdiri dari 16 nomor.'
             )
         );

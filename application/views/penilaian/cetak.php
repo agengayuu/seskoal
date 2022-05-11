@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
 	<title>Cetak Hasil Evaluasi Mahasiswa </title>
@@ -43,34 +43,34 @@
 								?>
 								<tr align="center">
 									<td><?php echo $no++; ?></td>                              
-	                                <td><?php echo $d->nama; ?></td>                                
-	                                <td><?php echo $d->nim; ?></td>                                
-	                                <td><?php echo $d->nama_mata_kuliah; ?></td>                                
-	                                <td><?php echo date('d-m-Y',strtotime($d->tanggal_ujian)); ?> | <?php echo date('H:i:s',strtotime($d->jam_ujian)); ?></td>
+	                                <td><?php echo $d['nama']; ?></td>                                
+	                                <td><?php echo $d['nim']; ?></td>                                
+	                                <td><?php echo $d['nama_mata_kuliah']; ?></td>                                
+	                                <td><?php echo date('d-m-Y',strtotime($d['tanggal_ujian'])); ?> | <?php echo date('H:i:s',strtotime($d['jam_ujian'])); ?></td>
 	                                <td>
 	                                    <?php
-	                                    if($d->benar == ''){
+	                                    if($d['benar'] == ''){
 	                                        echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
 	                                    }else {
-	                                        echo $d->benar;
+	                                        echo $d['benar'];
 	                                    }
 	                                    ?>
 	                                </td>                                
 	                                <td>
 	                                    <?php
-	                                    if($d->salah == ''){
+	                                    if($d['salah'] == ''){
 	                                        echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
 	                                    }else {
-	                                        echo $d->salah;
+	                                        echo $d['salah'];
 	                                    }
 	                                    ?>
 	                                </td>
 	                                <td>
 	                                    <?php
-	                                    if($d->nilai == ''){
+	                                    if($d['nilai'] == ''){
 	                                        echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
 	                                    }else {
-	                                        echo $d->nilai;
+	                                        echo $d['nilai'];
 	                                    }
 	                                    ?>
 	                                </td>
@@ -97,4 +97,3 @@
 	</script>
 </body>
 </html>
-

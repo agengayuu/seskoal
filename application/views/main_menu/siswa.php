@@ -30,14 +30,14 @@
                 <div class="col-sm-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Jadwal</h5>
+                            <h5 class="card-title" style="font-weight: bolder;">Jadwal</h5>
                             <?php foreach ($jadwal as $key => $jad) { ?>
                                 <?php
                                 if ($key == 0) { ?>
-                                    <p class="card-text"><?= date("d-m-Y", strtotime($jad->tanggal)); ?></p>
+                                    <p class="card-text">Tanggal <?= date("d-m-Y", strtotime($jad->tanggal)); ?></p>
                                 <?php }
                                 if ($key != 0 && $jadwal[$key - 1]->tanggal != $jad->tanggal) { ?>
-                                    <p class="card-text"><?= date("d-m-Y", strtotime($jad->tanggal)); ?></p>
+                                    <p class="card-text">Tanggal <?= date("d-m-Y", strtotime($jad->tanggal)); ?></p>
                                 <?php } ?>
 
                             <?php
@@ -56,7 +56,7 @@
                                             </div>
                                             <div>
                                                 <div class="tw-flex tw-items-center tw-mb-2">
-                                                    <h6 class="font-14px tw-text-sp-muted-text">' . date("d-m-Y", strtotime($jad->tanggal)) . '</h6>
+                                                    
                                                 </div>
                                                 <div class="tw-flex tw-items-center tw-mb-2">
                                                     <div class="bg-icon_oclock tw-mr-2"></div>

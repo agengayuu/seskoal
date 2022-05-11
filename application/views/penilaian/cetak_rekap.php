@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
 	<title>Cetak Hasil Evaluasi Mahasiswa </title>
@@ -19,6 +19,10 @@
 	        </table>
 			<section class="content-header">
 				<h3 align="center">Laporan Hasil Evaluasi</h3>
+				<h5 align="left">Diklat : <?php echo $mhs['nama_diklat']; ?> </h5>
+				<h5 align="left">Nama   : <?php echo $mhs['nama']; ?> </h5>
+				<h5 align="left">NIM    : <?php echo $mhs['nim']; ?> </h5>
+				<h5 align="left">Tahun akademik : <?php echo $mhs['tahun_akademik']; ?> </h5>
 			</section>
 			<section class="content">
 				<div class="row">
@@ -27,27 +31,22 @@
 							<thead align="center" style="background-color:#D3D3D3">
 								<tr>
 									<th width="1%">No</th>
-		                            <th>Nama Mahasiswa</th>                            
-		                            <th>NIM</th>                            
-		                            <th>Mata Kuliah</th>                            
-		                            <th width="20%">Waktu Ujian</th>                                           
-		                            <th>Benar</th>                            
-		                            <th>Salah</th>                            
+		                            <th>Mata Kuliah</th>                                                                            
+		                            <th width="20%">Waktu Ujian</th>                                                                    
 		                            <th>Nilai</th>
 								</tr>
 							</thead>
+                            <?php
+                            $no = 1;
+                            foreach($rekap as $d){
+                            ?>
 							<tbody style="font-size:9;">
-								<?php
-								$no = 1;
-								foreach($cetak as $d){
-								?>
 								<tr align="center">
 									<td><?php echo $no++; ?></td>                              
-	                                <td><?php echo $d->nama; ?></td>                                
-	                                <td><?php echo $d->nim; ?></td>                                
-	                                <td><?php echo $d->nama_mata_kuliah; ?></td>                                
+	                                <!-- <td><?php echo $d->nama; ?></td>                                 -->
+	                                <td><?php echo $d->nama_mata_kuliah; ?></td>                                                            
 	                                <td><?php echo date('d-m-Y',strtotime($d->tanggal_ujian)); ?> | <?php echo date('H:i:s',strtotime($d->jam_ujian)); ?></td>
-	                                <td>
+	                                <!-- <td>
 	                                    <?php
 	                                    if($d->benar == ''){
 	                                        echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
@@ -61,10 +60,10 @@
 	                                    if($d->salah == ''){
 	                                        echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
 	                                    }else {
-	                                        echo $d->salah;
+	                                        echo $d->salah ;
 	                                    }
 	                                    ?>
-	                                </td>
+	                                </td> -->
 	                                <td>
 	                                    <?php
 	                                    if($d->nilai == ''){
@@ -83,7 +82,7 @@
 			</section><br><br><br>
 			<div align="center">
 				<?php 
-				date_default_timezone_set('Asia/Jakarta'); 
+                date_default_timezone_set('Asia/Jakarta'); 
 				$date = Date('d-m-Y' );
 				$jam = Date('h:i:s');
 				echo "Laporan dicetak pada tanggal $date Jam $jam"; 
@@ -97,4 +96,3 @@
 	</script>
 </body>
 </html>
-

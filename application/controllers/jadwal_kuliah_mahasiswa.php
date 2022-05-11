@@ -27,6 +27,9 @@ class Jadwal_kuliah_mahasiswa extends CI_Controller
         // echo "<pre>";
         // print_r($query);die;
         $data['jadwal'] = $query;
+        
+        $query1 = $this->m_jadwal_kuliah_mahasiswa->getakademik();
+        $data['tahunakademik'] = $query1;
 
         $this->load->view('jadwal_kuliah_mahasiswa/index', $data);
         $this->load->view('templates_dosen/footer');

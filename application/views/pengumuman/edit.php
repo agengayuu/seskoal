@@ -6,8 +6,7 @@
     </div>
     <?php echo $this->session->flashdata('pesan') ?>
     <?php echo validation_errors(); ?>
-
-
+    <?php echo form_open_multipart('pengumuman/editupdate'); ?>
     <?php foreach($pengumumannya as $p) { ?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>

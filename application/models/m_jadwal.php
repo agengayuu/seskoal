@@ -26,14 +26,20 @@ class M_jadwal extends CI_Model{
     }
 
     public function getmainmenu(){
-        $query = "select tbl_jadwal_kuliah.*, tbl_diklat.nama_diklat, tbl_mata_kuliah.*, tbl_ruang.nama_ruang
-        from tbl_jadwal_kuliah join tbl_diklat 
-        on tbl_jadwal_kuliah.id_diklat = tbl_diklat.id_diklat
-        join tbl_mata_kuliah 
-        on tbl_jadwal_kuliah.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
-        join tbl_ruang
-        on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
-        where tbl_jadwal_kuliah.tanggal >= CURDATE()
+        $userlogin = $this->session->userdata('id');
+        $query = "select tbl_jadwal_kuliah.*,
+                        tbl_profil_mahasiswa.id_mahasiswa,
+                        tbl_diklat.nama_diklat, 
+                        tbl_mata_kuliah.*, 
+                        tbl_ruang.nama_ruang
+        from 
+            tbl_jadwal_kuliah 
+            inner join tbl_diklat on tbl_jadwal_kuliah.id_diklat = tbl_diklat.id_diklat
+            inner join tbl_profil_mahasiswa ON tbl_jadwal_kuliah.id_diklat = tbl_profil_mahasiswa.id_diklat
+            inner join tbl_mata_kuliah on tbl_jadwal_kuliah.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
+            inner join tbl_ruang on tbl_jadwal_kuliah.id_ruang = tbl_ruang.id_ruang
+        where 
+            tbl_jadwal_kuliah.tanggal >= CURDATE() and tbl_profil_mahasiswa.id_mahasiswa = $userlogin
         order by tbl_jadwal_kuliah.tanggal asc
         limit 5";
         $last2 = $this->db->order_by('id_jadwal_kuliah', 'desc')
