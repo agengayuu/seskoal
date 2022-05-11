@@ -6,8 +6,6 @@
         <i class="fas fa-fw fa-calendar-alt"></i> Jadwal Kuliah
         </div>
     </div>
-
-    <?php echo $this->session->flashdata('pesan') ?>
  
     <?php echo anchor('jadwal_kuliah_dosen/matakuliah_dosen', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye fa-sm"></i> Lihat Matakuliah Dosen</button>') ?>
     
@@ -43,8 +41,6 @@
                                         <td width="20px"><?php echo $no++ ?></td>
                                         <td><?= $jdw['nama_diklat'] ?></td>
                                         <td><?= $jdw['nama_mata_kuliah'] ?></td>    
-                                        <!-- <td><?= $jdw['tanggal'] ?></td> -->
-                                        <!-- <td><?php echo date('l', strtotime($jdw['tanggal'])); ?></td> -->
                                         <td><?php $hari = $jdw['tanggal'];
                                             $ubah = date('l', strtotime($hari));
 

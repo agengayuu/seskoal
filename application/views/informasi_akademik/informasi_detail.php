@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <?php echo $this->session->flashdata('pesan') ?>
+    <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()"><i class="fas fa-arrow-left"></i> Kembali</button>
 
     <!--table -->
     <div class="card shadow mb-4">
@@ -24,7 +24,6 @@
                             <th>Tanggal Pembuatan</th>
                             <th>Judul Pengumuman</th>
                             <th>Aksi</th>
-                            <!-- <th>Aksi</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -33,7 +32,7 @@
                         foreach ($pengumuman as $pa) : ?>
                             <tr>
                                 <td style="text-align: center"><?php echo $no++ ?></td>
-                                <td><?= $pa->tgl_pembuatan ?></td>
+                                <td><?= date('d-m-Y', strtotime($pa->tgl_pembuatan)); ?></td>
                                 <td><?= $pa->judul_pengumuman ?></td>
                                 <td style="text-align: center">
                                     <button id="detail" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-detail" data-idpengumuman="<?= $pa->id_pengumuman ?>" data-judulpengumuman="<?= $pa->judul_pengumuman ?>" data-tglpembuatan="<?= $pa->tgl_pembuatan ?>" data-isipengumuman="<?= $pa->isi_pengumuman ?>">
@@ -64,7 +63,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"> Tutup</button>
                 </div>
             </div>
         </div>

@@ -4,9 +4,10 @@
         <i class="fas fa-plus fa-sm"></i> Tambah Paket Evaluasi
         </div>
     </div>
-    
 
     <?php echo $this->session->flashdata('pesan') ?>
+    
+    <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()"><i class="fas fa-arrow-left"></i> Kembali</button>
 
     <!--table -->
     <div class="card shadow mb-4">
@@ -79,12 +80,9 @@
                             </tbody>
                         </table> -->
                     <input type="hidden" name="id_mata_kuliah" value="<?= $id_mata_kuliah; ?>">
-                    
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-4 mt-4">Simpan</button>
-                    <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>
-                </div>
-            </div>
+
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="reset" value="Cancel" class="btn btn-danger"">Batal</button>
         </form>
 </div>
 <script type="text/javascript">

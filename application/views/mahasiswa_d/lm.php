@@ -1,10 +1,11 @@
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Mahasiswa
+           <i class="fas fa-user"></i> Mahasiswa
         </div>
     </div>
-    
+
+    <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()"><i class="fas fa-arrow-left"></i> Kembali</button>
 
     <!--table -->
     <div class="card shadow mb-4">
