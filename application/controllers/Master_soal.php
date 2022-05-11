@@ -40,15 +40,8 @@ class Master_soal extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-
-        // $data['matakuliah'] = $query;
-
         $query= $this->m_master_soal->get();
-        // echo "<pre>";
-        // print_r($query);die;
         $data['matakuliah'] = $query;
-        // $query= $this->db->query("select * from tbl_mata_kuliah")->result();
-        // $data['matakuliah'] = $query;
 
         $this->load->view('master_soal/tambah', $data); 
         $this->load->view('templates_dosen/footer'); 
@@ -91,7 +84,6 @@ class Master_soal extends CI_Controller{
         $this->load->view('templates_dosen/header'); 
         $this->load->view('templates_dosen/sidebar_admin',$data);
 
-        // $data['matakuliah'] = $this->db->query("Select * from tbl_mata_kuliah")->result();
         $query= $this->m_master_soal->get();
         $data['matakuliah'] = $query;
         

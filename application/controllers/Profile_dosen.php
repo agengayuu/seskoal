@@ -13,17 +13,12 @@ class Profile_dosen extends CI_Controller{
         $this->load->helper('aksesblock');
         is_logged_in('3');
         
-        
-        // if(!$this->session->userdata('username')){
-        //     redirect('login');
-        // }
-       // session_start();
     }
     public function index(){
         $data['title'] = 'Profile Dosen';
 
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);  
 
@@ -34,7 +29,6 @@ class Profile_dosen extends CI_Controller{
                         WHERE tbl_dosen.nip = $userlogin ")->result();
 
         $data['detail'] = $dosen; 
-        // $data['profilnya'] = $this->db->query("select * from tbl_dosen")->result();
         
         $this->load->view('profile_dosen/index', $data); 
         $this->load->view('templates_dosen/footer'); 
@@ -45,14 +39,13 @@ class Profile_dosen extends CI_Controller{
         $data['title'] ="Edit Profile";
 
         $data['user'] = $this->db->get_where('user',['username' => $this->session->userdata('username')])->row_array();
+
         $this->load->view('templates_dosen/header',$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $where = array(
             'id_dosen' => $id
         );
-    
-        // $data['dosennya'] = $this->m_dosen->adminedit($where,'tbl_user')->result();
 
         $data['dosennya'] = $this->m_profil_dosen->edit($where, 'tbl_dosen')->result();
 
@@ -125,8 +118,6 @@ class Profile_dosen extends CI_Controller{
                                                 Data berhasil di Update. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
                 redirect('profile_dosen');
-        
-
     }
 
 }

@@ -2,8 +2,6 @@
 
 if(!defined('BASEPATH'))
 exit('No direct script access allowed');
-
-
     class Ruang extends CI_Controller 
     {
 
@@ -17,7 +15,6 @@ exit('No direct script access allowed');
                 redirect('login');
             }
             is_logged_in('1');
-            //session_start();
         }
 
         public function index() {
@@ -38,29 +35,11 @@ exit('No direct script access allowed');
             $this->load->view('templates_dosen/footer'); 
         }
 
-        // public function input() {
-
-        //     $timestamp = date('Y-m-d H:i:s');
-
-        //     $data = array(
-        //         'id_ruang'          => set_value('id_ruang'),
-        //         'nama_ruang'        => set_value('nama_ruang'),
-        //         'id_jenis_ruang'    => set_value('id_jenis_ruang'),
-        //         'kapasitas'         => set_value('kapasitas'),
-        //         'gedung'            => set_value('gedung'),
-        //         'lantai'            => set_value('lantai'),
-        //         'keterangan'        => set_value('keterangan'),
-        //         'created_at'        => set_value($timestamp)
-        //     );
- 
-        //     $this->load->view('ruang/tambah_ruang', $data); 
-        // }
-
         public function input(){
             $data['title'] = 'Tambah Ruangan';
 
-            $data['user'] = $this->db->get_where('user', ['username'=> 
-            $this->session->userdata('username')])->row_array();
+            $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+
             $this->load->view('templates_dosen/header', $data); 
             $this->load->view('templates_dosen/sidebar_admin', $data);
         
@@ -75,7 +54,7 @@ exit('No direct script access allowed');
 
             $this->_rules();
             $this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
+                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>');
 
             if($this->form_validation->run() == FALSE) {
             $this->input();
@@ -108,7 +87,6 @@ exit('No direct script access allowed');
     }
 
             public function _rules(){
-                // $this->form_validation->set_rules('id_ruang', 'id_ruang', 'required', ['required' => 'Id Ruang wajib diisi!']);
                 $this->form_validation->set_rules('nama_ruang', 'nama_ruang', 'required' , ['required' => 'Nama Ruang wajib diisi!']);
                 $this->form_validation->set_rules('id_jenis_ruang', 'id_jenis_ruang', 'required' , ['required' => 'Jenis Ruang wajib diisi!']);
                 $this->form_validation->set_rules('kapasitas', 'kapasitas', 'required|numeric' , ['required' => 'Kapasitas wajib diisi!',
@@ -122,8 +100,9 @@ exit('No direct script access allowed');
 
             public function edit($id){
                 $data['title'] = "Edit Ruangan";
-                $data['user'] = $this->db->get_where('user', ['username'=> 
-                $this->session->userdata('username')])->row_array();
+
+                $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+
                 $this->load->view('templates_dosen/header',$data); 
                 $this->load->view('templates_dosen/sidebar_admin',$data);
 
@@ -143,8 +122,9 @@ exit('No direct script access allowed');
     
                 if($this->form_validation->run() == FALSE) {
                     $data['title'] = "Edit Ruangan";
-                    $data['user'] = $this->db->get_where('user', ['username'=> 
-                    $this->session->userdata('username')])->row_array();
+
+                    $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
+                    
                     $this->load->view('templates_dosen/header',$data); 
                     $this->load->view('templates_dosen/sidebar_admin',$data);
 
