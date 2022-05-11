@@ -19,7 +19,7 @@
                         <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah' value="<?php echo $u->id_mata_kuliah; ?>">
                             <option value='0' selected  disabled>--- Pilih Mata Kuliah ---</option>
                             <?php foreach ($matakuliah as $mk) { ?>
-                                <option value="<?= $mk['id_mata_kuliah']; ?>" <?php if ($mk->id_mata_kuliah == $u->id_mata_kuliah) {
+                                <option value="<?= $mk['id_mata_kuliah']; ?>" <?php if ($mk['id_mata_kuliah'] == $u->id_mata_kuliah) {
                                                                                         echo "selected";
                                                                                     } ?>><?= $mk['nama_mata_kuliah']; ?></option>
                             <?php } ?>
@@ -28,6 +28,7 @@
                 </div>
 
                 <input type="hidden" name="id_master_soal" value="<?php echo $u->id_master_soal ?>">
+
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Tulis Soal <i style="color:red">*</i></label>
                     <div class="col-sm-10">
