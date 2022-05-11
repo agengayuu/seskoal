@@ -21,7 +21,7 @@
                             
                            
 
-                            <?php echo anchor('hasil_mahasiswa_evaluasi/print_all', '<button class="btn btn-sm btn-info mb-3 " ><i class="fas fa-print"></i> Data Mata Kuliah</button>') ?>
+                            <?php echo anchor('penilaian/print_all/' . $matakul->id_mata_kuliah, '<button class="btn btn-sm btn-info mb-3 " ><i class="fas fa-print"></i> Data Mata Kuliah</button>') ?>
 
                             <!--table -->
                             <div class="card shadow mb-4">
@@ -50,6 +50,7 @@
                                                             $no=1;
                                                             foreach($hasil as $d) { ?>
                                                                 <tr>
+                                                                    <input type="text" name="id_mata_kuliah" value="<?php echo $matakul->id_mata_kuliah ?>">
                                                                     <td><?php echo $no++; ?></td>                              
                                                                     <td><?php echo $d->nama; ?></td>   
                                                                     <td><?php echo $d->nim; ?></td>                                                                                     
@@ -80,7 +81,7 @@
                                                                         if($d->nilai == ''){
                                                                             echo "<span style='color:red'>Belum Ujian</span>";
                                                                         }else {
-                                                                            echo "<a href='".'hasil_mahasiswa_evaluasi/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
+                                                                            echo "<a href='".'penialian/cetak/'."$d->id_evaluasi class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
                                                                             
                                                                         }
                                                                         ?>

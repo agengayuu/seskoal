@@ -35,7 +35,7 @@
                             <td><?= $d->nama_diklat ?></td>
                             <td>
                                  <?php echo anchor('penilaian/getakademik/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
-                                 <?php echo anchor('penilaian/rekap_diklat/'.$d->id_diklat, '<div class="btn btn-sm btn-success">Rekapitulasi</div>' ) ?> 
+                                 <?php echo anchor('penilaian/getakademik_rekap/'.$d->id_diklat, '<div class="btn btn-sm btn-success">Rekapitulasi</div>' ) ?> 
                         </tr>
                                 <?php
                             endforeach

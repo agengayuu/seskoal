@@ -11,6 +11,8 @@ class Penilaian extends CI_Controller
         $this->load->library('form_validation');
         // $this->load->model('m_matakuliah');
         $this->load->model('m_akademik');
+        $this->load->model('m_hasil');
+         $this->load->library('mypdf');
         $this->load->library('session');
         is_logged_in('1');
         //session_start();
@@ -79,7 +81,6 @@ class Penilaian extends CI_Controller
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-
         $matkul = $this->db->query("select * from tbl_mata_kuliah where id_mata_kuliah = $id_matkul")->row();
         $data['matakul']=$matkul;
         $hsl = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*
@@ -97,7 +98,7 @@ class Penilaian extends CI_Controller
 
     }
 
-    public function getrekap_mhs($id){
+    public function getrekap_mhs($id_ak, $id_dik){
 
         $data['title'] = 'Penilaian';
         $data['user'] = $this->db->get_where('user', ['username'=> 
@@ -105,7 +106,7 @@ class Penilaian extends CI_Controller
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $mhs = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
+        $mhs = $this->db->query("select * from tbl_mahasiswa where id_akademik = $id_ak && id_diklat = $id_dik ")->result();
         $data['mhs'] = $mhs;
 
         $this->load->view('penilaian/getrekap_mhs',$data);
@@ -127,6 +128,40 @@ class Penilaian extends CI_Controller
 
     }
 
+        public function getakademik_rekap($id){
+        $data['title'] = 'Penilaian';
+        $data['user'] = $this->db->get_where('user', ['username'=> 
+        $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data); 
+        $this->load->view('templates_dosen/sidebar_admin',$data); 
+        // $akademik = $this->db->query("Select tbl_mata_kuliah.*, thn_akademik.*
+        //                                         from thn_akademik
+        //                                         join tbl_mata_kuliah 
+        //                                         on tbl_mata_kuliah.id_akademik = thn_akademik.id_akademik")->result();
+        $akademik = $this->db->query("Select * from thn_akademik")->result();
+        $data['akademik']= $akademik;  
+        
+        // mencari tahun akademik berdasarkan diklat nya. yg nantiny akan di ambil nilai mata kuliah pertahun dan per diklat
+        $diklat = $this->db->query("select * from tbl_diklat where id_diklat = $id")->row();
+        $data['diklat'] = $diklat;
+        $this->load->view('penilaian/getakademik_rekap',$data);
+        $this->load->view('templates_dosen/footer'); 
+    }
+    
+       public function print_all($id)
+       {	
+        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*, tbl_mata_kuliah.*
+                                from tbl_mahasiswa_evaluasi 
+                                inner  join tbl_mahasiswa 
+                                on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_mahasiswa.id_mahasiswa
+                                inner  join tbl_mata_kuliah
+                                on tbl_mahasiswa_evaluasi.id_mata_kuliah= tbl_mata_kuliah.id_mata_kuliah
+                                where tbl_mahasiswa_evaluasi.id_mata_kuliah = $id")->result_array();
+                            //    echo"<pre>";
+                            //    print_r($query);die;
+        $data['cetak'] = $query;
+		$this->mypdf->generate('penilaian/cetak', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
+	}
 
 
 
