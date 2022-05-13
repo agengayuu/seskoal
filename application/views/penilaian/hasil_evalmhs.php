@@ -42,7 +42,7 @@
                                                                 <th>Tanggal Ujian</th>
                                                                 <th>Nilai</th>
                                                                 <th>Mutu</th>
-                                                                <th>Cetak</th>
+                                                                <!-- <th>Cetak</th> -->
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -76,7 +76,7 @@
                                                                         } 
                                                                         ?>
                                                                     </td>                                                                                     
-                                                                    <td>
+                                                                    <!-- <td>
                                                                         <?php
                                                                         if($d->nilai == ''){
                                                                             echo "<span style='color:red'>Belum Ujian</span>";
@@ -85,7 +85,7 @@
                                                                             
                                                                         }
                                                                         ?>
-                                                                    </td> 
+                                                                    </td>  -->
                                                                 </tr>
                                                             <?php } ?> 
                                                         </tbody>

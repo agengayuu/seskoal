@@ -56,11 +56,11 @@
 		            </select>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>SKS</label>
                     <input type="number" name="sks" value="<?php echo $m->sks; ?>" class="form-control">
                     <?php echo form_error('sks', '<div class="text-danger small ml-3">','</div>') ?>
-                </div>
+                </div> -->
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>

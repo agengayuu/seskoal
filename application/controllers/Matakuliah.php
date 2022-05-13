@@ -62,7 +62,7 @@ class Matakuliah extends CI_Controller
 
         $kode_mata_kuliah   = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah   = $this->input->post('nama_mata_kuliah');
-        $sks              = $this->input->post('sks');
+        // $sks              = $this->input->post('sks');
         $id_dosen              = $this->input->post('id_dosen');
         $id_diklat              = $this->input->post('id_diklat');
         $id_akademik             = $this->input->post('id_akademik');
@@ -70,7 +70,7 @@ class Matakuliah extends CI_Controller
         $data = array(
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
-            'sks' => $sks,
+            // 'sks' => $sks,
             'id_dosen' => $id_dosen,
             'id_diklat' => $id_diklat,
             'id_akademik' => $id_akademik
@@ -93,7 +93,7 @@ class Matakuliah extends CI_Controller
             $data = array(
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', TRUE),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', TRUE),
-                'sks' => $this->input->post('sks', TRUE),
+                // 'sks' => $this->input->post('sks', TRUE),
                 'id_dosen' => $this->input->post('id_dosen', TRUE),
                 'id_diklat' => $this->input->post('id_diklat', TRUE),
                 'id_akademik' => $this->input->post('id_akademik', TRUE)
@@ -165,7 +165,7 @@ class Matakuliah extends CI_Controller
         $id_mata_kuliah = $this->input->post('id_mata_kuliah');
         $kode_mata_kuliah = $this->input->post('kode_mata_kuliah');
         $nama_mata_kuliah = $this->input->post('nama_mata_kuliah');
-        $sks = $this->input->post('sks');
+        // $sks = $this->input->post('sks');
         $id_dosen              = $this->input->post('id_dosen');
         $id_diklat             = $this->input->post('id_diklat');
         $id_akademik            = $this->input->post('id_akademik');
@@ -174,7 +174,7 @@ class Matakuliah extends CI_Controller
             'id_mata_kuliah' => $id_mata_kuliah,
             'kode_mata_kuliah' => $kode_mata_kuliah,
             'nama_mata_kuliah' => $nama_mata_kuliah,
-            'sks' => $sks,
+            // 'sks' => $sks,
             'id_dosen' => $id_dosen,
             'id_diklat' => $id_diklat,
             'id_akademik' => $id_akademik
