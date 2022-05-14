@@ -46,9 +46,6 @@ class Master_soal_admin  extends CI_Controller{
         $this->load->view('master_soal_admin/index2', $data); 
         $this->load->view('templates_dosen/footer'); 
 
-
-
-
     }
 
     public function getallsoal($id){
@@ -58,7 +55,7 @@ class Master_soal_admin  extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $soal = $this->db->query("select * from tbl_soal_evaluasi where id_mata_kuliah='".$id."'")->result();
+        $soal = $this->db->query("select * from tbl_master_soal where id_mata_kuliah='".$id."'")->result();
         $data['soal'] = $soal;    
 
         $this->load->view('master_soal_admin/getsoal', $data); 
@@ -81,29 +78,29 @@ class Master_soal_admin  extends CI_Controller{
         $this->load->view('templates_dosen/footer'); 
     }
 
-    public function getmahasiswa($id){
-        $data['title'] = 'Master Soal';
+    // public function getmahasiswa($id){
+    //     $data['title'] = 'Master Soal';
 
-        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
-        $this->load->view('templates_dosen/header',$data);  
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
+    //     $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
+    //     $this->load->view('templates_dosen/header',$data);  
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $join = $this->db->query("select tbl_mata_kuliah.id_mata_kuliah, tbl_diklat.id_diklat, tbl_mahasiswa.*
-                                    from tbl_diklat
-                                    join tbl_mata_kuliah
-                                    on tbl_mata_kuliah.id_diklat = tbl_diklat.id_diklat
-                                    join tbl_mahasiswa
-                                    on tbl_mahasiswa.id_diklat = tbl_diklat.id_diklat 
-                                    where tbl_mata_kuliah.id_diklat = tbl_mahasiswa.id_diklat")->result();
-        // echo "<pre>";
-        // print_r($join);die;
-        $mhs = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
-        $data['mhs'] = $mhs;
-        $this->load->view('master_soal_admin/index3', $data); 
-        $this->load->view('templates_dosen/footer'); 
-    }
+    //     $join = $this->db->query("select tbl_mata_kuliah.id_mata_kuliah, tbl_diklat.id_diklat, tbl_mahasiswa.*
+    //                                 from tbl_diklat
+    //                                 join tbl_mata_kuliah
+    //                                 on tbl_mata_kuliah.id_diklat = tbl_diklat.id_diklat
+    //                                 join tbl_mahasiswa
+    //                                 on tbl_mahasiswa.id_diklat = tbl_diklat.id_diklat 
+    //                                 where tbl_mata_kuliah.id_diklat = tbl_mahasiswa.id_diklat")->result();
+    //     // echo "<pre>";
+    //     // print_r($join);die;
+    //     $mhs = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
+    //     $data['mhs'] = $mhs;
+    //     $this->load->view('master_soal_admin/index3', $data); 
+    //     $this->load->view('templates_dosen/footer'); 
+    // }
 
-    public function getsoal_paket($id_paket, $id_matkul){
+    public function getsoal_paket($id_eval){
 
         // mengambil data soal dari mata kuliah dan paekt yang dipilih
         $data['title'] = 'Master Soal';
@@ -112,11 +109,21 @@ class Master_soal_admin  extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
      
-        $soal_paket = $this->db->query("select * from tbl_soal_evaluasi where id_paket_evaluasi = $id_paket && id_mata_kuliah = $id_matkul")->result();
+        $soal_paket = $this->db->query("select tbl_master_eval.*, tbl_master_soal.*, tbl_paket_evaluasi.*, tbl_mata_kuliah.*
+                                         from tbl_master_eval
+                                         join tbl_master_soal
+                                         on tbl_master_eval.id_master_soal = tbl_master_soal.id_master_soal
+                                         join tbl_paket_evaluasi
+                                         on tbl_master_eval.id_eval = tbl_paket_evaluasi.id_paket_evaluasi
+                                         join tbl_mata_kuliah
+                                         on tbl_master_soal.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
+                                         where tbl_master_eval.id_eval = $id_eval")->result(); 
+
+                                        //  select master_eval where id_eval = $id_eval
         $data['list'] = $soal_paket;
 
-        // echo "<pre>";
-        // print_r($soal_paket);die;
+        echo "<pre>";
+        print_r($soal_paket);die;
 
         $this->load->view('master_soal_admin/listsoal', $data); 
         $this->load->view('templates_dosen/footer'); 

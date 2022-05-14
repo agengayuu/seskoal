@@ -36,7 +36,7 @@
                             <td width="20px"><?php echo $no++ ?></td>
                             <td><?= $pkt->nama_paket_evaluasi ?></td>
                             <td>
-                                 <?php echo anchor('master_soal_admin/getsoal_paket/'.$pkt->id_paket_evaluasi.'/'.$pkt->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
+                                 <?php echo anchor('master_soal_admin/getsoal_paket/'.$pkt->id_paket_evaluasi, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?> 
                         </tr>
                                 <?php
                             endforeach

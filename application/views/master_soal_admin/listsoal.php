@@ -46,7 +46,7 @@
                             <td><?= $so->d ?></td>
                             <td><?= $so->e ?></td>
                             <!-- <td>
-                                 <?php echo anchor('master_soal_admin/getmahasiswa/'.$so->id_soal_evaluasi, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?>  -->
+                                 <?php echo anchor('master_soal_admin/getsoal_paket/'.$so->id_soal_evaluasi, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?>  -->
                         </tr>
                                 <?php
                             endforeach
