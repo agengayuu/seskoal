@@ -51,6 +51,18 @@ class M_master_soal extends CI_Model{
 // print_r($userlogin);die;
         return $this->db->query($query)->result_array();
     }
+
+
+    public function getsoal_paket($id){
+
+        $this->db->select('*');
+        $this->db->from('tbl_master_eval');
+        $this->db->join('tbl_master_soal', 'tbl_master_soal.id_master_soal = tbl_master_eval.id_master_soal');
+        $this->db->where('tbl_master_eval.id_eval', $id);
+        $query = $this->db->get()->result();
+        return $query;
+
+    }
 }
 
 ?>

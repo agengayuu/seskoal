@@ -7,7 +7,7 @@ class Master_soal_admin  extends CI_Controller{
     {
         parent::__construct();
         $this->load->library('form_validation');
-        // $this->load->model('m_master_soal_admin');
+        $this->load->model('m_master_soal');
         $this->load->model('m_diklat');
         $this->load->library('session');
         // is_logged_in('3');
@@ -109,21 +109,23 @@ class Master_soal_admin  extends CI_Controller{
         $this->load->view('templates_dosen/header',$data);  
         $this->load->view('templates_dosen/sidebar_admin',$data); 
      
-        $soal_paket = $this->db->query("select tbl_master_eval.*, tbl_master_soal.*, tbl_paket_evaluasi.*, tbl_mata_kuliah.*
-                                         from tbl_master_eval
-                                         join tbl_master_soal
-                                         on tbl_master_eval.id_master_soal = tbl_master_soal.id_master_soal
-                                         join tbl_paket_evaluasi
-                                         on tbl_master_eval.id_eval = tbl_paket_evaluasi.id_paket_evaluasi
-                                         join tbl_mata_kuliah
-                                         on tbl_master_soal.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
-                                         where tbl_master_eval.id_eval = $id_eval")->result(); 
+        // $soal_paket = $this->db->query("select tbl_master_eval.*, tbl_master_soal.*, tbl_paket_evaluasi.*, tbl_mata_kuliah.*
+        //                                  from tbl_master_eval
+        //                                  join tbl_master_soal
+        //                                  on tbl_master_eval.id_master_soal = tbl_master_soal.id_master_soal
+        //                                  join tbl_paket_evaluasi
+        //                                  on tbl_master_eval.id_eval = tbl_paket_evaluasi.id_paket_evaluasi
+        //                                  join tbl_mata_kuliah
+        //                                  on tbl_master_soal.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
+        //                                  where tbl_master_eval.id_eval = $id_eval")->result(); 
 
                                         //  select master_eval where id_eval = $id_eval
-        $data['list'] = $soal_paket;
+        // $id_eval = $this->uri->segment(4);
+        $data['list'] = $this->m_master_soal->getsoal_paket($id_eval);
 
-        echo "<pre>";
-        print_r($soal_paket);die;
+        // echo "<pre>";
+        // print_r( $data['list']);die;
+        // print_r(  $soal_paket );die;
 
         $this->load->view('master_soal_admin/listsoal', $data); 
         $this->load->view('templates_dosen/footer'); 
