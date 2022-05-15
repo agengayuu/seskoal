@@ -38,10 +38,10 @@ class M_matakuliah extends CI_Model{
         $this->db->delete($table);
     }
 
-     public function daftarsimpan($data){
-        return $this->db->insert('tbl_daftar_matkul', $data);
+    //  public function daftarsimpan($data){
+    //     return $this->db->insert('tbl_daftar_matkul', $data);
 
-    }
+    // }
 
 //     public function tampildaftar(){
 //         $data['title'] = 'Mata kuliah';

@@ -20,7 +20,7 @@ class M_berita extends CI_Model {
     }
 
     public function editupdate($where, $data, $table){
-        $this->db->where($where);
+        $this->db->where($where);                           
         $this->db->update($table, $data);
     }
 

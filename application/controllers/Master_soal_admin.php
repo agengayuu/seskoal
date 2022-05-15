@@ -23,12 +23,6 @@ class Master_soal_admin  extends CI_Controller{
 
         $data['diklat'] = $this->db->query("select * from tbl_diklat")->result();
 
-        // $query = $this->db->query("select a.*,b.* 
-        //                             from tbl_master_soal a, tbl_mata_kuliah b
-        //                             where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
-
-        // $data['soal'] = $query;
-
         $this->load->view('master_soal_admin/index', $data); 
         $this->load->view('templates_dosen/footer'); 
 
@@ -78,28 +72,6 @@ class Master_soal_admin  extends CI_Controller{
         $this->load->view('templates_dosen/footer'); 
     }
 
-    // public function getmahasiswa($id){
-    //     $data['title'] = 'Master Soal';
-
-    //     $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();  
-    //     $this->load->view('templates_dosen/header',$data);  
-    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
-
-    //     $join = $this->db->query("select tbl_mata_kuliah.id_mata_kuliah, tbl_diklat.id_diklat, tbl_mahasiswa.*
-    //                                 from tbl_diklat
-    //                                 join tbl_mata_kuliah
-    //                                 on tbl_mata_kuliah.id_diklat = tbl_diklat.id_diklat
-    //                                 join tbl_mahasiswa
-    //                                 on tbl_mahasiswa.id_diklat = tbl_diklat.id_diklat 
-    //                                 where tbl_mata_kuliah.id_diklat = tbl_mahasiswa.id_diklat")->result();
-    //     // echo "<pre>";
-    //     // print_r($join);die;
-    //     $mhs = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
-    //     $data['mhs'] = $mhs;
-    //     $this->load->view('master_soal_admin/index3', $data); 
-    //     $this->load->view('templates_dosen/footer'); 
-    // }
-
     public function getsoal_paket($id_eval){
 
         // mengambil data soal dari mata kuliah dan paekt yang dipilih
@@ -122,10 +94,6 @@ class Master_soal_admin  extends CI_Controller{
                                         //  select master_eval where id_eval = $id_eval
         // $id_eval = $this->uri->segment(4);
         $data['list'] = $this->m_master_soal->getsoal_paket($id_eval);
-
-        // echo "<pre>";
-        // print_r( $data['list']);die;
-        // print_r(  $soal_paket );die;
 
         $this->load->view('master_soal_admin/listsoal', $data); 
         $this->load->view('templates_dosen/footer'); 

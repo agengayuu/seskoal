@@ -30,7 +30,6 @@
 		                            <th>Nama Mahasiswa</th>                            
 		                            <th>NIM</th>                            
 		                            <th>Mata Kuliah</th>                            
-		                            <th width="20%">Waktu Ujian</th>                                           
 		                            <th>Benar</th>                            
 		                            <th>Salah</th>                            
 		                            <th>Nilai</th>
@@ -46,7 +45,6 @@
 	                                <td><?php echo $d['nama']; ?></td>                                
 	                                <td><?php echo $d['nim']; ?></td>                                
 	                                <td><?php echo $d['nama_mata_kuliah']; ?></td>                                
-	                                <td><?php echo date('d-m-Y',strtotime($d['tanggal_ujian'])); ?> | <?php echo date('H:i:s',strtotime($d['jam_ujian'])); ?></td>
 	                                <td>
 	                                    <?php
 	                                    if($d['benar'] == ''){

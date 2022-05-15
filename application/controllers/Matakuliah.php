@@ -246,61 +246,61 @@ class Matakuliah extends CI_Controller
         $this->load->view('templates_dosen/footer'); 
     }
 
-    public function daftardiklat(){
-        $data['title'] = 'Daftar Mata Kuliah';
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();
-        $this->load->view('templates_dosen/header', $data); 
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
+    // public function daftardiklat(){
+    //     $data['title'] = 'Daftar Mata Kuliah';
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array();
+    //     $this->load->view('templates_dosen/header', $data); 
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $diklat = $this->db->query("select * from tbl_diklat")->result();
-        $data['diklat'] = $diklat;
+    //     $diklat = $this->db->query("select * from tbl_diklat")->result();
+    //     $data['diklat'] = $diklat;
 
-        $this->load->view('matakuliah/daftardiklat',$data);
-        $this->load->view('templates_dosen/footer'); 
+    //     $this->load->view('matakuliah/daftardiklat',$data);
+    //     $this->load->view('templates_dosen/footer'); 
 
-    }
+    // }
 
-    public function tambahdaftar(){
-        $data['title'] = 'Tambah Daftar Mata Kuliah';
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();
-        $this->load->view('templates_dosen/header', $data); 
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
+    // public function tambahdaftar(){
+    //     $data['title'] = 'Tambah Daftar Mata Kuliah';
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array();
+    //     $this->load->view('templates_dosen/header', $data); 
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $akademik = $this->db->query("select * from thn_akademik")->result();
-        $matkul   = $this->db->query("select * from tbl_mata_kuliah")->result();
-        $data['matkul'] = $matkul;
-        $data['akademik']=$akademik;
+    //     $akademik = $this->db->query("select * from thn_akademik")->result();
+    //     $matkul   = $this->db->query("select * from tbl_mata_kuliah")->result();
+    //     $data['matkul'] = $matkul;
+    //     $data['akademik']=$akademik;
 
-        $this->load->view('matakuliah/tambahdaftar',$data);
-        $this->load->view('templates_dosen/footer'); 
-    }
+    //     $this->load->view('matakuliah/tambahdaftar',$data);
+    //     $this->load->view('templates_dosen/footer'); 
+    // }
 
-    public function simpanmatkul(){
+    // public function simpanmatkul(){
     
-            $data = array(
-                'id_akademik' => $this->input->post('id_akademik', TRUE),
-                'id_mata_kuliah' => $this->input->post('id_mata_kuliah', TRUE),
-            );
+    //         $data = array(
+    //             'id_akademik' => $this->input->post('id_akademik', TRUE),
+    //             'id_mata_kuliah' => $this->input->post('id_mata_kuliah', TRUE),
+    //         );
 
-            $this->m_matakuliah->daftarsimpan($data);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
-                                                    Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span></button></div>');
-            redirect('matakuliah/daftarmatkul');
+    //         $this->m_matakuliah->daftarsimpan($data);
+    //         $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
+    //                                                 Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
+    //                                                 <span aria-hidden="true">&times;</span></button></div>');
+    //         redirect('matakuliah/daftarmatkul');
 
-    }
+    // }
 
-    public function daftarhapus($id){
-        $where = array('id_daftar_matkul' => $id);
-        $this->m_matakuliah->hapus_data($where, 'tbl_daftar_matkul'); 
-        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                <span aria-hidden="true">&times;</span> </button></div>');
+    // public function daftarhapus($id){
+    //     $where = array('id_daftar_matkul' => $id);
+    //     $this->m_matakuliah->hapus_data($where, 'tbl_daftar_matkul'); 
+    //     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    //                                             Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+    //                                             <span aria-hidden="true">&times;</span> </button></div>');
 
-        redirect('matakuliah','refresh');
-    }
+    //     redirect('matakuliah','refresh');
+    // }
 
 }
 ?>

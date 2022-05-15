@@ -39,9 +39,9 @@
                                                                 <th>No</th>
                                                                 <th>Nama Mahasiswa</th>
                                                                 <th>Nim</th>
-                                                                <th>Tanggal Ujian</th>
+                                                                <!-- <th>Tanggal Ujian</th> -->
                                                                 <th>Nilai</th>
-                                                                <th>Mutu</th>
+                                                                <!-- <th>Mutu</th> -->
                                                                 <!-- <th>Cetak</th> -->
                                                             </tr>
                                                         </thead>
@@ -54,7 +54,7 @@
                                                                     <td><?php echo $no++; ?></td>                              
                                                                     <td><?php echo $d->nama; ?></td>   
                                                                     <td><?php echo $d->nim; ?></td>                                                                                     
-                                                                    <td><?php echo $d->tanggal_ujian; ?></td>                                                                                     
+                                                                    <!-- <td><?php echo $d->tanggal_ujian; ?></td>                                                                                      -->
                                                                     <td>
                                                                         <?php
                                                                         if($d->nilai == ''){
@@ -64,9 +64,14 @@
                                                                         }
                                                                         ?>
                                                                     </td>
-                                                                    <td>
-                                                                        <!-- Masih belum selesai nilai mutu nya -->
+                                                                    <!-- <td> -->
+                                                                        <!-- <?php echo $d->mutu; ?> -->
+                                                                        <!-- Masih belum selesai nilai mutu nya
                                                                         <?php 
+                                                                        echo "nilai : " + $d->nilai;
+                                                                        echo "batas_awal : " + $nilai->batas_awal;
+                                                                        echo "batas_awal : " + $nilai->batas_akhir;
+                                                                        if(in_array($var, $checkVars))
                                                                         if($d->nilai >= $nilai->batas_awal){
                                                                             echo $nilai->mutu;
                                                                         }elseif($d->nilai <= $nilai->batas_awal){
@@ -74,8 +79,8 @@
                                                                         }elseif($d->nilai >= $nilai->batas_awal[2]){
                                                                             echo "C";
                                                                         } 
-                                                                        ?>
-                                                                    </td>                                                                                     
+                                                                        ?> -->
+                                                                    <!-- </td>                                                                                      -->
                                                                     <!-- <td>
                                                                         <?php
                                                                         if($d->nilai == ''){

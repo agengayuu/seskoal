@@ -113,20 +113,20 @@ class Penilaian extends CI_Controller
         $this->load->view('templates_dosen/footer'); 
     }
 
-    public function rekap_diklat(){
-        $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array();
-        $this->load->view('templates_dosen/header', $data); 
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
+    // public function rekap_diklat(){
+    //     $data['title'] = 'Penilaian';
+    //     $data['user'] = $this->db->get_where('user', ['username'=> 
+    //     $this->session->userdata('username')])->row_array();
+    //     $this->load->view('templates_dosen/header', $data); 
+    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $diklat = $this->db->query("select * from tbl_diklat")->result();
-        $data['diklat'] = $diklat;
+    //     $diklat = $this->db->query("select * from tbl_diklat")->result();
+    //     $data['diklat'] = $diklat;
 
-        $this->load->view('penilaian/rekap_diklat',$data);
-        $this->load->view('templates_dosen/footer'); 
+    //     $this->load->view('penilaian/rekap_diklat',$data);
+    //     $this->load->view('templates_dosen/footer'); 
 
-    }
+    // }
 
         public function getakademik_rekap($id){
         $data['title'] = 'Penilaian';
