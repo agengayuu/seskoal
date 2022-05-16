@@ -24,7 +24,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-8"><b>Kode Matakuliah</b> <b><?php echo ": ".$kode_mata_kuliah; ?></b></label><br />
                                         <label class="control-label col-md-8"><b>Nama Matakuliah</b> <b><?php echo ": ".$tt; ?></b></label><br />
-                                        <label class="control-label col-md-8"><b>SKS</b> <b><?php echo ": ".$sks; ?></b></label><br />
+                                        <!-- <label class="control-label col-md-8"><b>SKS</b> <b><?php echo ": ".$sks; ?></b></label><br /> -->
                                         <label class="control-label col-md-8"><b>Keterangan</b> <b><?php echo ": ".$keterangan; ?></b></label>
                                     </div>
                                 </div>

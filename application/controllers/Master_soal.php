@@ -9,8 +9,8 @@ class Master_soal extends CI_Controller{
         $this->load->library('form_validation');
         $this->load->model('m_master_soal');
         $this->load->library('session');
+        $this->load->helper('aksesblock');
         is_logged_in('3');
-        // session_start();
     }
 
     public function index(){
@@ -81,7 +81,7 @@ class Master_soal extends CI_Controller{
 
         $data['user'] = $this->db->get_where('user', ['username'=>$this->session->userdata('username')])->row_array();
         
-        $this->load->view('templates_dosen/header'); 
+        $this->load->view('templates_dosen/header' ,$data); 
         $this->load->view('templates_dosen/sidebar_admin',$data);
 
         $query= $this->m_master_soal->get();

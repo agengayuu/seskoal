@@ -2,7 +2,7 @@
 
 if(!defined('BASEPATH'))
 exit('No direct script access allowed');
-class Profile_dosen extends CI_Controller{
+class Profile_dosen extends CI_Controller{ 
 
     function __construct()
     {

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            Update Paket Evaluasi
+        <i class="fas fa-edit"></i> Update Paket Evaluasi
         </div>
     </div>
 
@@ -9,7 +9,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Update Paket Evaluasi </h6>
+            <h6 class="m-0 font-weight-bold text-primary"> Update Paket Evaluasi </h6>
         </div>
 
         <form method="post" action="<?php echo base_url('daftar_matakuliah/updateEval')?>">

@@ -23,7 +23,6 @@
                             <thead>
                                 <tr style="text-align:center">
                                     <th>No</th>
-                                    <!-- <th>Nama Diklat</th> -->
                                     <th>Mata Kuliah</th>
                                 </tr>
                             </thead>
@@ -33,7 +32,6 @@
                                 foreach ($matakuliah as $mk) : ?>
                                     <tr>
                                         <td width="20px"><?php echo $no++ ?></td>
-                                        <!-- <td><?= $mk['nama_diklat'] ?></td> -->
                                         <td><?= $mk['nama_mata_kuliah'] ?></td>    
                                     </tr>
                                 <?php

@@ -102,8 +102,7 @@ class Main_menu extends CI_Controller
         is_logged_in('3');
         $data['title'] = 'Menu Dosen';
 
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' =>$this->session->userdata('username')])->row_array();
 
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);

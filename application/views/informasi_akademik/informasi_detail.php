@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            Pengumuman
+        <i class="fas fa-bullhorn"></i> Pengumuman
         </div>
     </div>
 
@@ -71,11 +71,6 @@
 
 </div>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
 <script>
     $(document).ready(function() {
         $(document).on('click', '#detail', function() {
@@ -122,3 +117,8 @@
         });
     })
 </script>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
