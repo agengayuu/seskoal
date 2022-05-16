@@ -29,6 +29,7 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller{
                                     where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
 
         $data['mahasiswa'] = $query;
+        // var_dump($data['mahasiswa']);
 
         $this->load->view('jadwal_mahasiswa_evaluasi/index', $data); 
         $this->load->view('templates_dosen/footer');  

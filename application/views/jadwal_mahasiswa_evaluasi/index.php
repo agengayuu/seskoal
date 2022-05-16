@@ -30,6 +30,7 @@ date_default_timezone_set('Asia/Jakarta');
                                         <th>Kode</th>
                                         <th>Mata Kuliah</th>
                                         <th>Waktu Ujian</th>
+                                        <th>Waktu Selesai</th>
                                         <th>Durasi</th>
                                         <th>Status</th> 
                                     </tr>
@@ -43,6 +44,15 @@ date_default_timezone_set('Asia/Jakarta');
                                             <td><?php echo $mhs->kode_mata_kuliah; ?></td>
                                             <td><?php echo $mhs->nama_mata_kuliah; ?></td>
                                             <td><?php echo date('d-m-Y', strtotime($mhs->tanggal_ujian)); ?> | <?php echo date('H:i:s', strtotime($mhs->jam_ujian)); ?></td>
+                                            
+                                            <td>
+                                                <?php 
+                                                    $waktu_ujian = date('d-m-Y H:i', strtotime($mhs->tanggal_ujian. $mhs->jam_ujian));
+                                                    // echo $waktu_ujian;
+                                                    $time = strtotime($waktu_ujian) + $mhs->durasi_ujian * 60;
+                                                    echo date('d-m-Y H:i:s', $time); 
+                                                ?>
+                                            </td>
                                             <td><?php echo $mhs->durasi_ujian; ?> Menit</td>
                                             <td>
                                             <?php if ($mhs->status_ujian == 0) {
