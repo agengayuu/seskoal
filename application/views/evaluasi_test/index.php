@@ -57,8 +57,9 @@ if(isset($_SESSION["waktu_start"])){
             <div class="card-body" style="overflow-y: scroll;height: 525px;">
                 <form id="formSoal" role="form" action="<?php echo base_url(); ?>evaluasi_test/jawab_aksi" method="post" onsubmit="return confirm('Anda Yakin ?')">
 
-                    <input type="hidden" name="id_evaluasi" value="<?php echo $id['id_evaluasi']; ?>">
+                    <input type="hidden" name="id_eval" value="<?php echo $id['id_eval']; ?>">
                     <input type="hidden" name="jumlah_soal" value="<?php echo $total_soal; ?>">
+                    <!-- <input type="text" name="id_mata_kuliah" value="<?php echo $matkul['id_mata_kuliah']; ?>"> -->
 
                     <?php $no = 0;
                     foreach ($soal as $s) {
@@ -69,12 +70,12 @@ if(isset($_SESSION["waktu_start"])){
                                     <tr>
                                         <td width="1%"><?php echo $no; ?>.</td>
                                         <td><?php echo $s->pertanyaan; ?>
-                                            <input type='hidden' name='soal[]' value='<?php echo $s->id_soal_evaluasi; ?>' /> <br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="A" required /> <?php echo $s->a; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="B" required /> <?php echo $s->b; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="C" required /> <?php echo $s->c; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="D" required /> <?php echo $s->d; ?><br>
-                                            <input type="radio" name="jawaban[<?php echo $s->id_soal_evaluasi; ?>]" value="E" required /> <?php echo $s->e; ?>
+                                            <input type='hidden' name='soal[]' value='<?php echo $s->id_master_soal; ?>' /> <br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_master_soal; ?>]" value="A" required /> <?php echo $s->a; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_master_soal; ?>]" value="B" required /> <?php echo $s->b; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_master_soal; ?>]" value="C" required /> <?php echo $s->c; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_master_soal; ?>]" value="D" required /> <?php echo $s->d; ?><br>
+                                            <input type="radio" name="jawaban[<?php echo $s->id_master_soal; ?>]" value="E" required /> <?php echo $s->e; ?>
                                         </td>
                                     </tr>
                                 </tbody>

@@ -24,9 +24,15 @@ class M_evaluasi_test extends CI_Model{
 
     public function UpdateNilai2($id_peserta, $data)
 	{
-		$this->db->where('id_evaluasi', $id_peserta);
+		$this->db->where('id_eval', $id_peserta);
 		$this->db->update('tbl_mahasiswa_evaluasi', $data);
 	}
+    public function insertNilai2($data, $table)
+	{
+		// $this->db->where('id_mahasiswa_evaluasi', $id_peserta);
+		return $this->db->insert('tbl_mahasiswa_evaluasi', $data);
+	}
+
 }
 
 ?>

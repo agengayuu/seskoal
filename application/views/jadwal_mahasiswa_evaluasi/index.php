@@ -42,7 +42,7 @@ date_default_timezone_set('Asia/Jakarta');
                                             <td width="20px"><?php echo $no++ ?></td>
                                             <td><?php echo $mhs->kode_mata_kuliah; ?></td>
                                             <td><?php echo $mhs->nama_mata_kuliah; ?></td>
-                                            <td><?php echo date('d-m-Y', strtotime($mhs->tanggal_ujian)); ?> | <?php echo date('H:i:s', strtotime($mhs->jam_ujian)); ?></td>
+                                            <td><?php echo date('d-m-Y', strtotime($mhs->waktu_evaluasi_mulai)); ?> | <?php echo date('H:i:s', strtotime($mhs->waktu_evaluasi_selesai)); ?></td>
                                             <td><?php echo $mhs->durasi_ujian; ?> Menit</td>
                                             <td>
                                             <?php if ($mhs->status_ujian == 0) {
@@ -51,12 +51,12 @@ date_default_timezone_set('Asia/Jakarta');
                                                     echo "<span> Sudah Mengikuti Ujian </span>";
                                                 } else if ($mhs->status_ujian == 1) {
                                                     if ($mhs->status_ujian == 1) {
-                                                        if (Date('d-m-Y', strtotime($mhs->tanggal_ujian)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->jam_ujian)) <= Date('H:i:s')) {
-                                                            echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
-                                                        } else if (Date('d-m-Y', strtotime($mhs->tanggal_ujian)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->jam_ujian)) <= Date('H:i:s')) {
+                                                        if (Date('d-m-Y', strtotime($mhs->waktu_evaluasi_mulai)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->waktu_evaluasi_mulai)) <= Date('H:i:s')) {
+                                                            echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                        } else if (Date('d-m-Y', strtotime($mhs->waktu_evaluasi_selesai)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->waktu_evaluasi_selesai)) <= Date('H:i:s')) {
                                                             echo "Waktu Ujian Habis";
                                                         } else {
-                                                            echo "Tuggu Waktu Ujian";
+                                                            echo "Tunggu Waktu Ujian";
                                                         }
                                                     }
                                                 }
