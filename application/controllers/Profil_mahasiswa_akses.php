@@ -13,26 +13,17 @@ class Profil_mahasiswa_akses extends CI_Controller
         $this->load->library('session');
         $this->load->helper('aksesblock');
         is_logged_in('2');
-
-
-        // if(!$this->session->userdata('username')){
-        //     redirect('login');
-        // }
-        // session_start();
     }
 
     public function index()
     {
         $data['title'] = 'Data Diri';
 
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $userlogin = $this->session->userdata('id');
-        // echo $userlogin;
-        // die();
 
         $mahasiswa = $this->db->query(
             "SELECT 
@@ -54,17 +45,6 @@ class Profil_mahasiswa_akses extends CI_Controller
                             user.id = $userlogin"
         )->row();
 
-
-        // echo "<pre>";
-        // print_r($mahasiswa);
-        // die();
-        //                         $ortu = $this->db->query("select * from tbl_ortu_wali where nim = '".$userlogin."'")->row_array();
-        //                         echo "<pre>";
-        //                         print_r($ortu);die;
-        // echo "<pre>";
-        //                         print_r($mahasiswa);die;
-
-
         $query1 = $this->db->query("select * from tbl_diklat order by id_diklat asc")->result();
         $data['diklat'] = $query1;
 
@@ -73,17 +53,11 @@ class Profil_mahasiswa_akses extends CI_Controller
 
         $data['datadiri'] = $mahasiswa;
 
-        //   echo "<pre>";print_r($data['datadiri']);die;
-
         $query4 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='AYAH' AND id_mahasiswa = " . $userlogin . "")->row();
         $data['ayah'] = $query4;
-        // print_r($query4);die;
-
-        // print_r($query5);die;
 
         $query5 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='IBU' AND id_mahasiswa = " . $userlogin . "")->row();
         $data['ibu'] = $query5;
-        // echo "<pre>";print_r($data);die;
 
         $this->load->view('profil_mahasiswa_akses/index', $data);
         $this->load->view('templates_dosen/footer');
@@ -104,8 +78,6 @@ class Profil_mahasiswa_akses extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $userlogin = $this->session->userdata('id');
-        // echo $userlogin;
-        // die();
 
         $mahasiswa = $this->db->query(
             "SELECT 
@@ -127,17 +99,6 @@ class Profil_mahasiswa_akses extends CI_Controller
                             user.id = $userlogin"
         )->row();
 
-
-        // echo "<pre>";
-        // print_r($mahasiswa);
-        // die();
-        //                         $ortu = $this->db->query("select * from tbl_ortu_wali where nim = '".$userlogin."'")->row_array();
-        //                         echo "<pre>";
-        //                         print_r($ortu);die;
-        // echo "<pre>";
-        //                         print_r($mahasiswa);die;
-
-
         $query1 = $this->db->query("select * from tbl_diklat order by id_diklat asc")->result();
         $data['diklat'] = $query1;
 
@@ -148,13 +109,9 @@ class Profil_mahasiswa_akses extends CI_Controller
 
         $query4 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='AYAH' AND id_mahasiswa = " . $userlogin . "")->row();
         $data['ayah'] = $query4;
-        // print_r($query4);die;
-
-        // print_r($query5);die;
 
         $query5 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='IBU' AND id_mahasiswa = " . $userlogin . "")->row();
         $data['ibu'] = $query5;
-        // echo "<pre>";print_r($data);die;
 
         $this->load->view('profil_mahasiswa_akses/detail', $data);
         $this->load->view('templates_dosen/footer');
@@ -169,8 +126,7 @@ class Profil_mahasiswa_akses extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Data Diri';
 
-            $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+            $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
             $this->load->view('templates_dosen/header', $data);
             $this->load->view('templates_dosen/sidebar_admin', $data);
 
@@ -198,17 +154,6 @@ class Profil_mahasiswa_akses extends CI_Controller
                                 user.id = $userlogin"
             )->row();
 
-
-            // echo "<pre>";
-            // print_r($mahasiswa);
-            // die();
-            //                         $ortu = $this->db->query("select * from tbl_ortu_wali where nim = '".$userlogin."'")->row_array();
-            //                         echo "<pre>";
-            //                         print_r($ortu);die;
-            // echo "<pre>";
-            //                         print_r($mahasiswa);die;
-
-
             $query1 = $this->db->query("select * from tbl_diklat order by id_diklat asc")->result();
             $data['diklat'] = $query1;
 
@@ -219,13 +164,9 @@ class Profil_mahasiswa_akses extends CI_Controller
 
             $query4 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='AYAH' AND id_mahasiswa = " . $userlogin . "")->row();
             $data['ayah'] = $query4;
-            // print_r($query4);die;
-
-            // print_r($query5);die;
 
             $query5 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='IBU' AND id_mahasiswa = " . $userlogin . "")->row();
             $data['ibu'] = $query5;
-            // echo "<pre>";print_r($data);die;
 
             $this->load->view('profil_mahasiswa_akses/detail', $data);
             $this->load->view('templates_dosen/footer');
@@ -298,9 +239,6 @@ class Profil_mahasiswa_akses extends CI_Controller
                 'id_diklat' => $id_diklat, //tambah ini
                 'angkatan' => $angkatan
             );
-
-            // echo "<pre>";
-            // print_r($data);die;
 
             $this->db->where('id_mahasiswa', $id_mahasiswa);
             $this->db->update('tbl_profil_mahasiswa', $data);

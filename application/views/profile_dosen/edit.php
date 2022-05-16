@@ -17,67 +17,58 @@
         <div class="form-group">
             <label>NID<i style="color:red">*</i></label>
             <input type="number" name="nip" id="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" readonly>
-            <?php echo form_error('nip', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>NIK<i style="color:red">*</i></label>
             <input type="number" name="nik" id="nik" placeholder="Masukkan NIK" class="form-control" value="<?php echo $d->nik ?>" readonly>
-            <?php echo form_error('nik', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>NPWP<i style="color:red">*</i></label>
             <input type="number" name="npwp" id="npwp" placeholder="Masukkan NPWP" class="form-control" value="<?php echo $d->npwp ?>" readonly>
-            <?php echo form_error('npwp', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Kewarganegaraan<i style="color:red">*</i></label>
             <input type="text" name="kewarganegaraan" placeholder="Masukkan Kewarganegaraan" class="form-control" value="<?php echo $d->kewarganegaraan ?>" required>
-            <?php echo form_error('kewarganegaraan', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Nama Dosen<i style="color:red">*</i></label>
             <input type="text" name="nama" placeholder="Masukkan Nama Dosen" class="form-control" value="<?php echo $d->nama ?>" required>
-            <?php echo form_error('nama', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Email<i style="color:red">*</i></label>
             <input type="email" name="email" class="form-control" value="<?php echo $d->email ?>" required>
-            <?php echo form_error('email', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
-            <label>No. Telepon</label>
-            <input type="number" name="no_tlp" placeholder="Masukkan No. Telepon" class="form-control" value="<?php echo $d->no_tlp ?>" required>
-            <?php echo form_error('no_tlp', '<div class="text-danger small ml-3">','</div>') ?>
+            <label>No. HP<i style="color:red">*</i></label>
+            <input type="number" name="no_tlp" placeholder="Masukkan No. Telepon" class="form-control" value="<?php echo $d->no_tlp ?>" max="12" required>
+            <label><i>No HP harus 12 digit angka</i></label>
         </div>
 
         <div class="form-group">
             <label>Gelar Depan</label>
-            <input type="text" name="gelar_depan" placeholder="Masukkan Gelar Depan" class="form-control" value="<?php echo $d->gelar_depan ?>" required>
+            <input type="text" name="gelar_depan" placeholder="Masukkan Gelar Depan" class="form-control" value="<?php echo $d->gelar_depan ?>">
             <?php echo form_error('gelar_depan', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
-            <label>Gelar Belakang</label>
-            <input type="text" name="gelar_belakang" placeholder="Masukkan Gelar Belakang" class="form-control" value="<?php echo $d->gelar_belakang ?>">
-            <?php echo form_error('gelar_belakang', '<div class="text-danger small ml-3">','</div>') ?>
+            <label>Gelar Belakang<i style="color:red">*</i></label>
+            <input type="text" name="gelar_belakang" placeholder="Masukkan Gelar Belakang" class="form-control" value="<?php echo $d->gelar_belakang ?>" required>
         </div>
         
         <div class="form-group">
             <label>Tempat Lahir<i style="color:red">*</i></label>
             <input type="text" name="tempat_lahir" placeholder="Masukkan Tempat Lahir" class="form-control" value="<?php echo $d->tempat_lahir ?>" required>
-            <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Tanggal Lahir<i style="color:red">*</i></label>
             <input type="date" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir" class="form-control" value="<?php echo $d->tgl_lahir ?>" required>
-            <?php echo form_error('tgl_lahir', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
@@ -87,7 +78,6 @@
                 <option value="Perempuan"> Perempuan </option>
                 <option value="Laki-laki">Laki-Laki</option>
             </select>
-            <?php echo form_error('jk', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
@@ -101,13 +91,11 @@
                 <option value="Hindu">Hindu</option>
                 <option value="Konghucu">Konghucu</option>
             </select>
-            <?php echo form_error('agama', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
             <label>Alamat<i style="color:red">*</i></label>
             <textarea class="form-control" name="alamat" rows="3" required> <?= "$d->alamat"?> </textarea>
-            <?php echo form_error('alamat', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
         <div class="form-group">
