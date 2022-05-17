@@ -33,7 +33,7 @@
                         foreach ($pengumuman as $pa) : ?>
                             <tr>
                                 <td style="text-align: center"><?php echo $no++ ?></td>
-                                <td><?= $pa->tgl_pembuatan ?></td>
+                                <td><?= date('d-m-Y', strtotime($pa->tgl_pembuatan)) ?></td>
                                 <td><?= $pa->judul_pengumuman ?></td>
                                 <td style="text-align: center">
                                     <button id="detail" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-detail" data-idpengumuman="<?= $pa->id_pengumuman ?>" data-judulpengumuman="<?= $pa->judul_pengumuman ?>" data-tglpembuatan="<?= $pa->tgl_pembuatan ?>" data-isipengumuman="<?= $pa->isi_pengumuman ?>">
