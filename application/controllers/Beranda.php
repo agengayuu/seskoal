@@ -9,8 +9,6 @@ class Beranda extends CI_Controller {
         $this->load->model('m_berita');
         $this->load->library('session');
         $this->load->helper('download');
-        //session_start();
-        // is_logged_in('1');
     }
     
     public function index() {
