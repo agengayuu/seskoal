@@ -30,6 +30,7 @@ date_default_timezone_set('Asia/Jakarta');
                                         <th>Kode</th>
                                         <th>Mata Kuliah</th>
                                         <th>Waktu Ujian</th>
+                                        <th>Waktu Selesai</th>
                                         <th>Durasi</th>
                                         <th>Status</th> 
                                     </tr>
@@ -42,28 +43,31 @@ date_default_timezone_set('Asia/Jakarta');
                                             <td width="20px"><?php echo $no++ ?></td>
                                             <td><?php echo $mhs->kode_mata_kuliah; ?></td>
                                             <td><?php echo $mhs->nama_mata_kuliah; ?></td>
-                                            <td><?php echo date('d-m-Y', strtotime($mhs->waktu_evaluasi_mulai)); ?> | <?php echo date('H:i:s', strtotime($mhs->waktu_evaluasi_selesai)); ?></td>
+                                            <td><?= Date('d-m-Y H:i:s', strtotime($mhs->waktu_evaluasi_mulai)); ?></td>
+                                            <td><?= Date('d-m-Y H:i:s', strtotime($mhs->waktu_evaluasi_selesai)); ?></td>
                                             <td><?php echo $mhs->durasi_ujian; ?> Menit</td>
                                             <td>
-                                            <?php if ($mhs->status_ujian == 0) {
+                                            <?php 
+                                                $time = (int)(Date('dmYHis'));
+                                                $mulai = (int)(Date('dmYHis', strtotime($mhs->waktu_evaluasi_mulai)));
+                                                $selesai = (int)(Date('dmYHis', strtotime($mhs->waktu_evaluasi_selesai)));
+                                            ?>
+                                                <?php if ($mhs->status_ujian == 0) {
                                                     echo "<span> Belum Mulai Ujian </span>";
-                                                } else if ($mhs->status_ujian == 2) {
-                                                    echo "<span> Sudah Mengikuti Ujian </span>";
-                                                } else if ($mhs->status_ujian == 1) {
-                                                    if ($mhs->status_ujian == 1) {
-                                                        if (Date('d-m-Y', strtotime($mhs->waktu_evaluasi_mulai)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->waktu_evaluasi_mulai)) <= Date('H:i:s')) {
-                                                            echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
-                                                        } else if (Date('d-m-Y', strtotime($mhs->waktu_evaluasi_selesai)) == Date('d-m-Y') && Date('H:i:s', strtotime($mhs->waktu_evaluasi_selesai)) <= Date('H:i:s')) {
-                                                            echo "Waktu Ujian Habis";
-                                                        } else {
-                                                            echo "Tunggu Waktu Ujian";
+                                                    } else if ($mhs->status_ujian == 2) {
+                                                        echo "<span> Sudah Mengikuti Ujian </span>";
+                                                    } else if ($mhs->status_ujian == 1) {
+                                                        if ($mhs->status_ujian == 1) {
+                                                            if ($time >= $mulai && $time <= $selesai) {
+                                                                echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                            } elseif ($time > $selesai) {
+                                                                echo "Waktu Habis";
+                                                            } elseif ($time < $mulai) {
+                                                                echo "Tunggu Waktu Ujian";
+                                                            }
                                                         }
                                                     }
-                                                }
                                                 ?>
-
-                                            </td>
-
                                             </td>
                                         </tr>
                                             <?php
