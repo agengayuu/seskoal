@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Jakarta');
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            <span>Jadwal Test Evaluasi</span>
+            <span>Jadwal Tes Evaluasi</span>
         </div>
     </div>
 
@@ -15,8 +15,32 @@ date_default_timezone_set('Asia/Jakarta');
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-        <h3 class="box-title"><?php print Date('d F Y'); ?> | <span id="time"> </h3>
-            <h6 class="m-0 font-weight-bold text-primary">Jadwal Test Evaluasi</h6>
+        <h3 class="box-title"><?php 
+            function tanggal_indonesia($tanggal){
+                $bulan = array (
+                    1 =>   	'Januari',
+                            'Februari',
+                            'Maret',
+                            'April',
+                            'Mei',
+                            'Juni',
+                            'Juli',
+                            'Agustus',
+                            'September',
+                            'Oktober',
+                            'November',
+                            'Desember'
+                    );
+                
+                    $var = explode('-', $tanggal);
+                
+                    return $var[2] . ' ' . $bulan[ (int)$var[1] ] . ' ' . $var[0];
+                    // var 0 = tanggal
+                    // var 1 = bulan
+                    // var 2 = tahun
+                }
+        echo tanggal_indonesia(date('Y-m-d')) ?> | <span id="clock"></span></h3>
+            <h6 class="m-0 font-weight-bold text-primary">Jadwal Tes Evaluasi</h6>
         </div>
 
             <div class="card-body">
@@ -89,29 +113,14 @@ date_default_timezone_set('Asia/Jakarta');
 </div>
 
 <script>
-    window.setTimeout("waktu()", 1000);
-
-    function showTime() {
-        var a_p = "";
-        var today = new Date();
-        var curr_hour = today.getHours();
-        var curr_minute = today.getMinutes();
-        var curr_second = today.getSeconds();
-        if (curr_hour < 12) {
-            a_p = "AM";
-        } else {
-            a_p = "PM";
-        }
-        if (curr_hour == 0) {
-            curr_hour = 12;
-        }
-        if (curr_hour > 12) {
-            curr_hour = curr_hour - 12;
-        }
-        curr_hour = checkTime(curr_hour);
-        curr_minute = checkTime(curr_minute);
-        curr_second = checkTime(curr_second);
-        document.getElementById('time').innerHTML = curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+    setInterval(customClock, 500);
+    
+    function customClock() {
+        var time = new Date();
+        var hrs = checkTime(time.getHours());
+        var min = checkTime(time.getMinutes());
+        var sec = checkTime(time.getSeconds());
+        document.getElementById('clock').innerHTML = hrs + ":" + min + ":" + sec;  
     }
 
     function checkTime(i) {
