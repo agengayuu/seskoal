@@ -38,8 +38,8 @@
                                         <tr style="text-align:center">
                                             <td width="20px"><?php echo $no++ ?></td>
                                             <td><?= $md->nama_mata_kuliah ?>
-                                            <td><?php echo date('d-m-Y', strtotime($md->tanggal_ujian)); ?></td>
-                                            <td><?php echo date('H:i:s', strtotime($md->jam_ujian)); ?></td>
+                                            <td><?php echo date('d-m-Y', strtotime($md->waktu_evaluasi_mulai)); ?></td>
+                                            <td><?php echo date('H:i:s', strtotime($md->waktu_evaluasi_mulai)); ?></td>
                                             <td>
                                                 <?php
                                                 if ($md->benar == '') {

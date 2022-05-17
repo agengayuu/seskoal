@@ -113,7 +113,7 @@ class Matakuliah extends CI_Controller
     public function _rules() {
         $this->form_validation->set_rules('kode_mata_kuliah', 'kode_mata_kuliah', 'required', ['required' => 'Kode Mata Kuliah Wajib diisi!']);
         $this->form_validation->set_rules('nama_mata_kuliah', 'nama_mata_kuliah', 'required', ['required' => 'Nama Mata Kuliah Wajib diisi!']);
-        $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks wajib diisi!']);
+        // $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks wajib diisi!']);
     }
 
     public function adminedit($id){

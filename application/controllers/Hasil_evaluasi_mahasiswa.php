@@ -29,6 +29,7 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller{
 
         if(count($array_id_mata_kuliah) > 0){
             $data['mahasiswa'] = $this->m_hasil_evaluasi_mahasiswa->get_mahasiswa($array_id_mata_kuliah);
+            // var_dump($data['mahasiswa']);die;
         } else {
             $data['mahasiswa'] = [];
         }

@@ -1194,6 +1194,7 @@ ERROR - 2022-05-16 03:17:05 --> 404 Page Not Found: Js/sb-admin-2.min.js
 ERROR - 2022-05-16 03:17:06 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-05-16 03:17:06 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-05-16 03:17:06 --> 404 Page Not Found: Js/demo
+<<<<<<< HEAD
 ERROR - 2022-05-16 03:53:25 --> 404 Page Not Found: Assets/global
 ERROR - 2022-05-16 03:53:25 --> 404 Page Not Found: Assets/global
 ERROR - 2022-05-16 03:53:25 --> 404 Page Not Found: Vendor/bootstrap
@@ -1405,3 +1406,33 @@ ERROR - 2022-05-16 04:02:53 --> 404 Page Not Found: Js/sb-admin-2.min.js
 ERROR - 2022-05-16 04:02:53 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-05-16 04:02:53 --> 404 Page Not Found: Vendor/datatables
 ERROR - 2022-05-16 04:02:53 --> 404 Page Not Found: Js/demo
+=======
+ERROR - 2022-05-16 22:18:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-05-16 22:18:33 --> Severity: 8192 --> Return type of CI_Session_files_driver::open($save_path, $name) should either be compatible with SessionHandlerInterface::open(string $path, string $name): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice C:\xampp\htdocs\seskoal\system\libraries\Session\drivers\Session_files_driver.php 132
+ERROR - 2022-05-16 22:18:33 --> Severity: 8192 --> Return type of CI_Session_files_driver::close() should either be compatible with SessionHandlerInterface::close(): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice C:\xampp\htdocs\seskoal\system\libraries\Session\drivers\Session_files_driver.php 294
+ERROR - 2022-05-16 22:18:33 --> Severity: 8192 --> Return type of CI_Session_files_driver::read($session_id) should either be compatible with SessionHandlerInterface::read(string $id): string|false, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice C:\xampp\htdocs\seskoal\system\libraries\Session\drivers\Session_files_driver.php 168
+ERROR - 2022-05-16 22:18:33 --> Severity: 8192 --> Return type of CI_Session_files_driver::write($session_id, $session_data) should either be compatible with SessionHandlerInterface::write(string $id, string $data): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice C:\xampp\htdocs\seskoal\system\libraries\Session\drivers\Session_files_driver.php 237
+ERROR - 2022-05-16 22:18:34 --> Severity: 8192 --> Return type of CI_Session_files_driver::destroy($session_id) should either be compatible with SessionHandlerInterface::destroy(string $id): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice C:\xampp\htdocs\seskoal\system\libraries\Session\drivers\Session_files_driver.php 317
+ERROR - 2022-05-16 22:18:34 --> Severity: 8192 --> Return type of CI_Session_files_driver::gc($maxlifetime) should either be compatible with SessionHandlerInterface::gc(int $max_lifetime): int|false, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice C:\xampp\htdocs\seskoal\system\libraries\Session\drivers\Session_files_driver.php 358
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 282
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> session_set_cookie_params(): Session cookie parameters cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 294
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 304
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 314
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 315
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 316
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 317
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 375
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> session_set_save_handler(): Session save handler cannot be changed after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 110
+ERROR - 2022-05-16 22:18:34 --> Severity: Warning --> session_start(): Session cannot be started after headers have already been sent C:\xampp\htdocs\seskoal\system\libraries\Session\Session.php 143
+ERROR - 2022-05-16 22:18:35 --> Severity: error --> Exception: Table 'seskoal.tbl_galeri' doesn't exist C:\xampp\htdocs\seskoal\system\database\drivers\mysqli\mysqli_driver.php 307
+ERROR - 2022-05-16 22:18:35 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\seskoal\system\core\Exceptions.php:271) C:\xampp\htdocs\seskoal\system\core\Common.php 570
+ERROR - 2022-05-16 22:20:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-05-16 22:20:50 --> Severity: error --> Exception: Table 'seskoal.tbl_galeri' doesn't exist C:\xampp\htdocs\seskoal\system\database\drivers\mysqli\mysqli_driver.php 307
+ERROR - 2022-05-16 22:24:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-05-16 22:24:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2022-05-16 22:24:29 --> Severity: Warning --> require(vendor/autoload.php): Failed to open stream: No such file or directory C:\xampp\htdocs\seskoal\application\controllers\Login.php 5
+ERROR - 2022-05-16 22:24:30 --> Severity: error --> Exception: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\seskoal\application\controllers\Login.php 5
+ERROR - 2022-05-16 22:26:01 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-16 22:26:09 --> 404 Page Not Found: Assets/global
+ERROR - 2022-05-16 22:26:37 --> 404 Page Not Found: Assets/global
+>>>>>>> c494de2d94bff6063071edf99b41b78d8fd72e63

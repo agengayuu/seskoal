@@ -23,9 +23,10 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller{
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
         $data['mahasiswa'] = $this->m_jadwal_mahasiswa_evaluasi->tampil_data2()->result();
-
+        // echo"<pre>";
+        // print_r($data['mahasiswa']);die;
         $query = $this->db->query("select a.*,b.* 
-                                    from tbl_mahasiswa_evaluasi a, tbl_mata_kuliah b
+                                    from tbl_paket_evaluasi a, tbl_mata_kuliah b
                                     where a.id_mata_kuliah = b.id_mata_kuliah order by a.id_mata_kuliah")->result();
 
         $data['mahasiswa'] = $query;

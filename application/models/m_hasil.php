@@ -59,7 +59,7 @@ class M_hasil extends CI_Model{
         $this->db->from('tbl_mahasiswa_evaluasi');
         $this->db->join('tbl_mata_kuliah', 'tbl_mahasiswa_evaluasi.id_mata_kuliah=tbl_mata_kuliah.id_mata_kuliah');
         $this->db->join('tbl_profil_mahasiswa', 'tbl_mahasiswa_evaluasi.id_mahasiswa=tbl_profil_mahasiswa.id_mahasiswa');
-        $this->db->where('tbl_mahasiswa_evaluasi.id_evaluasi', $id);
+        $this->db->where('tbl_mahasiswa_evaluasi.id_eval', $id);
         $query = $this->db->get();
         return $query->result();
     }

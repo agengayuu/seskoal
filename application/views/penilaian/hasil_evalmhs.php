@@ -41,7 +41,7 @@
                                                                 <th>Nim</th>
                                                                 <!-- <th>Tanggal Ujian</th> -->
                                                                 <th>Nilai</th>
-                                                                <!-- <th>Mutu</th> -->
+                                                                <th>Mutu</th>
                                                                 <!-- <th>Cetak</th> -->
                                                             </tr>
                                                         </thead>
@@ -64,8 +64,8 @@
                                                                         }
                                                                         ?>
                                                                     </td>
-                                                                    <!-- <td> -->
-                                                                        <!-- <?php echo $d->mutu; ?> -->
+                                                                    <td>
+                                                                        <?php echo $d->mutu; ?>
                                                                         <!-- Masih belum selesai nilai mutu nya
                                                                         <?php 
                                                                         echo "nilai : " + $d->nilai;
@@ -80,7 +80,7 @@
                                                                             echo "C";
                                                                         } 
                                                                         ?> -->
-                                                                    <!-- </td>                                                                                      -->
+                                                                    </td>                                                                                     
                                                                     <!-- <td>
                                                                         <?php
                                                                         if($d->nilai == ''){

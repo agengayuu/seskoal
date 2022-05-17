@@ -10,7 +10,7 @@ class M_jadwal_mahasiswa_evaluasi extends CI_Model{
     }
     
     public function tampil_data2(){
-        return $this->db->get('tbl_soal_evaluasi');
+        return $this->db->get('tbl_paket_evaluasi');
     }
 }
 

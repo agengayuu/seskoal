@@ -43,8 +43,8 @@
                                             <td><?php echo $d->nama; ?></td>   
                                             <td><?php echo $d->nim; ?></td>                             
                                             <td><?php echo $d->nama_mata_kuliah; ?></td>                                                          
-                                            <td><?php echo date('d-m-Y',strtotime($d->tanggal_ujian)); ?></td>
-                                            <td><?php echo date('H:i:s',strtotime($d->jam_ujian)); ?></td>
+                                            <td><?php echo date('d-m-Y', strtotime($d->waktu_evaluasi_mulai)); ?></td>
+                                            <td><?php echo date('h:i', strtotime($d->waktu_evaluasi_mulai)); ?></td>
                                             <td>
                                                 <?php
                                                 if($d->benar == ''){
@@ -77,7 +77,7 @@
                                                 if($d->nilai == ''){
                                                     echo "<span style='color:red'>Belum Ujian</span>";
                                                 }else {
-                                                    echo "<a href='".'hasil_mahasiswa_evaluasi/cetak/'."$d->id_evaluasi' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
+                                                    echo "<a href='".'hasil_mahasiswa_evaluasi/cetak/'."$d->id_eval' class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
                                                     
                                                 }
                                                 ?>

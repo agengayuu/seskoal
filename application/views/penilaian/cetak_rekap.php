@@ -31,9 +31,11 @@
 							<thead align="center" style="background-color:#D3D3D3">
 								<tr>
 									<th width="1%">No</th>
-		                            <th>Mata Kuliah</th>                                                                            
-		                            <th width="20%">Waktu Ujian</th>                                                                    
+		                            <th>Mata Kuliah</th>                                                                                                                                        
+		                            <th>Benar</th>
+		                            <th>Salah</th>
 		                            <th>Nilai</th>
+		                            <th>Mutu</th>
 								</tr>
 							</thead>
                             <?php
@@ -45,8 +47,8 @@
 									<td><?php echo $no++; ?></td>                              
 	                                <!-- <td><?php echo $d->nama; ?></td>                                 -->
 	                                <td><?php echo $d->nama_mata_kuliah; ?></td>                                                            
-	                                <td><?php echo date('d-m-Y',strtotime($d->tanggal_ujian)); ?> | <?php echo date('H:i:s',strtotime($d->jam_ujian)); ?></td>
-	                                <!-- <td>
+	                                <!-- <td><?php echo date('d-m-Y',strtotime($d->waktu_evaluasi_mulai)); ?> | <?php echo date('H:i:s',strtotime($d->waktu_evaluasi_mulai)); ?></td> -->
+	                                <td>
 	                                    <?php
 	                                    if($d->benar == ''){
 	                                        echo "<span class='btn btn-xs btn-warning'>Belum Ujian</span>";
@@ -63,7 +65,7 @@
 	                                        echo $d->salah ;
 	                                    }
 	                                    ?>
-	                                </td> -->
+	                                </td>
 	                                <td>
 	                                    <?php
 	                                    if($d->nilai == ''){
@@ -73,6 +75,7 @@
 	                                    }
 	                                    ?>
 	                                </td>
+									   <td><?php echo $d->mutu; ?></td>   
 								</tr>
 								<?php }	?>
 							</tbody>							
