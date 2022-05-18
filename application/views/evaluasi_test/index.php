@@ -59,7 +59,7 @@ if(isset($_SESSION["waktu_start"])){
 
                     <input type="hidden" name="id_eval" value="<?php echo $id['id_eval']; ?>">
                     <input type="hidden" name="jumlah_soal" value="<?php echo $total_soal; ?>">
-                    <!-- <input type="text" name="id_mata_kuliah" value="<?php echo $matkul['id_mata_kuliah']; ?>"> -->
+                    <!-- <input type="text" name="id_mata_kuliah" value="<?php echo $id['id_mata_kuliah']; ?>"> -->
 
                     <?php $no = 0;
                     foreach ($soal as $s) {
@@ -68,7 +68,7 @@ if(isset($_SESSION["waktu_start"])){
                             <table class="table table-bordered table-striped">
                                 <tbody>
                                     <tr>
-                                        <td width="1%"><?php echo $no; ?>.</td>
+                                        <td width="1%"><?php echo $no; ?></td>
                                         <td><?php echo $s->pertanyaan; ?>
                                             <input type='hidden' name='soal[]' value='<?php echo $s->id_master_soal; ?>' /> <br>
                                             <input type="radio" name="jawaban[<?php echo $s->id_master_soal; ?>]" value="A" required /> <?php echo $s->a; ?><br>

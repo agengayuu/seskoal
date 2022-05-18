@@ -86,11 +86,13 @@ class Daftar_matakuliah extends CI_Controller{
     }
 
     public function simpan(){
-		// $id_mata_kuliah 	            = $this->input->post('id_mata_kuliah');
+		$id_mata_kuliah 	            = $this->input->post('id_mata_kuliah');
         $nama_paket_evaluasi            = $this->input->post('nama_paket_evaluasi');
 		$waktu_evaluasi_mulai		    = $this->input->post('waktu_evaluasi_mulai');
 		$waktu_evaluasi_selesai			= $this->input->post('waktu_evaluasi_selesai');
 		$durasi_ujian		            = $this->input->post('durasi_ujian');
+
+        // print_r($id_mata_kuliah);die;
 
 		
 		if ( $nama_paket_evaluasi =='' || $nama_paket_evaluasi =='' || $waktu_evaluasi_mulai == '' || $waktu_evaluasi_selesai == '' || $durasi_ujian == '') {
