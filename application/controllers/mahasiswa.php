@@ -145,9 +145,9 @@ class Mahasiswa extends CI_Controller
             $id_diklat      = $this->input->post('id_diklat');
             $id_grup_user   = $this->input->post('id_grup_user');
             // $tgl_lhr        = $this->input->post('tgl_lhr');
-            $hsl            = date('d-m-Y', strtotime($tgl_lahir));
+            $hsl            = date('jmY', strtotime($tgl_lahir));
             $created_at     = $this->input->post('created_at');
-            $created_at     = date('d-m-Y H:i:s');
+            $created_at     = date('d-m-Y');
 
             $data = array(
                 'nim' => $nim,
@@ -295,7 +295,7 @@ class Mahasiswa extends CI_Controller
                 'email' =>  $email,
                 'id_diklat' => $id_diklat,
                 'no_tlp' => $no_tlp,
-                'foto'   => $foto
+                'foto'   => $foto,
             );
     
             $data2 = array(
