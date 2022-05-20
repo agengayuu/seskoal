@@ -56,11 +56,11 @@
                 <div class="swiper-wrapper content">
                         <?php foreach($berita as $brt) { ?>
                         <div class="swiper-slide card">
-                            <div class="card-content" style="height:310px" align="center">
+                            <div class="card-content" style="height:380px" align="center">
                                 <div class="image">
                                     <img  src="<?= base_url('./assets/uploads/' . $brt->dokumen) ?>" alt="" class="first-news" style="width:265px;height:190px;">
                                 </div>
-                                <div class="news-title">
+                                <div class="news-title" style="height:130px; font-size:14px">
                                     <span><b><?= $brt->judul_berita;?></b></span>
                                 </div>
                                 <div class="button">

@@ -188,6 +188,7 @@ class Mahasiswa extends CI_Controller
                 'tgl_lahir' => $tgl_lahir,
                 'jabatan' => $jabatan,
                 'email' =>  $email,
+                'id_akademik' => $id_akademik,
                 'id_diklat' => $id_diklat,
                 'no_tlp' => $no_tlp,
                 'foto'   => $foto,
