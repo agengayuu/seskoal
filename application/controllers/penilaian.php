@@ -83,10 +83,10 @@ class Penilaian extends CI_Controller
 
         $matkul = $this->db->query("select * from tbl_mata_kuliah where id_mata_kuliah = $id_matkul")->row();
         $data['matakul']=$matkul;
-        $hsl = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*
+        $hsl = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_profil_mahasiswa.*
                                 from tbl_mahasiswa_evaluasi 
-                                inner  join tbl_mahasiswa 
-                                on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_mahasiswa.id_mahasiswa
+                                join tbl_profil_mahasiswa 
+                                on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_profil_mahasiswa.id_mahasiswa
                                 where tbl_mahasiswa_evaluasi.id_mata_kuliah = $id_matkul")->result();
      
         $data['hasil']=$hsl;
@@ -106,7 +106,7 @@ class Penilaian extends CI_Controller
         $this->load->view('templates_dosen/header', $data); 
         $this->load->view('templates_dosen/sidebar_admin',$data); 
 
-        $mhs = $this->db->query("select * from tbl_mahasiswa where id_akademik = $id_ak && id_diklat = $id_dik ")->result();
+        $mhs = $this->db->query("select * from tbl_profil_mahasiswa where id_akademik = $id_ak && id_diklat = $id_dik ")->result();
         $data['mhs'] = $mhs;
 
         $this->load->view('penilaian/getrekap_mhs',$data);
@@ -150,10 +150,10 @@ class Penilaian extends CI_Controller
     
        public function print_all($id)
        {	
-        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*, tbl_mata_kuliah.*
+        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_profil_mahasiswa.*, tbl_mata_kuliah.*
                                 from tbl_mahasiswa_evaluasi 
-                                inner  join tbl_mahasiswa 
-                                on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_mahasiswa.id_mahasiswa
+                                inner  join tbl_profil_mahasiswa 
+                                on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_profil_mahasiswa.id_mahasiswa
                                 inner  join tbl_mata_kuliah
                                 on tbl_mahasiswa_evaluasi.id_mata_kuliah= tbl_mata_kuliah.id_mata_kuliah
                                 where tbl_mahasiswa_evaluasi.id_mata_kuliah = $id")->result_array();
@@ -165,24 +165,24 @@ class Penilaian extends CI_Controller
 
     public function print_rekap($idmhs){
 
-        $mahasiswa = $this->db->query("Select tbl_mahasiswa.*, tbl_diklat.*, thn_akademik.*
-                                        from tbl_mahasiswa
+        $mahasiswa = $this->db->query("Select tbl_profil_mahasiswa.*, tbl_diklat.*, thn_akademik.*
+                                        from tbl_profil_mahasiswa
                                         join tbl_diklat 
-                                        on tbl_diklat.id_diklat = tbl_mahasiswa.id_diklat
+                                        on tbl_diklat.id_diklat = tbl_profil_mahasiswa.id_diklat
                                         join thn_akademik
-                                        on thn_akademik.id_akademik = tbl_mahasiswa.id_akademik
-                                        where id_mahasiswa = $idmhs")->row_array();
+                                        on thn_akademik.id_akademik = tbl_profil_mahasiswa.id_akademik
+                                        where tbl_profil_mahasiswa.id_mahasiswa = $idmhs")->row_array();
+        
         $data['mhs'] = $mahasiswa;
-        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*, tbl_mata_kuliah.*
+        $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_profil_mahasiswa.*, tbl_mata_kuliah.*
                                             from tbl_mahasiswa_evaluasi
-                                            join tbl_mahasiswa 
-                                            on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_mahasiswa.id_mahasiswa 
+                                            join tbl_profil_mahasiswa 
+                                            on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_profil_mahasiswa.id_mahasiswa 
                                             join tbl_mata_kuliah
                                             on tbl_mahasiswa_evaluasi.id_mata_kuliah= tbl_mata_kuliah.id_mata_kuliah
                                             where tbl_mahasiswa_evaluasi.id_mahasiswa = $idmhs")->result();
-                                            // echo"<pre>";
-                                            // print_r( $data['rekap'] );die;
 
+// print_r($query);die;
         $data['rekap'] = $query;
 		$this->mypdf->generate('penilaian/cetak_rekap', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
 

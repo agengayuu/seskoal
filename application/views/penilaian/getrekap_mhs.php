@@ -25,7 +25,6 @@
                             <th>Nim</th>
                             <th>Nama Mahasiswa</th>
                             <th>Angkatan</th>
-                            <th>Tahun Masuk</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -38,7 +37,6 @@
                                 <td><?= $m->nim ?></td>
                                 <td><?= $m->nama ?></td>
                                 <td><?= $m->angkatan ?></td>
-                                <td><?= $m->tahun_masuk ?></td>
 
                                 <td> <?php echo anchor('penilaian/print_rekap/' . $m->id_mahasiswa, '<div class="btn btn-sm btn-warning"><i class="fa fa-print"></i></div>') ?>
                                 </td>

@@ -61,13 +61,13 @@
 
         <div class="form-group">
             <label>Gelar Belakang</label>
-            <input type="text" name="gelar_belakang" value="<?php echo set_value('gelar_belakang'); ?> " placeholder="Masukkan Gelar Belakang" class="form-control">
+            <input type="text" name="gelar_belakang" value="<?php echo set_value('gelar_belakang'); ?>" placeholder="Masukkan Gelar Belakang" class="form-control">
             <?php echo form_error('gelar_belakang', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
         
         <div class="form-group">
             <label>Tempat Lahir<i style="color:red">*</i></label>
-            <input type="text" name="tempat_lahir" value="<?php echo set_value('tempat_lahir'); ?> " placeholder="Masukkan Tempat Lahir" class="form-control">
+            <input type="text" name="tempat_lahir" value="<?php echo set_value('tempat_lahir'); ?>" placeholder="Masukkan Tempat Lahir" class="form-control">
             <?php echo form_error('tempat_lahir', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
