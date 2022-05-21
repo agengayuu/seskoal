@@ -6,10 +6,10 @@
     </div>
     <?php echo $this->session->flashdata('pesan') ?>
     <?php echo validation_errors(); ?>
-     <?php echo form_open_multipart('galeri/update'); ?> 
+     <?php echo form_open_multipart('galeri/update'); ?>
 
 
-    <?php foreach($galeri as $g) { ?>
+    <?php foreach ($galeri as $g) {?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
@@ -17,18 +17,18 @@
 
                 <div class="form-group">
                     <label>Nama Kegiatan<i style="color:red">*</i></label>
-                    <input type="hidden" name="id_galeri" id="id_galeri" value="<?= $g->id_galeri; ?>" >
+                    <input type="hidden" name="id_galeri" id="id_galeri" value="<?=$g->id_galeri;?>" >
                     <input type="text" name="nama_kegiatan" value="<?php echo $g->nama_kegiatan; ?>" class="form-control" placeholder="Nama Kegiatan" required>
-                    <?php echo form_error('judul_berita', '<div class="text-danger small ml-3">','</div>') ?>
+                    <?php echo form_error('judul_berita', '<div class="text-danger small ml-3">', '</div>') ?>
                 </div>
 
                 <div class="form-group">
                      <div class="col-md-2">
-                              <img src="<?php echo base_url().'assets/uploads/' .$g->foto ?>" style="width: 200px">
+                              <img src="<?php echo base_url() . 'assets/uploads/' . $g->foto ?>" style="width: 200px">
                             </div>
                     <label>Foto<i style="color:red">*</i></label>
                     <input type="file" name="foto" class="form-control" placeholder="foto" id="foto">
-                    <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
+                    <?php echo form_error('foto', '<div class="text-danger small ml-3">', '</div>') ?>
                 </div>
 
                 <!-- <div class="form-group">
@@ -38,7 +38,7 @@
                         <option value="1">Aktif</option>
                         <option value="0">Tidak Aktif</option>
                     </select>
-                    
+
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3"></div>') ?>
                 </div> -->
 
@@ -51,8 +51,8 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    <?php form_close(); ?>
-    <?php } ?>
+    <?php form_close();?>
+    <?php }?>
 </div>
 
 <script type="application/javascript">
