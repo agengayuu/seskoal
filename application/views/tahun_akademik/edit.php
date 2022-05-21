@@ -1,8 +1,5 @@
 <div class="container-fluid">
     <?php
-    // echo "<pre>";
-    // print_r($akademik);
-    // die();
      foreach ($akademik as $ak) { ?>
         <form action="<?php echo base_url('tahun_akademik/update') ?>" method="post">
 

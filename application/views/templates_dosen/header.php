@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $title; ?></title>
+    <title><?=$title;?></title>
 
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/seskoal.png" type="image/x-icon" />
 
@@ -28,7 +28,7 @@
     <!-- Custom styles for this page -->
     <link href="<?php echo base_url() ?>https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-        
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
