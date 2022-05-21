@@ -19,6 +19,7 @@
 	        </table>
 			<section class="content-header">
 				<h3 align="center">Laporan Hasil Evaluasi</h3>
+
 			</section>
 			<section class="content">
 				<div class="row">
@@ -27,9 +28,9 @@
 							<thead align="center" style="background-color:#D3D3D3">
 								<tr>
 									<th width="1%">No</th>
+		                            <th>Mata Kuliah</th>                            
 		                            <th>Nama Mahasiswa</th>                            
 		                            <th>NIM</th>                            
-		                            <th>Mata Kuliah</th>                            
 		                            <th>Benar</th>                            
 		                            <th>Salah</th>                            
 		                            <th>Nilai</th>
@@ -42,9 +43,9 @@
 								?>
 								<tr align="center">
 									<td><?php echo $no++; ?></td>                              
+	                                <td><?php echo $d['nama_mata_kuliah']; ?></td>                                
 	                                <td><?php echo $d['nama']; ?></td>                                
 	                                <td><?php echo $d['nim']; ?></td>                                
-	                                <td><?php echo $d['nama_mata_kuliah']; ?></td>                                
 	                                <td>
 	                                    <?php
 	                                    if($d['benar'] == ''){

@@ -13,16 +13,13 @@
                         <div class="table-responsive">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label col-md-8"><b>Diklat</b> <b><?php echo ": ".$diklat->nama_diklat; ?></b></label><br />
-                                        <label class="control-label col-md-8"><b>Tahun Akademik </b> <b><?php echo ": ".$akademik->tahun_akademik; ?></b></label><br />
-                                    </div>
+
                                 </div>
                             </div>
-    
+                
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Mata Kuliah</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Paket Evaluasi</h6>
                                 </div>
 
                                 <div class="card-body">
@@ -31,22 +28,19 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Nama Mata Kuliah</th>
-                                                    <!-- <th>SKS</th> -->
+                                                    <th>Nama Paket Evaluasi</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
                                                     $no =1;
-                                                    foreach ($matkul as $mat) : ?>
+                                                    foreach ($pktEval as $pkt) : ?>
                                                 <tr>
                                                     <td><?php echo $no++ ?></td>
-                                                    <td><?= $mat->nama_mata_kuliah ?></td>
-                                                    <!-- <td><?= $mat->sks ?></td> -->
-                                            
+                                                    <td><?= $pkt->nama_paket_evaluasi ?></td>
                                                     <td> 
-                                                        <?php echo anchor('penilaian/getpaket/'.$mat->id_mata_kuliah, '<div class="btn btn-sm btn-success">Paket Evaluasi</div>' ) ?>
+                                                        <?php echo anchor('penilaian/hasil_evalmhs/'.$pkt->id_paket_evaluasi, '<div class="btn btn-sm btn-success">Mahasiswa</div>' ) ?>
                                                      </td>
                                                     </center>
                                                 </tr>

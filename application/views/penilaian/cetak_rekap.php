@@ -32,6 +32,7 @@
 								<tr>
 									<th width="1%">No</th>
 		                            <th>Mata Kuliah</th>                                                                                                                                        
+		                            <th>Paket Evaluasi</th>                                                                                                                                        
 		                            <th>Benar</th>
 		                            <th>Salah</th>
 		                            <th>Nilai</th>
@@ -45,8 +46,8 @@
 							<tbody style="font-size:9;">
 								<tr align="center">
 									<td><?php echo $no++; ?></td>                              
-	                                <!-- <td><?php echo $d->nama; ?></td>                                 -->
 	                                <td><?php echo $d->nama_mata_kuliah; ?></td>                                                            
+	                                <td><?php echo $d->nama_paket_evaluasi; ?></td>                                                            
 	                                <!-- <td><?php echo date('d-m-Y',strtotime($d->waktu_evaluasi_mulai)); ?> | <?php echo date('H:i:s',strtotime($d->waktu_evaluasi_mulai)); ?></td> -->
 	                                <td>
 	                                    <?php

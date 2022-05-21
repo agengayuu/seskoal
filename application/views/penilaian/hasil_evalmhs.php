@@ -14,15 +14,14 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                         <label class="control-label col-md-8"><b>Mata Kuliah</b> <b><?php echo ": ".$matakul->nama_mata_kuliah; ?></b></label><br   />
-                                    </div>
+                                   </div>
                                 </div>
                             </div>
                             
                            
-
-                            <?php echo anchor('penilaian/print_all/' . $matakul->id_mata_kuliah, '<button class="btn btn-sm btn-info mb-3 " ><i class="fas fa-print"></i> Data Mata Kuliah</button>') ?>
-
+                           
+                            <?php echo anchor('penilaian/print_all/' . $paket->id_paket_evaluasi,'<button class="btn btn-sm btn-info mb-3 " ><i class="fas fa-print"></i> Data Paket Evaluasi</button>') ?>
+                                  
                             <!--table -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
@@ -39,22 +38,18 @@
                                                                 <th>No</th>
                                                                 <th>Nama Mahasiswa</th>
                                                                 <th>Nim</th>
-                                                                <!-- <th>Tanggal Ujian</th> -->
                                                                 <th>Nilai</th>
                                                                 <th>Mutu</th>
-                                                                <!-- <th>Cetak</th> -->
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                         <?php
-                                                            $no=1;
-                                                            foreach($hasil as $d) { ?>
+                                                        $no=1;
+                                                        foreach($hasil as $d) { ?>
                                                                 <tr>
-                                                                    <!-- <input type="hidden" name="id_mata_kuliah" value="<?php echo $matakul->id_mata_kuliah ?>"> -->
-                                                                    <td><?php echo $no++; ?></td>                              
+                                                                     <td><?php echo $no++; ?></td>                              
                                                                     <td><?php echo $d->nama; ?></td>   
-                                                                    <td><?php echo $d->nim; ?></td>                                                                                     
-                                                                    <!-- <td><?php echo $d->tanggal_ujian; ?></td>                                                                                      -->
+                                                                    <td><?php echo $d->nim; ?></td>   
                                                                     <td>
                                                                         <?php
                                                                         if($d->nilai == ''){
@@ -66,33 +61,9 @@
                                                                     </td>
                                                                     <td>
                                                                         <?php echo $d->mutu; ?>
-                                                                        <!-- Masih belum selesai nilai mutu nya
-                                                                        <?php 
-                                                                        echo "nilai : " + $d->nilai;
-                                                                        echo "batas_awal : " + $nilai->batas_awal;
-                                                                        echo "batas_awal : " + $nilai->batas_akhir;
-                                                                        if(in_array($var, $checkVars))
-                                                                        if($d->nilai >= $nilai->batas_awal){
-                                                                            echo $nilai->mutu;
-                                                                        }elseif($d->nilai <= $nilai->batas_awal){
-                                                                            echo $nilai->mutu;
-                                                                        }elseif($d->nilai >= $nilai->batas_awal[2]){
-                                                                            echo "C";
-                                                                        } 
-                                                                        ?> -->
-                                                                    </td>                                                                                     
-                                                                    <!-- <td>
-                                                                        <?php
-                                                                        if($d->nilai == ''){
-                                                                            echo "<span style='color:red'>Belum Ujian</span>";
-                                                                        }else {
-                                                                            echo "<a href='".'penialian/cetak/'."$d->id_evaluasi class='btn btn-xs btn-success' title='Cetak Hasil Ujian' target='_blank'><span class='fa fa-print'></span></a>";;
-                                                                            
-                                                                        }
-                                                                        ?>
-                                                                    </td>  -->
+                                                                    </td>                                                  
                                                                 </tr>
-                                                            <?php } ?> 
+                                                                <?php } ?> 
                                                         </tbody>
                                                     </table>
                                                 </div>
