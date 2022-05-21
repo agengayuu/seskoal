@@ -17,7 +17,8 @@ $this->load->view('evaluasi_test/header');
 </style>
 
 <?php
-$this->load->view('evaluasi_test/topbar');
+$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+$this->load->view('evaluasi_test/topbar',$data);
 ?>
 
 <?php
@@ -52,7 +53,7 @@ if(isset($_SESSION["waktu_start"])){
     <div class="col-md-9">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-               <h4 style="text-align:center" class="m-0 font-weight-bold text-primary">Soal Ujian</h4>
+               <h4 style="text-align:center" class="m-0 font-weight-bold text-primary">Soal Tes Evaluasi</h4>
             </div><!-- /.box-header -->
             <div class="card-body" style="overflow-y: scroll;height: 525px;">
                 <form id="formSoal" role="form" action="<?php echo base_url(); ?>evaluasi_test/jawab_aksi" method="post" onsubmit="return confirm('Anda Yakin ?')">
