@@ -1,28 +1,29 @@
 <?php
 
-if(!defined('BASEPATH')) 
-exit('No direct script access allowed');
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
-class Informasi_akademik extends CI_Controller {
+class Informasi_akademik extends CI_Controller
+{
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('m_info_akademik');
         $this->load->library('session');
-        if(!$this->session->userdata('username')){
+        if (!$this->session->userdata('username')) {
             redirect('login');
         }
         is_logged_in('3');
-       // session_start();
     }
 
-    public function index() {
+    public function index()
+    {
         is_logged_in('3');
         $data['title'] = 'Informasi Akademik';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
@@ -39,33 +40,30 @@ class Informasi_akademik extends CI_Controller {
         $this->load->view('templates_dosen/footer', $data);
     }
 
-    public function info() {
+    public function info()
+    {
         $data['title'] = 'Informasi Akademik';
 
-        $data['user'] = $this->db->get_where('user', ['username'=> $this->session->userdata('username')])->row_array();
-        $this->load->view('templates_dosen/header', $data); 
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
 
         $data['pengumuman'] = $this->m_info_akademik->tampil_data()->result();
 
-        $this->load->view('templates_dosen/sidebar_admin', $data); 
+        $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('informasi_akademik/informasi_detail', $data);
-        $this->load->view('templates_dosen/footer'); 
+        $this->load->view('templates_dosen/footer');
     }
 
-    public function detail($id_pengumuman) {
+    public function detail($id_pengumuman)
+    {
         $data['title'] = 'Detail Pengumuman';
 
-        $data['user'] = $this->db->get_where('user', ['username'=> 
-        $this->session->userdata('username')])->row_array(); 
-        $this->load->view('templates_dosen/header', $data); 
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
         // $data['pengumuman'] = $this->m_pengumuman_v->detail($id_pengumuman);
         $data['pengumuman'] = $this->db->query("select * from tbl_pengumuman")->result_array();
 
-
-        $this->load->view('templates_dosen/sidebar_admin',$data); 
-        // $this->load->view('mahasiswa/detail');
+        $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('templates_dosen/footer');
     }
 }
- 
-?>

@@ -6,7 +6,6 @@ class Data_mahasiswa extends CI_Controller
     {
         $data['title'] = 'Profile Dosen';
 
-
         $userlogin = $this->session->userdata('username');
         // print_r($userlogin);die();
 
@@ -22,7 +21,6 @@ class Data_mahasiswa extends CI_Controller
         $this->load->view('templates_dosen/sidebar', $data);
 
         $data['profilnya'] = $this->db->query("select * from tbl_mahasiswa")->result();
-
 
         $this->load->view('profile_dosen/index', $data);
         $this->load->view('templates_dosen/footer');

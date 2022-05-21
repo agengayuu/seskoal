@@ -1,11 +1,12 @@
 <?php
 
-if (!defined('BASEPATH'))
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
+}
 
 class Profil_mahasiswa extends CI_Controller
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
@@ -16,12 +17,11 @@ class Profil_mahasiswa extends CI_Controller
         //session_start();
     }
 
-
     public function index()
     {
         $data['title'] = 'Profil Mahasiswa';
         $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+            $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $data['profil_mahasiswa'] = $this->m_profil_mahasiswa->tampildata()->result();
 
@@ -34,7 +34,7 @@ class Profil_mahasiswa extends CI_Controller
     {
         $data['title'] = 'Tambah Profil Mahasiswa';
 
-        $data['user'] = $this->db->get_where('user', ['username' =>$this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
@@ -58,22 +58,22 @@ class Profil_mahasiswa extends CI_Controller
         //     if($this->form_validation->run() == FALSE) {
         //         $this->tambah();
         //     } else {
-        $nama           = $this->input->post('nama', TRUE);
-        $nim            = $this->input->post('nim', TRUE);
-        $tempat_lahir   = $this->input->post('tempat_lahir', TRUE);
-        $tgl_lahir      = $this->input->post('tgl_lahir');
-        $hsl            = date('jmY', strtotime($tgl_lahir));
-        $jenis_kelamin  = $this->input->post('jenis_kelamin', TRUE);
-        $foto               = $_FILES['foto'];
+        $nama = $this->input->post('nama', true);
+        $nim = $this->input->post('nim', true);
+        $tempat_lahir = $this->input->post('tempat_lahir', true);
+        $tgl_lahir = $this->input->post('tgl_lahir');
+        $hsl = date('jmY', strtotime($tgl_lahir));
+        $jenis_kelamin = $this->input->post('jenis_kelamin', true);
+        $foto = $_FILES['foto'];
         if ($foto = '') {
         } else {
-            $config['upload_path']      = './assets/uploads/';
-            $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
-            $config['max_size']         = 2048;
-            $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+            $config['upload_path'] = './assets/uploads/';
+            $config['allowed_types'] = 'jpg|png|jpeg|gif|tiff';
+            $config['max_size'] = 2048;
+            $config['file_name'] = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
             $this->load->library('upload', $config);
-            
+
             if (@$_FILES['foto']['name'] != null) {
                 if (!$this->upload->do_upload('foto')) {
                     echo 'Gagal Upload ukuran harus kurang dari 2 MB';
@@ -83,14 +83,13 @@ class Profil_mahasiswa extends CI_Controller
                 }
             }
         }
-        $created_at             = $this->input->post('created_at');
-
+        $created_at = $this->input->post('created_at');
 
         $created_at = date('Y-m-d H:i:s');
-        $agama      = $this->input->post('agama');
-        $id_diklat      = $this->input->post('id_diklat');
-        $angkatan      = $this->input->post('angkatan');
-        $id_akademik    = $this->input->post('id_akademik');
+        $agama = $this->input->post('agama');
+        $id_diklat = $this->input->post('id_diklat');
+        $angkatan = $this->input->post('angkatan');
+        $id_akademik = $this->input->post('id_akademik');
         $kewarganegaraan = $this->input->post('kewarganegaraan');
         $nik = $this->input->post('nik');
         $npwp = $this->input->post('npwp');
@@ -103,7 +102,7 @@ class Profil_mahasiswa extends CI_Controller
         $kode_pos = $this->input->post('kode_pos');
         $email = $this->input->post('email');
         $jabatan = $this->input->post('jabatan');
-        $no_tlp = $this->input->post('no_tlp'); 
+        $no_tlp = $this->input->post('no_tlp');
 
         // $id_mahasiswa   = $this->input->post('id_mahasiswa');
         $data2 = array(
@@ -111,10 +110,10 @@ class Profil_mahasiswa extends CI_Controller
             'id_grup_user' => 2,
             'is_active' => 1,
             'id_unique' => $nim . $hsl,
-            'date_created' => time()
+            'date_created' => time(),
         );
         $idmahasiswa = $this->m_profil_mahasiswa->simpanuser($data2, 'user');
-        
+
         $data = array(
             'nama' => $nama,
             'nim' => $nim,
@@ -139,23 +138,22 @@ class Profil_mahasiswa extends CI_Controller
             'email' => $email,
             'jabatan' => $jabatan,
             'no_tlp' => $no_tlp,
-            'created_at'  => $created_at,
-            'id_mahasiswa' => $idmahasiswa
+            'created_at' => $created_at,
+            'id_mahasiswa' => $idmahasiswa,
         );
         $this->db->insert("tbl_profil_mahasiswa", $data);
-
 
         $jenis = ['AYAH', 'IBU'];
         foreach ($jenis as $key => $val) {
             $this->db->insert("tbl_ortu_wali", [
                 'id_mahasiswa' => $idmahasiswa,
-                'nik_ortu' => ($_POST['nik_ortu'][$key]) ? $_POST['nik_ortu'][$key] : NULL,
-                'nama_ortu' => ($_POST['nama_ortu'][$key]) ? $_POST['nama_ortu'][$key] : NULL,
-                'tempat_lahir_ortu' => ($_POST['tempat_lahir_ortu'][$key]) ? $_POST['tempat_lahir_ortu'][$key] : NULL,
-                'tgl_lahir_ortu' => ($_POST['tgl_lahir_ortu'][$key]) ? $_POST['tgl_lahir_ortu'][$key] : NULL,
-                'pendidikan_ortu' => ($_POST['pendidikan_ortu'][$key]) ? $_POST['pendidikan_ortu'][$key] : NULL,
-                'pekerjaan_ortu' => ($_POST['pekerjaan_ortu'][$key]) ? $_POST['pekerjaan_ortu'][$key] : NULL,
-                'penghasilan_ortu' => ($_POST['penghasilan_ortu'][$key]) ? $_POST['penghasilan_ortu'][$key] : NULL,
+                'nik_ortu' => ($_POST['nik_ortu'][$key]) ? $_POST['nik_ortu'][$key] : null,
+                'nama_ortu' => ($_POST['nama_ortu'][$key]) ? $_POST['nama_ortu'][$key] : null,
+                'tempat_lahir_ortu' => ($_POST['tempat_lahir_ortu'][$key]) ? $_POST['tempat_lahir_ortu'][$key] : null,
+                'tgl_lahir_ortu' => ($_POST['tgl_lahir_ortu'][$key]) ? $_POST['tgl_lahir_ortu'][$key] : null,
+                'pendidikan_ortu' => ($_POST['pendidikan_ortu'][$key]) ? $_POST['pendidikan_ortu'][$key] : null,
+                'pekerjaan_ortu' => ($_POST['pekerjaan_ortu'][$key]) ? $_POST['pekerjaan_ortu'][$key] : null,
+                'penghasilan_ortu' => ($_POST['penghasilan_ortu'][$key]) ? $_POST['penghasilan_ortu'][$key] : null,
                 'jenis_data_ortu' => $val,
             ]);
         }
@@ -174,7 +172,7 @@ class Profil_mahasiswa extends CI_Controller
         $data['title'] = "Detail Mahasiswa";
 
         $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+            $this->session->userdata('username')])->row_array();
 
         // $userlogin = $this->session->userdata('username');
         // $mahasiswa = $this->db->query("SELECT tbl_profil_mahasiswa.*, user.*
@@ -197,7 +195,7 @@ class Profil_mahasiswa extends CI_Controller
         $data['datadiri'] = $query3;
 
         // echo $query4;die;
-        
+
         $query4 = $this->db->query("select * from tbl_ortu_wali where jenis_data_ortu='AYAH' AND id_mahasiswa = " . $id_mahasiswa . "")->row();
         $data['ayah'] = $query4;
 
@@ -215,7 +213,7 @@ class Profil_mahasiswa extends CI_Controller
         $data['title'] = "Edit Mahasiswa";
 
         $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+            $this->session->userdata('username')])->row_array();
 
         // $userlogin = $this->session->userdata('username');
         // $mahasiswa = $this->db->query("SELECT tbl_profil_mahasiswa.*, user.*
@@ -254,20 +252,20 @@ class Profil_mahasiswa extends CI_Controller
     public function adminedit()
     {
         //$id_mahasiswa = $this->input->post('id_mahasiswa', NULL);
-        $nama = $this->input->post('nama', NULL);
-        $nim   = $this->input->post('nim', NULL);
-        $tempat_lahir   = $this->input->post('tempat_lahir', NULL);
-        $tgl_lahir        = $this->input->post('tgl_lahir');
-        $hsl            = date('jmY', strtotime($tgl_lahir));
-        $jenis_kelamin   = $this->input->post('jenis_kelamin', NULL);
-        $foto           = $_FILES['foto'];
-        
+        $nama = $this->input->post('nama', null);
+        $nim = $this->input->post('nim', null);
+        $tempat_lahir = $this->input->post('tempat_lahir', null);
+        $tgl_lahir = $this->input->post('tgl_lahir');
+        $hsl = date('jmY', strtotime($tgl_lahir));
+        $jenis_kelamin = $this->input->post('jenis_kelamin', null);
+        $foto = $_FILES['foto'];
+
         if ($foto = '') {
         } else {
-            $config['upload_path']      = './assets/uploads/';
-            $config['allowed_types']    = 'jpg|png|jpeg|gif|tiff';
-            $config['max_size']         = 2048;
-            $config['file_name']        = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+            $config['upload_path'] = './assets/uploads/';
+            $config['allowed_types'] = 'jpg|png|jpeg|gif|tiff';
+            $config['max_size'] = 2048;
+            $config['file_name'] = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
             $this->load->library('upload', $config);
 
@@ -281,43 +279,43 @@ class Profil_mahasiswa extends CI_Controller
             }
         }
 
-        $agama      = $this->input->post('agama', NULL);
-        $id_diklat      = $this->input->post('id_diklat', NULL);
-        $angkatan      = $this->input->post('angkatan', NULL);
-        $id_akademik    = $this->input->post('id_akademik', NULL);
-        $kewarganegaraan = $this->input->post('kewarganegaraan', NULL);
-        $nik = $this->input->post('nik', NULL);
-        $npwp = $this->input->post('npwp', NULL);
-        $jalan = $this->input->post('jalan', NULL);
-        $dusun = $this->input->post('dusun', NULL);
-        $rt = $this->input->post('rt', NULL);
-        $rw = $this->input->post('rw', NULL);
-        $kelurahan = $this->input->post('kelurahan', NULL);
-        $kecamatan = $this->input->post('kecamatan', NULL);
-        $kode_pos = $this->input->post('kode_pos', NULL);
-        $email = $this->input->post('email', NULL);
-        $jabatan = $this->input->post('jabatan', NULL);
-        $no_tlp = $this->input->post('no_tlp', NULL);
-        $foto_hidden = $this->input->post('foto_hidden', NULL);
+        $agama = $this->input->post('agama', null);
+        $id_diklat = $this->input->post('id_diklat', null);
+        $angkatan = $this->input->post('angkatan', null);
+        $id_akademik = $this->input->post('id_akademik', null);
+        $kewarganegaraan = $this->input->post('kewarganegaraan', null);
+        $nik = $this->input->post('nik', null);
+        $npwp = $this->input->post('npwp', null);
+        $jalan = $this->input->post('jalan', null);
+        $dusun = $this->input->post('dusun', null);
+        $rt = $this->input->post('rt', null);
+        $rw = $this->input->post('rw', null);
+        $kelurahan = $this->input->post('kelurahan', null);
+        $kecamatan = $this->input->post('kecamatan', null);
+        $kode_pos = $this->input->post('kode_pos', null);
+        $email = $this->input->post('email', null);
+        $jabatan = $this->input->post('jabatan', null);
+        $no_tlp = $this->input->post('no_tlp', null);
+        $foto_hidden = $this->input->post('foto_hidden', null);
 
-        $id_mahasiswa   = $this->input->post('id_mahasiswa');
+        $id_mahasiswa = $this->input->post('id_mahasiswa');
 
         $data2 = array(
             'username' => $nim,
             'id_grup_user' => 2,
             'is_active' => 1,
-            'id_unique' => $nim . $hsl
+            'id_unique' => $nim . $hsl,
         );
         $this->db->where('username', $nim);
         $this->db->update('user', $data2);
-        
+
         $data = array(
             'nama' => $nama,
             'nim' => $nim,
             'tempat_lahir' => $tempat_lahir,
             'tgl_lahir' => $tgl_lahir,
             'jenis_kelamin' => $jenis_kelamin,
-            'foto' => ($foto == '') ? $foto_hidden :  $foto,
+            'foto' => ($foto == '') ? $foto_hidden : $foto,
             'agama' => $agama,
             'id_diklat' => $id_diklat,
             'angkatan' => $angkatan,
@@ -338,10 +336,8 @@ class Profil_mahasiswa extends CI_Controller
         );
         //$idmahasiswa = $this->db->insert_id();
 
-        
         $this->db->where('id_mahasiswa', $id_mahasiswa);
         $this->db->update('tbl_profil_mahasiswa', $data);
-        
 
         $jenis = ['AYAH', 'IBU'];
         //$delete_ortu = $this->db->query("update from tbl_ortu_wali where id_mahasiswa='".$id_mahasiswa."'");
@@ -350,13 +346,13 @@ class Profil_mahasiswa extends CI_Controller
             $this->db->where('jenis_data_ortu', $val);
             $this->db->update("tbl_ortu_wali", [
                 'id_mahasiswa' => $id_mahasiswa,
-                'nik_ortu' => ($_POST['nik_ortu'][$key]) ? $_POST['nik_ortu'][$key] : NULL,
-                'nama_ortu' => ($_POST['nama_ortu'][$key]) ? $_POST['nama_ortu'][$key] : NULL,
-                'tempat_lahir_ortu' => ($_POST['tempat_lahir_ortu'][$key]) ? $_POST['tempat_lahir_ortu'][$key] : NULL,
-                'tgl_lahir_ortu' => ($_POST['tgl_lahir_ortu'][$key]) ? $_POST['tgl_lahir_ortu'][$key] : NULL,
-                'pendidikan_ortu' => ($_POST['pendidikan_ortu'][$key]) ? $_POST['pendidikan_ortu'][$key] : NULL,
-                'pekerjaan_ortu' => ($_POST['pekerjaan_ortu'][$key]) ? $_POST['pekerjaan_ortu'][$key] : NULL,
-                'penghasilan_ortu' => ($_POST['penghasilan_ortu'][$key]) ? $_POST['penghasilan_ortu'][$key] : NULL,
+                'nik_ortu' => ($_POST['nik_ortu'][$key]) ? $_POST['nik_ortu'][$key] : null,
+                'nama_ortu' => ($_POST['nama_ortu'][$key]) ? $_POST['nama_ortu'][$key] : null,
+                'tempat_lahir_ortu' => ($_POST['tempat_lahir_ortu'][$key]) ? $_POST['tempat_lahir_ortu'][$key] : null,
+                'tgl_lahir_ortu' => ($_POST['tgl_lahir_ortu'][$key]) ? $_POST['tgl_lahir_ortu'][$key] : null,
+                'pendidikan_ortu' => ($_POST['pendidikan_ortu'][$key]) ? $_POST['pendidikan_ortu'][$key] : null,
+                'pekerjaan_ortu' => ($_POST['pekerjaan_ortu'][$key]) ? $_POST['pekerjaan_ortu'][$key] : null,
+                'penghasilan_ortu' => ($_POST['penghasilan_ortu'][$key]) ? $_POST['penghasilan_ortu'][$key] : null,
                 'jenis_data_ortu' => $val,
             ]);
             // $this->load->model('m_profil_mahasiswa');

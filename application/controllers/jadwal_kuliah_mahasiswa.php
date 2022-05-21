@@ -1,11 +1,12 @@
 <?php
 
-if(!defined('BASEPATH'))
-exit('No direct script access allowed');
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 class Jadwal_kuliah_mahasiswa extends CI_Controller
 {
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
@@ -15,7 +16,6 @@ class Jadwal_kuliah_mahasiswa extends CI_Controller
         //session_start();
     }
 
-
     public function index()
     {
         $data['title'] = 'Jadwal Kuliah';
@@ -23,19 +23,14 @@ class Jadwal_kuliah_mahasiswa extends CI_Controller
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
-        $query= $this->m_jadwal_kuliah_mahasiswa->getdata();
-        // echo "<pre>";
-        // print_r($query);die;
+        $query = $this->m_jadwal_kuliah_mahasiswa->getdata();
         $data['jadwal'] = $query;
-        
+
         $query1 = $this->m_jadwal_kuliah_mahasiswa->getakademik();
         $data['tahunakademik'] = $query1;
 
         $this->load->view('jadwal_kuliah_mahasiswa/index', $data);
         $this->load->view('templates_dosen/footer');
     }
-
-
-
 
 }

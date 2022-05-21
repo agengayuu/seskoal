@@ -1,12 +1,13 @@
 <?php
 
-if (!defined('BASEPATH'))
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
+}
 
 class Main_menu extends CI_Controller
 {
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
@@ -28,7 +29,6 @@ class Main_menu extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
-
 
         $queryaa = $this->db->query("select * from tbl_diklat")->result();
         $querycc = $this->db->query("select * from tbl_mahasiswa")->result();
@@ -56,19 +56,17 @@ class Main_menu extends CI_Controller
         $tgl = date('Y-m-d H:i:s');
         $waktu = date('H:i:s');
 
-
-        $kosong = $this->db->query("select 
+        $kosong = $this->db->query("select
                                         CONCAT(`tanggal`, ' ', `waktu_mulai`) as timestamp_waktu_mulai,
                                         CONCAT(`tanggal`, ' ', `waktu_selesai`) as timestamp_waktu_selesai,
-                                        tanggal, 
-                                        waktu_mulai, 
-                                        waktu_selesai 
-                                    from 
+                                        tanggal,
+                                        waktu_mulai,
+                                        waktu_selesai
+                                    from
                                         tbl_jadwal_kuliah
-                                    where 
+                                    where
                                         CONCAT(`tanggal`, ' ', `waktu_mulai`) >= '$tgl'")
             ->result();
-
 
         $now = new DateTime("now");
         $array_kosong = [];
@@ -87,8 +85,8 @@ class Main_menu extends CI_Controller
         // end function
 
         //function menghitung  pengumuman
-        $peng = $this->db->query("select id_pengumuman as total_data 
-                            from tbl_pengumuman 
+        $peng = $this->db->query("select id_pengumuman as total_data
+                            from tbl_pengumuman
                              where status = '1'")->result();
         $data['pengumuman'] = count($peng);
         // print_r ($data['pengumuman']);die;
@@ -102,7 +100,7 @@ class Main_menu extends CI_Controller
         is_logged_in('3');
         $data['title'] = 'Menu Dosen';
 
-        $data['user'] = $this->db->get_where('user', ['username' =>$this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
@@ -126,7 +124,6 @@ class Main_menu extends CI_Controller
             ->limit(1)
             ->get('tbl_pengumuman')
             ->result();
-        //print_r($last);die;
         $data['pengumuman'] = $last;
         $data['jadwal'] = $this->m_jadwal->getmainmenu();
 
@@ -134,13 +131,12 @@ class Main_menu extends CI_Controller
         $this->load->view('templates_dosen/footer', $data);
     }
 
-
     public function siswa()
     {
         is_logged_in('2');
         $data['title'] = 'Menu Siswa';
         $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+            $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
@@ -149,24 +145,10 @@ class Main_menu extends CI_Controller
             ->limit(1)
             ->get('tbl_pengumuman')
             ->result();
-        //print_r($last);die;
         $data['pengumuman'] = $last;
         $data['jadwal'] = $this->m_jadwal->getmainmenu();
 
         $this->load->view('main_menu/siswa', $data);
         $this->load->view('templates_dosen/footer', $data);
     }
-
-    // public function jadwal() {
-    //     $data['user'] = $this->db->get_where('user', ['username'=> 
-    //     $this->session->userdata('username')])->row_array();
-    //     $this->load->view('templates_dosen/header',$data); 
-    //     $this->load->view('templates_dosen/sidebar_admin',$data); 
-
-    //     $query = $this->db->query("select * from tbl_jadwal_kuliah")->result();
-    //     $data['jadwal'] = $query;
-
-    //     $this->load->view('main_menu/siswa',$data); 
-    //     $this->load->view('templates_dosen/footer',$data); 
-    // }
 }

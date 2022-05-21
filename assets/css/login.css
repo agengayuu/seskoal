@@ -1,12 +1,9 @@
-
-
 body {
     font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg.png) no-repeat;  
     height: auto;
     background-size:  100%;
   }
-
 
 .float-right {
     float: right !important;
@@ -102,20 +99,6 @@ input[type=text], input[type=password], input[type=date], input[type=email] {
   background: #003366;
   color: white;
 }
-
-/* .form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-  text-align: left;
-  color: white;
-  padding-left: 20px;
-}
-
-.form .message a {
-  color: #4CAF50;
-  text-decoration: none;
-} */
 
 .container:before, .container:after {
   content: "";

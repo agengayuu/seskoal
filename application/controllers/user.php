@@ -1,22 +1,23 @@
 <?php
 
-if(!defined('BASEPATH'))
-exit('No direct script access allowed');
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 class User extends CI_Controller
 {
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
     }
 
-    public function index(){
+    public function index()
+    {
 
-    $data['user'] = $this->db->get_where('user', ['username'=> 
-    $this->session->userdata('username')])->row_array();
-    //$this->load->view('main_menu',$data);
-   
+        $data['user'] = $this->db->get_where('user', ['username' =>
+            $this->session->userdata('username')])->row_array();
+        //$this->load->view('main_menu',$data);
 
     }
 
@@ -26,5 +27,3 @@ class User extends CI_Controller
         $this->db->delete($table);
     }
 }
-
-?>

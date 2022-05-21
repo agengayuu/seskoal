@@ -1,8 +1,9 @@
 <?php
 
-class Beranda extends CI_Controller {
+class Beranda extends CI_Controller
+{
 
-      function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
@@ -10,8 +11,9 @@ class Beranda extends CI_Controller {
         $this->load->library('session');
         $this->load->helper('download');
     }
-    
-    public function index() {
+
+    public function index()
+    {
 
         $data['title'] = 'Beranda';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
@@ -22,29 +24,27 @@ class Beranda extends CI_Controller {
             ->limit(6)
             ->get('tbl_berita')
             ->result();
-            // echo"<pre>";
-            // print_r($six);die;
+        // echo"<pre>";
+        // print_r($six);die;
         $data['berita'] = $six;
         // end berita terbaru
-        
+
         // bantuan
 
         // end bantuan
 
         // galeri
 
-         $galeri = $this->db->order_by('id_galeri', 'desc')
+        $galeri = $this->db->order_by('id_galeri', 'desc')
             ->limit(4)
             ->get('tbl_galeri')
             ->result();
-            // echo"<pre>";
-            // print_r($galeri);die;
+        // echo"<pre>";
+        // print_r($galeri);die;
         $data['galeri'] = $galeri;
         // end galeri
 
-
         $this->load->view('beranda/index', $data);
-  
+
     }
 }
-?>
