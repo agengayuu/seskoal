@@ -1,16 +1,16 @@
 <?php
 
-if (!defined('BASEPATH'))
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
+}
 
 class M_hak extends CI_Model
 {
 
-    function construct()
+    public function construct()
     {
         parent::__construct();
     }
-
 
     public function adminsimpan($d)
     {
@@ -33,6 +33,5 @@ class M_hak extends CI_Model
         $this->db->where($where);
         $this->db->delete($table);
     }
-
 
 }

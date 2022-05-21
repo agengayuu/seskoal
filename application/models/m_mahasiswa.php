@@ -1,12 +1,13 @@
 <?php
 
-if (!defined('BASEPATH'))
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
+}
 
 class M_mahasiswa extends CI_Model
 {
 
-    function construct()
+    public function construct()
     {
         parent::__construct();
     }
@@ -51,7 +52,7 @@ class M_mahasiswa extends CI_Model
         INNER JOIN thn_akademik on tbl_mahasiswa.id_akademik = thn_akademik.id_akademik
         where nim = '$nim'";
         return $this->db->query($hasil);
-        
+
     }
 
     public function update($where, $data, $table)

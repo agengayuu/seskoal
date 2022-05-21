@@ -23,7 +23,6 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <!-- <th>Ruang ID</th>  -->
                                         <th>Nama Ruang</th>
                                         <th>Jenis Ruang</th>
                                         <th>Kapasitas</th>
@@ -38,7 +37,6 @@
                                     foreach ($ruang as $rgn) : ?>
                                             <tr>
                                                 <td width="20px"><?php echo $no++ ?></td>
-                                                <!-- <td><?php echo $rgn->id_ruang ?></td> -->
                                                 <td><?php echo $rgn->nama_ruang ?></td>
                                                 <td><?php echo $rgn->nama_jenis_ruang ?></td>
                                                 <td><?php echo $rgn->kapasitas ?></td>

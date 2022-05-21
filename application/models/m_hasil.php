@@ -1,16 +1,19 @@
 <?php
 
-if(!defined('BASEPATH'))
-exit('No direct script access allowed');
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
-class M_hasil extends CI_Model{
+class M_hasil extends CI_Model
+{
 
-    function construct(){
-        parent:: __construct();
+    public function construct()
+    {
+        parent::__construct();
     }
 
-
-    public function tampil_data2(){
+    public function tampil_data2()
+    {
         return $this->db->get('tbl_soal_evaluasi');
     }
 
@@ -26,17 +29,18 @@ class M_hasil extends CI_Model{
         return $query->result();
     }
 
-    public function hasilmhs(){
-        
+    public function hasilmhs()
+    {
+
         $query = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_mahasiswa.*, tbl_mata_kuliah.*
-                                from tbl_mahasiswa_evaluasi 
-                                  join tbl_mahasiswa 
+                                from tbl_mahasiswa_evaluasi
+                                  join tbl_mahasiswa
                                 on tbl_mahasiswa_evaluasi.id_mahasiswa = tbl_mahasiswa.id_mahasiswa
                                   join tbl_mata_kuliah
                                 on tbl_mahasiswa_evaluasi.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
                                 where tbl_mata_kuliah.id_mata_kuliah = $id")->result();
-                               echo"<pre>";
-                            print_r($query);die;
+        echo "<pre>";
+        print_r($query);die;
         return $query->result();
 
     }
@@ -49,9 +53,8 @@ class M_hasil extends CI_Model{
         $this->db->join('tbl_profil_mahasiswa', 'tbl_mahasiswa_evaluasi.id_mahasiswa=tbl_profil_mahasiswa.id_mahasiswa');
         $this->db->order_by('nilai', 'DESC');
         $query = $this->db->get();
-        return $query->result();    
+        return $query->result();
     }
-
 
     public function cetak($id)
     {
@@ -64,5 +67,3 @@ class M_hasil extends CI_Model{
         return $query->result();
     }
 }
-
-?>

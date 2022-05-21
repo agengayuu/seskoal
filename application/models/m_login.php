@@ -1,16 +1,16 @@
 <?php
 
-if(!defined('BASEPATH'))
-exit('No direct script access allowed');
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
-class M_mahasiswa extends CI_Model{
+class M_mahasiswa extends CI_Model
+{
 
-    public function simpanpass($data){
+    public function simpanpass($data)
+    {
         return $this->db->insert('user', $data);
 
     }
 
-
 }
-
-?>
