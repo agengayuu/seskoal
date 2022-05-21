@@ -22,41 +22,37 @@ class Evaluasi_test extends CI_Controller
 
     public function soal()
     {
-
-        $id_paket_evaluasi = $this->uri->segment(3);
-        $id = $this->db->query('SELECT tbl_master_eval.*, tbl_master_soal.*
-								 FROM tbl_master_eval
-								 join tbl_master_soal
-								 on tbl_master_eval.id_master_soal = tbl_master_soal.id_master_soal
-								 WHERE id_eval="' . $id_paket_evaluasi . '"  ')->row_array();
-        // echo "<pre>";
-
-        $soal_ujian = $this->db->query('SELECT tbl_master_soal.*, tbl_master_eval.*
-										FROM tbl_master_eval
-										join tbl_master_soal
-										on tbl_master_soal.id_master_soal = tbl_master_eval.id_master_soal
-										WHERE id_eval="' . $id['id_eval'] . '" ORDER BY RAND()')->result();
-
-        $where = array('id_mahasiswa_evaluasi' => $id_paket_evaluasi);
-        // echo "<pre>";
-        $data2 = array('status_ujian_ujian' => 1);
-        // echo "<pre>";
-        $this->m_evaluasi_test->update_data($where, $data2, 'tbl_mahasiswa_evaluasi');
-        // $time = $id['timer_ujian'];
-        // echo $time;
-        $data = array(
-            "soal" => $soal_ujian,
-            "total_soal" => count($soal_ujian),
-            // "max_time" => $time,
-            "id" => $id,
-        );
-        // $data['soalnya'] = $data;
-
-        // $this->load->view('evaluasi_test/footer', $data);
-        // $this->load->view('evaluasi_test/header', $data);
-        $this->load->view('evaluasi_test/index', $data);
-        // $this->load->view('evaluasi_test/js', $data);
-        // $this->load->view('evaluasi_test/topbar', $data);
+        $cek2 = $this->db->query("select id_mahasiswa, id_eval from tbl_jawaban");
+        // print_r($cek2->result_array());die;
+        if(!$cek2->result_array()){ 
+            $id_paket_evaluasi = $this->uri->segment(3);
+            $id = $this->db->query('SELECT tbl_master_eval.*, tbl_master_soal.*
+                                     FROM tbl_master_eval
+                                     join tbl_master_soal
+                                     on tbl_master_eval.id_master_soal = tbl_master_soal.id_master_soal
+                                     WHERE id_eval="' . $id_paket_evaluasi . '"  ')->row_array();
+    
+            $soal_ujian = $this->db->query('SELECT tbl_master_soal.*, tbl_master_eval.*
+                                            FROM tbl_master_eval
+                                            join tbl_master_soal
+                                            on tbl_master_soal.id_master_soal = tbl_master_eval.id_master_soal
+                                            WHERE id_eval="' . $id['id_eval'] . '" ORDER BY RAND()')->result();
+    
+            $where = array('id_mahasiswa_evaluasi' => $id_paket_evaluasi);
+            $data2 = array('status_ujian_ujian' => 1);
+            $this->m_evaluasi_test->update_data($where, $data2, 'tbl_mahasiswa_evaluasi');
+            $data = array(
+                "soal" => $soal_ujian,
+                "total_soal" => count($soal_ujian),
+                "id" => $id,
+            );
+            $this->load->view('evaluasi_test/index', $data);
+        } else{
+            $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
+				Anda sudah melakukan ujian! <button type="button" class="close" data-dismiss="alert" aria-label="close">
+				<span aria-hidden="true">&times;</span></button></div>');
+			redirect('jadwal_mahasiswa_evaluasi', 'refresh');
+        }
     }
 
     public function jawab_aksi()
@@ -66,39 +62,35 @@ class Evaluasi_test extends CI_Controller
         $this->db->join('tbl_mahasiswa', 'tbl_mahasiswa.nim = user.username');
         $this->db->where('tbl_mahasiswa.nim', $this->session->userdata('username'));
         $getmhs = $this->db->get()->row();
-        $user = $this->session->userdata('username');
-        // print_r($getmhs);die;
-        // return $query
-        $userlogin = $this->session->userdata('username');
+        $user = $this->session->userdata('id');
 
         $id_evaluasi = $this->input->post('id_eval');
         $id_mahasiswa = $getmhs->id_mahasiswa;
-        // print_r($id_mahasiswa);die;
         $jumlah = $_POST['jumlah_soal'];
         $id_master_soal = $_POST['soal'];
         $jawaban = $_POST['jawaban'];
         for ($i = 0; $i < $jumlah; $i++) {
             $nomor = $id_master_soal[$i];
-            $jawaban[$nomor];
-            $data[] = array(
+            $data = array(
                 'id_eval' => $id_evaluasi,
+                'id_mahasiswa' => $id_mahasiswa,
                 'id_master_soal' => $nomor,
                 'jawaban' => $jawaban[$nomor],
             );
-            // print_r($data);die;
-            $this->db->insert_batch('tbl_jawaban', $data);
+            $this->db->insert('tbl_jawaban', $data);
         }
 
         $cek = $this->db->query('SELECT id_jawaban, jawaban, tbl_master_soal.kunci_jawaban, skor, tbl_master_soal.id_mata_kuliah
 								FROM tbl_jawaban
 								join tbl_master_soal
 								ON tbl_jawaban.id_master_soal = tbl_master_soal.id_master_soal
-								WHERE tbl_jawaban.id_eval="' . $id_evaluasi . '"');
+								WHERE tbl_jawaban.id_eval="' . $id_evaluasi . '"
+								AND id_mahasiswa = "'.$id_mahasiswa.'"');
+
         $id_mata_kuliah = 0;
         $jumlah = $cek->num_rows() == 0 ? 1 : $cek->num_rows();
         $benar = 0;
         $salah = 0;
-
         $skor = 0;
         foreach ($cek->result_array() as $d) {
             $where = $d['id_jawaban'];
@@ -111,6 +103,7 @@ class Evaluasi_test extends CI_Controller
                 $data['skor'] = 1;
                 $this->m_evaluasi_test->UpdateNilai($where, $data, 'tbl_jawaban');
             } else {
+                $data['skor'] = 0;
                 $salah++;
                 $this->m_evaluasi_test->UpdateNilai($where, $data, 'tbl_jawaban');
             }
@@ -119,7 +112,7 @@ class Evaluasi_test extends CI_Controller
         }
         $where = $id_evaluasi;
         $total_nilai = 0;
-        $total_nilai = $skor / $jumlah * 100;
+        $total_nilai = $benar / $jumlah * 100;
         $list_nilai = $this->db->query('SELECT * FROM tbl_nilai ');
         $mutu = "x";
         $found = false;
@@ -152,7 +145,6 @@ class Evaluasi_test extends CI_Controller
             'nilai' => $total_nilai,
             'mutu' => $mutu,
         );
-        // print_r($data);die;
         if ($tbl_mhs) {
             echo "update";
             $this->m_evaluasi_test->UpdateNilai2($where, $data, 'tbl_mahasiswa_evaluasi');
