@@ -22,8 +22,10 @@ class Evaluasi_test extends CI_Controller
 
     public function soal()
     {
-        $cek2 = $this->db->query("select id_mahasiswa, id_eval from tbl_jawaban");
-        // print_r($cek2->result_array());die;
+        $id_eval = $this->uri->segment(3);
+        $userlogin = $this->session->userdata('id');
+        $cek2 = $this->db->query("select id_mahasiswa, id_eval from tbl_jawaban where id_mahasiswa = $userlogin
+                                    and id_eval = $id_eval");
         if(!$cek2->result_array()){ 
             $id_paket_evaluasi = $this->uri->segment(3);
             $id = $this->db->query('SELECT tbl_master_eval.*, tbl_master_soal.*
@@ -57,12 +59,12 @@ class Evaluasi_test extends CI_Controller
 
     public function jawab_aksi()
     {
-        $this->db->select('tbl_mahasiswa.id_mahasiswa');
+        $this->db->select('tbl_profil_mahasiswa.id_mahasiswa');
         $this->db->from('user');
-        $this->db->join('tbl_mahasiswa', 'tbl_mahasiswa.nim = user.username');
-        $this->db->where('tbl_mahasiswa.nim', $this->session->userdata('username'));
-        $getmhs = $this->db->get()->row();
-        $user = $this->session->userdata('id');
+        $this->db->join('tbl_profil_mahasiswa', 'tbl_profil_mahasiswa.id_mahasiswa = user.id');
+        $this->db->where('tbl_profil_mahasiswa.id_mahasiswa', $this->session->userdata('id'));
+		$getmhs = $this->db->get()->row();
+		$user = $this->session->userdata('id');
 
         $id_evaluasi = $this->input->post('id_eval');
         $id_mahasiswa = $getmhs->id_mahasiswa;
