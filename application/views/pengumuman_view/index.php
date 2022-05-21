@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Pengumuman
+            Daftar Pengumuman
         </div>
     </div>
 
@@ -12,7 +12,7 @@
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Daftar Pengumuman</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Pengumuman</h6>
         </div>
 
         <div class="card-body">

@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Jakarta');
 <div class="container-fluid">
     <div class="card mb-4 py-0 border-left-primary">
         <div class="card-body">
-            <span>Jadwal Tes Evaluasi</span>
+            <span>Daftar Jadwal Tes Evaluasi</span>
         </div>
     </div>
 
@@ -62,7 +62,7 @@ date_default_timezone_set('Asia/Jakarta');
                                 <tbody>
                                     <?php
                                     $no =1;
-                                    foreach ($mahasiswa as $mhs) : ?>
+                                    foreach ($mulai as $mhs) : ?>
                                         <tr>
                                             <td width="20px"><?php echo $no++ ?></td>
                                             <td><?php echo $mhs->kode_mata_kuliah; ?></td>
@@ -84,6 +84,58 @@ date_default_timezone_set('Asia/Jakarta');
                                                         if ($mhs->status_ujian == 1) {
                                                             if ($time >= $mulai && $time <= $selesai) {
                                                                 echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                            } elseif ($time > $selesai) {
+                                                                echo "Waktu Habis";
+                                                            } elseif ($time < $mulai) {
+                                                                echo "Tunggu Waktu Ujian";
+                                                            }
+                                                        }
+                                                    }
+                                                ?>
+                                            </td>
+                                        </tr>
+                                            <?php
+                                        endforeach
+                                        ?>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Kode</th>
+                                        <th>Mata Kuliah</th>
+                                        <th>Waktu Ujian</th>
+                                        <th>Waktu Selesai</th>
+                                        <th>Durasi</th>
+                                        <th>Status</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $no =1;
+                                    foreach ($belum as $b) : ?>
+                                        <tr>
+                                            <td width="20px"><?php echo $no++ ?></td>
+                                            <td><?php echo $b->kode_mata_kuliah; ?></td>
+                                            <td><?php echo $b->nama_mata_kuliah; ?></td>
+                                            <td><?= Date('d-m-Y H:i:s', strtotime($b->waktu_evaluasi_mulai)); ?></td>
+                                            <td><?= Date('d-m-Y H:i:s', strtotime($b->waktu_evaluasi_selesai)); ?></td>
+                                            <td><?php echo $b->durasi_ujian; ?> Menit</td>
+                                            <td>
+                                            <?php 
+                                                $time = (int)(Date('dmYHis'));
+                                                $mulai = (int)(Date('dmYHis', strtotime($b->waktu_evaluasi_mulai)));
+                                                $selesai = (int)(Date('dmYHis', strtotime($b->waktu_evaluasi_selesai)));
+                                            ?>
+                                                <?php if ($b->status_ujian == 0) {
+                                                    echo "<span> Belum Mulai Ujian </span>";
+                                                    } else if ($b->status_ujian == 2) {
+                                                        echo "<span> Sudah Mengikuti Ujian </span>";
+                                                    } else if ($b->status_ujian == 1) {
+                                                        if ($b->status_ujian == 1) {
+                                                            if ($time >= $mulai && $time <= $selesai) {
+                                                                echo "<a href='" . 'evaluasi_test/soal/' . "$b->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
                                                             } elseif ($time > $selesai) {
                                                                 echo "Waktu Habis";
                                                             } elseif ($time < $mulai) {

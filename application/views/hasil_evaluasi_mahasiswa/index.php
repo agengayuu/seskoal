@@ -7,6 +7,7 @@
         </div>
     </div>
 
+    <?php echo anchor('hasil_evaluasi_mahasiswa/getmatkul', '<button class="btn btn-sm btn-success mb-3">Daftar Mata Kuliah</button>') ?>
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

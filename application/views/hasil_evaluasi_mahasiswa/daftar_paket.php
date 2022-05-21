@@ -1,14 +1,13 @@
 <div class="container-fluid">
     <div class="card mb-4 py-1 border-left-primary">
         <div class="card-body">
-            Daftar Mata Kuliah
+           Daftar Hasil Tes Evaluasi
         </div>
 </div>
     
-    <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Mata Kuliah</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Hasil Tes Evaluasi</h6>
         </div>
 
         <div class="card-body">
@@ -17,20 +16,20 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Kode</th>
-                            <th>Nama Mata Kuliah</th>
-                            <th>Dosen</th>
+                            <th>Nama Paket</th>
+                            <th>Nilai</th>
+                            <th>Mutu</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                             $no =1;
-                            foreach ($matkul as $m) : ?>
+                            foreach ($getpaket as $p) : ?>
                         <tr>
                             <td><?php echo $no++ ?></td>
-                            <td><?= $m->kode_mata_kuliah ?></td>
-                            <td><?= $m->nama_mata_kuliah ?></td>
-                            <td><?= $m->nama ?></td>
+                            <td><?= $p->nama_paket_evaluasi ?></td>
+                            <td><?= $p->nilai ?></td>
+                            <td><?= $p->mutu ?></td>
                         </tr>
                                 <?php
                             endforeach
@@ -46,14 +45,3 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-<script type="application/javascript">
-/** After windod Load */
-$(window).bind("load", function() {
-  window.setTimeout(function() {
-    $(".alert").fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove();
-    });
-}, 4000);
-});
-</script>
