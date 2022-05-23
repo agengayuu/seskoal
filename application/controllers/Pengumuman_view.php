@@ -42,4 +42,12 @@ class Pengumuman_view extends CI_Controller{
         $this->load->view('templates_dosen/footer');
     }
 
+    function download($id)
+	{
+		$data = $this->db->get_where('tbl_pengumuman', ['id_pengumuman'=>$id])->row();
+        // $test = force_download($data->dokumen,$data);
+        force_download(FCPATH.'/assets/file/'.$data->dokumen, null);
+        // print_r($test);die;
+	}
+
 }

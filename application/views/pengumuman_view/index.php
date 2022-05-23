@@ -36,7 +36,7 @@
                                 <td><?= date('d-m-Y', strtotime($pa->tgl_pembuatan)) ?></td>
                                 <td><?= $pa->judul_pengumuman ?></td>
                                 <td style="text-align: center">
-                                    <button id="detail" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-detail" data-idpengumuman="<?= $pa->id_pengumuman ?>" data-judulpengumuman="<?= $pa->judul_pengumuman ?>" data-tglpembuatan="<?= $pa->tgl_pembuatan ?>" data-isipengumuman="<?= $pa->isi_pengumuman ?>">
+                                    <button id="detail" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-detail" data-idpengumuman="<?= $pa->id_pengumuman ?>" data-judulpengumuman="<?= $pa->judul_pengumuman ?>" data-tglpembuatan="<?= $pa->tgl_pembuatan ?>" data-isipengumuman="<?= $pa->isi_pengumuman ?>" data-dokumen="<?= $pa->dokumen ?>">
                                         <i class="fas fa-search"></i> Detail
                                     </button>
                                 </td>
@@ -84,18 +84,23 @@
             var judulpengumuman = $(this).data('judulpengumuman');
             var tglpembuatan = $(this).data('tglpembuatan');
             var isipengumuman = $(this).data('isipengumuman');
+            var dokumen = $(this).data('dokumen');
             // if(id)
             $('#id_pengumuman').text(idpengumuman);
             $('#judul_pengumuman').text(judulpengumuman);
             $('#tgl_pembuatan').text(tglpembuatan);
             $('#isi_pengumuman').text(isipengumuman);
+            $('#dokumen').text(dokumen);
             console.log(idpengumuman);
         })
 
         $('#modal-detail').on('show.bs.modal', function(event) {
+            var idpengumuman = $(event.relatedTarget).data('idpengumuman');
             var judulpengumuman = $(event.relatedTarget).data('judulpengumuman');
             var tglpembuatan = $(event.relatedTarget).data('tglpembuatan');
             var isipengumuman = $(event.relatedTarget).data('isipengumuman');
+            var dokumen = $(event.relatedTarget).data('dokumen');
+            // console.log(idpengumuman);
             $(this).find(".modal-body").html('');
             $(this).find(".modal-body").html(`
             <div class="modal-body table-responsive">
@@ -114,7 +119,12 @@
                         <tr>
                             <th>Isi Pengumuman</th>
                             <td>:</td>
-                            <td><span id="isi_pengumuman">${isipengumuman}></span></td>
+                            <td><span id="isi_pengumuman">${isipengumuman}</span></td>
+                        </tr>
+                        <tr>
+                            <th>Download</th>
+                            <td>:</td>
+                            <td><a href="pengumuman_view/download/${idpengumuman}" <div class="btn btn-sm btn-primary"><i class="fas fa-download"></i></div></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -122,4 +132,5 @@
             `);
         });
     })
+
 </script>
