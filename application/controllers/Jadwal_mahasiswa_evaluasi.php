@@ -87,4 +87,17 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
 
     }
 
+    public function getselesaites()
+    {
+        $data['title'] = 'Daftar Selesai Tes Evaluasi';
+
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+        $this->load->view('templates_dosen/header', $data);
+        $this->load->view('templates_dosen/sidebar_admin', $data);
+
+        $this->load->view('jadwal_mahasiswa_evaluasi/daftarselesaites', $data);
+        $this->load->view('templates_dosen/footer');
+
+    }
+
 }

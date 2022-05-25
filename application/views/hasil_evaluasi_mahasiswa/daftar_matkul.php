@@ -31,7 +31,7 @@
                             <td><?= $m->nama ?></td>
                             <td>
                             <center>
-                                <?php echo anchor('hasil_evaluasi_mahasiswa/daftarpaket/'.$m->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                <?php echo anchor('hasil_evaluasi_mahasiswa/daftarpaket/'.$m->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?>
                             </center>
                         </tr>
                                 <?php
