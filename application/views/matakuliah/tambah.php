@@ -51,16 +51,10 @@
                     <select class="form-control" name='id_akademik' id='id_akademik'>
                     <option value='0' selected>--- Pilih tahun akademik ---</option>
                     <?php foreach ($akademik as $ak) { ?>
-                    <option value="<?php echo $ak->id_akademik; ?>"><?php echo $ak->tahun_akademik ?></option>
+                    <option value="<?php echo $ak->id_akademik; ?>"><?php echo $ak->tahun_akademik . ' - ' . $ak->semester ?></option>
 			    <?php } ?>
 		        </select>
                 </div>
-
-                <!-- <div class="form-group">
-                    <label>SKS<i style="color:red">*</i></label>
-                    <input type="number" name="sks" class="form-control" placeholder="Masukan SKS">
-                    <?php echo form_error('sks', '<div class="text-danger small ml-3">','</div>') ?>
-                </div> -->
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>

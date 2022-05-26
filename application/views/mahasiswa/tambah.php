@@ -21,7 +21,7 @@
 
             <div class="form-group">
                 <label>Nama Mahasiswa<i style="color:red">*</i></label>
-                <input type="text" name="nama" value="<?php echo set_value('nama'); ?>" placeholder="Masukkan Nama Anda" class="form-control">
+                <input type="text" name="nama" value="<?php echo set_value('nama'); ?>" placeholder="Masukkan Nama Mahasiswa" class="form-control">
                 <?php echo form_error('nama', '<div class="text-danger small ml-3">','</div>') ?>
             </div>
 

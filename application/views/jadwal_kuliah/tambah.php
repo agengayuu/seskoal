@@ -29,7 +29,7 @@
                     <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah' required>
                         <option style="display:none" value="">--- Materi Mata Kuliah ---</option>
                         <?php foreach ($matkul as $mat) { ?>
-                            <option value="<?php echo $mat->id_mata_kuliah; ?>"><?php echo $mat->nama_mata_kuliah; ?></option>
+                            <option value="<?php echo $mat->id_mata_kuliah; ?>"><?php echo $mat->nama_mata_kuliah . ' - ' . $mat->nama; ?></option>
                         <?php } ?>
                     </select>
                     <?php echo form_error('id_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
@@ -112,6 +112,31 @@
     </a>
 
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+	$('#id_diklat').change(function(){
+		var id = $(this).val();
+        $.ajax({
+            url : '<?= base_url("jadwal_kuliah/get_matkul_d")?>',
+            method : "POST",
+            data : {id: id},
+            async : false,
+            dataType : 'json',
+            success: function(data){
+                var html = '';
+                var i;
+                    for(i=0; i<data.length; i++){
+                        html += '<option>'+data[i].id_mata_kuliah+'</option>';
+                    }
+                    $('.id_mata_kuliah').html(html);
+                     
+                }
+            });
+    });
+
+});
+</script>
 
 <script type="text/javascript">
  $(document).ready(function() {
