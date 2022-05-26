@@ -10,6 +10,7 @@
             <?php
             if($this->session->flashdata('pesan')) {
                 echo $this->session->flashdata('pesan');
+                echo validation_errors();
             }
             ?>
 

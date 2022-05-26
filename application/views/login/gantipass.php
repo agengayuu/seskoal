@@ -26,25 +26,25 @@
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
         </head>
         
-        <?php echo $this->session->flashdata('pesan') ?>
         <body>
-        <!-- BEGIN LOGIN -->
-        <div class="login-page">
-            <div class="container">
-                <!-- BEGIN LOGIN FORM -->
-                <div class="form">
-                    <form class="login-form" action="<?= base_url('login/gantipass') ?>" method="post">
-                        <div class="container">
-                            <center>
-                                <div class="logo">
-                                    <div class="seskoal"></div>
-                                </div>
-                            </center>
-                        </div>
-                        <div class="form-header">
-                            <h2 style="text-align: center;">Ganti password anda<br /></h2>
-                            <h5><?= $this->session->userdata('reset_email');?></h5>
-                        </div>
+            <!-- BEGIN LOGIN -->
+            <div class="login-page">
+                <div class="container">
+                    <!-- BEGIN LOGIN FORM -->
+                    <div class="form">
+                        <form class="login-form" action="<?= base_url('login/gantipass') ?>" method="post">
+                            <div class="container">
+                                <center>
+                                    <div class="logo">
+                                        <div class="seskoal"></div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="form-header">
+                                <h2 style="text-align: center;">Ganti password anda<br /></h2>
+                                <h5><?= $this->session->userdata('reset_email');?></h5>
+                            </div>
+                            <?php echo $this->session->flashdata('pesan') ?>    
                         <div class="form-group">
                             <div class="input-icon">
                                 <i class="fa fa-user"></i>

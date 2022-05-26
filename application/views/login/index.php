@@ -46,7 +46,10 @@
                                 Academic Information System</h2>
                             </div>
                             <div class="form-group">
-                            <?php echo $this->session->flashdata('message') ?>
+                            <?php echo $this->session->flashdata('pesan') ?> 
+                            <?php echo validation_errors(); ?>
+
+                            
                             <div class="input-icon">
                                 <i class="fas fa-user"></i>
                                 <input type="text" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Username" name="username" value="<?= set_value('username');?>" />
@@ -56,12 +59,11 @@
                                 <i class="fas fa-lock"></i>
                                 <input type="password" name="password" class="form-control placeholder-no-fix" placeholder="Password " autocomplete="off" onkeypress="capLock(event)"/>
                                 <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
+                            
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="rmb">
-                                <!-- <input type="checkbox" value="remember" name="remember">
-                                <span>remember me</span>    -->
                             </label>
                             <div class="float-right">
                                 <a href="<?= base_url('login/buatpass');?>">Buat password</a>
@@ -77,9 +79,6 @@
                         </div>
 
                         <input type="hidden" id="token" name="token">
-                            <!--
-                            <a href="<?php echo base_url('ceklogin/cas') ?>" class="btn blue">&nbsp;&nbsp;&nbsp;CAS <i class="m-icon-swapright m-icon-white"></i></a>
-                            -->
                             <button type="submit" class="btn green">
                                 Login <i class="m-icon-swapright m-icon-white"></i>
                             </button>
@@ -91,3 +90,14 @@
         </div>
     </body>
 </html>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

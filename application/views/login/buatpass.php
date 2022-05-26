@@ -26,7 +26,8 @@
             <!-- CSS -->
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
         </head>
-        
+        <?php echo $this->session->flashdata('pesan') ?>
+        <?php echo validation_errors(); ?>
         <body>
             <!-- BEGIN LOGIN -->
             <div class="login-page">
