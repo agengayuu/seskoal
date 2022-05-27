@@ -47,7 +47,10 @@
                                 <center>
                                 <?php echo anchor('dosen/admindetail/'.$d->id_dosen, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> 
                                 <?php echo anchor('dosen/adminedit/'.$d->id_dosen, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                <?php echo anchor('dosen/adminhapus/'.$d->id_dosen, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                                <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                                     href="<?= base_url('dosen/adminhapus/').$d->id_dosen ?>"
+                                     class="btn btn-sm btn-danger">
+                                     <i class="fa fa-trash"></i></a>
                                 </center>
                             </td>
                             

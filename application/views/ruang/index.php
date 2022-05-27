@@ -43,7 +43,13 @@
                                                 <td><?php echo $rgn->gedung.' - ' . $rgn->lantai ?></td>
                                                 <td><?php echo $rgn->keterangan ?></td>
                                                 <td style="text-align:center" width="20px"> <?php echo anchor('ruang/edit/'.$rgn->id_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                                <?php echo anchor('ruang/delete/'.$rgn->id_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                                    <a onclick="return confirm('Apa anda yakin menghapus data ini?')" 
+                                                    href="<?= base_url('ruang/delete/').$rgn->id_ruang?>"
+                                                    class="btn btn-sm btn-danger">
+                                                    <i class="fa fa-trash"></i></a>
+                                                </div>
+                                               
+                                            </td>
                                             </tr>
                                             <?php
                                         endforeach
