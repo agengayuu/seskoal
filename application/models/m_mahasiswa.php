@@ -60,4 +60,14 @@ class M_mahasiswa extends CI_Model
         $this->db->where($where);
         $this->db->update($table, $data);
     }
+
+    public function mhsdetail($id_mhs)
+    {
+        $hasil = $this->db->where('id_mahasiswa', $id_mhs)->get('tbl_mahasiswa');
+        if ($hasil->num_rows() > 0) {
+            return $hasil->result();
+        } else {
+            return false;
+        }
+    }
 }

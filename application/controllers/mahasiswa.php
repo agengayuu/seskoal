@@ -155,7 +155,7 @@ class Mahasiswa extends CI_Controller
                 'email' => $email,
                 'id_diklat' => $id_diklat,
                 'no_tlp' => $no_tlp,
-                'foto' => $foto,
+                'foto' => 'default.jpeg',
                 'created_at' => $created_at,
             );
             // echo "<pre>";
@@ -166,7 +166,7 @@ class Mahasiswa extends CI_Controller
                 'username' => $nim,
                 'id_grup_user' => 2,
                 'is_active' => 1,
-                'foto' => $foto,
+                'foto' => 'default.jpeg',
                 'id_unique' => $nim . $hsl,
             );
 
@@ -184,7 +184,7 @@ class Mahasiswa extends CI_Controller
                 'id_akademik' => $id_akademik,
                 'id_diklat' => $id_diklat,
                 'no_tlp' => $no_tlp,
-                'foto' => $foto,
+                'foto' => 'default.jpeg',
                 'created_at' => $created_at,
             );
             $this->m_mahasiswa->adminsimpan($data3, 'tbl_profil_mahasiswa');
@@ -207,6 +207,7 @@ class Mahasiswa extends CI_Controller
             'id_mahasiswa' => $id,
         );
 
+        $data['detail'] = $this->m_mahasiswa->mhsdetail($id);
         $data['akademik'] = $this->db->query("select * from thn_akademik")->result();
         $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
         $data['siswanya'] = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
@@ -241,8 +242,7 @@ class Mahasiswa extends CI_Controller
             'nim' => $nim,
         );
         $test = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
-        // print_r($test);
-        // echo "<pre>";
+        
         $data['detail'] = $this->m_mahasiswa->admindetail($nim)->result();
         // print_r($data['detail']);die;
         $this->load->view('templates_dosen/sidebar_admin', $data);
@@ -289,11 +289,9 @@ class Mahasiswa extends CI_Controller
             'email' => $email,
             'id_diklat' => $id_diklat,
             'no_tlp' => $no_tlp,
-            'foto' => $foto,
         );
 
         $data2 = array(
-            'foto' => $foto,
             'email' => $email,
         );
 
@@ -303,12 +301,7 @@ class Mahasiswa extends CI_Controller
         $where2 = array(
             'username' => $nim,
         );
-        // echo "<pre>";
-        // print_r($data);
-        // echo "<pre>";
-        // print_r($data2);
-
-        // print_r($where);die;
+        
 
         $this->m_mahasiswa->update($where, $data, 'tbl_mahasiswa');
         $this->m_mahasiswa->update($where2, $data2, 'user');
