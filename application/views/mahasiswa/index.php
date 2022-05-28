@@ -33,10 +33,16 @@
         </div> -->
 
 
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
+        <!--table -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Daftar Dosen</h6>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
                         <tr>
                             <th>No</th>
                             <th>Nim</th>
@@ -47,30 +53,33 @@
                             <th>Email</th>
                             <th>Aksi</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $no =  1;
-                        foreach ($siswa as $s) : ?>
-                            <tr>
-                                <td width="20px"><?php echo $no++ ?></td>
-                                <td><?= $s->nim ?></td>
-                                <td><?= $s->nama ?></td>
-                                <td><?= $s->nama_diklat ?></td>
-                                <td><?= $s->angkatan ?></td>
-                                <td><?= $s->tahun_masuk ?></td>
-                                <td><?= $s->email ?></td>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $no =  1;
+                            foreach ($siswa as $s) : ?>
+                                <tr>
+                                    <td width="20px"><?php echo $no++ ?></td>
+                                    <td><?= $s->nim ?></td>
+                                    <td><?= $s->nama ?></td>
+                                    <td><?= $s->nama_diklat ?></td>
+                                    <td><?= $s->angkatan ?></td>
+                                    <td><?= $s->tahun_masuk ?></td>
+                                    <td><?= $s->email ?></td>
 
-                                <td> <?php echo anchor('mahasiswa/admindetail/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>') ?>
-                                    <?php echo anchor('mahasiswa/adminedit/' . $s->id_mahasiswa, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                    <?php echo anchor('mahasiswa/adminhapus/' . $s->nim, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?>
-                                </td>
+                                    <td> <?php echo anchor('mahasiswa/admindetail/' . $s->nim, '<div class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></div>') ?>
+                                        <?php echo anchor('mahasiswa/adminedit/' . $s->id_mahasiswa, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                        <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                                        href="<?= base_url('mahasiswa/adminhapus/') . $s->nim?>"
+                                        class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash"></i></a></div>
+                                    </td>
 
-                            </tr>
-                        <?php
-                        endforeach
-                        ?>
-                    </tbody>
+                                </tr>
+                            <?php
+                            endforeach
+                            ?>
+                        </tbody>
                 </table>
             </div>
         </div>

@@ -35,7 +35,10 @@
                             <td width="20px">
                             <?php echo anchor('hak_akses/akses/'.$r->id_grup_user, '<div class="btn btn-sm btn-warning"><i class="fa fa-list"></i></div>' ) ?>
                              <?php echo anchor('hak_akses/edit/'.$r->id_grup_user, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                             <?php echo anchor('hak_akses/hapus/'.$r->id_grup_user, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?>
+                             <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                             href="<?= base_url('hak_akses/hapus/').$r->id_grup_user?>"
+                             class="btn btn-sm btn-danger">
+                             <i class="fa fa-trash"></i></a></div>
                              
                             </td>
                             </tr>

@@ -108,16 +108,12 @@
             <?php echo form_error('alamat', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
-        <div class="form-group">
-            <label>Foto<i style="color:red">*</i></label>
-            <!-- <div class="custom-file">
-            <input type="file" class="form-control" name="foto" id="foto">
-            <label class="custom-file-label" for="foto">Pilih Foto</label>
-            </div> -->
+        <!-- <div class="form-group">
+            <label>Foto</label>
             <input type="file" name="foto" placeholder="Masukkan Foto" class="form-control">
             <label><i>hanya file ekstensi .png, .jpeg</i></label>
             <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
-        </div>
+        </div> -->
 
         <button type="submit" class="btn btn-primary mb-4 mt-4">Simpan</button>
         <button type="button" value="Cancel" class="btn btn-danger mb-4 mt-4" onclick="history.back()">Batal</button>

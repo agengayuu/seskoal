@@ -6,14 +6,14 @@
     </div>
     <?php echo $this->session->flashdata('pesan') ?>
     <?php echo validation_errors(); ?>
-     <?php echo form_open_multipart('berita/update'); ?> 
+    <?php echo form_open_multipart('berita/update'); ?> 
 
 
     <?php foreach($beritanya as $b) { ?>
     <div class="card-header bg-white">
     <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
         <div class="card-body">
-            <form action="<?php echo base_url('berita/update') ?>" method="post">
+            <!-- <form action="<?php echo base_url('berita/update') ?>" method="post"> -->
 
                 <div class="form-group">
                     <label>Judul Berita<i style="color:red">*</i></label>
@@ -39,7 +39,7 @@
                               <img src="<?php echo base_url().'assets/uploads/' .$b->dokumen ?>" style="width: 200px">
                             </div>
                     <label>Dokumen<i> (Opsional)</i></label>
-                    <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
+                    <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen" value = "<?= $b->dokumen;?>">
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
 

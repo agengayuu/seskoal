@@ -70,42 +70,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Card Example -->
-        <!-- <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Dosen Aktif</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">54</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Card Example -->
-        <!-- <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Mahasiswa Aktif</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">358</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        
     </div>
     </div>
 
@@ -163,8 +128,7 @@
                 colorByPoint: true,
                 data: [
                     <?php echo $grafik; ?>
-
-                ]
+                ] 
             }]
         });
     </script>
@@ -179,10 +143,11 @@
                 type: 'pie'
             },
             title: {
-                text: 'Persentase Jumlah Mahasiswa dan Dosen    '
+                text: 'Persentase Jumlah Mahasiswa dan Dosen'
             },
             tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                point2Format: '{series.name}: <b> {point2.valueText}'
+                
             },
             accessibility: {
                 point: {
@@ -195,19 +160,21 @@
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        format: '<b>{point.name}</b>:{point.percentage:.1f} % ',
                         style: {
                             color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                         }
-                    }
+                    },
+                  
                 }
             },
             series: [{
-                name: "User",
+                name: "Jumlah",
                 colorByPoint: true,
                 data: [{
                     name: 'Mahasiswa',
-                    y: <?= $mahasiswa; ?>,
+                 
+                    y: <?= $mahasiswa;?>,  
 
                 }, {
                     name: 'Dosen',

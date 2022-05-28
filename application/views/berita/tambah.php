@@ -33,21 +33,10 @@
 
                 <div class="form-group">
                     <label>Gambar<i style="color:red">*</i></label>
-                    <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen">
+                    <input type="file" name="dokumen" class="form-control" placeholder="dokumen" id="dokumen" required>
                     <!-- <label><i>hanya file ekstensi .png, .jpeg .pdf</i></label> -->
                     <?php echo form_error('dokumen', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
-
-                <!-- <div class="form-group">
-                    <label>Status<i style="color:red">*</i></label>
-                    <select class="form-control" name='status' id='status' required>
-                        <option value='0' selected>--- Pilih Status ---</option>
-                        <option value="1">Aktif</option>
-                        <option value="0">Tidak Aktif</option>
-                    </select>
-                    
-                    <?php echo form_error('status', '<div class="text-danger small ml-3">','</div>') ?>
-                </div> -->
 
                 <button type="submit" class="btn btn-primary mb-4">Simpan</button>
                 <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick=self.history.back()>Batal</button>
