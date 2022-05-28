@@ -26,31 +26,11 @@
 
                 <div class="form-group">
                     <label>Mata Kuliah <i style="color:red">*</i></label>
-                    <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah' required>
-                        <option style="display:none" value="">--- Materi Mata Kuliah ---</option>
-                        <?php foreach ($matkul as $mat) { ?>
-                            <option value="<?php echo $mat->id_mata_kuliah; ?>"><?php echo $mat->nama_mata_kuliah . ' - ' . $mat->nama; ?></option>
-                        <?php } ?>
+                    <select class="form-control" name='id_mata_kuliah' id='id_mata_kuliah' required readonly>
+                        <option>--- Pilih Mata Kuliah ---</option>
                     </select>
                     <?php echo form_error('id_mata_kuliah', '<div class="text-danger small ml-3">','</div>') ?>
                 </div>
-
-                <!-- <div class="form-group">
-                    <label> Nama Dosen <i style="color:red">*</i></label>
-                    <select class="form-control" name='id_dosen' id='id_dosen' required>
-                        <option style="display:none" value="">--- Pilih Dosen ---</option>
-                        <?php foreach ($dosen as $d) { ?>
-                            <option value="<?php echo $d->id_dosen; ?>"><?php echo $d->nama; ?></option>
-                        <?php } ?>
-                    </select>
-                    <?php echo form_error('id_dosen', '<div class="text-danger small ml-3">','</div>') ?>
-                </div> -->
-
-                <!-- <div class="form-group">
-            <label>Kode Jadwal<i style="color:red">*</i></label>
-            <input type="text" name="kapasitas" placeholder="Masukkan Kapasitas" class="form-control">
-          
-        </div> -->
 
                 <div class="form-group">
                     <label>Tanggal<i style="color:red">*</i></label>
@@ -115,24 +95,26 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-	$('#id_diklat').change(function(){
+	$('select[name="id_diklat"]').on('change',function(){
 		var id = $(this).val();
-        $.ajax({
-            url : '<?= base_url("jadwal_kuliah/get_matkul_d")?>',
-            method : "POST",
-            data : {id: id},
-            async : false,
-            dataType : 'json',
-            success: function(data){
-                var html = '';
-                var i;
-                    for(i=0; i<data.length; i++){
-                        html += '<option>'+data[i].id_mata_kuliah+'</option>';
-                    }
-                    $('.id_mata_kuliah').html(html);
-                     
-                }
-            });
+        $('select[name="id_mata_kuliah"]').prop('readonly', false);
+        if(id){
+            $.ajax({
+                url : '<?=base_url('jadwal_kuliah/matkul_d/')?>',
+                method : "POST",
+                data : {id: id},
+                dataType : 'json',
+                success:function(data) {
+                    $('select[name="id_mata_kuliah"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="id_mata_kuliah"]').append('<option value="'+ value.id_mata_kuliah +'">'+ value.nama_mata_kuliah +'</option>');
+                        });
+
+                    }   
+                });
+            }else{
+                $('select[name="id_mata_kuliah"]').empty();
+            }
     });
 
 });

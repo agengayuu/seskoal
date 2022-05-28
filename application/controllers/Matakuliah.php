@@ -96,14 +96,20 @@ class Matakuliah extends CI_Controller
             $data = array(
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', true),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', true),
-                // 'sks' => $this->input->post('sks', TRUE),
                 'id_dosen' => $this->input->post('id_dosen', true),
                 'id_diklat' => $this->input->post('id_diklat', true),
                 'id_akademik' => $this->input->post('id_akademik', true),
-
             );
-
             $this->m_matakuliah->adminsimpan($data);
+            $id_matkul = $this->db->insert_id();
+           
+            $data2 = array(
+                'id_mata_kuliah' =>  $id_matkul,
+                'id_diklat' => $this->input->post('id_diklat', true),
+            );
+            $this->m_matakuliah->simpanmatkul_d($data2);
+
+
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
                                                     Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span></button></div>');
@@ -115,7 +121,6 @@ class Matakuliah extends CI_Controller
     {
         $this->form_validation->set_rules('kode_mata_kuliah', 'kode_mata_kuliah', 'required', ['required' => 'Kode Mata Kuliah Wajib diisi!']);
         $this->form_validation->set_rules('nama_mata_kuliah', 'nama_mata_kuliah', 'required', ['required' => 'Nama Mata Kuliah Wajib diisi!']);
-        // $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks wajib diisi!']);
     }
 
     public function adminedit($id)
@@ -128,7 +133,7 @@ class Matakuliah extends CI_Controller
 
         $data['dosen'] = $this->db->query("Select * from tbl_dosen")->result();
         $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
-        $data['akademik'] = $this->db->query("Select * from thn_akademik")->result();
+        $data['akademik'] = $this->db->query("Select * from thn_akademik where status = 'Aktif'")->result();
 
         $where = array(
             'id_mata_kuliah' => $id,

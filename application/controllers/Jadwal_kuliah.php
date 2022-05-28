@@ -25,6 +25,8 @@ class Jadwal_kuliah extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $data['jadwal'] = $this->m_jadwal->getdata();
+        // $query=$this->db->get("tbl_jadwal_kuliah")->Result();
+        // print_r($query);die;
         $this->load->view('jadwal_kuliah/index', $data);
         $this->load->view('templates_dosen/footer');
     }
@@ -41,7 +43,7 @@ class Jadwal_kuliah extends CI_Controller
                                          from tbl_mata_kuliah
                                          join tbl_dosen
                                          on tbl_mata_kuliah.id_dosen = tbl_dosen.id_dosen")->result();
-        // $dosennya = $this->db->query("select * from tbl_dosen")->result();
+
         $ruangnya = $this->db->query("select * from tbl_ruang")->result();
         $data['diklat'] = $diklatnya;
         $data['matkul'] = $matkulnya;
@@ -50,6 +52,15 @@ class Jadwal_kuliah extends CI_Controller
 
         $this->load->view('jadwal_kuliah/tambah', $data);
         $this->load->view('templates_dosen/footer');
+    }
+
+    public function matkul_d(){
+        $id_diklat = $_POST['id'];
+        $matkul = $this->db->query("select tmk.*
+                        from tbl_matkul_diklat tmd
+                        join tbl_mata_kuliah tmk on tmd.id_mata_kuliah = tmk.id_mata_kuliah
+                        where tmd.id_diklat = $id_diklat")->result();
+        echo json_encode($matkul);
     }
 
     public function _rules()
@@ -76,8 +87,6 @@ class Jadwal_kuliah extends CI_Controller
 
             $diklat = $this->input->post('id_diklat');
             $matkul = $this->input->post('id_mata_kuliah');
-            // $dosen = $this->input->post('id_dosen');
-            // $kode = $this->input->post('kode_jadwal');
             $tgl = $this->input->post('tanggal');
             $waktu_mulai = $this->input->post('waktu_mulai');
             $waktu_selesai = $this->input->post('waktu_selesai');
@@ -93,8 +102,6 @@ class Jadwal_kuliah extends CI_Controller
             $data = array(
                 'id_diklat' => $diklat,
                 'id_mata_kuliah' => $matkul,
-                // 'id_dosen' => $dosen,
-                // 'kode_jadwal' => $kode,
                 'tanggal' => date('Y-m-d', strtotime($tgl)),
                 'waktu_mulai' => $waktu_mulai,
                 'waktu_selesai' => $waktu_selesai,
@@ -116,23 +123,6 @@ class Jadwal_kuliah extends CI_Controller
             redirect('jadwal_kuliah');
             $this->load->view('templates_dosen/footer');
         }
-
-        // print_r($tgl);
-        // echo "<pre>";
-
-        // $sama = [];
-        // foreach ($tanggal as $t) {
-
-        //     if ($t->tanggal == $tgl) {
-        //         $sama[] = $tgl;
-        //     }
-        // }
-        // print_r($sama);
-        // die();
-        // perbandingan ketika input
-        // if($tgl == $tanggal && $waktu_mulai == $waktu_m  && $waktu_selesai == $waktu_s ){
-        //     echo "Maaf ruangan sedang di pakai";die;
-        // }
     }
 
     public function edit($id)
@@ -208,8 +198,6 @@ class Jadwal_kuliah extends CI_Controller
             $id = $this->input->post('id_jadwal_kuliah');
             $diklat = $this->input->post('id_diklat');
             $matkul = $this->input->post('id_mata_kuliah');
-            // $dosen = $this->input->post('id_dosen');
-            // $kode = $this->input->post('kode_jadwal');
             $tgl = $this->input->post('tanggal');
             $waktu_mulai = $this->input->post('waktu_mulai');
             $waktu_selesai = $this->input->post('waktu_selesai');
@@ -225,8 +213,6 @@ class Jadwal_kuliah extends CI_Controller
             $data = array(
                 'id_diklat' => $diklat,
                 'id_mata_kuliah' => $matkul,
-                // 'id_dosen' => $dosen,
-                // 'kode_jadwal' => $kode,
                 'tanggal' => date('Y-m-d', strtotime($tgl)),
                 'waktu_mulai' => $waktu_mulai,
                 'waktu_selesai' => $waktu_selesai,
