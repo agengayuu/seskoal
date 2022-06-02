@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda</title>
 
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/assets/images/seskoal.png" type="image/x-icon"/>
+
     <!--CSS-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/layout.css">
@@ -23,7 +25,7 @@
                 <li><a href="#berita">Berita</a></li>
                 <li><a href="#bantuan">Bantuan</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#download">Dowload Manual</a></li>
+                <li><a href="#download">Download Manual</a></li>
                 <li>
                     <a href="<?= base_url('login'); ?>">
                         <button>Masuk</button>
@@ -51,91 +53,22 @@
         <div class="news-area">
             <h3>Berita Terbaru</h3>
             <div class="swiper mySwiper container">
-                    <div class="swiper-wrapper content">
+                <div class="swiper-wrapper content">
+                        <?php foreach($berita as $brt) { ?>
                         <div class="swiper-slide card">
-                            <div class="card-content">
+                            <div class="card-content" style="height:380px" align="center">
                                 <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-4.png" alt="" class="first-news">
+                                    <img  src="<?= base_url('./assets/uploads/' . $brt->dokumen) ?>" alt="" class="first-news" style="width:265px;height:190px;">
                                 </div>
-                                <div class="news-title">
-                                    <span><b>Untuk Lindungi Masyarakat, Kemendag Blokir 622 Situs Web Tanpa Izin Bappeti</b></span>
+                                <div class="news-title" style="height:130px; font-size:14px">
+                                    <span><b><?= $brt->judul_berita;?></b></span>
                                 </div>
                                 <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
+                                    <button class="selengkapnya"><a href="<?= $brt->link;?>" target="_blank">Selengkapnya<i class="fa-solid fa-arrow-right"></i></a></button>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Bappeti Kembali Blokir 137 Entitas Tak Berizin, Termasuk Penawaran ini ...</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-6.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Optimalkan Pemanfaatan SRG sebagai Instrumen Perdagangan, Wamendag: SR..</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Serbuan Vaksinasi Tahap ke-2 Lanud Abd Saleh di Detasemen TNI AU Senggreng</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Dalam sehari "Serbuan Vaksinasi" Lanud Abd Saleh Jangkau Empat Lokasi</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide card">
-                            <div class="card-content">
-                                <div class="image">
-                                    <img src="<?= base_url(); ?>assets/assets/images/foto-5.png" alt="" class="first-news">
-                                </div>
-                                <div class="news-title">
-                                    <span><b>Satkes Dema Mako Korphaskas Gelar Vaksinasi Covid Lanjutan di Gedung...</b></span>
-                                </div>
-                                <div class="button">
-                                    <button class="selengkapnya">Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        
+                        <?php } ?>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -191,46 +124,28 @@
     </section>
     <!-- END Bantuan -->
 
-    <!-- Bantuan-->
+    <!-- Galeri-->
     <section id="gallery">
         <div class="container">
             <h3>Gallery</h3>
             <div class="slider-container">
                 <ul class="slider-list">
                     <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-1.png" alt="" class="img-slider">
+                        <?php foreach($galeri as $g) { ?>
+                        <a href="" class="image">
+                            <img src="<?= base_url('./assets/uploads/' . $g->foto) ?>" alt="" class="img-slider" style="width:240px;height:200px;">
                         </a>
+                        <?php } ?>
                     </li>
-                    <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-2.png" alt="" class="img-slider">
-                        </a>
-                    </li>
-                    <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-3.png" alt="" class="img-slider">
-                        </a>
-                    </li>
-                    <!-- <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-4.png" alt="" class="img-slider">
-                        </a>
-                    </li>
-                    <li class="slider-item">
-                        <a href="" class="">
-                            <img src="<?php echo base_url() ?>assets/assets/images/foto-5.png" alt="" class="img-slider">
-                        </a>
-                    </li> -->
                 </ul>
-                <div class="slider-arrows">
+                <!-- <div class="slider-arrows">
                     <img src="<?= base_url(); ?>assets/assets/images/arr-left.png" alt="" class="slider-arrow-prev">
                     <img src="<?= base_url(); ?>assets/assets/images/arr-right.png" alt="" class="slider-arrow-next">
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
-    <!-- END Bantuan -->
+    <!-- END Galeri -->
 
     <!-- Download Manual-->
     <section id="download">
@@ -280,90 +195,4 @@
         },
     });
     </script>
-
-<!-- <script>
-        "use strict";
-
-    {
-    // Get HTML elements
-    const sliderList = document.querySelector(".slider-list");
-    const sliderItems = document.querySelectorAll(".slider-item");
-    const sliderNext = document.querySelector(".slider-arrow-next");
-    const sliderPrev = document.querySelector(".slider-arrow-prev");
-
-    // Define variables
-    let numberOfItems;
-    let itemIndex;
-
-    // Define media queries
-    const mediaQueryList = [
-        window.matchMedia("(max-width: 650px)"),
-        window.matchMedia("(max-width: 991px)")
-    ];
-
-    // Display slider items
-    const displayItems = () => {
-        let html = "";
-        let len = itemIndex + numberOfItems;
-        for (let i = itemIndex; i < len; i++) {
-        html += sliderItems[i].outerHTML;
-        }
-        sliderList.innerHTML = html;
-    };
-
-    // Handel number of slides and set slides height and width
-    const HandleScreen = () => {
-        if (mediaQueryList[0].matches) {
-        numberOfItems = 1;
-        itemIndex = 0;
-        // set width and height to item for when image does not load
-        sliderItems.forEach((item) => {
-            item.style.width = "100%";
-            item.style.minHeight = "150px";
-        });
-        } else if (mediaQueryList[1].matches) {
-        numberOfItems = 2;
-        itemIndex = 0;
-        // set width and height to item for when image does not load
-        sliderItems.forEach((item) => {
-            item.style.width = "50%";
-            item.style.minHeight = "150px";
-        });
-        } else {
-        numberOfItems = 3;
-        itemIndex = 0;
-        // set width and height to item for when image does not load
-        sliderItems.forEach((item) => {
-            item.style.width = "35%";
-            item.style.minHeight = "150px";
-        });
-        }
-        displayItems();
-    };
-
-    // Run handel screen function for the first time
-    HandleScreen();
-
-    // Add listener to media query list items
-    for (let i = 0; i < mediaQueryList.length; i++) {
-        mediaQueryList[i].addListener(HandleScreen);
-    }
-
-    // Diplay next slide
-    sliderNext.addEventListener("click", function () {
-        if (itemIndex < sliderItems.length - numberOfItems) {
-        itemIndex++;
-        displayItems();
-        }
-    });
-
-    // Display Previous slide
-    sliderPrev.addEventListener("click", function () {
-        if (itemIndex > 0) {
-        itemIndex--;
-        displayItems();
-        }
-    });
-    }
-</script> -->
 </html>

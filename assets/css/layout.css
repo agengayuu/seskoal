@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+/* @import url(https://fonts.googleapis.com/css?family=Segoe300); */
 
 * {
     box-sizing: border-box;
@@ -18,7 +18,7 @@ html {
 }
 
 button {
-    font-family: "Roboto", sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #003366;
@@ -33,12 +33,6 @@ section h3 {
     color: #003366;
 }
 
-/* header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-} */
-
 .logo {
     cursor: pointer;
     width: 500px;
@@ -46,11 +40,11 @@ section h3 {
     line-height: 80px;
 }
 
-nav{
+nav {
+    font-family: "Segoe UI", sans-serif;
     background: #abc7db;
     height: 80px;
     width: 100%;
-    /* position: fixed; */
 }
 
 nav ul {
@@ -58,7 +52,7 @@ nav ul {
     margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
@@ -86,7 +80,7 @@ nav ul li a:hover {
 
 button {
     padding: 9px 25px;
-    background-image: linear-gradient(to right, #12D8FA 0%, #1FA2FF  90%, #1FA2FF  100%);
+    background-image: linear-gradient(to right, #12D8FA 0%, #1FA2FF 90%, #1FA2FF 100%);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -94,7 +88,7 @@ button {
 }
 
 button:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
     color: #fff;
     text-decoration: none;
 }
@@ -105,7 +99,7 @@ button:hover {
 
 .banner {
     background: url(../assets/images/slide.png) no-repeat;
-    background-size:  100%;
+    background-size: cover;
     padding: 57 px 0;
 }
 
@@ -115,18 +109,18 @@ button:hover {
 }
 
 #berita {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-1.png) no-repeat;
-    background-size:  100%;
+    background-size: cover;
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
 
 }
-.news-area .container{
+
+.news-area .container {
     padding: 30px;
     height: auto;
-    /* align-items: center;
-    justify-content: center; */
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -135,7 +129,7 @@ button:hover {
     height: auto;
 }
 
-.news-area .card .image img{
+.news-area .card .image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -144,7 +138,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 3px solid #fff */
 }
 
 .first-news {
@@ -157,7 +150,6 @@ button:hover {
     position: relative;
     background: #e7f2f8;
     border-radius: 15px;
-    /* margin: 20px 0; */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -180,7 +172,7 @@ button:hover {
 }
 
 .card .button button {
-    background-image: linear-gradient(to right, #12D8FA 0%, #1FA2FF  90%, #1FA2FF  100%);
+    background-image: linear-gradient(to right, #12D8FA 0%, #1FA2FF 90%, #1FA2FF 100%);
     outline: none;
     border: none;
     padding: 8px 10px;
@@ -191,7 +183,7 @@ button:hover {
 }
 
 .button button:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
     color: #fff;
     text-decoration: none;
 }
@@ -206,16 +198,18 @@ button:hover {
     border-radius: 25px;
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next,
+.swiper-button-prev {
     opacity: 0.7;
     transition: all 0.3s ease;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover{
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     opacity: 1;
 }
 
-.gallery-area .container-gallery{
+.gallery-area .container-gallery {
     max-width: 81rem;
     width: 100%;
     margin: 0 auto;
@@ -233,58 +227,18 @@ button:hover {
     border-radius: 5%;
 }
 
-.card-gallery .image img{
+.card-gallery .image img {
     height: 100%;
     width: 100%;
     border-radius: 5%;
     object-fit: cover;
     border: 5px solid #e7f2f8;
-    /* border: 3px solid #fff */
 }
-
-/* .slider-container-berita {
-    padding: 10px;
-    max-width: 1170px;
-    margin: auto;
-  }
-
-.slider-list-berita {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-.img-slider-berita {
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 0 0 70px 0;
-    border-radius: 30px;
-    margin: 5px;
-    width: 250px;
-    background-color: white;
-}
-
-.slider-arrows-berita {
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-    bottom: 80px;
-    cursor: pointer;
-  }
-  
-.slider-item-berita img {
-    max-width: auto;
-    height: auto;
-} */
 
 #bantuan {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-2.png) no-repeat;
-    background-size:  100%;
+    background-size: 100%;
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -301,7 +255,7 @@ button:hover {
     font-weight: bold;
 }
 
-.grid-container > div {
+.grid-container>div {
     background-color: #abc7db;
     text-align: center;
     padding: 20px 0;
@@ -323,8 +277,9 @@ ul.arrows {
 }
 
 #gallery {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-1.png) no-repeat;
-    background-size:  100%;
+    background-size: cover;
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -334,7 +289,7 @@ ul.arrows {
     padding: 10px;
     max-width: 1170px;
     margin: auto;
-  }
+}
 
 .slider-list {
     list-style-type: none;
@@ -348,12 +303,7 @@ ul.arrows {
 
 .slider-item:not(.slider-item:last-child) {
     padding-left: 40px;
-  }
-
-/* .slider-item {
-    background-color: gray;
-    margin-bottom: -4px;
-} */
+}
 
 .img-slider {
     height: auto;
@@ -366,7 +316,7 @@ ul.arrows {
 
 .img-slider:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  }
+}
 
 .slider-arrows {
     display: flex;
@@ -374,16 +324,17 @@ ul.arrows {
     height: 30px;
     bottom: 80px;
     cursor: pointer;
-  }
-  
+}
+
 .slider-item img {
     max-width: auto;
     height: auto;
 }
 
 #download {
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/bg-3.png) no-repeat;
-    background-size:  100%;
+    background-size: cover;
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -407,18 +358,15 @@ ul.arrows {
 }
 
 footer {
-    font-family: "Roboto", sans-serif;
+    font-family: "Segoe UI", sans-serif;
     background: url(../assets/images/footer.png) no-repeat;
-    background-size:  100%;
-    /* position: fixed; */
+    background-size: cover;
     left: 0;
     bottom: 0;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    /* background-color: #003366; */
     color: white;
     text-align: center;
     height: auto;
 }
-

@@ -1,0 +1,125 @@
+<div class="container-fluid">
+    <div class="card mb-4 py-0 border-left-primary">
+        <div class="card-body">
+         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Edit Profile Dosen 
+        </div>
+    </div> 
+
+    <div class="card-header bg-white">
+    <h4 class="h5 align-middle m-0 font-weight-bold text-primary"></h4>
+        <div class="card-body">
+
+    <?php foreach($dosennya as $d) : ?> 
+    <?php echo form_open_multipart('profile_dosen/update'); ?> 
+
+    <input type="hidden" class="form-control" name="id_dosen" id="id_dosen" value="<?php echo $d->id_dosen; ?>">
+
+        <div class="form-group">
+            <label>NID<i style="color:red">*</i></label>
+            <input type="number" name="nip" id="nip" placeholder="Masukkan NIP" class="form-control" value="<?php echo $d->nip ?>" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>NIK<i style="color:red">*</i></label>
+            <input type="number" name="nik" id="nik" placeholder="Masukkan NIK" class="form-control" value="<?php echo $d->nik ?>" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>NPWP<i style="color:red">*</i></label>
+            <input type="number" name="npwp" id="npwp" placeholder="Masukkan NPWP" class="form-control" value="<?php echo $d->npwp ?>" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Kewarganegaraan<i style="color:red">*</i></label>
+            <input type="text" name="kewarganegaraan" placeholder="Masukkan Kewarganegaraan" class="form-control" value="<?php echo $d->kewarganegaraan ?>" required>
+        </div>
+
+        <div class="form-group">
+            <label>Nama Dosen<i style="color:red">*</i></label>
+            <input type="text" name="nama" placeholder="Masukkan Nama Dosen" class="form-control" value="<?php echo $d->nama ?>" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email<i style="color:red">*</i></label>
+            <input type="email" name="email" class="form-control" value="<?php echo $d->email ?>" required>
+        </div>
+
+        <div class="form-group">
+            <label>No. HP<i style="color:red">*</i></label>
+            <input type="number" name="no_tlp" placeholder="Masukkan No. Telepon" class="form-control" value="<?php echo $d->no_tlp ?>" max="12" required>
+            <label><i>No HP harus 12 digit angka</i></label>
+        </div>
+
+        <div class="form-group">
+            <label>Gelar Depan</label>
+            <input type="text" name="gelar_depan" placeholder="Masukkan Gelar Depan" class="form-control" value="<?php echo $d->gelar_depan ?>">
+            <?php echo form_error('gelar_depan', '<div class="text-danger small ml-3">','</div>') ?>
+        </div>
+
+        <div class="form-group">
+            <label>Gelar Belakang<i style="color:red">*</i></label>
+            <input type="text" name="gelar_belakang" placeholder="Masukkan Gelar Belakang" class="form-control" value="<?php echo $d->gelar_belakang ?>" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Tempat Lahir<i style="color:red">*</i></label>
+            <input type="text" name="tempat_lahir" placeholder="Masukkan Tempat Lahir" class="form-control" value="<?php echo $d->tempat_lahir ?>" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tanggal Lahir<i style="color:red">*</i></label>
+            <input type="date" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir" class="form-control" value="<?php echo $d->tgl_lahir ?>" required>
+        </div>
+
+        <div class="form-group">
+        <label>Jenis Kelamin<i style="color:red">*</i></label>
+            <select class="form-control" id='jk'name="jk" value ="<?php echo $d->jk; ?>">
+                <option value="<?= $d->jk;?>"> <?= $d->jk;?> </option>
+                <option value="Perempuan"> Perempuan </option>
+                <option value="Laki-laki">Laki-Laki</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Agama<i style="color:red">*</i></label>
+            <select class="form-control" id='agama' name="agama" value="<?php echo $d->agama ?>">
+            <option value="<?php echo $d->agama ?>"> <?= "$d->agama"?> </option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Katholik">Katholik</option>
+                <option value="Budha">Budha</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Alamat<i style="color:red">*</i></label>
+            <textarea class="form-control" name="alamat" rows="3" required> <?= "$d->alamat"?> </textarea>
+        </div>
+
+        <div class="form-group">
+            <?php foreach($detail as $dt) : ?>
+                <img src="<?php echo base_url().'assets/uploads/' .$d->foto ?>" style="width: 200px">
+                <?php endforeach; ?><br><br>
+                <label>Foto<i style="color:red">*</i></label>
+            <input type="file" name="userfile" class="form-control"  value = "<?= $d->foto;?>">
+            <label><i>hanya file ekstensi .png, .jpg .jpeg</i></label>
+        </div>
+
+        <button type="submit" class="btn btn-info mb-4">Update</button>
+        <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
+
+
+    <?php form_close(); ?>
+    <?php endforeach; ?>
+
+    </div>
+</div>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+</div>

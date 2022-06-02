@@ -1,30 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
 body {
-    background: url(../assets/images/bg.png) no-repeat;  
-    height: auto;
-    background-size:  100%;
-  }
-
+  font-family: "Segoe UI", sans-serif;
+  background: url(../assets/images/bg.png) no-repeat;
+  height: auto;
+  background-size: 100%;
+}
 
 .float-right {
-    float: right !important;
+  float: right !important;
+}
+
+.float-right2 {
+  float: right !important;
 }
 
 label {
-    display: inline-block;
-    padding-right: 20px;
+  display: inline-block;
+  padding-right: 20px;
 }
 
-label.rmb{
-    color: white;
-    padding-right: 130px;
+label.rmb {
+  color: white;
+  padding-right: 130px;
 }
 
 a:link {
-    color: white;
-    text-decoration: none;
-  }
+  color: white;
+  text-decoration: none;
+}
 
 .login-page {
   width: 460px;
@@ -33,16 +35,17 @@ a:link {
 }
 
 /*Logo*/
-.logo{
-    width: 350px;
+.logo {
+  width: 350px;
 }
 
 .seskoal {
-    background: url(../assets/images/seskoall.png) no-repeat;
-    background-size: 350px 80px;
-    height: 80px;
-    margin-bottom: 30px;
+  background: url(../assets/images/seskoall.png) no-repeat;
+  background-size: 350px 80px;
+  height: 80px;
+  margin-bottom: 30px;
 }
+
 /*Logo end*/
 
 .form {
@@ -57,24 +60,27 @@ a:link {
   border-radius: 10%;
 }
 
-.form-header{
-    position: relative;
-    text-align: left;
-    color: #003366;
-    font-weight: bold;
-    padding-bottom: 10px;
+.form-header {
+  position: relative;
+  text-align: left;
+  color: #003366;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 
-input[type=text], input[type=password] {
-    outline: 0;
-    background: #fffff7;
-    width: 100%;
-    border: 0;
-    margin: 0 0 20px;
-    padding: 8px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=email] {
+  outline: 0;
+  background: #fffff7;
+  width: 100%;
+  border: 0;
+  margin: 0 0 20px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
 
 .form button {
@@ -94,26 +100,15 @@ input[type=text], input[type=password] {
   cursor: pointer;
 }
 
-.form button:hover,.form button:active,.form button:focus {
+.form button:hover,
+.form button:active,
+.form button:focus {
   background: #003366;
   color: white;
 }
 
-/* .form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-  text-align: left;
-  color: white;
-  padding-left: 20px;
-}
-
-.form .message a {
-  color: #4CAF50;
-  text-decoration: none;
-} */
-
-.container:before, .container:after {
+.container:before,
+.container:after {
   content: "";
   display: block;
   clear: both;
@@ -122,25 +117,25 @@ input[type=text], input[type=password] {
 /***
   Input icons
   ***/
-  .input-icon {
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.input-icon {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 
-  /* NOTIF */
-  .close {
-    display: inline-block;
-    margin-top: 0px;
-    margin-right: 0px;
-    width: 9px;
-    height: 9px;
-    background-repeat: no-repeat !important;
-    text-indent: -10000px;
-    outline: none;
-    background-image: url("../global/img/remove-icon-small.png") !important;
-  }
+/* NOTIF */
+.close {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 0px;
+  width: 9px;
+  height: 9px;
+  background-repeat: no-repeat !important;
+  text-indent: -10000px;
+  outline: none;
+  background-image: url("../global/img/remove-icon-small.png") !important;
+}
 
 .display-none,
 .display-hide {
@@ -151,146 +146,165 @@ input[type=text], input[type=password] {
 Custom icon buttons
 ***/
 .icon-btn {
-    height: 60px;
-    min-width: 80px;
-    margin: 5px 5px 0 0;
-    border: 1px solid #ddd;
-    padding: 12px 0px 0px 0px;
-    background-color: #fafafa;
-    background-image: none;
-    filter: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    display: inline-block;
-    color: #646464;
-    text-shadow: none;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-  .icon-btn:hover {
-    text-decoration: none;
-    border-color: #999;
-    color: #444;
-    text-shadow: 0 1px 0px white;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  .icon-btn:hover > .badge {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  .icon-btn > div {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    color: #000;
-    font-size: 12px;
-    font-weight: 300;
-  }
-  .icon-btn > .badge {
-    position: absolute;
-    font-size: 11px;
-    font-weight: 300;
-    top: -5px;
-    right: -5px;
-    padding: 3px 6px 3px 6px;
-    color: white;
-    text-shadow: none;
-    border-width: 0;
-    border-style: solid;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  .icon-btn > i {
-    font-size: 18px;
-  }
-  .ie8 .icon-btn:hover {
-    filter: none;
-  }
-  
-  /***
+  height: 60px;
+  min-width: 80px;
+  margin: 5px 5px 0 0;
+  border: 1px solid #ddd;
+  padding: 12px 0px 0px 0px;
+  background-color: #fafafa;
+  background-image: none;
+  filter: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: inline-block;
+  color: #646464;
+  text-shadow: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  text-decoration: none;
+  border-color: #999;
+  color: #444;
+  text-shadow: 0 1px 0px white;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.icon-btn:hover>.badge {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.icon-btn>div {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.icon-btn>.badge {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 300;
+  top: -5px;
+  right: -5px;
+  padding: 3px 6px 3px 6px;
+  color: white;
+  text-shadow: none;
+  border-width: 0;
+  border-style: solid;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.icon-btn>i {
+  font-size: 18px;
+}
+
+.ie8 .icon-btn:hover {
+  filter: none;
+}
+
+/***
   Input icons
   ***/
-  .input-icon {
-    position: relative;
-  }
-  .input-icon > .form-control {
-    padding-left: 33px;
-  }
-  .input-group .input-icon > .form-control {
-    -webkit-border-radius: 4px 0 0 4px;
-    -moz-border-radius: 4px 0 0 4px;
-    -ms-border-radius: 4px 0 0 4px;
-    -o-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
-  }
-  .input-icon > i {
-    color: #ccc;
-    display: block;
-    position: absolute;
-    margin: 11px 2px 4px 10px;
-    z-index: 3;
-    width: 16px;
-    height: 16px;
-    font-size: 16px;
-    text-align: center;
-  }
-  .modal .input-icon > i {
-    z-index: 10055;
-  }
-  .has-success .input-icon > i {
-    color: #45B6AF;
-  }
-  .has-warning .input-icon > i {
-    color: #dfba49;
-  }
-  .has-info .input-icon > i {
-    color: #89C4F4;
-  }
-  .has-error .input-icon > i {
-    color: #F3565D;
-  }
-  .input-icon.right > .form-control {
-    padding-right: 33px;
-    padding-left: 12px;
-  }
-  .input-group .input-icon.right > .form-control {
-    -webkit-border-radius: 0 4px 4px 0;
-    -moz-border-radius: 0 4px 4px 0;
-    -ms-border-radius: 0 4px 4px 0;
-    -o-border-radius: 0 4px 4px 0;
-    border-radius: 0 4px 4px 0;
-  }
-  .input-icon.right > i {
-    right: 8px;
-    float: right;
-  }
-  .input-icon.input-icon-lg > i {
-    margin-top: 16px;
-  }
-  .input-icon.input-icon-sm > i {
-    margin-top: 8px;
-    font-size: 13px;
-  }
+.input-icon {
+  position: relative;
+}
+
+.input-icon>.form-control {
+  padding-left: 33px;
+}
+
+.input-group .input-icon>.form-control {
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-icon>i {
+  color: #ccc;
+  display: block;
+  position: absolute;
+  margin: 11px 2px 4px 10px;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.modal .input-icon>i {
+  z-index: 10055;
+}
+
+.has-success .input-icon>i {
+  color: #45B6AF;
+}
+
+.has-warning .input-icon>i {
+  color: #dfba49;
+}
+
+.has-info .input-icon>i {
+  color: #89C4F4;
+}
+
+.has-error .input-icon>i {
+  color: #F3565D;
+}
+
+.input-icon.right>.form-control {
+  padding-right: 33px;
+  padding-left: 12px;
+}
+
+.input-group .input-icon.right>.form-control {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.input-icon.right>i {
+  right: 8px;
+  float: right;
+}
+
+.input-icon.input-icon-lg>i {
+  margin-top: 16px;
+}
+
+.input-icon.input-icon-sm>i {
+  margin-top: 8px;
+  font-size: 13px;
+}

@@ -5,60 +5,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 <meta charset="utf-8">
 <title>404 Page Not Found</title>
-<style type="text/css">
 
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
-
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
-
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
-
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
-
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
-
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
-
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
 </head>
+<style>
+	body{
+			margin: 0;
+			padding: 0;
+			font-family: "montserrat", sans-serif;
+			min-height: 100vh;
+			background: url(assets/assets/images/bg-1.png) no-repeat;
+			background-size:  150%;
+		}
+	.container {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		color: #343434;
+	}
+
+	.container h1{
+		font-size: 160px;
+		margin: 0;
+		font-weight: 900;
+		letter-spacing: 20px;
+		background: url(assets/assets/images/bg.png) center no-repeat;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+	}
+
+	.container a{
+		text-decoration: none;
+		color: #fff;
+		padding: 12px 24px;
+		display: inline-block;
+		border-radius: 25px;
+		font-size: 14px;
+		text-transform: uppercase;
+		transition: 0.4s;
+		background-image: linear-gradient(to right, #133589 0%, #1FA2FF  90%, #1FA2FF  100%);
+		border: none;
+		border-radius: 50px;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+	}
+
+	.container a:hover{
+		background-color: #133589;
+		color: #fff;
+		text-decoration: none;
+	}
+
+</style>
+
 <body>
-	<div id="container">
+	<div class="container">
+		<h2>Oops! Page Not Found</h2>
+		<h1>404</h1>
+		<p>We Can't find the page you're looking for in SESKOAL.</p>
+		<a href="">Go Back Home</a>
+	</div>
+	<!-- <div id="container">
 		<h1><?php echo $heading; ?></h1>
 		<?php echo $message; ?>
-	</div>
+	</div> -->
 </body>
 </html>
