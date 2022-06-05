@@ -1,0 +1,4 @@
+Catatan :
+Bugs pada dosen :
+- data jadwal kuliah dan matakuliah yang keluar pada dosen tidak sesuai
+- penilaian untuk dosen belum selesai

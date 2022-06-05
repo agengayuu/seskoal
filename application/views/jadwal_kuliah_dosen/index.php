@@ -5,7 +5,7 @@
         <div class="card-body">
         <i class="fas fa-fw fa-calendar-alt"></i> Jadwal Kuliah
         </div>
-    </div>
+    </div> 
  
     <?php echo anchor('jadwal_kuliah_dosen/matakuliah_dosen', '<button class="btn btn-sm btn-info mb-3"><i class="fas fa-eye fa-sm"></i> Lihat Matakuliah Dosen</button>') ?>
     

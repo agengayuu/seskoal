@@ -13,14 +13,12 @@ class Dosen extends CI_Controller
         $this->load->model('m_dosen');
         $this->load->library('session');
         is_logged_in('1');
-        //session_start();
     }
 
     public function index()
     {
         $data['title'] = " Dosen";
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
         $this->load->view('templates_dosen/header', $data);
         $query = $this->db->query("select * from
@@ -36,7 +34,7 @@ class Dosen extends CI_Controller
     {
         $data['title'] = "Tambah Dosen";
         $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $this->session->userdata('username')])->row_array();
 
         $this->load->view('templates_dosen/header', $data);
         $query = $this->db->query("select * from
@@ -45,14 +43,13 @@ class Dosen extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('dosen/tambah');
         $this->load->view('templates_dosen/footer');
-
     }
 
     public function adminsimpan()
     {
 
         $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $this->session->userdata('username')])->row_array();
 
         $created_at = date('Y-m-d H:i:s');
 
@@ -79,7 +76,8 @@ class Dosen extends CI_Controller
             $alamat = $this->input->post('alamat');
             $hsl = date('jmY', strtotime($tgl_lahir));
             $foto = $_FILES['foto'];
-            if ($foto = '') {} else {
+            if ($foto = '') {
+            } else {
                 $config['upload_path'] = './assets/uploads/';
                 $config['allowed_types'] = 'jpg|png|jpeg|gif|tiff';
                 $config['max_size'] = 2048;
@@ -89,7 +87,8 @@ class Dosen extends CI_Controller
 
                 if (@$_FILES['foto']['name'] != null) {
                     if (!$this->upload->do_upload('foto')) {
-                        echo 'Gagal Upload';die();
+                        echo 'Gagal Upload';
+                        die();
                     } else {
                         $foto = $this->upload->data('file_name');
                     }
@@ -138,81 +137,36 @@ class Dosen extends CI_Controller
                                             <span aria-hidden="true">&times;</span></button></div>');
             redirect('dosen');
         }
-
-        // $nip            = $this->input->post('nip');
-        // $nik            = $this->input->post('nik');
-        // $npwp            = $this->input->post('npwp');
-        // $kewarganegaraan = $this->input->post('kewarganegaraan');
-        // $nama           = $this->input->post('nama');
-        // $email          = $this->input->post('email');
-        // $no_tlp         = $this->input->post('no_tlp');
-        // $gelar_depan    = $this->input->post('gelar_depan');
-        // $gelar_belakang = $this->input->post('gelar_belakang');
-        // $tempat_lahir   = $this->input->post('tempat_lahir');
-        // $tgl_lahir      = $this->input->post('tgl_lahir');
-        // $jk             = $this->input->post('jk');
-        // $agama          = $this->input->post('agama');
-        // $alamat         = $this->input->post('alamat');
-        // $foto           = $this->input->post('foto');
-        // $id_grup_user   = $this->input->post('id_grup_user');
-        // $created_at     = $this->input->post('created_at');
-        // $hsl            = date('jmY', strtotime($tgl_lahir));
-
-        // $data = array(
-        //     'nip' => $nip,
-        //     'nik' => $nik,
-        //     'npwp' => $npwp,
-        //     'kewarganegaraan' => $kewarganegaraan,
-        //     'nama' => $nama,
-        //     'email' => $email,
-        //     'no_tlp' => $no_tlp,
-        //     'gelar_depan' =>$gelar_depan,
-        //     'gelar_belakang' => $gelar_belakang,
-        //     'tempat_lahir' =>  $tempat_lahir,
-        //     'tgl_lahir' => $tgl_lahir,
-        //     'jk'   => $jk,
-        //     'agama'   => $agama,
-        //     'alamat'   => $alamat,
-        //     'foto'   => $foto,
-        //     'jk'   => $jk ,
-        //     'created_at' => time()
-
-        // );
-
-        // $data2 = array(
-        //     'username' => $nip,
-        //     'id_grup_user' => 3,
-        //     'is_active' =>1,
-        //     'id_unique' => $nip.$hsl,
-        //     'date_created' => time()
-
-        // );
-
-        // $this->m_dosen->adminsimpan($data, 'tbl_dosen');
-        // $this->m_dosen->simpanuser($data2,'user');
-        // redirect ('dosen');
     }
 
     public function _rules()
     {
-        $this->form_validation->set_rules('nip', 'NIP', 'required|is_unique[user.username]', ['required' => 'NIP Wajib diisi!',
-            'is_unique' => '%s sudah ada']);
+        $this->form_validation->set_rules('nip', 'NIP', 'required|is_unique[user.username]', [
+            'required' => 'NIP Wajib diisi!',
+            'is_unique' => '%s sudah ada'
+        ]);
 
-        $this->form_validation->set_rules('nik', 'nik', 'required|is_unique[user.username]', ['required' => 'NIK Wajib diisi!',
-            'is_unique' => '%s sudah ada']);
+        $this->form_validation->set_rules('nik', 'nik', 'required|is_unique[user.username]', [
+            'required' => 'NIK Wajib diisi!',
+            'is_unique' => '%s sudah ada'
+        ]);
 
-        $this->form_validation->set_rules('npwp', 'npwp', 'required|is_unique[user.username]', ['required' => 'NPWP Wajib diisi!',
-            'is_unique' => '%s sudah ada']);
+        $this->form_validation->set_rules('npwp', 'npwp', 'required|is_unique[user.username]', [
+            'required' => 'NPWP Wajib diisi!',
+            'is_unique' => '%s sudah ada'
+        ]);
 
         $this->form_validation->set_rules('kewarganegaraan', 'kewarganegaraan', 'required', ['required' => 'Kewarganegaraan Wajib diisi!']);
         $this->form_validation->set_rules('nama', 'nama', 'required', ['required' => 'Nama Wajib diisi!']);
-        $this->form_validation->set_rules('email', 'email', 'required|valid_email', ['required' => 'Email Wajib diisi!',
-            'valid_email' => 'Masukan email yang benar']);
+        $this->form_validation->set_rules('email', 'email', 'required|valid_email', [
+            'required' => 'Email Wajib diisi!',
+            'valid_email' => 'Masukan email yang benar'
+        ]);
 
-        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required|numeric|min_length[11]', ['required' => 'No Telpon Wajib diisi!',
-            'min_length' => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.']);
-        // $this->form_validation->set_rules('gelar_depan', 'gelar_depan', 'required', ['required' => 'Gelar Depan Wajib diisi!']);
-        // $this->form_validation->set_rules('gelar_belakang', 'gelar_belakang', 'required', ['required' => 'Gelar Belakang Wajib diisi!']);
+        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required|numeric|min_length[11]', [
+            'required' => 'No Telpon Wajib diisi!',
+            'min_length' => 'Nomor telepon minimal 11 nomor dan maksimal 14 nomor.'
+        ]);
         $this->form_validation->set_rules('tempat_lahir', 'tempat_lahir', 'required', ['required' => 'Tempat Lahir Wajib diisi!']);
         $this->form_validation->set_rules('tgl_lahir', 'tgl_lahir', 'required', ['required' => 'Tanggal Lahir Wajib diisi!']);
         $this->form_validation->set_rules('jk', 'jk', 'required', ['required' => 'Jenis Kelamin Wajib diisi!']);
@@ -224,21 +178,19 @@ class Dosen extends CI_Controller
     {
         $data['title'] = "Edit Update";
         $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
         $where = array(
             'id_dosen' => $id,
         );
-        // $data['dosennya'] = $this->m_dosen->adminedit($where,'tbl_user')->result();
 
         $data['dosennya'] = $this->m_dosen->adminedit($where, 'tbl_dosen')->result();
 
         $data['detail'] = $this->m_dosen->admindetail($id);
         $this->load->view('dosen/edit', $data);
         $this->load->view('templates_dosen/footer');
-
     }
 
     public function adminupdate()
@@ -404,7 +356,6 @@ class Dosen extends CI_Controller
         if (isset($_POST['import'])) {
 
             $file = $_FILES['filecsv']['tmp_name'];
-            // echo $file;die();
             // Medapatkan ekstensi file csv yang akan diimport.
             $ekstensi = explode('.', $_FILES['filecsv']['name']);
 
@@ -435,19 +386,15 @@ class Dosen extends CI_Controller
                             'tgl_lahir' => $dsn[6],
                         ];
 
-                        // print_r($data);die;
-
                         // Simpan data ke database.
                         $this->m_dosen->adminsimpan($data, 'tbl_dosen');
                         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                 Data berhasil ditambah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
-
                     }
 
                     fclose($handle);
                     redirect('dosen');
-
                 } else {
                     echo 'Format file tidak valid!';
                 }

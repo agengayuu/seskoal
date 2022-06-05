@@ -99,7 +99,7 @@
                 <option value="Katholik">Katholik</option>
                 <option value="Budha">Budha</option>
                 <option value="Hindu">Hindu</option>
-                <option value="Konghucu">Konghucu</option>
+                <option value="Konghucu">Konghucu</option> 
             </select>
             <?php echo form_error('agama', '<div class="text-danger small ml-3">','</div>') ?>
         </div>

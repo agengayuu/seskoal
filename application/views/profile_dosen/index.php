@@ -8,7 +8,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php foreach($detail as $dt) {?>
+    <?php foreach($detail as $dt) : ?>
         
     <div class="card-header bg-white">
         <div class="card-body">
@@ -18,14 +18,14 @@
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <?php if($dt->foto!= null) { ?>
-                                    <img src="<?=base_url('assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
+                                    <img src="<?=base_url('./assets/uploads/'.$dt->foto) ?>" class="img-fluid" alt="avatar" style="width: 200px">
                                 <?php } ?>
-                            </div>
+                            </div> 
  
                             <div class="col-md-10"> 
                                 <div class="form-group row">
                                     <div class="col-md-3">
-                                        <label for="">NID</label>
+                                        <label for="">NIP</label>
                                     </div>
                                     <div class="col-md-6">
                                         <label for=""><?= $dt->nip;?></label>
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
 
-                            <?php } ?> 
+                            <?php endforeach; ?> 
                         </div>
                     </div>
                 </div>

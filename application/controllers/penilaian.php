@@ -16,14 +16,12 @@ class Penilaian extends CI_Controller
         $this->load->library('mypdf');
         $this->load->library('session');
         is_logged_in('1');
-        //session_start();
     }
 
     public function index()
     {
         $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
@@ -32,14 +30,12 @@ class Penilaian extends CI_Controller
 
         $this->load->view('penilaian/getdiklat', $data);
         $this->load->view('templates_dosen/footer');
-
     }
 
     public function getakademik($id)
     {
         $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $akademik = $this->db->query("Select * from thn_akademik")->result();
@@ -55,8 +51,7 @@ class Penilaian extends CI_Controller
     public function getmatkul($id_akademik, $id_diklat)
     {
         $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
@@ -72,17 +67,16 @@ class Penilaian extends CI_Controller
         $this->load->view('templates_dosen/footer');
     }
 
-    public function getpaket($idmatkul){
+    public function getpaket($idmatkul)
+    {
         $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $paket = $this->db->query("select * from tbl_paket_evaluasi where id_mata_kuliah = $idmatkul")->result();
         $data['pktEval'] = $paket;
         $this->load->view('penilaian/getpaket', $data);
         $this->load->view('templates_dosen/footer');
-
     }
 
     public function hasil_evalmhs($id_pkt)
@@ -95,7 +89,7 @@ class Penilaian extends CI_Controller
 
         $pkt = $this->db->query("select * from tbl_paket_evaluasi where id_paket_evaluasi = $id_pkt")->row();
         $data['paket'] = $pkt;
-    
+
         $idpkt = $this->uri->segment(3);
         $hsl = $this->db->query("select tbl_mahasiswa_evaluasi.*, tbl_profil_mahasiswa.*
                                 from tbl_mahasiswa_evaluasi
@@ -104,17 +98,15 @@ class Penilaian extends CI_Controller
                                 where tbl_mahasiswa_evaluasi.id_eval = $id_pkt")->result();
         $data['hasil'] = $hsl;
         $data['eval'] = $idpkt;
-        $this->load->view('penilaian/hasil_evalmhs',$data);
-        $this->load->view('templates_dosen/footer',$data);
-
+        $this->load->view('penilaian/hasil_evalmhs', $data);
+        $this->load->view('templates_dosen/footer', $data);
     }
 
     public function getrekap_mhs($id_ak, $id_dik)
     {
 
         $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
 
@@ -128,8 +120,7 @@ class Penilaian extends CI_Controller
     public function getakademik_rekap($id)
     {
         $data['title'] = 'Penilaian';
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $akademik = $this->db->query("Select * from thn_akademik")->result();
@@ -152,7 +143,7 @@ class Penilaian extends CI_Controller
                                     on tbl_mahasiswa_evaluasi.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah
                                     where tbl_mahasiswa_evaluasi.id_eval = $idpkt")->result_array();
         $data['cetak'] = $query;
-    
+
         $this->mypdf->generate('penilaian/cetak', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
     }
 
@@ -178,10 +169,8 @@ class Penilaian extends CI_Controller
                                             on tbl_mahasiswa_evaluasi.id_eval = tbl_paket_evaluasi.id_paket_evaluasi
                                             where tbl_mahasiswa_evaluasi.id_mahasiswa = $idmhs order by nama_mata_kuliah")->result();
 
-// print_r($query);die;
+        // print_r($query);die;
         $data['rekap'] = $query;
         $this->mypdf->generate('penilaian/cetak_rekap', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
-
     }
-
 }

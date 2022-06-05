@@ -21,7 +21,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label col-md-2"><b>Diklat</b> <b><?php echo ": ".$nama_diklat; ?></b></label><br />
-                                <label class="control-label col-md-2"><b>Tahun Akademik</b> <b><?php echo ": ".$tahun_akademik; ?></b></label><br />
+                                <label class="control-label col-md-2"><b>Tahun Akademik</b> <b><?php echo ": ".$tahun_akademik[0]['tahun_akademik']; ?></b></label><br />
                             </div>
                         </div>
                     </div>               
@@ -41,10 +41,9 @@
                                     foreach ($penilaian_tahun as $pd) : ?>
                                         <tr>
                                             <td width="20px"><?php echo $no++ ?></td>
-                                            <td><?= $pd->nama_mata_kuliah ?>
+                                            <td><?= $pd->nama_mata_kuliah ?></td>
                                             
-                                            <td width="180px"> <?php echo anchor('penilaian_thn/listmahasiswa/'.$idnya.'/'.$tahun_akademik.'/', '<div class="btn btn-sm btn-primary"> Detail Nilai <i class="fa fa-arrow-right"></i></div>' ) ?></td>
-                                            </td>
+                                            <td width="180px"> <?php echo anchor('penilaian_thn/listpaketevaluasi/'.$idnya.'/'.$tahun_akademik2.'/'. $pd->id_mata_kuliah, '<div class="btn btn-sm btn-primary"> List Paket Evaluasi <i class="fa fa-arrow-right"></i></div>' ) ?></td>
                                         </tr>
                                             <?php
                                         endforeach
