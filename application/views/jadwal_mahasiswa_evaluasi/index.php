@@ -82,7 +82,11 @@ date_default_timezone_set('Asia/Jakarta');
                                                     } else if ($mhs->status_ujian == 1) {
                                                         if ($mhs->status_ujian == 1) {
                                                             if ($time >= $mulai && $time <= $selesai) {
+                                                                if (in_array($mhs->id_paket_evaluasi, $check) == true) {
+                                                                    echo "Ujian Selesai";
+                                                                } else {
                                                                 echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                                }
                                                             } elseif ($time > $selesai) {
                                                                 echo "Waktu Habis";
                                                             } elseif ($time < $mulai) {

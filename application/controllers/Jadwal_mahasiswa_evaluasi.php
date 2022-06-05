@@ -29,7 +29,19 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
         $userlogin = $this->session->userdata('id');
         $query = $this->db->query("select user.*, tbl_profil_mahasiswa.*
                                     from user join tbl_profil_mahasiswa on user.id = tbl_profil_mahasiswa.id_mahasiswa where tbl_profil_mahasiswa.id_mahasiswa = $userlogin");
-        $id_diklat = 0;
+
+        $check_jawaban = $this->db->query("select distinct id_eval
+                                    from tbl_jawaban
+                                    where id_mahasiswa = $userlogin");
+                                    
+        $check_jawaban = $check_jawaban->result_array();
+        // $check_jawaban = $check_jawaban['id_eval'];
+        
+        $check = [];
+        foreach ($check_jawaban as $c){
+            array_push($check, $c['id_eval']);
+        }
+        
         foreach ($query->result_array() as $q) {
             $now = Date('Y-m-d H:i:s');
             $where = $q['id_diklat'];
@@ -39,7 +51,7 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
                                             on tbl_mata_kuliah.id_mata_kuliah = tbl_paket_evaluasi.id_mata_kuliah
                                             where '$now' < tbl_paket_evaluasi.waktu_evaluasi_selesai
                                             and tbl_mata_kuliah.id_diklat = $where 
-                                            and tbl_paket_evaluasi.status_ujian = 1
+                                            and tbl_paket_evaluasi.status_ujian = 1 or 0
                                             order by tbl_paket_evaluasi.id_mata_kuliah")->result();
             
             // 0 belum mulai ujian
@@ -51,10 +63,10 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
             // print_r($belumujian);die;
         };
         $data['mulai'] = $mulaiujian;
+        $data['check'] = $check;
 
         $this->load->view('jadwal_mahasiswa_evaluasi/index', $data);
         $this->load->view('templates_dosen/footer');
-
     }
 
     public function getdaftarmatkul()
