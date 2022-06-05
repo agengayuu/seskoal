@@ -11,8 +11,8 @@ date_default_timezone_set('Asia/Jakarta');
         </div>
     </div>
 
-    <?php echo anchor('jadwal_mahasiswa_evaluasi/getdaftarmatkul', '<button class="btn btn-sm btn-success mb-3">Daftar Mata Kuliah</button>') ?>
     <?php echo anchor('jadwal_mahasiswa_evaluasi/getselesaites', '<button class="btn btn-sm btn-success mb-3">Daftar Selesai Tes</button>') ?>
+    <?php echo anchor('jadwal_mahasiswa_evaluasi/getdaftarmatkul', '<button class="btn btn-sm btn-success mb-3">Daftar Mata Kuliah</button>') ?>
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -73,18 +73,20 @@ date_default_timezone_set('Asia/Jakarta');
                                             <td><?php echo $mhs->durasi_ujian; ?> Menit</td>
                                             <td>
                                             <?php 
-                                                $time = (int)(Date('dmYHis'));
-                                                $mulai = (int)(Date('dmYHis', strtotime($mhs->waktu_evaluasi_mulai)));
-                                                $selesai = (int)(Date('dmYHis', strtotime($mhs->waktu_evaluasi_selesai)));
+                                                $time = (Date('d-m-Y H:i:s'));
+                                                $mulai = (Date('d-m-Y H:i:s', strtotime($mhs->waktu_evaluasi_mulai)));
+                                                $selesai = (Date('d-m-Y H:i:s', strtotime($mhs->waktu_evaluasi_selesai)));
                                             ?>
                                                 <?php if ($mhs->status_ujian == 0) {
                                                     echo "<span> Belum Mulai Ujian </span>";
-                                                    } else if ($mhs->status_ujian == 2) {
-                                                        echo "<span> Sudah Mengikuti Ujian </span>";
                                                     } else if ($mhs->status_ujian == 1) {
                                                         if ($mhs->status_ujian == 1) {
                                                             if ($time >= $mulai && $time <= $selesai) {
+                                                                if (in_array($mhs->id_paket_evaluasi, $check) == true) {
+                                                                    echo "Ujian Selesai";
+                                                                } else {
                                                                 echo "<a href='" . 'evaluasi_test/soal/' . "$mhs->id_paket_evaluasi' class='btn btn-xs btn-success';'>Mulai Ujian</a>";
+                                                                }
                                                             } elseif ($time > $selesai) {
                                                                 echo "Waktu Habis";
                                                             } elseif ($time < $mulai) {

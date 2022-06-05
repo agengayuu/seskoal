@@ -64,7 +64,7 @@ class Ruang extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->input();
         } else {
-            $id_ruang = $this->input->post('id_ruang');
+            //  $id_ruang = $this->input->post('id_ruang'); 
             $nama_ruang = $this->input->post('nama_ruang');
             $id_jenis_ruang = $this->input->post('id_jenis_ruang');
             $kapasitas = $this->input->post('kapasitas');
@@ -73,7 +73,7 @@ class Ruang extends CI_Controller
             $keterangan = $this->input->post('keterangan');
 
             $data = array(
-                'id_ruang' => $id_ruang,
+                // 'id_ruang' => $id_ruang,
                 'nama_ruang' => $nama_ruang,
                 'id_jenis_ruang' => $id_jenis_ruang,
                 'kapasitas' => $kapasitas,
@@ -84,7 +84,7 @@ class Ruang extends CI_Controller
 
             $this->m_ruang->input_data($data, 'tbl_ruang');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                                Data berhasil diupdate. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                Data berhasil dimasukan. <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                 <span aria-hidden="true">&times;</span> </button></div>');
 
             redirect('ruang');

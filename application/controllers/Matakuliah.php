@@ -94,14 +94,20 @@ class Matakuliah extends CI_Controller
             $data = array(
                 'kode_mata_kuliah' => $this->input->post('kode_mata_kuliah', true),
                 'nama_mata_kuliah' => $this->input->post('nama_mata_kuliah', true),
-                // 'sks' => $this->input->post('sks', TRUE),
                 'id_dosen' => $this->input->post('id_dosen', true),
                 'id_diklat' => $this->input->post('id_diklat', true),
                 'id_akademik' => $this->input->post('id_akademik', true),
-
             );
-
             $this->m_matakuliah->adminsimpan($data);
+            $id_matkul = $this->db->insert_id();
+           
+            $data2 = array(
+                'id_mata_kuliah' =>  $id_matkul,
+                'id_diklat' => $this->input->post('id_diklat', true),
+            );
+            $this->m_matakuliah->simpanmatkul_d($data2);
+
+
             $this->session->set_flashdata('pesan', '<div class="alert alert-info alert-dismissible fade show" role="alert">
                                                     Data berhasil dimasukkan! <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                                     <span aria-hidden="true">&times;</span></button></div>');
@@ -113,7 +119,6 @@ class Matakuliah extends CI_Controller
     {
         $this->form_validation->set_rules('kode_mata_kuliah', 'kode_mata_kuliah', 'required', ['required' => 'Kode Mata Kuliah Wajib diisi!']);
         $this->form_validation->set_rules('nama_mata_kuliah', 'nama_mata_kuliah', 'required', ['required' => 'Nama Mata Kuliah Wajib diisi!']);
-        // $this->form_validation->set_rules('sks', 'sks', 'required', ['required' => 'sks wajib diisi!']);
     }
 
     public function adminedit($id)
@@ -126,7 +131,7 @@ class Matakuliah extends CI_Controller
 
         $data['dosen'] = $this->db->query("Select * from tbl_dosen")->result();
         $data['diklat'] = $this->db->query("Select * from tbl_diklat")->result();
-        $data['akademik'] = $this->db->query("Select * from thn_akademik")->result();
+        $data['akademik'] = $this->db->query("Select * from thn_akademik where status = 'Aktif'")->result();
 
         $where = array(
             'id_mata_kuliah' => $id,
@@ -192,10 +197,10 @@ class Matakuliah extends CI_Controller
         }
     }
 
-    public function adminhapus($kode_mata_kuliah)
+    public function adminhapus($id_mata_kuliah)
     {
 
-        $where = array('kode_mata_kuliah' => $kode_mata_kuliah);
+        $where = array('id_mata_kuliah' => $id_mata_kuliah);
         $this->m_matakuliah->hapus_data($where, 'tbl_mata_kuliah');
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                 Data berhasil dihapus. <button type="button" class="close" data-dismiss="alert" aria-label="close">
@@ -229,7 +234,6 @@ class Matakuliah extends CI_Controller
         $thn = $this->db->query("select * from thn_akademik where id_akademik = $id")->row_array();
         $data["thn"] = $thn;
 
-        // print_r($thn);die;
         $join = $this->db->query("Select tbl_mata_kuliah.*, thn_akademik.*, tbl_dosen.*, tbl_diklat.*
                                     from tbl_mata_kuliah
                                     join thn_akademik
@@ -239,8 +243,6 @@ class Matakuliah extends CI_Controller
                                     join tbl_diklat
                                     on tbl_mata_kuliah.id_diklat = tbl_diklat.id_diklat
                                     where tbl_mata_kuliah.id_akademik = $id")->result();
-        // echo"<pre>";
-        // print_r($join);die;
         $data['daftarmatkul'] = $join;
 
         $this->load->view('matakuliah/daftarmatkul', $data);

@@ -169,11 +169,17 @@ class Pengumuman extends CI_Controller
         redirect('pengumuman');
     }
 
-    function download($id)
+    function download()
 	{
-		$data = $this->db->get_where('tbl_pengumuman',['dokumen'=>$id])->row();
-		// $test = force_download($data->dokumen,$data);
-        force_download(FCPATH.'/assets/file/'.$data->dokumen, null);
-        // print_r($test);die;
+        $id = $this->uri->segment(3);
+        $data = $this->db->get_where('tbl_pengumuman',['dokumen'=>$id])->row();
+        if($data){
+         force_download(FCPATH.'/assets/file/'.$data->dokumen, null);
+        }else{
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                Dokumen tidak tersedia. <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                                <span aria-hidden="true">&times;</span> </button></div>');
+                                                redirect('pengumuman');
+        }
 	}
 }

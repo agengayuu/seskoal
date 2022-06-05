@@ -48,10 +48,10 @@
                         <label>Status<i style="color:red">*</i></label>
                     </div>
                     <div>
-                        <?php echo form_radio('status',1)?>Aktif
+                        <?php echo form_radio('status',1,($p->status == 1 ) ? TRUE : FALSE )?>Aktif
                     </div>
                     <div>
-                        <?php echo form_radio('status',0)?> Tidak Aktif
+                        <?php echo form_radio('status',0,($p->status == 0 ) ? TRUE : FALSE )?>Tidak Aktif
                     </div>
                 </div> 
 

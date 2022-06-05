@@ -39,7 +39,11 @@
                                         <td style="text-align:center" width="20px"> 
                                         <?php echo anchor('diklat/getmhs/'.$d->id_diklat, '<div class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></div>' ) ?> 
                                         <?php echo anchor('diklat/adminedit/'.$d->id_diklat, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                        <?php echo anchor('diklat/adminhapus/'.$d->id_diklat, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                        <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                                        href="<?= base_url('diklat/adminhapus/').$d->id_diklat?>"
+                                        class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash"></i></a></div>
+                                    </td>
                                     </tr>
                                         <?php
                                     endforeach

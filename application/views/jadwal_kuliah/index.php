@@ -28,7 +28,6 @@
                                     <th>Nama Diklat</th>
                                     <th>Mata Kuliah</th>
                                     <th>Nama Dosen</th>
-                                    <!-- <th width="50px">Kode</th> -->
                                     <th>Tanggal</th>
                                     <th>Waktu</th>
                                     <th>JP ke</th>
@@ -46,16 +45,20 @@
                                         <td width="20px"><?php echo $no++ ?></td>
                                         <td><?= $jdw->nama_diklat ?></td>
                                         <td><?= $jdw->nama_mata_kuliah ?></td>
-                                        <td><?= $jdw->nama ?></td>
-                                        <!-- <td><?= $jdw->kode_jadwal ?></td> -->
+                                        <td><?= $jdw->nama ?></td> 
                                         <td><?= date('d-m-Y',strtotime($jdw->tanggal)); ?></td>
                                         <td><?= $jdw->waktu_mulai ?> - <?= $jdw->waktu_selesai ?></td>
                                         <td><?= $jdw->jam_pelajaran_ke ?></td>
                                         <td><?= $jdw->tema ?></td>
                                         <td><?= $jdw->nama_ruang ?></td>
-                                        <td><?= $jdw->keterangan ?></td>
+                                        <td><?= $jdw->keterangan_jadwal_kuliah ?></td>
                                         <td width="20px"> <?php echo anchor('jadwal_kuliah/edit/' . $jdw->id_jadwal_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                            <?php echo anchor('jadwal_kuliah/hapus/' . $jdw->id_jadwal_kuliah, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                        <a onclick="return confirm('Apa anda yakin menghapus data ini?')" 
+                                        href="<?= base_url('jadwal_kuliah/hapus/') . $jdw->id_jadwal_kuliah?>"
+                                        class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash"></i></a> 
+                                        </td>
+                        
                                     </tr>
                                 <?php
                                 endforeach

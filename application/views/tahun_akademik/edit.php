@@ -33,10 +33,10 @@
                     <label>Status<i style="color:red">*</i></label>
                 </div>
                 <div>
-                    <?php echo form_radio('status','Aktif',FALSE)?>Aktif
+                    <?php echo form_radio('status','Aktif', ($ak->status == 'Aktif') ? TRUE : FALSE )?>Aktif
                 </div>
                 <div>
-                    <?php echo form_radio('status','Tidak Aktif',FALSE)?> Tidak Aktif
+                    <?php echo form_radio('status','Tidak Aktif',($ak->status == 'Tidak Aktif') ? TRUE : FALSE )?> Tidak Aktif
                 </div>
             </div>  
 

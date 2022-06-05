@@ -35,7 +35,11 @@
                                     <td><?php echo $no++ ?></td>
                                     <td><?= $jr->nama_jenis_ruang ?></td>
                                     <td width="20px"> <?php echo anchor('jenis_ruang/update/'.$jr->id_jenis_ruang, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>&nbsp;
-                                    <?php echo anchor('jenis_ruang/delete/'.$jr->id_jenis_ruang, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                    <a onclick="return confirm('Apa anda yakin menghapus data ini?')" 
+                                    href="<?= base_url('jenis_ruang/delete/').$jr->id_jenis_ruang?>"
+                                    class="btn btn-sm btn-danger">
+                                    <i class="fa fa-trash"></i></a>    
+                                </td>
                                 </tr>
                                         <?php
                                     endforeach

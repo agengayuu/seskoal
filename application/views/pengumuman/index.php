@@ -51,7 +51,11 @@
                                      ?></td>
                                 <center>
                                     <td style="text-align: center"> <?php echo anchor('pengumuman/edit/' . $p->id_pengumuman, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                    <?php echo anchor('pengumuman/delete/' . $p->id_pengumuman, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                    <a onclick="return confirm('Apa anda yakin menghapus data ini?')" 
+                                    href="<?= base_url('pengumuman/delete/') . $p->id_pengumuman?>" 
+                                    class="btn btn-sm btn-danger">
+                                    <i class="fa fa-trash"></i></a> 
+                                    </td>  
                                 </center>
                             </tr>
                         <?php

@@ -45,8 +45,13 @@
                                 <td style="text-align: center"><?= date('d-m-Y',strtotime($b->created_at)); ?></td>
                                 <center>
                                 </td>
-                                    <td style="text-align: center"> <?php echo anchor('berita/edit/' . $b->id_berita, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                    <?php echo anchor('berita/hapus/' . $b->id_berita, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                    <td style="text-align: center"> 
+                                    <?php echo anchor('berita/edit/' . $b->id_berita, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
+                                    <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                                    href="<?= base_url('berita/hapus/'). $b->id_berita?>"
+                                    class="btn btn-sm btn-danger">
+                                    <i class="fa fa-trash"></i></a></div>
+                                </td>
                                 </center>
                             </tr>
                         <?php
@@ -63,3 +68,14 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>

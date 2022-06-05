@@ -37,20 +37,14 @@
                             <td style = "text-align:center"><?= $n->batas_awal?></td>
                             <td style = "text-align:center"><?= $n->batas_akhir?></td>
                             <td style = "text-align:center"><?= $n->mutu?></td>
-                            <td style = "text-align:center"><?= $n->keterangan 
-                                                            //     if ($n->mutu == 'A'){
-                                                            //     echo"Sangat Baik"; 
-                                                            //     }elseif ($n->mutu == 'B'){
-                                                            //         echo"Cukup Baik";
-                                                            //     }elseif ($n->mutu == 'C'){
-                                                            //         echo"Baik";
-                                                            //     } else{
-                                                            //         echo "Kurang Baik";
-                                                            //     } 
-                                                             ?>
+                            <td style = "text-align:center"><?= $n->keterangan ?></td>
+                            <td width="20px"> 
+                                <?php echo anchor('nilai/edit/'.$n->id_nilai, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                                href="<?= base_url('nilai/hapus/') .$n->id_nilai?>"
+                                class="btn btn-sm btn-danger">
+                                <i class="fa fa-trash"></i></a></div>
                             </td>
-                            <td width="20px"> <?php echo anchor('nilai/edit/'.$n->id_nilai, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                            <?php echo anchor('nilai/hapus/'.$n->id_nilai, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
                             </tr>
                                 <?php
                             endforeach

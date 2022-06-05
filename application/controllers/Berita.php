@@ -111,28 +111,28 @@ class Berita extends CI_Controller
         $isi = $this->input->post('isi', true);
         $link = $this->input->post('link', true);
         $id_berita = $this->input->post('id_berita', true);
-        $dokumen = $_FILES['dokumen']['name'];
-        if ($dokumen) {
+        $foto = $_FILES['dokumen']['name'];;
+        if ($foto = '') {
+        } else {
             $config['upload_path'] = './assets/uploads/';
-            $config['allowed_types'] = 'jpg|png|jpeg|gif|tiff';
-            $config['max_size'] = 2048;
+            $config['allowed_types'] = 'jpg|png|jpeg|gif|tiff|pdf';
+            $config['max_size'] = 5000;
             $config['file_name'] = 'item-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
 
             $this->load->library('upload', $config);
 
             if ($this->upload->do_upload('dokumen')) {
-                $dokumen = $this->upload->data('file_name');
-                $this->db->set('dokumen', $dokumen);
+                $file = $this->upload->data('file_name');
+                $this->db->set('dokumen', $file);
             } else {
                 echo "Gagal Upload";
             }
         }
-
+        
         $data = array(
             'judul_berita' => $judul_berita,
             'isi' => $isi,
             'link' => $link,
-            'dokumen' => $dokumen,
             'created_at' => date('Y-m-d'),
         );
 

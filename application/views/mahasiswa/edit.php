@@ -2,6 +2,11 @@
     <?php foreach ($siswanya as $s) { ?>
         <form action="<?php echo base_url('mahasiswa/update') ?>" method="post">
             <input type="hidden" class="form-control" name="id_mahasiswa" id="id_mahasiswa" value="<?php echo $s->id_mahasiswa; ?>">
+            <div class="text-center">
+            <?php foreach($detail as $dt) : ?>
+                <img src="<?php echo base_url().'assets/uploads/' .$s->foto ?>" style="width: 200px">
+            <?php endforeach; ?>
+            </div>
             <div class="form-group">
                 <label>NIM</label>
                 <input type="text" name="nim" value="<?php echo $s->nim; ?>" class="form-control" required readonly>
@@ -39,7 +44,7 @@
                     <?php foreach ($akademik as $ak) { ?>
                     <option value="<?php echo $ak->id_akademik; ?>" <?php if ($s->id_akademik == $ak->id_akademik) {
                                                                     echo "selected";
-                                                                    } ?> ><?php echo $ak->tahun_akademik; ?></option>
+                                                                    } ?> ><?php echo $ak->tahun_akademik . ' - ' . $ak->semester; ?></option>
                     <?php } ?>
                 </select>
             </div>
@@ -75,14 +80,14 @@
                 <?php echo form_error('no_tlp', '<div class="text-danger small ml-3"></div>') ?>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Foto</label>
                 <input type="file" name="foto" value="<?php echo $s->foto; ?>" class="form-control" >
                  <label><i>hanya file ekstensi .png, .jpeg</i></label>
                 <?php echo form_error('foto', '<div class="text-danger small ml-3"></div>') ?>
-            </div>
+            </div> -->
 
-            <button type="submit" class="btn btn-primary mb-4">Simpan</button>
+            <button type="submit" class="btn btn-primary mb-4">Update</button>
             <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>
         </form>
     <?php } ?>

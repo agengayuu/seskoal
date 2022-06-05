@@ -122,7 +122,7 @@ class Galeri extends CI_Controller
 
         $data = array(
             'nama_kegiatan' => $nama_kegiatan,
-            'foto' => $foto,
+            // 'foto' => $foto,
             'created_at' => date('Y-m-d'),
         );
 

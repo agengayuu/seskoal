@@ -22,7 +22,6 @@ $this->load->view('evaluasi_test/topbar',$data);
 ?>
 
 <?php
-
 if(isset($_SESSION["waktu_start"])){
     $lewat = time() - $_SESSION["waktu_start"];
 }else{
@@ -131,8 +130,9 @@ $this->load->view('evaluasi_test/js');
             $(this).css({color:"red"});
         }
     }
+    
     $(function(){
-        var waktu = '<?= $max_time; ?>'; 
+        var waktu = '<?= $durasi['durasi_ujian'] * 60; ?>'; 
         var sisa_waktu = waktu - <?php echo $lewat ?>;
         var longWayOff = sisa_waktu;
         $("#counter").countdown({

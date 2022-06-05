@@ -80,19 +80,18 @@ class Login extends CI_Controller
 
                         //arahkan ke view sesuai dengan grup
                     } else {
-                        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password salah</div>');
+                        $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"> Password salah</div>');
                         //echo password_hash($password, PASSWORD_DEFAULT);die;
                         redirect('login');
                     }
 
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Username is not been actived</div>');
-                    //echo "user tidak aktif";die;
-                    redirect('login');
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"> Username belum aktif</div>');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Username belum terdaftar!</div>');
-                //echo "user tidak ada";die;
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"> Username belum terdaftar</div>');
+                redirect('login');
+
                 redirect('login');
             }
 
@@ -103,9 +102,7 @@ class Login extends CI_Controller
     public function logout()
     {
         $this->session->sess_destroy();
-        // $this->session->unset_usedata('username');
-        // $this->session->unset_usedata('id_grup_user');
-        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> anda sudah logged out</div>');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"> anda sudah logged out</div>');
         redirect('login');
     }
 
@@ -122,8 +119,6 @@ class Login extends CI_Controller
     {
         $this->form_validation->set_rules('tgl_lhr', 'Birth', 'trim|required|xss_clean');
         $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-        //     $this->form_validation->set_rules('password','Password','trim|required|xss_clean|min_length[3]|matches[new_password2]');
-        //     $this->form_validation->set_rules('password2','Password2','trim|required|xss_clean|min_length[3]|matches[new_password]');
         if ($this->form_validation->run() == false) {
             $this->load->view('login/buatpass');
         } else {
@@ -136,20 +131,15 @@ class Login extends CI_Controller
                                             user where
                                             username = '$username' and id_unique ='$unik'")->result();
             $data['user'] = $usernya[0];
-            // print_r($cekuser);
-            // print_r($unik);die;
-            // print_r($usernya); die;
 
             if ($usernya == null) {
-                // print_r('kosong'); die;
-                $this->session->set_Flashdata('message', '<div class="alert alert-danger" role="alert">Data anda belum terdaftar</div>');
+                $this->session->set_Flashdata('pesan', '<div class="alert alert-danger" role="alert">Data anda belum terdaftar</div>');
                 redirect('login');
             } else {
-                // print_r('ada'); die;
                 if ($usernya[0]->id_unique == $unik && $usernya[0]->password == 0) {
                     $this->load->view('login/buatpass2', $data);
                 } else {
-                    $this->session->set_Flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil login</div>');
+                    $this->session->set_Flashdata('pesan', '<div class="alert alert-success" role="alert">Anda berhasil login</div>');
                     redirect('login');
                 }
             }
@@ -169,21 +159,13 @@ class Login extends CI_Controller
             $usernya = $this->db->query("select * from
                                             user where
                                             id = '$id'")->result();
-            // print_r($usernya[0]); die;
+           
 
             $data['user'] = $usernya;
-            // echo($password);
-            // echo "-------";
-            // echo($password2);die;
-
+            
             if ($password == $password2) {
-                // echo $password;
-                // "------";
-                // echo $password2;
-                // "------";
+             
                 $newpass = password_hash($password, PASSWORD_DEFAULT);
-                // echo $newpass;
-                print
 
                 $new = $this->db->query("update user set password = '" . $newpass . "' where id = '" . $id . "'");
                 $hasil = $this->db->query("select * from
@@ -193,7 +175,7 @@ class Login extends CI_Controller
                 redirect('login');
 
             } else {
-                $this->session->set_Flashdata('message', '<div class="alert alert-success" role="alert">Password tidak sama</div>');
+                $this->session->set_Flashdata('pesan', '<div class="alert alert-success" role="alert">Password tidak sama</div>');
                 redirect('login/buatpass2');
 
             }
@@ -240,14 +222,14 @@ class Login extends CI_Controller
             if (!password_verify($passlama, $data['user']['password'])) {
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                Password lama salah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                               <span aria-hidden="true">&times;</span> </button></div>');
+                                               <span aria-hidden="true">&times;</span> </button>','</div>');
                 redirect('login/set', 'refresh');
 
             } else {
                 if ($passlama == $passbaru) {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                    Password baru tidak boleh sama dengan password lama. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                   <span aria-hidden="true">&times;</span> </button></div>');
+                                                   <span aria-hidden="true">&times;</span> </button>','</div>');
                     redirect('login/set', 'refresh');
 
                     // echo"pass lama sama dgn pass baru";
@@ -256,10 +238,8 @@ class Login extends CI_Controller
                 ($passbaru != $passbaru1) {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                     Konfirmasi password tidak sesuai <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span> </button></div>');
+                                                    <span aria-hidden="true">&times;</span> </button>','</div>');
                     redirect('login/set', 'refresh');
-
-                    // echo"pass baru tdk sama dgn konf paass";
 
                 } else {
                     //password sudah benar
@@ -270,7 +250,7 @@ class Login extends CI_Controller
                     $this->db->update('user');
                     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                                                     Password berhasil di ubah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span> </button></div>');
+                                                    <span aria-hidden="true">&times;</span> </button>','</div>');
                     redirect('login/set', 'refresh');
                     // echo "password berhasil di updt";die;
 
@@ -338,14 +318,12 @@ class Login extends CI_Controller
 
                 $this->db->insert('user_token', $user_token);
                 $this->_sendEmail($token, 'forgot');
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                    Silahkan cek email anda. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span> </button></div>');
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"> Silahkan cek email anda</div>');
+               
                 redirect('login/lupapass');
             } else {
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                    Email belum terdaftar atau belum aktif. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span> </button></div>');
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"> Email belum terdaftar atau belum aktif</div>');
+               
                 redirect('login/lupapass');
             }
         }
@@ -366,44 +344,45 @@ class Login extends CI_Controller
             } else {
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                         Reset password gagal! email token. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                        <span aria-hidden="true">&times;</span> </button></div>');
+                                                        <span aria-hidden="true">&times;</span> </button>','</div>');
                 redirect('login', 'refresh');
             }
 
         } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                                     Reset password gagal! email salah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span> </button></div>');
+                                                    <span aria-hidden="true">&times;</span> </button>','</div>');
             redirect('login', 'refresh');
         }
     }
 
     public function gantipass()
     {
-
         if (!$this->session->userdata('reset_email')) {
             redirect('login', 'refresh');
         }
-
         $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[3]|matches[password]');
         $this->form_validation->set_rules('password2', 'Password2', 'trim|required|xss_clean|min_length[3]|matches[password2]');
+        $p = $this->input->post('password');
+        $p2 = $this->input->post('password2');
         if ($this->form_validation->run() == false) {
             $this->load->view('login/gantipass');
         } else {
-            $password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
-            $email = $this->session->userdata('reset_email');
-
-            //   print_r($password);die;
-
-            $this->db->set('password', $password);
-            $this->db->where('email', $email);
-            $this->db->update('user');
-
-            $this->session->unset_userdata('reset_email');
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                   Password berhasil di ubah. <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                                    <span aria-hidden="true">&times;</span> </button></div>');
-            redirect('login', 'refresh');
+            if($p != $p2){
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">Konfirmasi password tidak sesuai </div>');
+                redirect('login/gantipass', 'refresh');
+            }else{
+                $password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+                $email = $this->session->userdata('reset_email');
+    
+                $this->db->set('password', $password);
+                $this->db->where('email', $email);
+                $this->db->update('user');
+    
+                $this->session->unset_userdata('reset_email');
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">Password berhasil di ubah </div>');
+                redirect('login', 'refresh');
+            }
         }
     }
 }

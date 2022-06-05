@@ -27,6 +27,11 @@ class M_matakuliah extends CI_Model
         return $this->db->insert('tbl_mata_kuliah', $data);
 
     }
+    public function simpanmatkul_d($data)
+    {
+        return $this->db->insert('tbl_matkul_diklat', $data);
+
+    }
 
     public function adminedit($where, $table)
     {

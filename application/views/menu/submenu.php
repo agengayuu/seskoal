@@ -31,8 +31,8 @@
                     </thead>
                     <tbody>
                         <?php
-$no = 1;
-foreach ($submenu as $s): ?>
+                        $no = 1;
+                        foreach ($submenu as $s): ?>
                             <tr>
                             <td width="20px" style="text-align: center;"><?php echo $no++ ?></td>
                             <td><?=$s->title?></td>
@@ -40,16 +40,20 @@ foreach ($submenu as $s): ?>
                             <td><?=$s->url?></td>
                             <td><?=$s->icon?></td>
                             <td style="text-align: center;"><?php if ($s->is_active == 1) {
-    echo "Aktif";
-} else {
-    echo "Tidak Aktif";
-}?></td>
+                                                                            echo "Aktif";
+                                                                        } else {
+                                                                            echo "Tidak Aktif";
+                                                                        }?></td>
                             <td width="20px"> <?php echo anchor('menu/subedit/' . $s->id_sub_menu, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                            <?php echo anchor('menu/subdelete/' . $s->id_sub_menu, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
-                            </tr>
+                            <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                            href="<?= base_url('menu/subdelete/') . $s->id_sub_menu?>"
+                            class="btn btn-sm btn-danger">
+                            <i class="fa fa-trash"></i></a></div>  
+                            </td> 
+                        </tr>
                                 <?php
-endforeach
-?>
+                        endforeach
+                        ?>
                     </tbody>
                 </table>
             </div>

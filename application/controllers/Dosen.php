@@ -97,14 +97,14 @@ class Dosen extends CI_Controller
             $created_at = $this->input->post('created_at');
 
             $created_at = date('Y-m-d H:i:s');
-
+            $cek = 
             $data2 = array(
                 'email' => $email,
                 'username' => $nip,
                 'id_grup_user' => 3,
                 'is_active' => 1,
                 'id_unique' => $nip . $hsl,
-                'foto' => $foto,
+                'foto' => 'default.jpeg',
                 'date_created' => time(),
 
             );
@@ -125,7 +125,7 @@ class Dosen extends CI_Controller
                 'jk' => $jk,
                 'agama' => $agama,
                 'alamat' => $alamat,
-                'foto' => $foto,
+                'foto' => 'default.jpeg',
                 'created_at' => $created_at,
                 'id_user' => $iduser,
             );
@@ -137,6 +137,10 @@ class Dosen extends CI_Controller
                                             <span aria-hidden="true">&times;</span></button></div>');
             redirect('dosen');
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9698153c3f51e89982752faf1da80f8090586f87
     }
 
     public function _rules()
@@ -195,17 +199,7 @@ class Dosen extends CI_Controller
 
     public function adminupdate()
     {
-        // $data['user'] = $this->db->get_where('user',['username' =>
-        // $this->session->userdata('username')])->row_array();
 
-        // $this->load->view('templates_dosen/header',$data);
-        // $this->load->view('templates_dosen/sidebar_admin',$data);
-
-        // $this->_rules();
-
-        // if($this->form_validation->run() == FALSE){
-        //     $this->adminedit();
-        // } else {
         $id_dosen = $this->input->post('id_dosen');
         $nip = $this->input->post('nip');
         $nik = $this->input->post('nik');
@@ -328,7 +322,6 @@ class Dosen extends CI_Controller
         $where = array('id_dosen' => $id_dosen);
         $user = $this->db->query("delete a.* from user a
                                 join tbl_dosen b on a.id = b.id_user where b.id_dosen = $id_dosen");
-        // print_r($user);die;
 
         $this->m_dosen->adminhapus($where, 'tbl_dosen');
         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">

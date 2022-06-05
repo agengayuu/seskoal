@@ -12,7 +12,12 @@
     <?php foreach($dosennya as $d) : ?> 
     <?php echo form_open_multipart('dosen/adminupdate'); ?> 
 
-    <input type="hidden" class="form-control" name="id_dosen" id="id_dosen" value="<?php echo $d->id_dosen; ?>">
+        <input type="hidden" class="form-control" name="id_dosen" id="id_dosen" value="<?php echo $d->id_dosen; ?>">
+        <div class="text-center">
+        <?php foreach($detail as $dt) : ?>
+            <img src="<?php echo base_url().'assets/uploads/' .$d->foto ?>" style="width: 200px">
+        <?php endforeach; ?>
+        </div>
 
         <div class="form-group">
             <label>NID<i style="color:red">*</i></label>
@@ -110,14 +115,14 @@
             <?php echo form_error('alamat', '<div class="text-danger small ml-3">','</div>') ?>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <?php foreach($detail as $dt) : ?>
                 <img src="<?php echo base_url().'assets/uploads/' .$d->foto ?>" style="width: 200px">
                 <?php endforeach; ?><br><br>
                 <label>Foto</label>
             <input type="file" name="userfile" class="form-control"  value = "<?= $d->foto;?>">
             <label><i>hanya file ekstensi .png, .jpeg</i></label>
-        </div>
+        </div> -->
 
         <button type="submit" class="btn btn-info mb-4">Update</button>
         <button type="button" value="Cancel" class="btn btn-danger mb-4" onclick="history.back()">Batal</button>

@@ -26,27 +26,27 @@
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
         </head>
         
-        <?php echo $this->session->flashdata('message') ?>
         <body>
-        <!-- BEGIN LOGIN -->
-        <div class="login-page">
-            <div class="container">
-                <!-- BEGIN LOGIN FORM -->
-                <div class="form">
-                    <form class="login-form" action="<?= base_url('login/lupapass') ?>" method="post">
-                        <div class="container">
-                            <center>
-                                <div class="logo">
-                                    <div class="seskoal"></div>
-                                </div>
-                            </center>
-                        </div>
-                        <div class="form-header">
-                            <h2 style="text-align: center;">Lupa Password<br />
+            <!-- BEGIN LOGIN -->
+            <div class="login-page">
+                <div class="container">
+                    <!-- BEGIN LOGIN FORM -->
+                    <div class="form">
+                        <form class="login-form" action="<?= base_url('login/lupapass') ?>" method="post">
+                            <div class="container">
+                                <center>
+                                    <div class="logo">
+                                        <div class="seskoal"></div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="form-header">
+                                <h2 style="text-align: center;">Lupa Password<br />
                             </h2>
                         </div>
                         <div class="form-group">
-                        <?php echo $this->session->flashdata('pesan') ?>
+                            <?php echo $this->session->flashdata('pesan') ?>
+                            <?php echo validation_errors(); ?>
                             <div class="input-icon">
                                 <i class="fa fa-user"></i>
                                 <input type="email" class="form-control placeholder-no-fix" autocomplete="off" placeholder="Masukan Email" name="email" value="<?= set_value('email');?>" />

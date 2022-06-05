@@ -29,22 +29,31 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
         $userlogin = $this->session->userdata('id');
         $query = $this->db->query("select user.*, tbl_profil_mahasiswa.*
                                     from user join tbl_profil_mahasiswa on user.id = tbl_profil_mahasiswa.id_mahasiswa where tbl_profil_mahasiswa.id_mahasiswa = $userlogin");
-        $id_diklat = 0;
-        foreach ($query->result_array() as $q) {
-           
 
+        $check_jawaban = $this->db->query("select distinct id_eval
+                                    from tbl_jawaban
+                                    where id_mahasiswa = $userlogin");
+                                    
+        $check_jawaban = $check_jawaban->result_array();
+        // $check_jawaban = $check_jawaban['id_eval'];
+        
+        $check = [];
+        foreach ($check_jawaban as $c){
+            array_push($check, $c['id_eval']);
+        }
+        
+        foreach ($query->result_array() as $q) {
+            $now = Date('Y-m-d H:i:s');
             $where = $q['id_diklat'];
             $mulaiujian = $this->db->query("select tbl_mata_kuliah.*, tbl_paket_evaluasi.*
-                                        from tbl_mata_kuliah
-                                        join tbl_paket_evaluasi
-                                        on tbl_mata_kuliah.id_mata_kuliah = tbl_paket_evaluasi.id_mata_kuliah
-                                        where id_diklat =  $where  && tbl_paket_evaluasi.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah && tbl_paket_evaluasi.status_ujian = 1 or 2 order by tbl_paket_evaluasi.id_mata_kuliah")->result();
+                                            from tbl_mata_kuliah
+                                            join tbl_paket_evaluasi
+                                            on tbl_mata_kuliah.id_mata_kuliah = tbl_paket_evaluasi.id_mata_kuliah
+                                            where '$now' < tbl_paket_evaluasi.waktu_evaluasi_selesai
+                                            and tbl_mata_kuliah.id_diklat = $where 
+                                            and tbl_paket_evaluasi.status_ujian = 1 or 0
+                                            order by tbl_paket_evaluasi.id_mata_kuliah")->result();
             
-            $belumujian = $this->db->query("select tbl_mata_kuliah.*, tbl_paket_evaluasi.*
-                                        from tbl_mata_kuliah
-                                        join tbl_paket_evaluasi
-                                        on tbl_mata_kuliah.id_mata_kuliah = tbl_paket_evaluasi.id_mata_kuliah
-                                        where id_diklat =  $where  && tbl_paket_evaluasi.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah && tbl_paket_evaluasi.status_ujian = 0 order by tbl_paket_evaluasi.id_mata_kuliah")->result();
             // 0 belum mulai ujian
             // 1 mulai mengikuti ujian
             // 2 sudah mengikuti ujian
@@ -54,11 +63,10 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
             // print_r($belumujian);die;
         };
         $data['mulai'] = $mulaiujian;
-        $data['belum'] = $belumujian;
+        $data['check'] = $check;
 
         $this->load->view('jadwal_mahasiswa_evaluasi/index', $data);
         $this->load->view('templates_dosen/footer');
-
     }
 
     public function getdaftarmatkul()
@@ -90,7 +98,35 @@ class Jadwal_mahasiswa_evaluasi extends CI_Controller
     public function getselesaites()
     {
         $data['title'] = 'Daftar Selesai Tes Evaluasi';
+        
+        $userlogin = $this->session->userdata('id');
+        $query = $this->db->query("select user.*, tbl_profil_mahasiswa.*
+                                    from user join tbl_profil_mahasiswa on user.id = tbl_profil_mahasiswa.id_mahasiswa where tbl_profil_mahasiswa.id_mahasiswa = $userlogin");
+        $id_diklat = 0;
+        foreach ($query->result_array() as $q) {
+            $now = Date('Y-m-d H:i:s');
+            $where = $q['id_diklat'];
 
+            $belumujian = $this->db->query("select tbl_mata_kuliah.*, tbl_paket_evaluasi.*
+                                        from tbl_mata_kuliah
+                                        join tbl_paket_evaluasi
+                                        on tbl_mata_kuliah.id_mata_kuliah = tbl_paket_evaluasi.id_mata_kuliah
+                                        where '$now' > tbl_paket_evaluasi.waktu_evaluasi_selesai
+                                        and id_diklat =  $where 
+                                        and tbl_paket_evaluasi.id_mata_kuliah = tbl_mata_kuliah.id_mata_kuliah 
+                                        and tbl_paket_evaluasi.status_ujian = 1
+                                        order by tbl_paket_evaluasi.id_mata_kuliah")->result();
+            // 0 belum mulai ujian
+            // 1 mulai mengikuti ujian
+            // 2 sudah mengikuti ujian
+
+            // echo "<pre>";
+            // print_r($mulaiujian);
+            // print_r($belumujian);die;
+        };
+
+        $data['mulai'] = $belumujian;
+        // var_dump($data['mulai']);die;
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);

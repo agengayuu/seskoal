@@ -33,20 +33,25 @@ class Evaluasi_test extends CI_Controller
                                      join tbl_master_soal
                                      on tbl_master_eval.id_master_soal = tbl_master_soal.id_master_soal
                                      WHERE id_eval="' . $id_paket_evaluasi . '"  ')->row_array();
-    
+            
+            $durasi = $this->db->query('SELECT durasi_ujian
+                                        FROM tbl_paket_evaluasi
+                                        WHERE id_paket_evaluasi="' . $id_paket_evaluasi . '"  ')->row_array();
+            
             $soal_ujian = $this->db->query('SELECT tbl_master_soal.*, tbl_master_eval.*
                                             FROM tbl_master_eval
                                             join tbl_master_soal
                                             on tbl_master_soal.id_master_soal = tbl_master_eval.id_master_soal
                                             WHERE id_eval="' . $id['id_eval'] . '" ORDER BY RAND()')->result();
-    
+            
             $where = array('id_mahasiswa_evaluasi' => $id_paket_evaluasi);
             $data2 = array('status_ujian_ujian' => 1);
             $this->m_evaluasi_test->update_data($where, $data2, 'tbl_mahasiswa_evaluasi');
             $data = array(
-                "soal" => $soal_ujian,
-                "total_soal" => count($soal_ujian),
-                "id" => $id,
+                "soal"          => $soal_ujian,
+                "total_soal"    => count($soal_ujian),
+                "id"            => $id,
+                "durasi"        => $durasi
             );
             $this->load->view('evaluasi_test/index', $data);
         } else{
@@ -110,7 +115,7 @@ class Evaluasi_test extends CI_Controller
                 $this->m_evaluasi_test->UpdateNilai($where, $data, 'tbl_jawaban');
             }
 
-            $skor += $d['skor'];
+            $skor += (int)($d['skor']);
         }
         $where = $id_evaluasi;
         $total_nilai = 0;

@@ -21,7 +21,7 @@
 
             <div class="form-group">
                 <label>Nama Mahasiswa<i style="color:red">*</i></label>
-                <input type="text" name="nama" value="<?php echo set_value('nama'); ?>" placeholder="Masukkan Nama Anda" class="form-control">
+                <input type="text" name="nama" value="<?php echo set_value('nama'); ?>" placeholder="Masukkan Nama Mahasiswa" class="form-control">
                 <?php echo form_error('nama', '<div class="text-danger small ml-3">','</div>') ?>
             </div>
 
@@ -48,7 +48,7 @@
                 <select class="form-control" name='id_akademik' id='id_akademik'>
                     <option value='0' selected>--- Pilih Tahun Akademik ---</option>
                     <?php foreach ($akademik as $ak) { ?>
-                        <option value="<?php echo $ak->id_akademik; ?>"><?php echo $ak->tahun_akademik; ?></option>
+                        <option value="<?php echo $ak->id_akademik; ?>"><?php echo $ak->tahun_akademik . ' - ' . $ak->semester; ?></option>
                     <?php } ?>
                 </select>
             </div>
@@ -81,12 +81,12 @@
                 <?php echo form_error('no_tlp', '<div class="text-danger small ml-3">','</div>') ?>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Foto</i></label>
-                <input type="file" name="foto" multiple accept="image/*" class="form-control" required>
+                <input type="file" name="foto" multiple accept="image/*" class="form-control" >
                  <label><i>hanya file ekstensi .png, .jpeg</i></label>
                 <?php echo form_error('foto', '<div class="text-danger small ml-3">','</div>') ?>
-            </div>
+            </div> -->
 
             <!-- document -->
             <!-- <br />

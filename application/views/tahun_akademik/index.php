@@ -40,8 +40,13 @@
                                         <td><?= $a->tahun_akademik ?></td>
                                         <td><?= $a->semester ?></td>
                                         <td><?= $a->status ?></td>
-                                        <td width="20px"> <?php echo anchor('tahun_akademik/edit/'.$a->id_akademik, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
-                                        <?php echo anchor('tahun_akademik/hapus/'.$a->id_akademik, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>' ) ?></td>
+                                        <td width="20px"> 
+                                        <?php echo anchor('tahun_akademik/edit/'.$a->id_akademik, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>' ) ?>
+                                        <a onclick="return confirm('Apa anda yakin menghapus data ini?')"
+                                        href="<?= base_url('tahun_akademik/hapus/').$a->id_akademik ?>"
+                                        class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash"></i></a>
+                                        </td>
                                     </tr>
                                         <?php
                                     endforeach

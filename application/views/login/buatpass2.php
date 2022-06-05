@@ -20,6 +20,7 @@
             <!-- CSS -->
             <link href="<?php echo base_url() ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
             <?php echo $this->session->flashdata('message') ?>
+            <?php echo validation_errors(); ?>
         </head>
 
     <body>

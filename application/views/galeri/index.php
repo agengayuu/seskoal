@@ -42,7 +42,11 @@
                                 <center>
                                 </td>
                                     <td style="text-align: center"> <?php echo anchor('galeri/edit/' . $g->id_galeri, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-                                    <?php echo anchor('galeri/hapus/' . $g->id_galeri, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+                                    <a onclick="return confirm('Apa anda yakin menghapus data ini?')" 
+                                        href="<?= base_url('galeri/hapus/'). $g->id_galeri ?>"  
+                                        class="btn btn-sm btn-danger">
+                                    <i class="fa fa-trash"></i></a>
+                                </td>
                                 </center>
                             </tr>
                         <?php
@@ -59,3 +63,14 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+
+<script type="application/javascript">
+/** After windod Load */
+$(window).bind("load", function() {
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 4000);
+});
+</script>
