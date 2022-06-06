@@ -11,7 +11,7 @@ date_default_timezone_set('Asia/Jakarta');
         </div>
     </div>
     <?php echo anchor('jadwal_mahasiswa_evaluasi/', '<button class="btn btn-sm btn-success mb-3">Daftar Tes Evaluasi</button>') ?>
-    <?php echo anchor('jadwal_mahasiswa_evaluasi/getdaftarmatkul', '<button class="btn btn-sm btn-success mb-3">Daftar Mata Kuliah</button>') ?>
+    <?php echo anchor('jadwal_mahasiswa_evaluasi/getdaftarmatkul', '<button class="btn btn-sm btn-primary mb-3">Daftar Mata Kuliah</button>') ?>
     <!--table -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

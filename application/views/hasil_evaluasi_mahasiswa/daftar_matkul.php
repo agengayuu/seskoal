@@ -11,6 +11,20 @@
         </div>
 
         <div class="card-body">
+        <table class="table table-bordered" width="100%" cellspacing="0">
+                    <?php foreach($mhs as $m): ?>
+                        <tbody>
+                            <tr>
+                                <th width="200">Diklat</th>
+                                <td><?= $m->nama_diklat; ?></td>      
+                            </tr>
+                            <tr>
+                                <th>Tahun Akademik</th>
+                                <td><?= $m->tahun_akademik; ?></td>      
+                            </tr>
+                    <?php endforeach; ?>
+                        </tbody>
+                </table>
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -32,6 +46,7 @@
                             <td>
                             <center>
                                 <?php echo anchor('hasil_evaluasi_mahasiswa/daftarpaket/'.$m->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fas fa-arrow-alt-circle-right"></i></div>' ) ?>
+                                <?php echo anchor('hasil_evaluasi_mahasiswa/print_rekap/'.$m->id_mata_kuliah, '<div class="btn btn-sm btn-primary"><i class="fa fa-print"></i></div>' ) ?>
                             </center>
                         </tr>
                                 <?php

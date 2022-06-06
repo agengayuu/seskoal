@@ -38,10 +38,12 @@ class M_hasil_evaluasi_mahasiswa extends CI_Model
     {
         $userlogin = $this->session->userdata('id');
 
-            $paket = $this->db->query("select tbl_paket_evaluasi.*, tbl_mahasiswa_evaluasi.*
+            $paket = $this->db->query("select tbl_paket_evaluasi.*, tbl_mahasiswa_evaluasi.*, tbl_mata_kuliah.*
             from tbl_paket_evaluasi
             join tbl_mahasiswa_evaluasi
-            on tbl_mahasiswa_evaluasi.id_eval = tbl_paket_evaluasi.id_paket_evaluasi 
+            on tbl_mahasiswa_evaluasi.id_eval = tbl_paket_evaluasi.id_paket_evaluasi
+            join tbl_mata_kuliah
+            on tbl_mata_kuliah.id_mata_kuliah = tbl_paket_evaluasi.id_mata_kuliah 
             where tbl_mahasiswa_evaluasi.id_mata_kuliah = $id_mata_kuliah && tbl_mahasiswa_evaluasi.id_mahasiswa = $userlogin");
             return $paket->result();
     }
@@ -70,6 +72,18 @@ class M_hasil_evaluasi_mahasiswa extends CI_Model
                 tbl_mahasiswa_evaluasi.id_mata_kuliah in (" . $explode_id_mata_kuliah . ")";
 
         return $this->db->query($query)->result();
+    }
+
+    public function get_nilai(){
+        $userlogin = $this->session->userdata('id');
+        $mahasiswa = $this->db->query("Select tbl_profil_mahasiswa.*, tbl_diklat.*, thn_akademik.*
+                                        from tbl_profil_mahasiswa
+                                        join tbl_diklat
+                                        on tbl_diklat.id_diklat = tbl_profil_mahasiswa.id_diklat
+                                        join thn_akademik
+                                        on thn_akademik.id_akademik = tbl_profil_mahasiswa.id_akademik
+                                        where tbl_profil_mahasiswa.id_mahasiswa = $userlogin");
+        return $mahasiswa->result();
     }
 
 }
