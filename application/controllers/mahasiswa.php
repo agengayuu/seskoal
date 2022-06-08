@@ -158,8 +158,7 @@ class Mahasiswa extends CI_Controller
                 'foto' => 'default.jpeg',
                 'created_at' => $created_at,
             );
-            // echo "<pre>";
-            // print_r($data);die;
+          
 
             $data2 = array(
                 'email' => $email,
@@ -243,7 +242,15 @@ class Mahasiswa extends CI_Controller
         );
         $test = $this->m_mahasiswa->adminedit($where, 'tbl_mahasiswa')->result();
         
-        $data['detail'] = $this->m_mahasiswa->admindetail($nim)->result();
+        $d = $this->m_mahasiswa->admindetail($nim)->result();
+        $data['detail'] = $this->db->query("select tbl_mahasiswa.*, tbl_diklat.*, thn_akademik.* 
+                                            from 
+                                                tbl_mahasiswa
+                                             join 
+                                                tbl_diklat on tbl_mahasiswa.id_diklat = tbl_diklat.id_diklat 
+                                            left join 
+                                                thn_akademik on tbl_mahasiswa.id_akademik = thn_akademik.id_akademik 
+                                            where nim=$nim")->result();
         // print_r($data['detail']);die;
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('mahasiswa/detail');
@@ -489,17 +496,29 @@ class Mahasiswa extends CI_Controller
 
                         $mhs = explode(";", $row[0]);
                         // Data yang akan disimpan ke dalam databse
+                        $hsllahir = DateTime::createFromFormat('d/m/Y', $mhs[6])->format('Y-m-d');
+                        $hsllahir2 = str_replace("-", "", $hsllahir);
+                        $data2 = [
+                            'username' => $mhs[0],
+                            'email' => $mhs[5],
+                            'id_unique' =>  $mhs[0].$hsllahir2,
+                            'id_grup_user' => 2,
+                            'is_active' => 1,
+                            'foto' => "default.jpeg"
+                        ];
+                        // print_r($hsllahir);die;
+                        $this->m_mahasiswa->adminsimpan($data2, 'user');
+                        $iduser = $this->db->insert_id();
                         $data = [
                             'nim' => $mhs[0],
-                            'nama' => $mhs[2],
+                            'nama' => $mhs[1],
                             'angkatan' => $mhs[2],
                             'id_diklat' => $mhs[3],
                             'tahun_masuk' => $mhs[4],
                             'email' => $mhs[5],
-                            'tgl_lahir' => $mhs[6],
+                            'tgl_lahir' => $hsllahir,
+                            'foto' => "default.jpeg"
                         ];
-
-                        print_r($data);
 
                         // Simpan data ke database.
                         $this->m_mahasiswa->adminsimpan($data, 'tbl_mahasiswa');
@@ -518,11 +537,4 @@ class Mahasiswa extends CI_Controller
             }
         }
     }
-    // $id_mahasiswa   = $data[0];
-    // $nim = $data[1];
-    // $nama  = $data[2];
-    // $angkatan  = $data[3];
-    // $id_diklat  = $data[10];
-    // $tahun_masuk   = $data[5];
-    // $email         = $data[8]
 }

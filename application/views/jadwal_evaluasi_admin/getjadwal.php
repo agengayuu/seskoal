@@ -42,7 +42,7 @@
                                         <th>Tanggal Waktu Mulai</th>
                                         <th>Tanggal Waktu Selesai</th>
                                         <th>Durasi</th>
-                                        <th>Status</th>
+                                        <!-- <th>Status</th> -->
                                         <!-- <th>Aksi</th> -->
                                     </tr>
                                 </thead>
@@ -55,17 +55,17 @@
                                             <td><?= $pe->nama_mata_kuliah ?></td>
                                             <td><?= $pe->nama ?></td>
                                             <td><?= $pe->nama_paket_evaluasi ?></td>
-                                            <td><?= $pe->waktu_evaluasi_mulai ?></td>
-                                            <td><?= $pe->waktu_evaluasi_selesai ?></td>
-                                            <td><?= $pe->durasi_ujian ?></td>
-                                            <td>
+                                            <td><?=  date('d-m-Y H:i:s', strtotime($pe->waktu_evaluasi_mulai)) ?></td>
+                                            <td><?= date('d-m-Y H:i:s', strtotime($pe->waktu_evaluasi_selesai)) ?></td>
+                                            <td><?= $pe->durasi_ujian." menit"?></td>
+                                            <!-- <td>
                                                 <?php if ($pe->status_ujian == "1") {
                                                     echo "<span style='color:red'> Belum Ujian </span>";
                                                 } else if ($pe->status_ujian == "2") {
                                                     echo "<span class='btn btn-xs btn-info'> Selesai Ujian </span>";
                                                 }
                                                 ?>
-                                            </td>
+                                            </td> -->
                                             
                                             <!-- <td width="100px">
                                                 <div class="btn-group" role="group" aria-label="Basic example">
