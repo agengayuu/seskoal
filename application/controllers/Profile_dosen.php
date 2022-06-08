@@ -52,7 +52,7 @@ class Profile_dosen extends CI_Controller
             'id_dosen' => $id,
         );
 
-        $data['dosennya'] = $this->m_profil_dosen->edit($where, 'tbl_dosen')->result();
+        $data['dosennya'] = $this->m_profil_dosen->edit($where, 'tbl_dosen')->result(); 
 
         $data['detail'] = $this->m_profil_dosen->detail($id);
         $this->load->view('profile_dosen/edit', $data);
@@ -110,7 +110,6 @@ class Profile_dosen extends CI_Controller
             'jk' => $jk,
             'agama' => $agama,
             'alamat' => $alamat,
-
         );
 
         $where = array(

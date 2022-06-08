@@ -11,6 +11,7 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->library('mypdf');
         $this->load->model('m_hasil_evaluasi_mahasiswa');
         $this->load->library('session');
 
@@ -53,6 +54,7 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller
         $userlogin = $this->session->userdata('id');
         
         $data['getmatkul'] = $this->m_hasil_evaluasi_mahasiswa->get_matakuliah();
+        $data['mhs'] = $this->m_hasil_evaluasi_mahasiswa->get_nilai();
 
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
@@ -67,6 +69,7 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         
         $paket = $this->uri->segment(3);
+        $data['mhs'] = $this->m_hasil_evaluasi_mahasiswa->get_nilai();
         $data['getpaket'] = $this->m_hasil_evaluasi_mahasiswa->get_paket($paket);
 
         $this->load->view('templates_dosen/header', $data);
@@ -77,4 +80,11 @@ class Hasil_evaluasi_mahasiswa extends CI_Controller
 
     }
 
+    public function print_rekap()
+    {
+        $paket = $this->uri->segment(3);
+        $data['getrekap'] = $this->m_hasil_evaluasi_mahasiswa->get_paket($paket);
+        $data['mhs'] = $this->m_hasil_evaluasi_mahasiswa->get_nilai();
+        $this->mypdf->generate('hasil_evaluasi_mahasiswa/cetak_rekap', $data, 'Cetak Hasil Ujian ujian', 'A4', 'Landscape');
+    }
 }

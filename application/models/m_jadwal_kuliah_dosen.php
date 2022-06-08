@@ -15,10 +15,9 @@ class M_jadwal_kuliah_dosen extends CI_Model
     public function get()
     {
         $userlogin = $this->session->userdata('id');
-        // print_r($userlogin);die;
         $query = "select
             tbl_jadwal_kuliah.*,
-            tbl_dosen.id_dosen,
+            tbl_dosen.id_dosen, 
             tbl_mata_kuliah.nama_mata_kuliah,
             tbl_diklat.nama_diklat,
             tbl_ruang.nama_ruang
@@ -31,7 +30,6 @@ class M_jadwal_kuliah_dosen extends CI_Model
         where
             tbl_dosen.id_user = " . $userlogin . "";
 
-// print_r($userlogin);die;
         return $this->db->query($query)->result_array();
     }
 
@@ -50,5 +48,4 @@ class M_jadwal_kuliah_dosen extends CI_Model
 
         return $this->db->query($query)->result_array();
     }
-
 }

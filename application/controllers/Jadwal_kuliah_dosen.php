@@ -19,14 +19,14 @@ class Jadwal_kuliah_dosen extends CI_Controller
     {
         $data['title'] = 'Jadwal Kuliah Dosen';
 
-        $data['user'] = $this->db->get_where('user', ['username' =>
-            $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates_dosen/header', $data);
 
-        $query = $this->m_jadwal_kuliah_dosen->get();
-        // echo "<pre>";
-        // print_r($query);die;
+        $query = $this->m_jadwal_kuliah_dosen->get(); 
         $data['jadwal'] = $query;
+
+        // var_dump($query);
+        // die;
 
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('jadwal_kuliah_dosen/index', $data);
@@ -46,7 +46,5 @@ class Jadwal_kuliah_dosen extends CI_Controller
         $this->load->view('templates_dosen/sidebar_admin', $data);
         $this->load->view('jadwal_kuliah_dosen/matakuliah_dosen', $data);
         $this->load->view('templates_dosen/footer');
-
     }
-
 }
