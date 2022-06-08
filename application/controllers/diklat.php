@@ -75,6 +75,7 @@ class Diklat extends CI_Controller
 
     public function adminedit($id)
     {
+        $data['title'] = 'Edit Diklat';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $where = array('id_diklat' => $id);
         $data['diklat'] = $this->m_diklat->edit_data($where, 'tbl_diklat')->result();
@@ -127,7 +128,6 @@ class Diklat extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
         $data['mhs'] = $this->db->query("select * from tbl_mahasiswa where id_diklat = $id")->result();
-        // print_r($data['mhs']);die;
 
         $this->load->view('templates_dosen/header', $data);
         $this->load->view('templates_dosen/sidebar_admin', $data);
